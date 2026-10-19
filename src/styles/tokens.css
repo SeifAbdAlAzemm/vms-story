@@ -1,0 +1,58 @@
+/* =====================================================================
+   DESIGN TOKENS
+   ===================================================================== */
+@font-face {
+  font-family: "InterVMS";
+  src: url("../assets/fonts/inter-latin-wght.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: block;
+}
+
+:root {
+  /* palette */
+  --midnight: #0A1B2E;
+  --navy: #0E2A47;
+  --navy-2: #163A5F;
+  --navy-3: #21507E;
+  --ink: #142233;
+  --slate: #44556A;
+  --slate-2: #66768A;
+  --mute: #97A3B3;
+  --line: #D3DBE4;
+  --line-2: #E5EAF0;
+  --paper: #F5F7F9;
+  --white: #FFFFFF;
+  --teal: #0F766E;
+  --teal-2: #13897F;
+  --teal-l: #DCEFEC;
+  --teal-on-dark: #6FC2B8;
+  --steel: #2F5D8A;
+  --steel-l: #E2EAF3;
+  --amber: #B45309;
+  --amber-l: #FBEFD9;
+  --red: #A23B3B;
+  --gold: #B8891A;          /* golden thread on light */
+  --gold-on-dark: #E2B649;  /* golden thread on dark */
+  --gold-l: #FBF3DC;
+
+  /* type */
+  --font: "InterVMS", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+
+  /* chrome sizes (real px, not scaled) */
+  --top-h: 52px;
+  --rail-h: 60px;
+  --notes-h: 0px;
+
+  /* composition-safe canvas (design px) and its fit; JS refines these */
+  --s: 0.6;
+  --tx: 0px;
+  --ty: 60px;
+
+  --ease-out: cubic-bezier(.2, .7, .2, 1);
+}
+
+/* coarse no-JS fallback for the canvas scale (JS computes the exact value) */
+@media (min-width: 1100px) { :root { --s: 0.66; } }
+@media (min-width: 1300px) and (min-height: 760px) { :root { --s: 0.7; } }
+@media (min-width: 1700px) and (min-height: 1000px) { :root { --s: 0.95; } }

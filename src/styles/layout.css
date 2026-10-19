@@ -1,0 +1,60 @@
+/* =====================================================================
+   SCENES · STAGES · COMPOSITION-SAFE CANVAS
+   Static (default) mode: every scene is one viewport tall and shows its
+   final state, so the story reads even without JavaScript.
+   Animation mode (html.anim, added only after GSAP initialised): scenes
+   grow to beats × 100vh and the stage sticks while beats play.
+   ===================================================================== */
+.scene { position: relative; }
+.stage { position: relative; height: 100vh; overflow: hidden; }
+html.anim .scene { height: calc(var(--beats) * 100vh); }
+html.anim .stage { position: sticky; top: 0; }
+
+.bg { position: absolute; inset: 0; }
+.bg-dark { background: radial-gradient(120% 90% at 70% 10%, #13324F 0%, var(--navy) 38%, var(--midnight) 100%); }
+.bg-light { background: var(--paper); }
+.bg-grid { position: absolute; inset: 0; opacity: .5;
+  background-image: linear-gradient(rgba(111,194,184,.07) 1px, transparent 1px), linear-gradient(90deg, rgba(111,194,184,.07) 1px, transparent 1px);
+  background-size: 64px 64px; }
+.bg-fleet { position: absolute; right: 0; top: 0; bottom: 0; width: 55%; opacity: .55;
+  background-image: radial-gradient(circle, rgba(111,194,184,.38) 1.6px, transparent 2px); background-size: 22px 22px;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 40%); mask-image: linear-gradient(90deg, transparent, #000 40%); }
+
+/* the 1600 × 900 composition-safe canvas, scaled to fit inside the chrome */
+.safe { position: absolute; left: 0; top: 0; width: 1600px; height: 900px; transform-origin: 0 0;
+  transform: translate(var(--tx), var(--ty)) scale(var(--s)); }
+
+/* ---------- shared scene typography ---------- */
+.head { position: absolute; left: 0; top: 0; width: 1500px; }
+.kicker { font-size: 18px; font-weight: 750; letter-spacing: .16em; text-transform: uppercase; color: var(--teal); }
+.title { margin-top: 12px; font-size: 46px; line-height: 1.12; font-weight: 760; letter-spacing: -.015em; color: var(--navy); max-width: 1380px; }
+.title em, .p-q em { font-style: normal; color: var(--teal); }
+.scene[data-theme="dark"] .kicker, .kicker-light { color: var(--teal-on-dark); }
+.scene[data-theme="dark"] .title, .title-light { color: #fff; }
+.scene[data-theme="dark"] .title em { color: var(--teal-on-dark); }
+.src { font-size: 17px; color: var(--slate-2); line-height: 1.35; }
+.scene[data-theme="dark"] .src { color: #8EA0B4; }
+.src-foot { position: absolute; left: 0; bottom: 0; }
+.unlocks { position: absolute; right: 0; bottom: 0; font-size: 22px; font-weight: 650; color: var(--teal); display: flex; align-items: center; gap: 10px; }
+.unlocks::before { content: "Unlocks →"; font-size: 15px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--slate-2); }
+.scene[data-theme="dark"] .unlocks { color: var(--teal-on-dark); }
+.scene[data-theme="dark"] .unlocks::before { color: #8EA0B4; }
+.eyebrow { display: block; font-size: 16px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; color: #8EA0B4; }
+.eyebrow-teal { color: var(--teal-on-dark); }
+
+.tag { display: inline-flex; align-items: center; gap: 6px; font-size: 15px; font-weight: 750; letter-spacing: .06em; text-transform: uppercase;
+  padding: 4px 10px; border-radius: 5px; white-space: nowrap; }
+.tag-vis { background: rgba(143,179,217,.16); color: #9FC0E0; }
+.tag-src { background: var(--teal-l); color: var(--teal); }
+.tag-team { background: var(--steel-l); color: var(--steel); }
+.tag-open { background: var(--amber-l); color: var(--amber); }
+.tag-gold { background: var(--gold-l); color: var(--gold); }
+
+/* golden-thread emphasis */
+.thread-on { --tc: var(--gold); }
+.id { font-weight: 750; color: var(--teal); font-variant-numeric: tabular-nums; }
+
+/* ---------- reduced motion: no CSS motion at all ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}

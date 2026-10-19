@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VMS · A Business Analysis Story</title>
+<meta name="description" content="Final Business Analysis project — Vehicle Management System (VMS). Interactive narrative of the team journey and the project journey.">
+<!-- @styles: tokens, base, layout, scenes/* are inlined here by tools/build.mjs -->
+<link rel="stylesheet" href="styles/tokens.css">
+<link rel="stylesheet" href="styles/base.css">
+<link rel="stylesheet" href="styles/layout.css">
+<link rel="stylesheet" href="styles/scenes/prologue.css">
+<link rel="stylesheet" href="styles/scenes/chapter-01.css">
+<link rel="stylesheet" href="styles/scenes/chapter-02.css">
+<link rel="stylesheet" href="styles/scenes/chapter-03.css">
+<link rel="stylesheet" href="styles/scenes/chapter-04.css">
+<link rel="stylesheet" href="styles/scenes/chapter-05.css">
+<link rel="stylesheet" href="styles/scenes/chapter-06.css">
+<link rel="stylesheet" href="styles/scenes/chapter-07.css">
+<link rel="stylesheet" href="styles/scenes/chapter-08.css">
+<link rel="stylesheet" href="styles/scenes/finale.css">
+</head>
+<body data-theme="dark">
+<!--@include:assets/icons/sprite.svg-->
+
+<!-- =====================================================================
+     PERSISTENT CHROME: brand, golden thread, journey rail, controls, notes
+     ===================================================================== -->
+<header class="topbar" aria-label="Story status">
+  <div class="brand"><b>VMS</b><span>A Business Analysis Story</span></div>
+  <div class="thread-tracker" aria-label="Golden thread: vehicle license expiry">
+    <span class="tt-label">Golden thread · vehicle license expiry</span>
+    <!--@render:threadTracker-->
+  </div>
+</header>
+
+<nav class="rail" aria-label="13-session BA journey">
+  <div class="rail-label"><b>13-SESSION BA JOURNEY</b><span id="railChapter">Prologue</span></div>
+  <div class="rail-track">
+    <div class="rail-line"><i id="railFill"></i></div>
+    <!--@render:railTicks-->
+    <div class="design-track" id="designTrack" aria-hidden="true"><i></i><span>Design track · wireframes &amp; prototype</span></div>
+  </div>
+  <div class="rail-loop" id="reviewGlyph" title="Review loop: create · review · align · improve · approve">
+    <svg viewBox="0 0 24 24" class="ico"><use href="#i-refresh-ccw"/></svg><span>Review loop</span>
+  </div>
+  <div class="rail-count" id="beatCounter" aria-live="polite">01 / 32</div>
+  <div class="controls" aria-label="Presenter controls">
+  <button type="button" id="btnPrev" aria-label="Previous beat"><svg class="ico"><use href="#i-chevron-left"/></svg></button>
+  <button type="button" id="btnNext" aria-label="Next beat"><svg class="ico"><use href="#i-chevron-right"/></svg></button>
+  <button type="button" id="btnNotes" aria-pressed="false" title="Presenter notes (N)"><svg class="ico"><use href="#i-notebook-pen"/></svg>Notes</button>
+  <button type="button" id="btnPresent" title="Present in fullscreen"><svg class="ico"><use href="#i-monitor-play"/></svg><span>Present</span></button>
+</div>
+</nav>
+
+
+
+<aside class="notes" id="notes" aria-label="Presenter notes" hidden>
+  <div class="n-head"><span id="nBeat">01 / 32</span><b id="nTitle"></b></div>
+  <div class="n-grid">
+    <div><h5>Key message</h5><p id="nKey"></p></div>
+    <div><h5>Why it matters</h5><p id="nWhy"></p></div>
+    <div><h5>Value added</h5><p id="nValue"></p></div>
+    <div><h5>Transition</h5><p id="nNext"></p></div>
+  </div>
+</aside>
+<div class="veil" id="veil" aria-hidden="true"></div>
+
+<main id="story">
+
+<!-- =====================================================================
+     PROLOGUE · DIFFERENT BACKGROUNDS → ONE BA MINDSET   (2 beats)
+     ===================================================================== -->
+<section class="scene" id="prologue" data-beats="2" data-chapter="prologue" data-theme="dark" data-entry="intro">
+  <div class="stage"><div class="bg bg-dark"><div class="bg-grid"></div></div>
+  <div class="safe">
+    <p class="kicker p-kicker">Vehicle Management System · Final Business Analysis Project</p>
+    <h1 class="p-q"><span>Who are we?</span></h1>
+    <p class="p-sub">We came from different backgrounds.</p>
+    <div class="p-labels"><!--@render:prologueLabels--></div>
+    <div class="p-lock">
+      <div class="p-one">ONE TEAM</div>
+      <div class="p-mind">ONE BA MINDSET</div>
+    </div>
+    <div class="p-journey">
+      <span class="p-jlabel">13-SESSION BA JOURNEY</span>
+      <div class="p-ticks"><!--@render:sessionTicks--></div>
+    </div>
+    <p class="p-line">…and learned to approach problems through one shared BA mindset.</p>
+    <p class="unlocks">Then we were handed a real problem.</p>
+  </div></div>
+</section>
+
+<!-- =====================================================================
+     CHAPTER 1 · THE WORLD WE ENTERED   (4 beats)
+     ===================================================================== -->
+<section class="scene" id="ch1" data-beats="4" data-chapter="ch1" data-theme="dark">
+  <div class="stage"><div class="bg bg-dark"><div class="bg-fleet"></div></div>
+  <div class="safe">
+    <header class="head"><p class="kicker">01 · The world we entered</p>
+      <h2 class="title">How do fleets usually work — and how does <em>this</em> organization actually work?</h2></header>
+
+    <div class="c1-scale">
+      <div class="c1-num">~550</div>
+      <p class="c1-cap">vehicles used daily by several departments — tracked by hand and in separate Excel files</p>
+      <p class="src">BRD-VMS-003 §4.1 · approximately 550</p>
+    </div>
+
+    <div class="c1-domain">
+      <div class="c1-colhead"><span class="eyebrow">Domain research</span><b>How does fleet management usually work?</b></div>
+      <!--@render:domainMap-->
+      <span class="tag tag-vis">Domain orientation</span>
+    </div>
+
+    <div class="c1-divider" aria-hidden="true"></div>
+
+    <div class="c1-elic">
+      <div class="c1-colhead"><span class="eyebrow eyebrow-teal">Elicitation</span><b>How does <em>this</em> organization actually work?</b>
+        <span class="c1-who"><svg class="ico"><use href="#i-messages-square"/></svg>Kick-off · Business Owner / Mentor acting as Client Representative</span></div>
+      <div class="c1-findings"><!--@render:kickoffFindings--></div>
+      <!--@render:kickoffThread-->
+      <div class="c1-open"><b>7 open business topics</b><div class="c1-topics"><!--@render:openTopics--></div></div>
+    </div>
+    <p class="unlocks">Too much uncertainty to guess. Too much work for one stream.</p>
+    <p class="src src-foot">Source: VMS Kick-off Meeting · Minutes of Meeting</p>
+  </div></div>
+</section>
+
+<!-- =====================================================================
+     CHAPTER 2 · HOW WE WORKED   (3 beats)
+     ===================================================================== -->
+<section class="scene" id="ch2" data-beats="3" data-chapter="ch2" data-theme="light">
+  <div class="stage"><div class="bg bg-light"></div>
+  <div class="safe">
+    <header class="head"><p class="kicker">02 · How we worked</p>
+      <h2 class="title">How did a diverse team analyze one problem — without fragmenting the understanding?</h2></header>
+
+    <div class="c2-life">
+      <div class="c2-lifehead"><b>The BA lifecycle we learned to think in</b>
+        <span class="legend"><i class="st applied"></i>Applied <i class="st partial"></i>Partially applied <i class="st prepared"></i>Prepared for</span></div>
+      <ol class="c2-stages"><!--@render:lifecycle--></ol>
+    </div>
+
+    <div class="c2-flow"><!--@render:streams-->
+      <div class="c2-msg">
+        <p class="c2-quote">We divided the work&nbsp;—<br><b>not the understanding.</b></p>
+        <p class="src">Evidence: 7 Jira epics, one reporter each · four team BRDs merged (BRD Ref-05) · BRD v2.0 conflict resolution</p>
+      </div>
+    </div>
+    <p class="unlocks">First, we needed one shared boundary.</p>
+  </div></div>
+</section>
+
+<!-- =====================================================================
+     CHAPTER 3 · THE BOUNDARY   (2 beats)
+     ===================================================================== -->
+<section class="scene" id="ch3" data-beats="2" data-chapter="ch3" data-theme="light">
+  <div class="stage"><div class="bg bg-light"></div>
+  <div class="safe">
+    <header class="head"><p class="kicker">03 · The boundary</p>
+      <h2 class="title">What are we solving — and what are we deliberately <em>not</em> solving?</h2></header>
+    <div class="c3-boundary">
+      <span class="c3-blabel">VMS · Project Scope baseline · 11 areas</span>
+      <div class="c3-groups"><!--@render:scopeGroups--></div>
+      <p class="c3-base">Scope turned a fuzzy problem into an agreed boundary. Where the Feature List differs, the Project Scope wins.</p>
+    </div>
+    <aside class="c3-out">
+      <h3><svg class="ico"><use href="#i-ban"/></svg>Outside this release</h3>
+      <ul class="c3-ex"><!--@render:exclusions--></ul>
+      <!--@render:noMigration-->
+      <p class="src">5 of 18 documented exclusions · BRD §6.2 · changes need a Sponsor-approved change request</p>
+    </aside>
+    <p class="unlocks">Now that the boundary was clear: who matters inside it?</p>
+  </div></div>
+</section>
+
+<!-- =====================================================================
+     CHAPTER 4 · PEOPLE AND OWNERSHIP   (3 beats)
+     ===================================================================== -->
+<section class="scene" id="ch4" data-beats="3" data-chapter="ch4" data-theme="light">
+  <div class="stage"><div class="bg bg-light"></div>
+  <div class="safe">
+    <header class="head"><p class="kicker">04 · People and ownership</p>
+      <h2 class="title">Who matters — and who decides?</h2></header>
+    <div class="c4-matrix">
+      <div class="c4-yaxis"><span>POWER</span></div>
+      <div class="c4-quads"><!--@render:stakeQuads--></div>
+      <div class="c4-xaxis"><span>INTEREST</span></div>
+      <p class="c4-count"><b>15</b> identified → <b>13</b> in scope · 2 external parties do not use VMS</p>
+    </div>
+    <div class="c4-raci">
+      <div class="c4-rhead"><b>Simple RACI</b><span>10 key decisions · exactly one Accountable each</span></div>
+      <!--@render:raciTable-->
+      <p class="src">Source: Simple RACI (Stakeholder Analysis A05). Full workbook: 63 activities, one Accountable each.</p>
+      <p class="c4-msg">Knowing who matters was not enough — we also needed to know <b>who decides</b>.</p>
+    </div>
+    <div class="stake-pop" id="stakePop" role="dialog" aria-live="polite" hidden></div>
+    <p class="unlocks">With ownership clear, needs could become capabilities.</p>
+  </div></div>
+</section>
+
+<!-- =====================================================================
+     CHAPTER 5A · PAINS → FEATURES   (2 beats)
+     ===================================================================== -->
+<section class="scene" id="ch5a" data-beats="2" data-chapter="ch5" data-theme="light">
+  <div class="stage"><div class="bg bg-light"></div>
+  <div class="safe">
+    <header class="head"><p class="kicker">05 · Capabilities and priorities</p>
+      <h2 class="title">What must the system do — and what can wait?</h2></header>
+    <div class="c5-cols"><span>Pain / need</span><span>Capability → feature</span></div>
+    <div class="c5-rows"><!--@render:painRows--></div>
+    <p class="src src-foot">Feature names and IDs: Consolidated Feature List (A04) · all eight are Must</p>
+  </div></div>
+</section>
+
+<!-- =====================================================================
+     CHAPTER 5B · 67 FEATURES · MOSCOW   (2 beats)
+     ===================================================================== -->
+<section class="scene" id="ch5b" data-beats="2" data-chapter="ch5" data-theme="light">
+  <div class="stage"><div class="bg bg-light"></div>
+  <div class="safe">
+    <header class="head"><p class="kicker">05 · Capabilities and priorities</p>
+      <h2 class="title">Good analysis is also deciding what <em>not</em> to build.</h2></header>
+    <div class="c5-total">
+      <div class="c5-big"><span data-count="67">67</span></div>
+      <p class="c5-cap">features in <b>12 capability groups</b></p>
+      <ol class="c5-groups"><!--@render:featureGroups--></ol>
+    </div>
+    <div class="c5-prio">
+      <div class="c5-chart"><!--@render:moscow--></div>
+      <div class="c5-pairs"><!--@render:pairs--></div>
+    </div>
+    <p class="unlocks">Before formalizing these decisions, we checked them.</p>
+  </div></div>
+</section>
+
+<!-- =====================================================================
+     CHAPTER 6A · VERIFICATION / VALIDATION GATE   (1 beat)
+     ===================================================================== -->
+<section class="scene" id="ch6a" data-beats="1" data-chapter="ch6" data-theme="light">
+  <div class="stage"><div class="bg bg-light"></div>
+  <div class="safe">
+    <header class="head"><p class="kicker">06 · The baseline</p>
+      <h2 class="title">Did we get it right?</h2></header>
+    <ol class="c6-stages"><!--@render:vvStages--></ol>
+    <div class="c6-gate"><!--@render:vvCards--></div>
+  </div></div>
+</section>
+
+<!-- =====================================================================
+     CHAPTER 6B · CONVERGENCE INTO THE BRD   (2 beats)
+     ===================================================================== -->
+<section class="scene" id="ch6b" data-beats="2" data-chapter="ch6" data-theme="light">
+  <div class="stage"><div class="bg bg-light"></div>
+  <div class="safe">
+    <header class="head"><p class="kicker">06 · The baseline</p>
+      <h2 class="title">The BRD became one coherent baseline.</h2></header>
+    <div class="c6-hub"><!--@render:brdHub--></div>
+    <ol class="c6-layers"><!--@render:brdLayers--></ol>
+    <div class="c6-objs"><!--@render:objectives--></div>
+    <p class="unlocks">Requirements told us WHAT. Now we needed to understand HOW work moves.</p>
+  </div></div>
+</section>
+
+<!-- =====================================================================
+     CHAPTER 7 · HOW WORK FLOWS (BPMN)   (3 beats)
+     Redrawn faithfully from "VMS Business Process Documentation" §3
+     (Vehicle License / Document Expiry Management). Role labels preserved.
+     ===================================================================== -->
+<section class="scene" id="ch7" data-beats="3" data-chapter="ch7" data-theme="light">
+  <div class="stage"><div class="bg bg-light"></div>
+  <div class="safe">
+    <header class="head"><p class="kicker">07 · How work flows</p>
+      <h2 class="title">How does the work move today — and how should it work tomorrow?</h2>
+      <p class="c7-sub">Primary process · Vehicle License / Document Expiry Management</p></header>
+
+    <svg class="c7-bpmn" viewBox="0 0 1600 580" role="img" aria-labelledby="bpmnTitle">
+      <title id="bpmnTitle">As-Is and To-Be BPMN for vehicle license and document expiry management</title>
+      <defs>
+        <marker id="arw" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6B7F"/></marker>
+        <marker id="arwG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8891A"/></marker>
+        <marker id="arwT" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0F766E"/></marker>
+      </defs>
+
+      <!-- ===== AS-IS POOL ===== -->
+      <g class="asis">
+        <rect class="pool" x="0" y="0" width="1600" height="200" rx="6"/>
+        <rect class="pool-h" x="0" y="0" width="44" height="200" rx="6"/>
+        <text class="pool-t" transform="translate(28 100) rotate(-90)" text-anchor="middle">AS-IS</text>
+        <line class="lane-sep" x1="88" y1="0" x2="88" y2="200"/>
+        <text class="lane-t" transform="translate(72 100) rotate(-90)" text-anchor="middle">Fleet Coordinator</text>
+        <g class="bp-n a1"><circle class="ev" cx="140" cy="100" r="17"/><text class="lbl-s" x="140" y="140" text-anchor="middle">Vehicle license</text><text class="lbl-s" x="140" y="160" text-anchor="middle">exists</text></g>
+        <path class="flow f-a1" d="M157 100 H210" marker-end="url(#arw)"/>
+        <g class="bp-n a2"><rect class="task" x="212" y="64" width="210" height="72" rx="10"/><text class="lbl" x="317" y="96" text-anchor="middle">Maintain license</text><text class="lbl" x="317" y="118" text-anchor="middle">information manually</text></g>
+        <path class="flow f-a2" d="M422 100 H468" marker-end="url(#arw)"/>
+        <g class="bp-n a3"><rect class="task" x="470" y="64" width="220" height="72" rx="10"/><text class="lbl" x="580" y="96" text-anchor="middle">Monitor license expiry</text><text class="lbl" x="580" y="118" text-anchor="middle">manually / reactively</text></g>
+        <path class="flow f-a3" d="M690 100 H736" marker-end="url(#arw)"/>
+        <g class="bp-n a4"><path class="gw" d="M766 70 L796 100 L766 130 L736 100 Z"/><path class="gwx" d="M756 90 L776 110 M776 90 L756 110"/>
+          <text class="lbl-s" x="750" y="154" text-anchor="end">Expiry noticed</text><text class="lbl-s" x="750" y="174" text-anchor="end">before vehicle use?</text></g>
+        <path class="flow f-a4" d="M766 70 V44 H846" marker-end="url(#arw)"/><text class="lbl-s yes" x="800" y="36">Yes</text>
+        <g class="bp-n a5"><rect class="task" x="848" y="14" width="250" height="60" rx="10"/><text class="lbl" x="973" y="40" text-anchor="middle">Take manual renewal /</text><text class="lbl" x="973" y="62" text-anchor="middle">compliance action</text></g>
+        <path class="flow f-a5" d="M1098 44 H1160 V96" marker-end="url(#arw)"/>
+        <!-- the late-discovery path (golden thread) -->
+        <g class="nopath">
+          <path class="flow flow-gold f-a6" d="M796 100 H812 V156 H846" marker-end="url(#arwG)"/><text class="lbl-s no" x="808" y="190">No</text>
+          <g class="bp-n a6"><rect class="task task-gold" x="848" y="124" width="250" height="64" rx="10"/><text class="lbl" x="973" y="151" text-anchor="middle">Discover expired license</text><text class="lbl" x="973" y="173" text-anchor="middle">when vehicle is requested</text></g>
+          <path class="flow flow-gold f-a7" d="M1098 156 H1160 V104" marker-end="url(#arwG)"/>
+        </g>
+        <path class="flow f-a8" d="M1162 100 H1204" marker-end="url(#arw)"/>
+        <g class="bp-n a7"><circle class="ev ev-end" cx="1222" cy="100" r="17"/><text class="lbl-s" x="1222" y="140" text-anchor="middle">Compliance issue</text><text class="lbl-s" x="1222" y="160" text-anchor="middle">handled manually</text></g>
+        <g class="c7-callout">
+          <rect x="1312" y="86" width="272" height="104" rx="10"/>
+          <text class="co-big" x="1332" y="128">6 vehicles</text>
+          <text class="co-s" x="1332" y="154">found with expired licenses</text>
+          <text class="co-tag" x="1332" y="176">KICK-OFF FINDING</text>
+          <path class="co-line" d="M1312 174 H1100"/>
+        </g>
+      </g>
+
+      <!-- ===== TO-BE POOL ===== -->
+      <g class="tobe">
+        <rect class="pool" x="0" y="224" width="1600" height="356" rx="6"/>
+        <rect class="pool-h" x="0" y="224" width="44" height="356" rx="6"/>
+        <text class="pool-t" transform="translate(28 402) rotate(-90)" text-anchor="middle">TO-BE MVP</text>
+        <line class="lane-sep" x1="88" y1="224" x2="88" y2="580"/>
+        <text class="lane-t" transform="translate(72 310) rotate(-90)" text-anchor="middle">Fleet Coordinator</text>
+        <g class="sys-lane">
+          <rect class="lane-sys" x="44" y="396" width="1556" height="184"/>
+          <line class="lane-sep2" x1="44" y1="396" x2="1600" y2="396"/>
+          <text class="lane-t lane-t-sys" transform="translate(72 488) rotate(-90)" text-anchor="middle">Fleet Mgmt System</text>
+        </g>
+        <g class="bp-n t1"><circle class="ev" cx="158" cy="310" r="17"/><text class="lbl-s" x="158" y="366" text-anchor="middle">Vehicle registration /</text><text class="lbl-s" x="158" y="386" text-anchor="middle">document recorded</text></g>
+        <path class="flow f-t1" d="M175 310 H206" marker-end="url(#arw)"/>
+        <g class="bp-n t2"><rect class="task" x="208" y="274" width="210" height="72" rx="10"/><text class="lbl" x="313" y="306" text-anchor="middle">Enter document and</text><text class="lbl" x="313" y="328" text-anchor="middle">expiry details</text></g>
+        <path class="flow f-t2" d="M418 310 H446 V486 H470" marker-end="url(#arw)"/>
+        <g class="bp-n t3"><rect class="task task-sys" x="472" y="450" width="210" height="72" rx="10"/><text class="lbl" x="577" y="482" text-anchor="middle">Store and monitor</text><text class="lbl" x="577" y="504" text-anchor="middle">expiry date</text></g>
+        <path class="flow f-t3" d="M682 486 H730" marker-end="url(#arw)"/>
+        <g class="bp-n t4"><rect class="task task-sys" x="732" y="450" width="210" height="72" rx="10"/><text class="lbl" x="837" y="482" text-anchor="middle">Generate expiry</text><text class="lbl" x="837" y="504" text-anchor="middle">reminder / alert</text></g>
+        <path class="flow f-t4" d="M942 486 H984" marker-end="url(#arw)"/>
+        <g class="bp-n t5"><path class="gw" d="M1014 456 L1044 486 L1014 516 L984 486 Z"/><path class="gwx" d="M1004 476 L1024 496 M1024 476 L1004 496"/>
+          <text class="lbl-s" x="1014" y="540" text-anchor="middle">Document</text><text class="lbl-s" x="1014" y="560" text-anchor="middle">renewed?</text></g>
+        <path class="flow f-t5" d="M1014 456 V348" marker-end="url(#arw)"/><text class="lbl-s yes" x="1022" y="420">Yes</text>
+        <g class="bp-n t6"><rect class="task" x="904" y="274" width="220" height="72" rx="10"/><text class="lbl" x="1014" y="306" text-anchor="middle">Update renewed</text><text class="lbl" x="1014" y="328" text-anchor="middle">document details</text></g>
+        <path class="flow f-t6" d="M960 274 V250 H560 V448" marker-end="url(#arw)"/>
+        <path class="flow f-t7" d="M1044 486 H1110" marker-end="url(#arw)"/><text class="lbl-s no" x="1050" y="440">No / expired</text>
+        <g class="bp-n t7"><rect class="task task-sys" x="1112" y="450" width="230" height="72" rx="10"/><text class="lbl" x="1227" y="482" text-anchor="middle">Flag document as</text><text class="lbl" x="1227" y="504" text-anchor="middle">expired and notify user</text></g>
+        <path class="flow f-t8" d="M1227 450 V348" marker-end="url(#arw)"/>
+        <g class="bp-n t8"><rect class="task" x="1146" y="274" width="230" height="72" rx="10"/><text class="lbl" x="1261" y="306" text-anchor="middle">Take compliance /</text><text class="lbl" x="1261" y="328" text-anchor="middle">renewal action</text></g>
+        <path class="flow f-t9" d="M1376 310 H1420 V486 H1470" marker-end="url(#arw)"/>
+        <g class="bp-n t9"><circle class="ev ev-end" cx="1488" cy="486" r="17"/><text class="lbl-s" x="1488" y="526" text-anchor="middle">Document status</text><text class="lbl-s" x="1488" y="546" text-anchor="middle">controlled and visible</text></g>
+      </g>
+    </svg>
+
+    <div class="c7-also">
+      <span class="c7-alabel">Also modelled</span>
+      <figure><img src="@asset(process/mission-tobe.png)" alt="Team BPMN: Vehicle Mission / Movement Management, To-Be"><figcaption>Vehicle Mission / Movement</figcaption></figure>
+      <figure><img src="@asset(process/maintenance-tobe.png)" alt="Team BPMN: Preventive Maintenance Management, To-Be"><figcaption>Preventive Maintenance</figcaption></figure>
+      <figure><img src="@asset(process/license-tobe.png)" alt="Team BPMN source: License / Document Expiry, To-Be"><figcaption>Source diagram · license To-Be</figcaption></figure>
+      <p class="src">Source: VMS Business Process Documentation (As-Is → To-Be, BPMN)</p>
+    </div>
+    <p class="unlocks">Now the business was understood. But how does a delivery team build it?</p>
+  </div></div>
+</section>
+
+<!-- =====================================================================
+     CHAPTER 8A · REQUIREMENT → STORY → CRITERIA → BACKLOG   (3 beats)
+     ===================================================================== -->
+<section class="scene" id="ch8a" data-beats="3" data-chapter="ch8" data-theme="light">
+  <div class="stage"><div class="bg bg-light"></div>
+  <div class="safe">
+    <header class="head"><p class="kicker">08 · From requirement to backlog</p>
+      <h2 class="title">How does a delivery team build this?</h2></header>
+    <ol class="c8-chain"><!--@render:chain--></ol>
+    <div class="c8-story"><!--@render:story--></div>
+    <div class="c8-ac"><!--@render:criteria--></div>
+    <div class="c8-quality"><b class="c8-qh">Quality layers around the story</b><ul><!--@render:quality--></ul></div>
+    <div class="c8-backlog"><!--@render:modules--></div>
+  </div></div>
+</section>
+
+<!-- =====================================================================
+     CHAPTER 8B · JIRA EVIDENCE — epics, backlog, VMS-16   (1 beat)
+     ===================================================================== -->
+<section class="scene" id="ch8b" data-beats="1" data-chapter="ch8" data-theme="light">
+  <div class="stage"><div class="bg bg-light"></div>
+  <div class="safe">
+    <header class="head"><p class="kicker">08 · From requirement to backlog</p>
+      <h2 class="title">Documentation became actionable work.</h2></header>
+    <!--@render:jira-->
+    <p class="unlocks">Meanwhile, design was giving the requirements a shape.</p>
+  </div></div>
+</section>
+
+<!-- =====================================================================
+     CHAPTER 8C · PROTOTYPE REVEAL — requirements → backlog → design   (1 beat)
+     Real team-created prototype screens. Sample data is labelled illustrative.
+     ===================================================================== -->
+<section class="scene" id="ch8c" data-beats="1" data-chapter="ch8" data-theme="light">
+  <div class="stage"><div class="bg bg-light"></div>
+  <div class="safe">
+    <header class="head"><p class="kicker">08 · From requirement to backlog</p>
+      <h2 class="title">Analysis and design evolved together.</h2></header>
+    <div class="pt"><!--@render:protoThread--></div>
+    <figure class="pr-hero">
+      <!--@render:protoHero-->
+      <figcaption>
+        <span class="pr-name"><b><!--@render:protoHeroTitle--></b> — requirements began taking shape in the product experience.</span>
+        <span class="pr-hint"><i aria-hidden="true"></i>License status: what US-16 asks the system to calculate</span>
+      </figcaption>
+    </figure>
+    <div class="pr-side">
+      <!--@render:protoSupport-->
+      <div class="pr-track"><b>Parallel design track</b>
+        <ol class="c8-dsteps"><!--@render:designSteps--></ol>
+        <p class="src">Ran alongside the analysis; became more concrete as modules were approved.</p></div>
+    </div>
+    <p class="pr-label"><!--@render:protoLabel--></p>
+    <p class="unlocks">Step back. What did all of this become?</p>
+  </div></div>
+</section>
+
+<!-- =====================================================================
+     FINALE A · CONVERGENCE   (2 beats)
+     ===================================================================== -->
+<section class="scene" id="finale-a" data-beats="2" data-chapter="finale" data-theme="dark">
+  <div class="stage"><div class="bg bg-dark"><div class="bg-grid"></div></div>
+  <div class="safe">
+    <header class="head"><p class="kicker kicker-light">Finale · Convergence</p>
+      <h2 class="title title-light">What did it all add up to?</h2></header>
+    <div class="f-hub"><!--@render:finaleHub--></div>
+    <div class="f-team"><!--@render:finaleTeam--></div>
+    <p class="f-merge"><span>Team transformation</span><b>+</b><span>Project transformation</span></p>
+  </div></div>
+</section>
+
+<!-- =====================================================================
+     FINALE B · CLOSING FRAME   (1 beat)
+     ===================================================================== -->
+<section class="scene" id="finale-b" data-beats="1" data-chapter="finale" data-theme="dark">
+  <div class="stage"><div class="bg bg-dark"></div>
+  <div class="safe">
+    <div class="fb-ft">
+      <div class="fb-from"><span>FROM</span><ul><li>Fragmented</li><li>Manual</li><li>Reactive</li></ul></div>
+      <div class="fb-arrow"><svg class="ico"><use href="#i-arrow-right"/></svg></div>
+      <div class="fb-to"><span>TO</span><ul><li>Structured</li><li>Controlled</li><li>Traceable</li></ul></div>
+    </div>
+    <p class="fb-brand">VEHICLE MANAGEMENT SYSTEM</p>
+    <p class="fb-statement">We did not produce a collection of documents.<br>We turned one operational problem into a structured, verified, and traceable product definition.</p>
+    <p class="fb-support">Each artifact answered a different question, reduced uncertainty, and unlocked the next decision.</p>
+    <p class="fb-thanks">Thank you</p>
+  </div></div>
+</section>
+
+</main>
+
+<noscript><style>.controls,.rail-count{display:none}</style></noscript>
+
+<!-- @scripts: vendor + data + engine + scenes are inlined here by tools/build.mjs -->
+<script src="../vendor/gsap/gsap.min.js"></script>
+<script src="../vendor/gsap/ScrollTrigger.min.js"></script>
+<script src="scripts/data/project.js"></script>
+<script src="scripts/data/stakeholders.js"></script>
+<script src="scripts/data/raci.js"></script>
+<script src="scripts/data/features.js"></script>
+<script src="scripts/data/requirements.js"></script>
+<script src="scripts/data/jira.js"></script>
+<script src="scripts/data/prototype.js"></script>
+<script src="scripts/data/beats.js"></script>
+<script src="scripts/engine.js"></script>
+<script src="scripts/navigation.js"></script>
+<script src="scripts/presenter.js"></script>
+<script src="scripts/scenes/prologue.js"></script>
+<script src="scripts/scenes/chapter-01.js"></script>
+<script src="scripts/scenes/chapter-02.js"></script>
+<script src="scripts/scenes/chapter-03.js"></script>
+<script src="scripts/scenes/chapter-04.js"></script>
+<script src="scripts/scenes/chapter-05.js"></script>
+<script src="scripts/scenes/chapter-06.js"></script>
+<script src="scripts/scenes/chapter-07.js"></script>
+<script src="scripts/scenes/chapter-08.js"></script>
+<script src="scripts/scenes/finale.js"></script>
+<script src="scripts/boot.js"></script>
+</body>
+</html>

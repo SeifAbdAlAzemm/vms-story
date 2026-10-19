@@ -1,0 +1,16 @@
+/* PROLOGUE · different backgrounds → one BA mindset */
+#prologue .p-kicker { position: absolute; left: 0; top: 0; color: var(--teal-on-dark); }
+#prologue .p-q { position: absolute; left: 0; right: 0; margin: 0 auto; width: fit-content; top: 70px; text-align: center; font-size: 76px; font-weight: 780; letter-spacing: -.02em; color: #fff; }
+#prologue .p-sub { position: absolute; left: 0; right: 0; margin: 0 auto; width: fit-content; top: 178px; text-align: center; font-size: 30px; color: #C9D4E0; }
+#prologue .p-labels { position: absolute; left: 0; width: 1600px; top: 280px; display: flex; justify-content: center; gap: 22px; }
+#prologue .p-label { display: inline-block; }
+#prologue .p-in { display: inline-block; padding: 14px 26px; border: 2px solid rgba(111,194,184,.55); border-radius: 40px; color: #EAF2F7; font-size: 27px; font-weight: 650; background: rgba(14,42,71,.6); white-space: nowrap; }
+#prologue .p-lock { position: absolute; left: 0; right: 0; top: 400px; text-align: center; }
+#prologue .p-one { font-size: 112px; font-weight: 820; letter-spacing: .04em; color: #fff; line-height: 1; }
+#prologue .p-mind { margin-top: 14px; font-size: 38px; font-weight: 700; letter-spacing: .3em; color: var(--teal-on-dark); }
+#prologue .p-journey { position: absolute; left: 300px; width: 1000px; top: 640px; text-align: center; }
+#prologue .p-jlabel { font-size: 17px; font-weight: 800; letter-spacing: .24em; color: #8EA0B4; }
+#prologue .p-ticks { margin-top: 14px; display: flex; justify-content: space-between; position: relative; }
+#prologue .p-ticks::before { content: ""; position: absolute; left: 0; right: 0; top: 7px; height: 2px; background: rgba(111,194,184,.4); }
+#prologue .p-ticks i { position: relative; width: 16px; height: 16px; border-radius: 50%; background: var(--teal-on-dark); }
+#prologue .p-line { position: absolute; left: 0; right: 0; margin: 0 auto; width: fit-content; top: 730px; text-align: center; font-size: 28px; color: #C9D4E0; }

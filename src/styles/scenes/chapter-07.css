@@ -1,0 +1,35 @@
+/* CHAPTER 7 · how work flows (BPMN) */
+#ch7 .c7-sub { margin-top: 8px; font-size: 20px; font-weight: 700; color: var(--slate); }
+#ch7 .c7-bpmn { position: absolute; left: 0; top: 188px; width: 1600px; height: 580px; overflow: visible; }
+#ch7 .pool { fill: #fff; stroke: #AFBDCC; stroke-width: 1.5; }
+#ch7 .pool-h { fill: var(--navy); }
+#ch7 .tobe .pool-h { fill: var(--teal); }
+#ch7 .pool-t { fill: #fff; font-size: 15px; font-weight: 800; letter-spacing: .16em; }
+#ch7 .lane-sep, #ch7 .lane-sep2 { stroke: #C4CFDA; stroke-width: 1.5; }
+#ch7 .lane-t { fill: var(--slate); font-size: 14px; font-weight: 700; }
+#ch7 .lane-sys { fill: var(--teal-l); opacity: .55; }
+#ch7 .lane-t-sys { fill: var(--teal); }
+#ch7 .task { fill: #fff; stroke: #3E4F63; stroke-width: 2; }
+#ch7 .task-sys { stroke: var(--teal); fill: #F4FBFA; }
+#ch7 .task-gold { stroke: var(--gold); stroke-width: 3; fill: var(--gold-l); }
+#ch7 .ev { fill: #fff; stroke: #3E4F63; stroke-width: 2; }
+#ch7 .ev-end { stroke-width: 4.5; }
+#ch7 .gw { fill: #fff; stroke: #3E4F63; stroke-width: 2; }
+#ch7 .gwx { stroke: #3E4F63; stroke-width: 3; }
+#ch7 .lbl { fill: var(--ink); font-size: 17px; font-weight: 600; }
+#ch7 .lbl-s { fill: var(--slate); font-size: 14px; font-weight: 600; }
+#ch7 .yes { fill: var(--teal); font-weight: 800; } #ch7 .no { fill: var(--gold); font-weight: 800; }
+#ch7 .flow { fill: none; stroke: #5B6B7F; stroke-width: 2; }
+#ch7 .flow-gold { stroke: var(--gold); stroke-width: 3.5; }
+#ch7 .c7-callout rect { fill: var(--gold-l); stroke: var(--gold); stroke-width: 2.5; }
+#ch7 .co-big { fill: var(--gold); font-size: 34px; font-weight: 820; }
+#ch7 .co-s { fill: var(--ink); font-size: 17px; font-weight: 600; }
+#ch7 .co-tag { fill: var(--gold); font-size: 13px; font-weight: 800; letter-spacing: .14em; }
+#ch7 .co-line { stroke: var(--gold); stroke-width: 2; stroke-dasharray: 5 5; fill: none; }
+#ch7 .c7-also { position: absolute; left: 0; top: 780px; width: 1600px; display: flex; align-items: center; gap: 22px; }
+#ch7 .c7-alabel { font-size: 15px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--slate-2); width: 90px; line-height: 1.2; }
+#ch7 .c7-also figure { display: flex; flex-direction: column; gap: 4px; }
+#ch7 .c7-also img { box-sizing: content-box; height: 56px; width: auto; border: 1px solid var(--line); border-radius: 4px; background: #fff; }
+#ch7 .c7-also figcaption { font-size: 14px; color: var(--slate); font-weight: 600; }
+#ch7 .c7-also .src { width: 220px; font-size: 14px; }
+#ch7 .unlocks { bottom: 0; }

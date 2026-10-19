@@ -1,0 +1,55 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Vercel
+.vercel/
+
+# Test / QA output
+playwright-report/
+test-results/
+coverage/
+qa-output/
+screenshots/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editors / IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary / cache files
+.tmp/
+temp/
+tmp/
+.cache/
+.parcel-cache/
+.eslintcache
+
+# Archives / generated packages
+*.zip
+
+# Python leftovers
+__pycache__/
+*.py[cod]
+.venv/
+venv/

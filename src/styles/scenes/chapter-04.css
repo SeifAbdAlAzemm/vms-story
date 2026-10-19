@@ -1,0 +1,44 @@
+/* CHAPTER 4 · people and ownership */
+#ch4 .c4-matrix { position: absolute; left: 0; top: 180px; width: 780px; height: 640px; padding-left: 40px; padding-bottom: 70px; }
+#ch4 .c4-quads { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 10px; height: 100%; }
+#ch4 .quad { border-radius: 8px; padding: 14px 16px 12px; display: flex; flex-direction: column; position: relative; }
+#ch4 .quad h4 { font-size: 23px; font-weight: 780; }
+#ch4 .quad .ax { font-size: 15px; margin-top: 1px; }
+#ch4 .q-sat { background: var(--steel-l); color: var(--navy); }
+#ch4 .q-man { background: var(--navy); color: #fff; }
+#ch4 .q-mon { background: #E9EDF1; color: var(--slate); }
+#ch4 .q-inf { background: var(--teal-l); color: var(--teal); }
+#ch4 .q-man .ax { color: #A9BDD2; } #ch4 .q-sat .ax, #ch4 .q-mon .ax, #ch4 .q-inf .ax { color: var(--slate-2); }
+#ch4 .chips { margin-top: 10px; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+#ch4 .chip { min-height: 56px; border-radius: 6px; background: #fff; color: var(--ink); font-size: 17px; font-weight: 650; line-height: 1.15; padding: 4px 8px; border: 2px solid transparent; text-align: center; }
+#ch4 .q-man .chip { background: var(--navy-3); color: #fff; }
+#ch4 .chip:hover, #ch4 .chip:focus-visible, #ch4 .chip.sel { border-color: var(--gold); outline: none; }
+#ch4 .strat { margin-top: auto; padding-top: 8px; font-size: 16px; font-weight: 650; border-top: 1px solid rgba(68,85,106,.18); }
+#ch4 .q-man .strat { border-top-color: rgba(255,255,255,.2); color: #DCE8F3; }
+#ch4 .c4-yaxis { position: absolute; left: 0; top: 0; bottom: 70px; width: 26px; border-right: 2px solid var(--slate-2); }
+#ch4 .c4-yaxis span { position: absolute; left: -2px; top: 50%; transform: translate(-50%, -50%) rotate(-90deg); transform-origin: center; margin-left: 10px; font-size: 15px; font-weight: 800; letter-spacing: .2em; color: var(--slate-2); }
+#ch4 .c4-xaxis { position: absolute; left: 40px; right: 0; bottom: 52px; height: 2px; background: var(--slate-2); }
+#ch4 .c4-xaxis span { position: absolute; left: 50%; top: 6px; transform: translateX(-50%); font-size: 15px; font-weight: 800; letter-spacing: .2em; color: var(--slate-2); }
+#ch4 .c4-count { position: absolute; left: 40px; bottom: 0; font-size: 18px; color: var(--slate); }
+#ch4 .c4-count b { color: var(--navy); font-size: 22px; }
+#ch4 .c4-raci { position: absolute; left: 830px; top: 180px; width: 770px; }
+#ch4 .c4-rhead b { font-size: 24px; color: var(--navy); }
+#ch4 .c4-rhead span { margin-left: 12px; font-size: 17px; color: var(--slate); }
+#ch4 .raci { margin-top: 12px; width: 100%; border-collapse: separate; border-spacing: 3px; table-layout: fixed; }
+#ch4 .raci th { font-size: 13px; font-weight: 750; color: var(--slate); height: 40px; line-height: 1.1; }
+#ch4 .raci th.dec { text-align: left; width: 230px; }
+#ch4 .raci td { height: 40px; text-align: center; font-size: 17px; font-weight: 780; border-radius: 4px; }
+#ch4 .raci td.dec { text-align: left; font-size: 17px; font-weight: 600; color: var(--ink); background: none; padding-left: 2px; white-space: nowrap; }
+#ch4 .rc-a, #ch4 .rc-ra { background: var(--navy); color: #fff; }
+#ch4 .rc-r { background: var(--teal); color: #fff; }
+#ch4 .rc-c { background: var(--teal-l); color: var(--teal); }
+#ch4 .rc-i { background: #E8ECF0; color: var(--slate); }
+#ch4 .rc-e { background: rgba(255,255,255,.7); }
+#ch4 .c4-raci .src { margin-top: 10px; }
+#ch4 .c4-msg { margin-top: 14px; font-size: 22px; color: var(--navy); line-height: 1.3; }
+#ch4 .c4-msg b { color: var(--teal); }
+#ch4 .stake-pop { position: absolute; z-index: 5; width: 360px; padding: 16px 18px; border-radius: 10px; background: #fff; border: 1px solid var(--line); box-shadow: 0 8px 28px rgba(10,27,46,.18); font-size: 17px; color: var(--ink); }
+#ch4 .stake-pop h5 { font-size: 22px; color: var(--navy); }
+#ch4 .stake-pop .sc { margin-top: 6px; font-size: 16px; color: var(--slate); font-weight: 700; }
+#ch4 .stake-pop p { margin-top: 8px; line-height: 1.35; }
+#ch4 .stake-pop .nt { color: var(--amber); font-size: 15px; }
