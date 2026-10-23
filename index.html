@@ -311,6 +311,34 @@ html:not(.anim) #prologue .p-team { display: none; }
 #ch1 .topic .ico { font-size: 15px; }
 #ch1 .src-foot { bottom: 0; }
 
+/* beat 2 · operational questions (full-canvas layer over the scale beat) */
+#ch1 .c1-ask { position: absolute; inset: 0; pointer-events: none; }
+html:not(.anim) #ch1 .c1-ask { display: none; }
+#ch1 .c1-ask-lead { position: absolute; left: 0; right: 0; top: 14px; text-align: center; font-size: 25px; line-height: 1.38; font-weight: 500; color: #A9BACB; }
+#ch1 .c1-ask-lead b { color: #D4DEE8; font-weight: 700; }
+#ch1 .c1-ask-lead strong { display: block; margin-top: 10px; font-size: 32px; font-weight: 750; color: #fff; }
+#ch1 .c1-ask-links { position: absolute; inset: 0; width: 1600px; height: 900px; overflow: visible; }
+#ch1 .c1-ask-links path { fill: none; stroke: rgba(230,181,102,.45); stroke-width: 2; stroke-dasharray: 5 7; }
+#ch1 .c1-vx { position: absolute; left: 620px; top: 268px; width: 360px; height: 164px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px;
+  border-radius: 14px; background: #102F4D; border: 2px solid rgba(143,179,217,.5); box-shadow: 0 0 0 10px rgba(16,47,77,.35); }
+#ch1 .c1-vx .ico { font-size: 40px; color: var(--teal-on-dark); }
+#ch1 .c1-vx b { font-size: 34px; font-weight: 820; letter-spacing: .14em; color: #fff; }
+#ch1 .c1-vx-rows { display: flex; gap: 10px; margin-top: 4px; }
+#ch1 .c1-vx-rows i { width: 70px; height: 0; border-top: 2px dashed rgba(143,179,217,.4); }
+#ch1 .c1-qs { list-style: none; margin: 0; padding: 0; }
+#ch1 .c1-q { position: absolute; width: 440px; display: flex; gap: 16px; align-items: center; padding: 16px 22px; border-radius: 12px;
+  background: rgba(16,47,77,.78); border: 1.5px dashed rgba(230,181,102,.5); font-size: 26px; line-height: 1.25; font-weight: 650; color: #fff; }
+#ch1 .c1-qm { flex: none; width: 38px; height: 38px; border-radius: 50%; display: grid; place-items: center; font-size: 22px; font-weight: 800;
+  color: #E6B566; border: 2px dashed rgba(230,181,102,.7); }
+#ch1 .c1-q.q1 { left: 92px; top: 190px; }
+#ch1 .c1-q.q2 { left: 1068px; top: 190px; }
+#ch1 .c1-q.q3 { left: 52px; top: 408px; }
+#ch1 .c1-q.q4 { left: 1108px; top: 408px; }
+#ch1 .c1-q.q5 { left: 450px; top: 532px; width: 700px; justify-content: center; white-space: nowrap; }
+#ch1 .c1-ask-close { position: absolute; left: 0; right: 0; top: 700px; text-align: center; font-size: 28px; line-height: 1.35; color: #A9BACB; }
+#ch1 .c1-ask-close b { display: block; font-size: 44px; font-weight: 800; color: #fff; letter-spacing: -.01em; }
+#ch1 .c1-ask-close em { font-style: normal; color: #E6B566; }
+
 /* styles/scenes/chapter-02.css */
 /* CHAPTER 2 · how we worked */
 #ch2 .c2-life { position: absolute; left: 0; top: 168px; width: 1600px; }
@@ -887,6 +915,29 @@ html:not(.anim) #prologue .p-team { display: none; }
       <div class="c1-num">~550</div>
       <p class="c1-cap">vehicles used daily by several departments — tracked by hand and in separate Excel files</p>
       <p class="src">BRD-VMS-003 §4.1 · approximately 550</p>
+    </div>
+
+    <!-- beat 1 · operational questions at real scale. The questions are a BA storytelling synthesis of documented problems
+         (not kick-off quotes); the scale line is BRD §4.1. Full-canvas layer: in for this beat only, out before the domain map.
+         Hidden in the static fallback. -->
+    <div class="c1-ask" aria-label="Operational questions that were difficult to answer">
+      <p class="c1-ask-lead">Imagine managing <b>~550 vehicles</b> across several departments —<br>with the information scattered across manual records and Excel files.
+        <strong>You need an answer — right now.</strong></p>
+      <svg class="c1-ask-links" viewBox="0 0 1600 900" aria-hidden="true">
+        <path d="M620 318 C570 318 572 238 532 238"/><path d="M980 318 C1030 318 1028 238 1068 238"/>
+        <path d="M620 392 C560 392 548 456 492 456"/><path d="M980 392 C1040 392 1052 456 1108 456"/>
+        <path d="M800 432 V532"/>
+      </svg>
+      <div class="c1-vx"><svg class="ico"><use href="#i-car"/></svg><b>VEHICLE X</b>
+        <span class="c1-vx-rows" aria-hidden="true"><i></i><i></i><i></i></span></div>
+      <ul class="c1-qs">
+        <li class="c1-q q1"><span class="c1-qm">?</span>Is its license still valid?</li>
+        <li class="c1-q q2"><span class="c1-qm">?</span>Who is responsible for this vehicle?</li>
+        <li class="c1-q q3"><span class="c1-qm">?</span>What was its average fuel consumption last month?</li>
+        <li class="c1-q q4"><span class="c1-qm">?</span>What has this vehicle cost us in maintenance so far?</li>
+        <li class="c1-q q5"><span class="c1-qm">?</span>Which mission is vehicle X currently assigned to?</li>
+      </ul>
+      <p class="c1-ask-close">If answering these takes more than a few seconds,<br><b>you have a <em>visibility</em> problem.</b></p>
     </div>
 
     <div class="c1-domain">
@@ -1678,11 +1729,11 @@ html:not(.anim) #prologue .p-team { display: none; }
     { scene: "prologue", chapter: "prologue", title: "Different disciplines arrive",
       notes: { key: "We came from different backgrounds.", why: "The audience should see the team before the project: UI/UX, BA, technical, marketing, technical and non-technical people.", value: "Diversity is the reason review mattered later.", next: "Pause, then show how those backgrounds became one way of thinking." } },
     { scene: "prologue", chapter: "prologue", title: "One team, one BA mindset",
-      notes: { key: "Over a 13-session bootcamp we learned to approach problems through one shared BA mindset.", why: "Every session we learned a BA concept and applied it to the same project.", value: "One mindset meant one standard of evidence across very different people.", next: "Then we were handed a real problem." } },
+      notes: { key: "Over a 13-session bootcamp we learned to approach problems through one shared BA mindset.", why: "Every session we learned a BA concept and applied it to the same project.", value: "One mindset meant one standard of evidence across very different people.", next: "Then we were handed a real problem: roughly 550 vehicles, run by hand — where simple questions had no quick answer." } },
 
     // ---------------- CHAPTER 1 (~2:30) ----------------
-    { scene: "ch1", chapter: "ch1", title: "The fleet challenge",
-      notes: { key: "Roughly 550 vehicles, used every day by several departments, tracked by hand and in separate Excel files.", why: "Scale turns small manual gaps into fines, stoppages and unexplained costs.", value: "Sets the stakes before any solution is mentioned.", next: "Before designing a system, we had to understand the world it operates in." } },
+    { scene: "ch1", chapter: "ch1", title: "Questions nobody could answer quickly",
+      notes: { key: "Imagine managing roughly 550 vehicles across several departments, with the information scattered across manual records and Excel files — and you need an answer right now. Is its license still valid? Who is responsible for this vehicle? What was its average fuel consumption last month? What has it cost us in maintenance so far? Which mission is it currently assigned to? If answering takes more than a few seconds, you have a visibility problem.", why: "Scale and manual tracking are a source fact (BRD §4.1: approximately 550 vehicles, several departments, by hand and in separate Excel files). The five questions are our BA synthesis, not quotes from the kick-off. Each maps to a documented problem: records on paper and in Excel; license expiry noticed only when a vehicle is requested; no fuel traceability; maintenance and cost visibility (a BRD objective, and vehicle cost an open kick-off topic); no actual movement tracking; fleet ownership still an open topic.", value: "Scale first, then the visibility gap — felt before we explain how we investigated it. Do not answer the questions, and do not add figures. If asked about live location: GPS stays out of scope; mission assignment comes from movement orders.", next: "Before we could fix that, we had to understand how fleet management usually works — the world this system operates in." } },
     { scene: "ch1", chapter: "ch1", title: "Domain orientation",
       notes: { key: "We first researched how fleet management usually works: vehicles, drivers, movements, maintenance, fuel, licensing.", why: "Without domain vocabulary you cannot ask the client good questions.", value: "Gave us a map to structure the kick-off.", next: "But research only tells you how the domain usually works." } },
     { scene: "ch1", chapter: "ch1", title: "Research vs elicitation",
@@ -2163,10 +2214,21 @@ VMS.scene("prologue", ({ sc, tl, q, qa, reduce }) => {
 
 </script>
 <script>/* chapter-01.js */
-/* CHAPTER 1 · scale → domain map → research vs elicitation → kick-off findings */
+/* CHAPTER 1 · operational questions at scale → domain map → research vs elicitation → kick-off findings */
 VMS.scene("ch1", ({ tl, q, qa, at, draw }) => {
   tl.from(q(".bg-fleet"), { opacity: 0, duration: 0.8 }, at(0));
-  tl.from(q(".c1-scale"), { opacity: 0, y: 30, duration: 0.6 }, at(0) + 0.15);
+  // beat 1: operational questions at real scale — lead (~550 context), Vehicle X + five questions, then the framing line.
+  // The chapter canvas (head + ~550 block) stays hidden until Domain orientation; the static fallback shows it as before.
+  const base = [q(".head"), q(".c1-scale")];
+  tl.from(q(".c1-ask"), { autoAlpha: 0, duration: 0.2 }, at(0) + 0.05);
+  tl.from(q(".c1-ask-lead"), { opacity: 0, y: 12, duration: 0.3 }, at(0) + 0.08);
+  tl.from(q(".c1-vx"), { opacity: 0, scale: 0.92, transformOrigin: "50% 50%", duration: 0.3 }, at(0) + 0.28);
+  tl.from(q(".c1-ask-links"), { opacity: 0, duration: 0.3 }, at(0) + 0.38);   // dashed links keep their dashes (no stroke draw)
+  tl.from(qa(".c1-q"), { opacity: 0, y: 10, stagger: 0.06, duration: 0.25 }, at(0) + 0.4);
+  tl.from(q(".c1-ask-close"), { opacity: 0, y: 12, duration: 0.22 }, at(0) + 0.76);
+  // leaving it: the layer clears and the chapter canvas arrives as the domain map builds
+  tl.to(q(".c1-ask"), { autoAlpha: 0, duration: 0.25 }, at(1));
+  tl.fromTo(base, { opacity: 0 }, { opacity: 1, duration: 0.35 }, at(1) + 0.05);
   // beat 2: domain orientation
   tl.from(q(".dm-core"), { opacity: 0, scale: 0.6, transformOrigin: "50% 50%", duration: 0.35 }, at(1));
   tl.from(qa(".dm-core-t"), { opacity: 0, duration: 0.3 }, at(1) + 0.1);

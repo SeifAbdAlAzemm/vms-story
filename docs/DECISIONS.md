@@ -17,7 +17,7 @@ Evidence map and known content risks: `SOURCES.md`. Technical how-to: `CLAUDE.md
 |---|---|---|
 | Opening: What is VMS? (title, one-line definition, six lifecycle areas, vehicle) | 1 | opening |
 | Prologue: meet the team → different backgrounds → one BA mindset | 3 | prologue |
-| 1 · The world we entered | 4 | ch1 |
+| 1 · The world we entered (operational questions at ~550-vehicle scale → domain orientation → research vs elicitation → kick-off) | 4 | ch1 |
 | 2 · How we worked | 3 | ch2 |
 | 3 · The boundary | 2 | ch3 |
 | 4 · People and ownership | 3 | ch4 |
@@ -115,3 +115,4 @@ Each scene ends with an "Unlocks →" line that hands over to the next question.
 - v1.0.0 — approved baseline (32 beats, real prototype in ch8c).
 - Unreleased (proposed v2.0.0, beat count changed) — Meet the Team added as Prologue beat 1; Prologue 2 → 3 beats, total 32 → 33. Confirmed team list locked (§7a).
 - Unreleased — Opening "What is VMS?" added as a standalone scene before the Prologue (§6a); 15 → 16 scenes, 33 → 34 beats (≈ +15 s). Meet the Team now plays when the presenter arrives from the opening.
+- Unreleased — Ch 1 opens with "Operational questions" (full-canvas layer inside ch1, hidden in the static fallback). It replaces the standalone Fleet Challenge beat: the ~550 vehicles / several departments / manual + Excel context moved into its lead line, and the ~550 block stays on the Ch 1 canvas from Domain orientation on. Total stays 34 beats. The five questions are a BA storytelling synthesis of documented problems, not kick-off quotes; the closing line is narrative framing, not a statistic.

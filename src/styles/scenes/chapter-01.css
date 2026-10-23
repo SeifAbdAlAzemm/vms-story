@@ -34,3 +34,31 @@
 #ch1 .topic { display: inline-flex; align-items: center; gap: 6px; font-size: 15px; color: #F0D9AE; padding: 4px 10px; border-radius: 16px; border: 1px dashed rgba(230,181,102,.55); }
 #ch1 .topic .ico { font-size: 15px; }
 #ch1 .src-foot { bottom: 0; }
+
+/* beat 2 · operational questions (full-canvas layer over the scale beat) */
+#ch1 .c1-ask { position: absolute; inset: 0; pointer-events: none; }
+html:not(.anim) #ch1 .c1-ask { display: none; }
+#ch1 .c1-ask-lead { position: absolute; left: 0; right: 0; top: 14px; text-align: center; font-size: 25px; line-height: 1.38; font-weight: 500; color: #A9BACB; }
+#ch1 .c1-ask-lead b { color: #D4DEE8; font-weight: 700; }
+#ch1 .c1-ask-lead strong { display: block; margin-top: 10px; font-size: 32px; font-weight: 750; color: #fff; }
+#ch1 .c1-ask-links { position: absolute; inset: 0; width: 1600px; height: 900px; overflow: visible; }
+#ch1 .c1-ask-links path { fill: none; stroke: rgba(230,181,102,.45); stroke-width: 2; stroke-dasharray: 5 7; }
+#ch1 .c1-vx { position: absolute; left: 620px; top: 268px; width: 360px; height: 164px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px;
+  border-radius: 14px; background: #102F4D; border: 2px solid rgba(143,179,217,.5); box-shadow: 0 0 0 10px rgba(16,47,77,.35); }
+#ch1 .c1-vx .ico { font-size: 40px; color: var(--teal-on-dark); }
+#ch1 .c1-vx b { font-size: 34px; font-weight: 820; letter-spacing: .14em; color: #fff; }
+#ch1 .c1-vx-rows { display: flex; gap: 10px; margin-top: 4px; }
+#ch1 .c1-vx-rows i { width: 70px; height: 0; border-top: 2px dashed rgba(143,179,217,.4); }
+#ch1 .c1-qs { list-style: none; margin: 0; padding: 0; }
+#ch1 .c1-q { position: absolute; width: 440px; display: flex; gap: 16px; align-items: center; padding: 16px 22px; border-radius: 12px;
+  background: rgba(16,47,77,.78); border: 1.5px dashed rgba(230,181,102,.5); font-size: 26px; line-height: 1.25; font-weight: 650; color: #fff; }
+#ch1 .c1-qm { flex: none; width: 38px; height: 38px; border-radius: 50%; display: grid; place-items: center; font-size: 22px; font-weight: 800;
+  color: #E6B566; border: 2px dashed rgba(230,181,102,.7); }
+#ch1 .c1-q.q1 { left: 92px; top: 190px; }
+#ch1 .c1-q.q2 { left: 1068px; top: 190px; }
+#ch1 .c1-q.q3 { left: 52px; top: 408px; }
+#ch1 .c1-q.q4 { left: 1108px; top: 408px; }
+#ch1 .c1-q.q5 { left: 450px; top: 532px; width: 700px; justify-content: center; white-space: nowrap; }
+#ch1 .c1-ask-close { position: absolute; left: 0; right: 0; top: 700px; text-align: center; font-size: 28px; line-height: 1.35; color: #A9BACB; }
+#ch1 .c1-ask-close b { display: block; font-size: 44px; font-weight: 800; color: #fff; letter-spacing: -.01em; }
+#ch1 .c1-ask-close em { font-style: normal; color: #E6B566; }
