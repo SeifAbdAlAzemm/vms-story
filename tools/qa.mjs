@@ -76,6 +76,9 @@ const AUDIT = () => {
   return { scene: sc.id, issues };
 };
 
+/* time-based intros (opening on load, Meet the Team on arrival) must finish before a shot */
+const introsDone = (page) => page.waitForFunction(() => ![VMS.intro, VMS.teamIntro].some((t) => t && t.isActive()), null, { timeout: 6000 }).catch(() => {});
+
 async function stepAll(page, label, { shots = false, settle = SETTLE } = {}) {
   const n = await page.evaluate(() => VMS.nav.count);
   const positions = await page.evaluate(() => VMS.nav.positions);
@@ -83,6 +86,7 @@ async function stepAll(page, label, { shots = false, settle = SETTLE } = {}) {
   for (let i = 0; i < n; i++) {
     await page.evaluate((y) => window.scrollTo(0, y), positions[i]);
     await sleep(settle);
+    await introsDone(page);
     const a = await page.evaluate(AUDIT);
     rows.push({ beat: i + 1, ...a });
     if (shots) await page.screenshot({ path: path.join(OUT, "shots", `${label}-b${String(i + 1).padStart(2, "0")}.png`) });
@@ -131,7 +135,7 @@ if (want("functional")) {
   keys.freeScrollThenNext = { exact: await onExact(), ok: await onExact() };
   // chapter jump via rail tick
   await page.click('.rail-ticks li[data-chapter="ch7"] button'); await sleep(1200);
-  keys.chapterJump = { beat: await atBeat(), ok: (await atBeat()) === 23 };
+  keys.chapterJump = { beat: await atBeat(), ok: (await atBeat()) === 24 };
   // notes
   await page.keyboard.press("n"); await sleep(400);
   const notesOpen = await page.evaluate(() => !document.getElementById("notes").hidden && document.getElementById("nKey").textContent.length > 10);
@@ -148,14 +152,14 @@ if (want("functional")) {
   const fs2 = await page.evaluate(() => ({ fs: !!document.fullscreenElement, presenting: document.body.classList.contains("presenting") }));
   keys.fullscreen = { enter: fs1, notesHiddenInFs: !notesInFs, exit: fs2, ok: fs1.fs && fs1.presenting && fs1.controls === "none" && !notesInFs && !fs2.fs && !fs2.presenting };
   // stakeholder Q&A popover
-  await page.evaluate(() => window.scrollTo(0, VMS.nav.positions[12])); await sleep(1400);
+  await page.evaluate(() => window.scrollTo(0, VMS.nav.positions[13])); await sleep(1400);
   await page.click('#ch4 .chip[data-i="7"]'); await sleep(300);
   const pop = await page.evaluate(() => { const p = document.getElementById("stakePop"); return !p.hidden && p.textContent.includes("Decommissioning"); });
   await page.screenshot({ path: path.join(OUT, "shots", "stakeholder-popover.png") });
   keys.stakeholderPopover = { ok: pop };
   r.keys = keys;
   r.console = log;
-  r.pass = r.anim && r.beats === 33 && !r.timelineWarnings.length && Object.values(keys).every((k) => k.ok) && !log.errors.length && !log.warnings.length && !log.requests.length;
+  r.pass = r.anim && r.beats === 34 && !r.timelineWarnings.length && Object.values(keys).every((k) => k.ok) && !log.errors.length && !log.warnings.length && !log.requests.length;
   report.phases.functional = r;
   await ctx.close();
   console.log("functional:", r.pass ? "PASS" : "FAIL", JSON.stringify(Object.fromEntries(Object.entries(keys).map(([k, v]) => [k, v.ok]))));
@@ -198,8 +202,8 @@ if (want("viewports")) {
     const { ctx, page, log } = await open(v);
     const rows = await stepAll(page, v.name.replace(/[^\w]/g, "_"), { shots: false, settle: 1100 });
     const files = [];
-    for (const i of [0, 1, 2, 6, 14, 18, 22, 24, 27, 28, 29]) {   // all three prologue beats, representative dense beats + both Chapter-8 evidence beats
-      await page.evaluate((y) => window.scrollTo(0, y), (await page.evaluate(() => VMS.nav.positions))[i]); await sleep(1200);
+    for (const i of [0, 1, 2, 3, 7, 15, 19, 23, 25, 28, 29, 30]) {   // opening + all three prologue beats, representative dense beats + both Chapter-8 evidence beats
+      await page.evaluate((y) => window.scrollTo(0, y), (await page.evaluate(() => VMS.nav.positions))[i]); await sleep(1200); await introsDone(page);
       const f = path.join(OUT, "shots", `${v.name.replace(/[^\w]/g, "_")}-b${String(i + 1).padStart(2, "0")}.png`); await page.screenshot({ path: f }); files.push(f);
     }
     await sheet(files, path.join(OUT, "sheets", `viewport-${v.name.replace(/[^\w]/g, "_")}.png`), 4, 480);
@@ -253,10 +257,10 @@ if (want("reduced")) {
   const { ctx, page, log } = await open({ reducedMotion: "reduce" });
   const rows = await stepAll(page, "reduced", { settle: 350 });
   const files = [];
-  for (const i of [0, 1, 2, 9, 20, 24, 29, 32]) { await page.evaluate((y) => window.scrollTo(0, y), (await page.evaluate(() => VMS.nav.positions))[i]); await sleep(400); const f = path.join(OUT, "shots", `reduced-b${i + 1}.png`); await page.screenshot({ path: f }); files.push(f); }
+  for (const i of [0, 1, 2, 3, 10, 21, 25, 30, 33]) { await page.evaluate((y) => window.scrollTo(0, y), (await page.evaluate(() => VMS.nav.positions))[i]); await sleep(400); const f = path.join(OUT, "shots", `reduced-b${i + 1}.png`); await page.screenshot({ path: f }); files.push(f); }
   await sheet(files, path.join(OUT, "sheets", "reduced-motion.png"), 3, 640);
   const issues = rows.filter((r) => r.issues.length);
-  report.phases.reduced = { beats: rows.length, issues, errors: log.errors, pass: rows.length === 33 && !issues.length && !log.errors.length };
+  report.phases.reduced = { beats: rows.length, issues, errors: log.errors, pass: rows.length === 34 && !issues.length && !log.errors.length };
   await ctx.close();
   console.log("reduced:", report.phases.reduced.pass ? "PASS" : "FAIL", issues.length);
 }
@@ -267,7 +271,7 @@ if (want("perf")) {
   const cdp = await ctx.newCDPSession(page);
   await cdp.send("Emulation.setCPUThrottlingRate", { rate: 4 });
   await page.evaluate(() => { window.__ft = []; let last = performance.now(); const f = (t) => { window.__ft.push(t - last); last = t; requestAnimationFrame(f); }; requestAnimationFrame(f); });
-  for (let i = 0; i < 32; i++) { await page.keyboard.press("ArrowRight"); await sleep(1250); }
+  for (let i = 0; i < 33; i++) { await page.keyboard.press("ArrowRight"); await sleep(1250); }
   const ft = await page.evaluate(() => window.__ft.slice(5));
   ft.sort((a, b) => a - b);
   const pct = (p) => +ft[Math.floor(ft.length * p)].toFixed(1);

@@ -5,7 +5,7 @@ Technical guide for working inside this repository. Narrative and evidence rules
 
 ## What this is
 An offline, scroll-driven HTML narrative for the VMS Business Analysis final project:
-33 presenter beats (about 19 min). It is **not** a website and **not** a slide deck.
+34 presenter beats (about 19 min). It is **not** a website and **not** a slide deck.
 The approved build is deployed with GitHub Pages from `index.html` at the repo root on `master`.
 
 ## Golden rules
@@ -21,7 +21,7 @@ index.html                 GENERATED — deployed copy of dist/index.html (GitHu
 SOURCES.md                 evidence map: every fact → source document; known content risks
 package.json               npm run build | npm run qa   (devDeps: sharp, playwright)
 src/
-  index.html               page template: chrome + 15 <section class="scene"> blocks + build markers
+  index.html               page template: chrome + 16 <section class="scene"> blocks + build markers
   styles/
     tokens.css             palette, font-face, spacing tokens (colour system is approved: don't change)
     base.css               persistent chrome: topbar, golden-thread tracker, journey rail, controls, notes, veil
@@ -51,12 +51,16 @@ qa/                        GENERATED QA output (shots/, sheets/, report.json, QA
 ## Scene model (read before touching any scene)
 - Each scene is `<section class="scene" id data-beats data-chapter data-theme>` → sticky `.stage` (100vh) → `.safe`, a 1600×900 canvas scaled by `engine.layout()`.
   Everything inside `.safe` is positioned in canvas px. Keep content inside 1600×900, and keep the `.unlocks` line at the bottom.
-- Scenes, in order (beats): prologue 3 · ch1 4 · ch2 3 · ch3 2 · ch4 3 · ch5a 2 · ch5b 2 · ch6a 1 · ch6b 2 · ch7 3 · ch8a 3 · ch8b 1 · ch8c 1 · finale-a 2 · finale-b 1 = **33**.
+- Scenes, in order (beats): opening 1 · prologue 3 · ch1 4 · ch2 3 · ch3 2 · ch4 3 · ch5a 2 · ch5b 2 · ch6a 1 · ch6b 2 · ch7 3 · ch8a 3 · ch8b 1 · ch8c 1 · finale-a 2 · finale-b 1 = **34**.
 - Timeline: one paused GSAP timeline per scene, duration = beats, scrubbed by ScrollTrigger (`top bottom` → `bottom bottom`, scrub 0.6).
   `at(k)` is the start of the move into beat k. Beat 0 animates during the scene's entry `[0,1)`, and beat k animates in `[k, k+1)`.
   **Never let a scene's tweens run past `beats`.** `boot.js` records overruns in `VMS.warnings`, and QA fails on any.
-- The prologue uses `data-entry="intro"` (pinned at `top top`, plus a time-based intro). Its timeline is 2 units for 3 beats:
-  beat 1 Meet the Team = the time-based `VMS.intro` (heading → mentor → 3 member columns); `[0,1)` the `.p-team` frame fades out and
+- The opening ("What is VMS?", chapter `prologue`) uses `data-entry="intro"` with 1 beat, so its scroll timeline is empty (0 units).
+  Everything is the time-based `VMS.intro`, played on load (vehicle drives in from the right → title → definition → six areas);
+  a deep link or reduced motion completes it instantly. Static mode shows its final state.
+- The prologue uses `data-entry="intro"` too (pinned at `top top`, plus a time-based team intro). Its timeline is 2 units for 3 beats:
+  prologue beat 1 Meet the Team = the time-based `VMS.teamIntro` (heading → mentor → 3 member columns), played by a ScrollTrigger
+  when the prologue arrives (`top 40%`), completed instantly on a jump past it, reset when the presenter goes back to the opening; `[0,1)` the `.p-team` frame fades out and
   the question + background labels appear; `[1,2)` converge. `.p-team` is `display:none` without `html.anim`, so the static /
   no-GSAP fallback shows the prologue's final (converged) state like every other scene, without the team frame.
 - Helpers passed to builders: `tl, q, qa, at, draw(els,pos,opt)` (SVG stroke draw), `count(el,to,pos,dur)`, `reduce`.
@@ -86,7 +90,7 @@ The build fails on:
 - prototype filenames outside `prototype_0[1-5].(png|jpg|jpeg|webp)`
 
 The build prints: scenes/beats · Jira assets · process thumbnails · `Prototype: X/3 real images found (…)` · HTML size · external requests (must be 0).
-Expected today: 15 scenes · 33 beats · 2 · 3 · 3/3 · ≈0.67 MB · 0.
+Expected today: 16 scenes · 34 beats · 2 · 3 · 3/3 · ≈0.68 MB · 0.
 
 **Environments:**
 - Cowork may use an isolated Linux/cloud environment for build and QA verification.
@@ -115,15 +119,16 @@ npm run qa                                        # all phases, ≈ 15–20 min
   - images distorted, clipped, upscaled or not decoded
   - any console error or warning
   - any timeline overrun
+- QA waits for the time-based intros (`VMS.intro`, `VMS.teamIntro`) to finish before auditing or shooting a beat.
 - Output: `qa/report.json` (merged across runs), `qa/QA-REPORT.md`, `qa/shots/`, `qa/sheets/` (contact sheets). **Look at the sheets** for anything visual. The audit does not judge balance.
 - **QA tiers** (pick by what the change touches):
   - **Tier 0 · wording/data:** build + `--only=visual`, then inspect the touched beats at 1920 and 1366. If a fact changed, check its source and SOURCES.md.
   - **Tier 1 · one scene's layout/animation/image:** Tier 0 + `functional,viewports,reduced`. Check the scrub frames if entry animation changed.
   - **Tier 2 · beat count, navigation, chrome, build tooling, performance, several chapters:** a short plan first, then full `npm run qa` and every contact sheet.
 - Long runs: a local shell with a short per-command limit can't hold a full QA run. Run phases separately, or run QA in an environment with long-running commands and Chromium preinstalled.
-- Hard-coded expectations to update if the beat count changes (all in qa.mjs): `beats === 33` (functional) and `rows.length === 33` (reduced);
-  the rail chapter-jump target (ch7 → beat 23); the stakeholder popover beat (`positions[12]`, first ch4 beat); the viewport sample
-  indices `[0,1,2,6,14,18,22,24,27,28,29]`; the reduced-motion sample indices `[0,1,2,9,20,24,29,32]`; the perf phase's 32 Next presses;
+- Hard-coded expectations to update if the beat count changes (all in qa.mjs): `beats === 34` (functional) and `rows.length === 34` (reduced);
+  the rail chapter-jump target (ch7 → beat 24); the stakeholder popover beat (`positions[13]`, first ch4 beat); the viewport sample
+  indices `[0,1,2,3,7,15,19,23,25,28,29,30]`; the reduced-motion sample indices `[0,1,2,3,10,21,25,30,33]`; the perf phase's 33 Next presses;
   and the scrub scene list. Also `tools/README.dist.txt` (prototype beat number) and the beat numbers in `SOURCES.md`.
 
 ## Release (GitHub Pages)
@@ -155,7 +160,7 @@ Committing, merging to `master` and pushing are Seif's decisions. Pushing `maste
 2. Entry in `beats.js` at the right position, with notes.
 3. Choreography in `scenes/<chapter>.js` for the new `at(k)`.
 4. QA hard-codes (above).
-5. The beat count (now 33) in `beats.js` header, `src/index.html` counters, README and `SOURCES.md`.
+5. The beat count (now 34) in `beats.js` header, `src/index.html` counters, README and `SOURCES.md`.
 6. Build (it checks the scene/beat mapping), then full QA.
 
 **New scene:**
@@ -164,10 +169,10 @@ Committing, merging to `master` and pushing are Seif's decisions. Pushing `maste
 3. Beats entries.
 4. Add it to the qa.mjs scrub/no-JS lists if it is a signature scene.
 
-**Performance budget:** ≤ 30 ScrollTriggers (now 15), ≤ 3,000 DOM nodes (now ≈1,745), ≤ 6 heavy scenes, HTML ≈ under 1 MB.
+**Performance budget:** ≤ 30 ScrollTriggers (now 17), ≤ 3,000 DOM nodes (now ≈1,745), ≤ 6 heavy scenes, HTML ≈ under 1 MB.
 
 ## Verification checklist (every change)
-- [ ] build passes with expected summary (33 beats, 0 external requests, Prototype 3/3)
+- [ ] build passes with expected summary (34 beats, 0 external requests, Prototype 3/3)
 - [ ] relevant QA phases pass; console clean; no timeline warnings
 - [ ] contact sheets / screenshots of the touched beats inspected at 1920×1080 and 1366×768
 - [ ] keyboard navigation still lands on exact beats; notes and Present still work

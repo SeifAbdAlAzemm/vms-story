@@ -15,6 +15,9 @@ export function makeRenderers(D, ctx) {
     threadTracker: () => `<ol class="tt-dots">${D.thread.map((t) => `<li data-thread="${t.id}" title="${esc(t.label)}"><i></i><span>${esc(t.label)}</span></li>`).join("")}</ol>`,
     railTicks: () => `<ol class="rail-ticks">${D.chapters.map((c) => `<li data-chapter="${c.id}"><button type="button" aria-label="Go to ${esc(c.title)}" title="${esc(c.title)}"></button></li>`).join("")}</ol>`,
 
+    /* ---------- opening · what is VMS? ---------- */
+    vmsAreas: () => D.vmsAreas.map((a, i) => `<li class="o-area" data-i="${i}">${ico(a.icon)}<span>${esc(a.label)}</span></li>`).join(""),
+
     /* ---------- prologue ---------- */
     teamCredits: () => {
       const cols = [0, 4, 8].map((s) => D.team.members.slice(s, s + 4));

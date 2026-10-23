@@ -1,5 +1,5 @@
 /* =====================================================================
-   PRESENTER BEATS — 33 narrative states, ~19 minutes.
+   PRESENTER BEATS — 34 narrative states, ~19 minutes.
    scene  : id of the <section class="scene"> the beat belongs to (beats are
             ordered; the build checks the count per scene matches data-beats)
    thread : golden-thread step that lights up at this beat (optional)
@@ -8,6 +8,10 @@
    ===================================================================== */
 (function (D) {
   D.beats = [
+    // ---------------- OPENING (~0:15) ----------------
+    { scene: "opening", chapter: "prologue", title: "What is VMS?",
+      notes: { key: "VMS, the Vehicle Management System: one centralized system for managing the complete vehicle lifecycle — vehicle, driver, movement, maintenance, fuel and licensing.", why: "The audience should know what the system is before they meet the team or the BA journey.", value: "A shared definition in a few seconds. The problem, the scale and the findings come later in the story.", next: "Before the problem, the people: meet the team." } },
+
     // ---------------- PROLOGUE (~1:10) ----------------
     { scene: "prologue", chapter: "prologue", title: "Meet the team",
       notes: { key: "This is our team: our mentor, Sayed Helika, and twelve team members.", why: "The audience meets the actual people before the project.", value: "Names first, then where we came from, then the mindset we built together: one continuous opening.", next: "Who are we beyond our names? We came from different backgrounds." } },

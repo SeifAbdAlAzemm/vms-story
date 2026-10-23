@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="styles/tokens.css">
 <link rel="stylesheet" href="styles/base.css">
 <link rel="stylesheet" href="styles/layout.css">
+<link rel="stylesheet" href="styles/scenes/opening.css">
 <link rel="stylesheet" href="styles/scenes/prologue.css">
 <link rel="stylesheet" href="styles/scenes/chapter-01.css">
 <link rel="stylesheet" href="styles/scenes/chapter-02.css">
@@ -44,7 +45,7 @@
   <div class="rail-loop" id="reviewGlyph" title="Review loop: create · review · align · improve · approve">
     <svg viewBox="0 0 24 24" class="ico"><use href="#i-refresh-ccw"/></svg><span>Review loop</span>
   </div>
-  <div class="rail-count" id="beatCounter" aria-live="polite">01 / 33</div>
+  <div class="rail-count" id="beatCounter" aria-live="polite">01 / 34</div>
   <div class="controls" aria-label="Presenter controls">
   <button type="button" id="btnPrev" aria-label="Previous beat"><svg class="ico"><use href="#i-chevron-left"/></svg></button>
   <button type="button" id="btnNext" aria-label="Next beat"><svg class="ico"><use href="#i-chevron-right"/></svg></button>
@@ -56,7 +57,7 @@
 
 
 <aside class="notes" id="notes" aria-label="Presenter notes" hidden>
-  <div class="n-head"><span id="nBeat">01 / 33</span><b id="nTitle"></b></div>
+  <div class="n-head"><span id="nBeat">01 / 34</span><b id="nTitle"></b></div>
   <div class="n-grid">
     <div><h5>Key message</h5><p id="nKey"></p></div>
     <div><h5>Why it matters</h5><p id="nWhy"></p></div>
@@ -67,6 +68,58 @@
 <div class="veil" id="veil" aria-hidden="true"></div>
 
 <main id="story">
+
+<!-- =====================================================================
+     OPENING · WHAT IS VMS?   (1 beat)
+     ===================================================================== -->
+<section class="scene" id="opening" data-beats="1" data-chapter="prologue" data-theme="dark" data-entry="intro">
+  <div class="stage"><div class="bg bg-dark"><div class="bg-grid"></div></div>
+  <div class="safe">
+    <p class="kicker o-kicker">Final Business Analysis Project</p>
+    <h1 class="o-title"><span>Vehicle</span><span>Management</span><span>System</span></h1>
+    <i class="o-rule" aria-hidden="true"></i>
+    <p class="o-def">One centralized system for managing the complete vehicle lifecycle.</p>
+    <ul class="o-areas" aria-label="Lifecycle areas"><!--@render:vmsAreas--></ul>
+    <svg class="o-car" viewBox="0 0 820 380" role="img" aria-label="Fleet vehicle (illustration)">
+      <defs>
+        <radialGradient id="oGlow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#6FC2B8" stop-opacity=".30"/><stop offset="1" stop-color="#6FC2B8" stop-opacity="0"/></radialGradient>
+        <radialGradient id="oShadow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#000" stop-opacity=".55"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+        <linearGradient id="oBody" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3D73A6"/><stop offset=".42" stop-color="#21507E"/><stop offset="1" stop-color="#112E4C"/></linearGradient>
+        <linearGradient id="oGlass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1E4F73"/><stop offset=".55" stop-color="#0C2238"/><stop offset="1" stop-color="#081829"/></linearGradient>
+        <linearGradient id="oFloor" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#6FC2B8" stop-opacity="0"/><stop offset=".5" stop-color="#6FC2B8" stop-opacity=".45"/><stop offset="1" stop-color="#6FC2B8" stop-opacity="0"/></linearGradient>
+      </defs>
+      <ellipse class="o-glow" cx="420" cy="220" rx="420" ry="175" fill="url(#oGlow)"/>
+      <path class="o-floor" d="M0 357 H820" stroke="url(#oFloor)" stroke-width="2"/>
+      <g class="o-car-move">
+        <g class="o-speed" stroke="#6FC2B8" stroke-width="3" stroke-linecap="round"><path d="M800 170 H960"/><path d="M812 232 H1010"/><path d="M796 286 H930"/></g>
+        <ellipse cx="410" cy="356" rx="380" ry="16" fill="url(#oShadow)"/>
+        <path class="o-body" d="M52 300 L46 246 Q46 214 78 206 L262 188 Q300 150 342 118 Q356 108 380 107 L650 104 Q690 104 712 124 L760 178 Q772 194 772 214 L774 284 Q774 300 758 300 L688 300 A68 68 0 0 0 552 300 L268 300 A68 68 0 0 0 132 300 Z" fill="url(#oBody)" stroke="#6FC2B8" stroke-width="2.5" stroke-linejoin="round"/>
+        <path d="M400 100 L640 97" stroke="#6FC2B8" stroke-opacity=".55" stroke-width="5" stroke-linecap="round"/>
+        <path class="o-glass" d="M288 186 Q322 152 352 128 Q362 122 380 122 L642 119 Q676 119 694 136 L726 178 Q730 186 720 186 Z" fill="url(#oGlass)" stroke="#6FC2B8" stroke-opacity=".5" stroke-width="1.5"/>
+        <path d="M360 132 L330 180 M384 126 L352 180" stroke="#9FD8D0" stroke-opacity=".22" stroke-width="7" stroke-linecap="round"/>
+        <path d="M492 120 V186 M650 119 L664 186" stroke="#21507E" stroke-width="11"/>
+        <path d="M384 112 L648 109" stroke="#fff" stroke-opacity=".22" stroke-width="2" stroke-linecap="round"/>
+        <path d="M70 232 L764 222" stroke="#6FC2B8" stroke-opacity=".38" stroke-width="2"/>
+        <path d="M292 194 V292 M492 192 V294 M670 192 L676 268" stroke="#0A1B2E" stroke-opacity=".55" stroke-width="2"/>
+        <rect x="438" y="210" width="28" height="6" rx="3" fill="#fff" fill-opacity=".35"/><rect x="616" y="208" width="28" height="6" rx="3" fill="#fff" fill-opacity=".35"/>
+        <ellipse cx="54" cy="222" rx="40" ry="18" fill="url(#oGlow)"/>
+        <path d="M50 222 Q52 212 66 210 L112 206 Q104 222 86 226 L54 230 Z" fill="#EAF6F4"/>
+        <path d="M762 194 L772 200 L773 236 L762 236 Z" fill="#C2554F"/>
+        <path d="M60 276 H118 M690 278 H764" stroke="#0A1B2E" stroke-opacity=".5" stroke-width="4" stroke-linecap="round"/>
+        <g class="o-wheel"><circle cx="200" cy="300" r="56" fill="#07121F" stroke="#2B4A69" stroke-width="3"/>
+          <g class="o-rim"><circle cx="200" cy="300" r="36" fill="#10283F" stroke="#6FC2B8" stroke-width="3"/>
+            <path d="M200 300 V268 M200 300 L230.4 290.1 M200 300 L218.8 325.9 M200 300 L181.2 325.9 M200 300 L169.6 290.1" stroke="#6FC2B8" stroke-opacity=".75" stroke-width="4" stroke-linecap="round"/>
+            <circle cx="200" cy="300" r="8" fill="#6FC2B8"/></g></g>
+        <g class="o-wheel"><circle cx="620" cy="300" r="56" fill="#07121F" stroke="#2B4A69" stroke-width="3"/>
+          <g class="o-rim"><circle cx="620" cy="300" r="36" fill="#10283F" stroke="#6FC2B8" stroke-width="3"/>
+            <path d="M620 300 V268 M620 300 L650.4 290.1 M620 300 L638.8 325.9 M620 300 L601.2 325.9 M620 300 L589.6 290.1" stroke="#6FC2B8" stroke-opacity=".75" stroke-width="4" stroke-linecap="round"/>
+            <circle cx="620" cy="300" r="8" fill="#6FC2B8"/></g></g>
+      </g>
+    </svg>
+    <p class="src src-foot o-src">Definition based on BRD-VMS-003 §4.2 · Proposed solution</p>
+    <p class="unlocks">Meet the team behind the analysis.</p>
+  </div></div>
+</section>
 
 <!-- =====================================================================
      PROLOGUE · MEET THE TEAM → DIFFERENT BACKGROUNDS → ONE BA MINDSET   (3 beats)
@@ -470,6 +523,7 @@
 <script src="scripts/engine.js"></script>
 <script src="scripts/navigation.js"></script>
 <script src="scripts/presenter.js"></script>
+<script src="scripts/scenes/opening.js"></script>
 <script src="scripts/scenes/prologue.js"></script>
 <script src="scripts/scenes/chapter-01.js"></script>
 <script src="scripts/scenes/chapter-02.js"></script>

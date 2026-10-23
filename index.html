@@ -228,6 +228,20 @@ html.anim .stage { position: sticky; top: 0; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
 
+/* styles/scenes/opening.css */
+/* OPENING · what is VMS? (1 beat, dark). Title + definition + six lifecycle areas left, vehicle right. */
+#opening .o-kicker { position: absolute; left: 0; top: 166px; color: var(--teal-on-dark); }
+#opening .o-title { position: absolute; left: 0; top: 204px; width: 740px; font-size: 90px; font-weight: 820; line-height: 1; letter-spacing: .01em; text-transform: uppercase; color: #fff; }
+#opening .o-title span { display: block; }
+#opening .o-rule { position: absolute; left: 0; top: 532px; width: 88px; height: 4px; border-radius: 2px; background: var(--teal-on-dark); }
+#opening .o-def { position: absolute; left: 0; top: 558px; width: 660px; font-size: 30px; line-height: 1.35; color: #C9D4E0; }
+#opening .o-areas { position: absolute; left: 0; top: 684px; width: 700px; margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+#opening .o-area { display: flex; align-items: center; gap: 12px; height: 58px; padding: 0 20px; border: 2px solid rgba(111,194,184,.45); border-radius: 30px; background: rgba(14,42,71,.6); }
+#opening .o-area .ico { font-size: 26px; color: var(--teal-on-dark); }
+#opening .o-area span { font-size: 24px; font-weight: 650; color: #EAF2F7; white-space: nowrap; }
+#opening .o-car { position: absolute; left: 760px; top: 248px; width: 840px; height: 389px; overflow: visible; }
+#opening .o-speed { opacity: 0; }   /* only visible during the entry move */
+
 /* styles/scenes/prologue.css */
 /* PROLOGUE · meet the team → different backgrounds → one BA mindset */
 #prologue .p-kicker { position: absolute; left: 0; top: 0; color: var(--teal-on-dark); }
@@ -757,7 +771,7 @@ html:not(.anim) #prologue .p-team { display: none; }
   <div class="rail-loop" id="reviewGlyph" title="Review loop: create · review · align · improve · approve">
     <svg viewBox="0 0 24 24" class="ico"><use href="#i-refresh-ccw"/></svg><span>Review loop</span>
   </div>
-  <div class="rail-count" id="beatCounter" aria-live="polite">01 / 33</div>
+  <div class="rail-count" id="beatCounter" aria-live="polite">01 / 34</div>
   <div class="controls" aria-label="Presenter controls">
   <button type="button" id="btnPrev" aria-label="Previous beat"><svg class="ico"><use href="#i-chevron-left"/></svg></button>
   <button type="button" id="btnNext" aria-label="Next beat"><svg class="ico"><use href="#i-chevron-right"/></svg></button>
@@ -769,7 +783,7 @@ html:not(.anim) #prologue .p-team { display: none; }
 
 
 <aside class="notes" id="notes" aria-label="Presenter notes" hidden>
-  <div class="n-head"><span id="nBeat">01 / 33</span><b id="nTitle"></b></div>
+  <div class="n-head"><span id="nBeat">01 / 34</span><b id="nTitle"></b></div>
   <div class="n-grid">
     <div><h5>Key message</h5><p id="nKey"></p></div>
     <div><h5>Why it matters</h5><p id="nWhy"></p></div>
@@ -780,6 +794,58 @@ html:not(.anim) #prologue .p-team { display: none; }
 <div class="veil" id="veil" aria-hidden="true"></div>
 
 <main id="story">
+
+<!-- =====================================================================
+     OPENING · WHAT IS VMS?   (1 beat)
+     ===================================================================== -->
+<section class="scene" id="opening" data-beats="1" data-chapter="prologue" data-theme="dark" data-entry="intro">
+  <div class="stage"><div class="bg bg-dark"><div class="bg-grid"></div></div>
+  <div class="safe">
+    <p class="kicker o-kicker">Final Business Analysis Project</p>
+    <h1 class="o-title"><span>Vehicle</span><span>Management</span><span>System</span></h1>
+    <i class="o-rule" aria-hidden="true"></i>
+    <p class="o-def">One centralized system for managing the complete vehicle lifecycle.</p>
+    <ul class="o-areas" aria-label="Lifecycle areas"><li class="o-area" data-i="0"><svg class="ico "><use href="#i-car"/></svg><span>Vehicle</span></li><li class="o-area" data-i="1"><svg class="ico "><use href="#i-id-card"/></svg><span>Driver</span></li><li class="o-area" data-i="2"><svg class="ico "><use href="#i-route"/></svg><span>Movement</span></li><li class="o-area" data-i="3"><svg class="ico "><use href="#i-wrench"/></svg><span>Maintenance</span></li><li class="o-area" data-i="4"><svg class="ico "><use href="#i-fuel"/></svg><span>Fuel</span></li><li class="o-area" data-i="5"><svg class="ico "><use href="#i-shield-check"/></svg><span>Licensing</span></li></ul>
+    <svg class="o-car" viewBox="0 0 820 380" role="img" aria-label="Fleet vehicle (illustration)">
+      <defs>
+        <radialGradient id="oGlow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#6FC2B8" stop-opacity=".30"/><stop offset="1" stop-color="#6FC2B8" stop-opacity="0"/></radialGradient>
+        <radialGradient id="oShadow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#000" stop-opacity=".55"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+        <linearGradient id="oBody" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3D73A6"/><stop offset=".42" stop-color="#21507E"/><stop offset="1" stop-color="#112E4C"/></linearGradient>
+        <linearGradient id="oGlass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1E4F73"/><stop offset=".55" stop-color="#0C2238"/><stop offset="1" stop-color="#081829"/></linearGradient>
+        <linearGradient id="oFloor" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#6FC2B8" stop-opacity="0"/><stop offset=".5" stop-color="#6FC2B8" stop-opacity=".45"/><stop offset="1" stop-color="#6FC2B8" stop-opacity="0"/></linearGradient>
+      </defs>
+      <ellipse class="o-glow" cx="420" cy="220" rx="420" ry="175" fill="url(#oGlow)"/>
+      <path class="o-floor" d="M0 357 H820" stroke="url(#oFloor)" stroke-width="2"/>
+      <g class="o-car-move">
+        <g class="o-speed" stroke="#6FC2B8" stroke-width="3" stroke-linecap="round"><path d="M800 170 H960"/><path d="M812 232 H1010"/><path d="M796 286 H930"/></g>
+        <ellipse cx="410" cy="356" rx="380" ry="16" fill="url(#oShadow)"/>
+        <path class="o-body" d="M52 300 L46 246 Q46 214 78 206 L262 188 Q300 150 342 118 Q356 108 380 107 L650 104 Q690 104 712 124 L760 178 Q772 194 772 214 L774 284 Q774 300 758 300 L688 300 A68 68 0 0 0 552 300 L268 300 A68 68 0 0 0 132 300 Z" fill="url(#oBody)" stroke="#6FC2B8" stroke-width="2.5" stroke-linejoin="round"/>
+        <path d="M400 100 L640 97" stroke="#6FC2B8" stroke-opacity=".55" stroke-width="5" stroke-linecap="round"/>
+        <path class="o-glass" d="M288 186 Q322 152 352 128 Q362 122 380 122 L642 119 Q676 119 694 136 L726 178 Q730 186 720 186 Z" fill="url(#oGlass)" stroke="#6FC2B8" stroke-opacity=".5" stroke-width="1.5"/>
+        <path d="M360 132 L330 180 M384 126 L352 180" stroke="#9FD8D0" stroke-opacity=".22" stroke-width="7" stroke-linecap="round"/>
+        <path d="M492 120 V186 M650 119 L664 186" stroke="#21507E" stroke-width="11"/>
+        <path d="M384 112 L648 109" stroke="#fff" stroke-opacity=".22" stroke-width="2" stroke-linecap="round"/>
+        <path d="M70 232 L764 222" stroke="#6FC2B8" stroke-opacity=".38" stroke-width="2"/>
+        <path d="M292 194 V292 M492 192 V294 M670 192 L676 268" stroke="#0A1B2E" stroke-opacity=".55" stroke-width="2"/>
+        <rect x="438" y="210" width="28" height="6" rx="3" fill="#fff" fill-opacity=".35"/><rect x="616" y="208" width="28" height="6" rx="3" fill="#fff" fill-opacity=".35"/>
+        <ellipse cx="54" cy="222" rx="40" ry="18" fill="url(#oGlow)"/>
+        <path d="M50 222 Q52 212 66 210 L112 206 Q104 222 86 226 L54 230 Z" fill="#EAF6F4"/>
+        <path d="M762 194 L772 200 L773 236 L762 236 Z" fill="#C2554F"/>
+        <path d="M60 276 H118 M690 278 H764" stroke="#0A1B2E" stroke-opacity=".5" stroke-width="4" stroke-linecap="round"/>
+        <g class="o-wheel"><circle cx="200" cy="300" r="56" fill="#07121F" stroke="#2B4A69" stroke-width="3"/>
+          <g class="o-rim"><circle cx="200" cy="300" r="36" fill="#10283F" stroke="#6FC2B8" stroke-width="3"/>
+            <path d="M200 300 V268 M200 300 L230.4 290.1 M200 300 L218.8 325.9 M200 300 L181.2 325.9 M200 300 L169.6 290.1" stroke="#6FC2B8" stroke-opacity=".75" stroke-width="4" stroke-linecap="round"/>
+            <circle cx="200" cy="300" r="8" fill="#6FC2B8"/></g></g>
+        <g class="o-wheel"><circle cx="620" cy="300" r="56" fill="#07121F" stroke="#2B4A69" stroke-width="3"/>
+          <g class="o-rim"><circle cx="620" cy="300" r="36" fill="#10283F" stroke="#6FC2B8" stroke-width="3"/>
+            <path d="M620 300 V268 M620 300 L650.4 290.1 M620 300 L638.8 325.9 M620 300 L601.2 325.9 M620 300 L589.6 290.1" stroke="#6FC2B8" stroke-opacity=".75" stroke-width="4" stroke-linecap="round"/>
+            <circle cx="620" cy="300" r="8" fill="#6FC2B8"/></g></g>
+      </g>
+    </svg>
+    <p class="src src-foot o-src">Definition based on BRD-VMS-003 §4.2 · Proposed solution</p>
+    <p class="unlocks">Meet the team behind the analysis.</p>
+  </div></div>
+</section>
 
 <!-- =====================================================================
      PROLOGUE · MEET THE TEAM → DIFFERENT BACKGROUNDS → ONE BA MINDSET   (3 beats)
@@ -1289,6 +1355,15 @@ html:not(.anim) #prologue .p-team { display: none; }
     { id: "prototype", label: "Prototype" },
   ];
 
+  /* ---------- Opening · What is VMS? ---------- */
+  // TEAM wording (Seif's opening brief, 23 Oct 2026), consistent with BRD-VMS-003 §4.2 Proposed Solution:
+  // "One centralized, role-based Vehicle Management System covering the vehicle lifecycle: registry, assignment,
+  // movements, maintenance, fuel, license alerts…". Labels match the Ch1 domain map. Introductory definition only.
+  D.vmsAreas = [
+    { label: "Vehicle", icon: "car" }, { label: "Driver", icon: "id-card" }, { label: "Movement", icon: "route" },
+    { label: "Maintenance", icon: "wrench" }, { label: "Fuel", icon: "fuel" }, { label: "Licensing", icon: "shield-check" },
+  ];
+
   /* ---------- Prologue (TEAM) ---------- */
   D.backgrounds = ["UI/UX", "Business Analysis", "Software / Technical", "Marketing", "Technical & Non-Technical"];
   // TEAM: confirmed final team list (Seif, 23 Oct 2026). Spelling and order are locked (docs/DECISIONS.md §7a).
@@ -1584,7 +1659,7 @@ html:not(.anim) #prologue .p-team { display: none; }
 </script>
 <script>/* beats.js */
 /* =====================================================================
-   PRESENTER BEATS — 33 narrative states, ~19 minutes.
+   PRESENTER BEATS — 34 narrative states, ~19 minutes.
    scene  : id of the <section class="scene"> the beat belongs to (beats are
             ordered; the build checks the count per scene matches data-beats)
    thread : golden-thread step that lights up at this beat (optional)
@@ -1593,6 +1668,10 @@ html:not(.anim) #prologue .p-team { display: none; }
    ===================================================================== */
 (function (D) {
   D.beats = [
+    // ---------------- OPENING (~0:15) ----------------
+    { scene: "opening", chapter: "prologue", title: "What is VMS?",
+      notes: { key: "VMS, the Vehicle Management System: one centralized system for managing the complete vehicle lifecycle — vehicle, driver, movement, maintenance, fuel and licensing.", why: "The audience should know what the system is before they meet the team or the BA journey.", value: "A shared definition in a few seconds. The problem, the scale and the findings come later in the story.", next: "Before the problem, the people: meet the team." } },
+
     // ---------------- PROLOGUE (~1:10) ----------------
     { scene: "prologue", chapter: "prologue", title: "Meet the team",
       notes: { key: "This is our team: our mentor, Sayed Helika, and twelve team members.", why: "The audience meets the actual people before the project.", value: "Names first, then where we came from, then the mindset we built together: one continuous opening.", next: "Who are we beyond our names? We came from different backgrounds." } },
@@ -2027,8 +2106,24 @@ window.VMS.presenter = (function () {
 })();
 
 </script>
+<script>/* opening.js */
+/* OPENING · what is VMS? One beat, time-based on load (VMS.intro):
+   vehicle drives in from the right → title → definition → six lifecycle areas. No scroll choreography. */
+VMS.scene("opening", ({ q, qa }) => {
+  VMS.intro = gsap.timeline({ paused: true })
+    .from(q(".o-car-move"), { x: 760, duration: 1.15, ease: "power3.out" }, 0)
+    .from(qa(".o-rim"), { rotation: 760, transformOrigin: "50% 50%", duration: 1.15, ease: "power3.out" }, 0)
+    .fromTo(q(".o-speed"), { opacity: 0.55 }, { opacity: 0, duration: 0.5, ease: "power1.in" }, 0.6)
+    .from([q(".o-kicker"), ...qa(".o-title span")], { opacity: 0, y: 26, stagger: 0.1, duration: 0.6, ease: "power2.out" }, 0.45)
+    .from(q(".o-rule"), { scaleX: 0, transformOrigin: "0 50%", duration: 0.45, ease: "power2.out" }, 0.95)
+    .from(q(".o-def"), { opacity: 0, y: 16, duration: 0.5, ease: "power2.out" }, 1.0)
+    .from(qa(".o-area"), { opacity: 0, y: 14, stagger: 0.06, duration: 0.4, ease: "power2.out" }, 1.3)
+    .from([q(".o-src"), q(".unlocks")], { opacity: 0, duration: 0.4 }, 1.75);
+});
+
+</script>
 <script>/* prologue.js */
-/* PROLOGUE · meet the team (intro), backgrounds arrive (beat 2), then converge (beat 3) */
+/* PROLOGUE · meet the team (time-based team intro), backgrounds arrive (beat 2), then converge (beat 3) */
 VMS.scene("prologue", ({ sc, tl, q, qa, reduce }) => {
   const labels = qa(".p-label"), inner = qa(".p-in");
   // scattered start positions (canvas px, centre points) — different directions
@@ -2039,11 +2134,19 @@ VMS.scene("prologue", ({ sc, tl, q, qa, reduce }) => {
     const cx = w.offsetLeft + w.offsetWidth / 2, cy = row.offsetTop + w.offsetHeight / 2;
     el._dx = spots[i][0] - cx; el._dy = spots[i][1] - cy;
   });
-  // intro (time-based, on load) = beat 1: kicker + heading, mentor, then the three member columns
-  VMS.intro = gsap.timeline({ paused: true })
+  // team intro (time-based) = prologue beat 1 "Meet the Team": kicker + heading, mentor, then the three member columns.
+  // Plays when the presenter arrives from the opening; a jump past the prologue just completes it.
+  const team = VMS.teamIntro = gsap.timeline({ paused: true })
     .from([q(".p-kicker"), q(".pt-head")], { opacity: 0, y: 24, stagger: 0.15, duration: 0.7, ease: "power2.out" })
     .from(q(".pt-mentor"), { opacity: 0, y: 18, duration: 0.6, ease: "power2.out" }, 0.55)
     .from([q(".pt-members .pt-role"), ...qa(".pt-col")], { opacity: 0, y: 18, stagger: 0.16, duration: 0.55, ease: "power2.out" }, 0.95);
+  const arrive = () => {
+    const t = sc.getBoundingClientRect().top;
+    if (t > 0.42 * innerHeight) return;              // still sliding in
+    if (t > -0.5 * innerHeight) team.restart(); else team.progress(1);
+  };
+  if (reduce) team.progress(1);
+  else ScrollTrigger.create({ trigger: sc, start: "top bottom", end: "top 40%", onEnter: arrive, onLeave: arrive, onLeaveBack: () => team.pause(0) });
   // beat 2 [0,1): the team frame gives way; question and backgrounds appear at their scattered spots
   tl.to(q(".p-team"), { autoAlpha: 0, y: -24, duration: 0.35, ease: "power2.in" }, 0);
   tl.from([q(".p-q"), q(".p-sub")], { opacity: 0, y: 24, stagger: 0.1, duration: 0.4 }, 0.3);

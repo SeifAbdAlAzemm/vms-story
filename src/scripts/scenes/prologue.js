@@ -1,4 +1,4 @@
-/* PROLOGUE · meet the team (intro), backgrounds arrive (beat 2), then converge (beat 3) */
+/* PROLOGUE · meet the team (time-based team intro), backgrounds arrive (beat 2), then converge (beat 3) */
 VMS.scene("prologue", ({ sc, tl, q, qa, reduce }) => {
   const labels = qa(".p-label"), inner = qa(".p-in");
   // scattered start positions (canvas px, centre points) — different directions
@@ -9,11 +9,19 @@ VMS.scene("prologue", ({ sc, tl, q, qa, reduce }) => {
     const cx = w.offsetLeft + w.offsetWidth / 2, cy = row.offsetTop + w.offsetHeight / 2;
     el._dx = spots[i][0] - cx; el._dy = spots[i][1] - cy;
   });
-  // intro (time-based, on load) = beat 1: kicker + heading, mentor, then the three member columns
-  VMS.intro = gsap.timeline({ paused: true })
+  // team intro (time-based) = prologue beat 1 "Meet the Team": kicker + heading, mentor, then the three member columns.
+  // Plays when the presenter arrives from the opening; a jump past the prologue just completes it.
+  const team = VMS.teamIntro = gsap.timeline({ paused: true })
     .from([q(".p-kicker"), q(".pt-head")], { opacity: 0, y: 24, stagger: 0.15, duration: 0.7, ease: "power2.out" })
     .from(q(".pt-mentor"), { opacity: 0, y: 18, duration: 0.6, ease: "power2.out" }, 0.55)
     .from([q(".pt-members .pt-role"), ...qa(".pt-col")], { opacity: 0, y: 18, stagger: 0.16, duration: 0.55, ease: "power2.out" }, 0.95);
+  const arrive = () => {
+    const t = sc.getBoundingClientRect().top;
+    if (t > 0.42 * innerHeight) return;              // still sliding in
+    if (t > -0.5 * innerHeight) team.restart(); else team.progress(1);
+  };
+  if (reduce) team.progress(1);
+  else ScrollTrigger.create({ trigger: sc, start: "top bottom", end: "top 40%", onEnter: arrive, onLeave: arrive, onLeaveBack: () => team.pause(0) });
   // beat 2 [0,1): the team frame gives way; question and backgrounds appear at their scattered spots
   tl.to(q(".p-team"), { autoAlpha: 0, y: -24, duration: 0.35, ease: "power2.in" }, 0);
   tl.from([q(".p-q"), q(".p-sub")], { opacity: 0, y: 24, stagger: 0.1, duration: 0.4 }, 0.3);

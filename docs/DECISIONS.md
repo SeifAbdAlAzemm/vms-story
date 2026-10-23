@@ -12,9 +12,10 @@ Evidence map and known content risks: `SOURCES.md`. Technical how-to: `CLAUDE.md
 - Target: Chrome / Edge, presenter-driven with keyboard or clicker. English on screen.
 - Viewports that must work: 1920×1080, 1366×768, 1280×800, 1024×768, plus 125% and 150% OS scaling.
 
-## 2. Structure — 33 beats, about 19 minutes
+## 2. Structure — 34 beats, about 19 minutes
 | Part | Beats | Scenes |
 |---|---|---|
+| Opening: What is VMS? (title, one-line definition, six lifecycle areas, vehicle) | 1 | opening |
 | Prologue: meet the team → different backgrounds → one BA mindset | 3 | prologue |
 | 1 · The world we entered | 4 | ch1 |
 | 2 · How we worked | 3 | ch2 |
@@ -77,8 +78,14 @@ Each scene ends with an "Unlocks →" line that hands over to the next question.
 - Backgrounds are shown without names: no person ↔ background mapping anywhere.
 - Closing line (approved): "We did not produce a collection of documents. We turned one operational problem into a structured, **verified**, and traceable product definition."
 
+## 6a. Opening — What is VMS? (requested by Seif, 23 Oct 2026)
+- One short beat (~10–15 s) before Meet the Team, so the audience knows what VMS is first.
+- Heading "VEHICLE MANAGEMENT SYSTEM"; definition "One centralized system for managing the complete vehicle lifecycle."; six areas: Vehicle · Driver · Movement · Maintenance · Fuel · Licensing. Wording is team-provided, consistent with BRD §4.2.
+- It is a definition only. It must not introduce the ~550 vehicles, Excel/manual tracking, open questions, statistics, kick-off findings, the 6 expired vehicles, the golden thread (no gold on this beat) or team methodology.
+- Vehicle illustration on the right drives in from the right, then title → definition → areas. Restrained; Meet the Team follows unchanged.
+
 ## 7a. Team credits (locked)
-- Prologue beat 1 "Meet the Team" shows the confirmed final team list. It is a **team-provided fact, confirmed by Seif (23 Oct 2026)**, not a business-document fact.
+- Prologue beat 1 "Meet the Team" (presentation beat 2, right after the opening) shows the confirmed final team list. It is a **team-provided fact, confirmed by Seif (23 Oct 2026)**, not a business-document fact.
 - Spelling and order are locked. Change them only when Seif explicitly asks. Data: `D.team` in `src/scripts/data/project.js`.
   - Team Mentor: Sayed Helika
   - Team Members: Gehad Alkady · Mohamed Tokhy · Mohamed Abdelhay · Aya Saied · Esraa Alawadly · Mostafa ElKaramany · Soha Sayed · Sara Amrousy · Hesham Khaled · Mohamed Ghallab · Seif Abd Al-Azem · Eman Hawary
@@ -107,3 +114,4 @@ Each scene ends with an "Unlocks →" line that hands over to the next question.
 ## Change log
 - v1.0.0 — approved baseline (32 beats, real prototype in ch8c).
 - Unreleased (proposed v2.0.0, beat count changed) — Meet the Team added as Prologue beat 1; Prologue 2 → 3 beats, total 32 → 33. Confirmed team list locked (§7a).
+- Unreleased — Opening "What is VMS?" added as a standalone scene before the Prologue (§6a); 15 → 16 scenes, 33 → 34 beats (≈ +15 s). Meet the Team now plays when the presenter arrives from the opening.

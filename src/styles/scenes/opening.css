@@ -1,0 +1,12 @@
+/* OPENING · what is VMS? (1 beat, dark). Title + definition + six lifecycle areas left, vehicle right. */
+#opening .o-kicker { position: absolute; left: 0; top: 166px; color: var(--teal-on-dark); }
+#opening .o-title { position: absolute; left: 0; top: 204px; width: 740px; font-size: 90px; font-weight: 820; line-height: 1; letter-spacing: .01em; text-transform: uppercase; color: #fff; }
+#opening .o-title span { display: block; }
+#opening .o-rule { position: absolute; left: 0; top: 532px; width: 88px; height: 4px; border-radius: 2px; background: var(--teal-on-dark); }
+#opening .o-def { position: absolute; left: 0; top: 558px; width: 660px; font-size: 30px; line-height: 1.35; color: #C9D4E0; }
+#opening .o-areas { position: absolute; left: 0; top: 684px; width: 700px; margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+#opening .o-area { display: flex; align-items: center; gap: 12px; height: 58px; padding: 0 20px; border: 2px solid rgba(111,194,184,.45); border-radius: 30px; background: rgba(14,42,71,.6); }
+#opening .o-area .ico { font-size: 26px; color: var(--teal-on-dark); }
+#opening .o-area span { font-size: 24px; font-weight: 650; color: #EAF2F7; white-space: nowrap; }
+#opening .o-car { position: absolute; left: 760px; top: 248px; width: 840px; height: 389px; overflow: visible; }
+#opening .o-speed { opacity: 0; }   /* only visible during the entry move */

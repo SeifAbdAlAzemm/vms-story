@@ -33,6 +33,15 @@
     { id: "prototype", label: "Prototype" },
   ];
 
+  /* ---------- Opening · What is VMS? ---------- */
+  // TEAM wording (Seif's opening brief, 23 Oct 2026), consistent with BRD-VMS-003 §4.2 Proposed Solution:
+  // "One centralized, role-based Vehicle Management System covering the vehicle lifecycle: registry, assignment,
+  // movements, maintenance, fuel, license alerts…". Labels match the Ch1 domain map. Introductory definition only.
+  D.vmsAreas = [
+    { label: "Vehicle", icon: "car" }, { label: "Driver", icon: "id-card" }, { label: "Movement", icon: "route" },
+    { label: "Maintenance", icon: "wrench" }, { label: "Fuel", icon: "fuel" }, { label: "Licensing", icon: "shield-check" },
+  ];
+
   /* ---------- Prologue (TEAM) ---------- */
   D.backgrounds = ["UI/UX", "Business Analysis", "Software / Technical", "Marketing", "Technical & Non-Technical"];
   // TEAM: confirmed final team list (Seif, 23 Oct 2026). Spelling and order are locked (docs/DECISIONS.md §7a).
