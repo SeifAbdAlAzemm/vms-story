@@ -217,27 +217,40 @@
       <p class="src c1-pin-note">External industry and market statistics, shown for context only. They do not describe the VMS organization, its fleet or this project.</p>
     </div>
 
-    <!-- beat 3 · a real operational moment. Storytelling RECONSTRUCTION of the documented pattern (Kick-off MOM: paper + Excel;
-         expiry discovered only when the organization tried to assign/use a vehicle for a mission; no proactive monitoring).
-         Not an incident report. No count here: the 6 vehicles are revealed on the kick-off findings beat.
-         Full-canvas layer: in for this beat only, out before the problem in numbers. Hidden in the static fallback. -->
-    <div class="c1-moment" aria-label="One operational moment before VMS">
-      <div class="c1-mo-head"><p class="kicker">Before VMS · one ordinary moment</p>
-        <h3>What the manual process looked like when a vehicle was actually <em>needed</em></h3>
-        <span class="tag tag-vis">Reconstructed from the documented pattern</span></div>
-      <ol class="c1-mo-steps">
-        <li class="c1-mo-step"><span class="c1-mo-n">1</span><svg class="ico"><use href="#i-clipboard-list"/></svg><b>Mission request</b><p>A vehicle is needed for a mission</p></li>
-        <li class="c1-mo-arrow" aria-hidden="true"><svg class="ico"><use href="#i-arrow-right"/></svg></li>
-        <li class="c1-mo-step"><span class="c1-mo-n">2</span><svg class="ico"><use href="#i-car"/></svg><b>Select vehicle</b><p>A vehicle is chosen for it</p></li>
-        <li class="c1-mo-arrow" aria-hidden="true"><svg class="ico"><use href="#i-arrow-right"/></svg></li>
-        <li class="c1-mo-step"><span class="c1-mo-n">3</span><svg class="ico"><use href="#i-file-spreadsheet"/></svg><b>Manual license check</b><p>Its validity is looked up by hand, in paper and Excel records</p></li>
-        <li class="c1-mo-arrow" aria-hidden="true"><svg class="ico"><use href="#i-arrow-right"/></svg></li>
-        <li class="c1-mo-step c1-mo-x"><span class="c1-mo-n">4</span><svg class="ico"><use href="#i-triangle-alert"/></svg><b class="c1-mo-stamp">Expired</b><p>Only now does anyone see it</p></li>
-      </ol>
-      <div class="c1-mo-track" aria-hidden="true"><i class="c1-mo-line"></i><i class="c1-mo-dot"></i>
-        <span class="c1-mo-was">The license was already expired — but nothing surfaced it proactively</span><span class="c1-mo-here">Found here</span></div>
-      <p class="c1-mo-close"><span>The process depended on someone checking at the right moment.</span>
-        <b>The problem was discovered at the moment of use — <em>not before it.</em></b></p>
+    <!-- beat 3 · THE IGNORANCE TAX. ILLUSTRATIVE fleet scenario (a typical consequence of poor operational visibility):
+         NOT an incident at the VMS organization and NOT the kick-off's 6 vehicles (that documented finding stays on the kick-off beat).
+         No amounts. The layer is scrubbed in for this beat; the story is the time-based VMS.taxIntro. Hidden in the static fallback. -->
+    <div class="c1-moment" aria-label="Illustrative fleet scenario: the ignorance tax">
+      <span class="tag tag-vis c1-tx-tag">Illustrative fleet scenario</span>
+      <p class="c1-tx-time">Monday <i>·</i> 08:15 AM</p>
+      <svg class="c1-tx-scene" viewBox="0 0 1600 300" aria-hidden="true">
+        <defs><pattern id="txStripe" patternUnits="userSpaceOnUse" width="28" height="14"><rect width="14" height="14" fill="#E9EEF3"/><rect x="14" width="14" height="14" fill="#5B6B7F"/></pattern></defs>
+        <path class="tx-road" d="M0 252 H1600"/><path class="tx-lane" d="M0 280 H1600"/>
+        <g class="tx-dest"><path d="M1460 196 c-18 -24 -26 -38 -26 -50 a26 26 0 0 1 52 0 c0 12 -8 26 -26 50 Z"/><circle cx="1460" cy="146" r="9"/><text x="1460" y="96" text-anchor="middle">Critical delivery</text></g>
+        <g class="tx-check"><rect class="tx-post" x="900" y="126" width="12" height="126" rx="3"/><text x="924" y="118">Checkpoint</text>
+          <g class="tx-arm"><rect x="906" y="132" width="220" height="14" rx="4" fill="url(#txStripe)"/></g></g>
+        <g class="tx-truck" transform="translate(632 0)">
+          <rect class="tx-box" x="0" y="140" width="152" height="86" rx="6"/>
+          <path class="tx-cab" d="M156 226 V160 H202 L236 194 V226 Z"/>
+          <path class="tx-win" d="M168 168 H198 L222 192 H168 Z"/>
+          <circle class="tx-wheel" cx="44" cy="230" r="21"/><circle class="tx-wheel" cx="196" cy="230" r="21"/>
+          <circle class="tx-hub" cx="44" cy="230" r="7"/><circle class="tx-hub" cx="196" cy="230" r="7"/>
+        </g>
+      </svg>
+      <div class="c1-tx-alert"><svg class="ico"><use href="#i-triangle-alert"/></svg><b>License expired</b><span>3 days ago</span></div>
+      <p class="c1-tx-nobody">Nobody noticed.</p>
+      <ul class="c1-tx-cons">
+        <li><svg class="ico"><use href="#i-id-card"/></svg>Driver stuck</li>
+        <li><svg class="ico"><use href="#i-clock4"/></svg>Delivery delayed</li>
+        <li><svg class="ico"><use href="#i-users"/></svg>Customer waiting</li>
+        <li><svg class="ico"><use href="#i-receipt"/></svg>Fine issued</li>
+      </ul>
+      <div class="c1-tx-idea">
+        <p class="c1-tx-err"><span>Human error?</span><i class="c1-tx-strike"></i></p>
+        <p class="c1-tx-tax">The <em>ignorance</em> tax</p>
+        <p class="c1-tx-def">The cost of critical information being hidden in memory, paper, or disconnected files.</p>
+      </div>
+      <p class="c1-tx-next">One bad day? <b>The industry data says otherwise.</b></p>
     </div>
 
     <div class="c1-domain">

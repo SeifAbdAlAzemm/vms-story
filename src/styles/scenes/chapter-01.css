@@ -99,35 +99,40 @@ html:not(.anim) #ch1 .c1-pin { display: none; }
 #ch1 .c1-pin-close em { font-style: normal; color: #E6B566; }
 #ch1 .c1-pin-note { position: absolute; left: 0; right: 0; bottom: 0; text-align: center; font-size: 15px; }
 
-/* beat 3 · one operational moment (full-canvas layer; reconstruction of the documented pattern, not an incident report) */
+/* beat 3 · the ignorance tax (full-canvas layer; ILLUSTRATIVE scenario, not a client incident). Red = expired only, amber = impact. */
 #ch1 .c1-moment { position: absolute; inset: 0; pointer-events: none; }
 html:not(.anim) #ch1 .c1-moment { display: none; }
-#ch1 .c1-mo-head { position: absolute; left: 0; top: 0; width: 1600px; }
-#ch1 .c1-mo-head h3 { margin-top: 8px; font-size: 34px; line-height: 1.22; font-weight: 750; color: #fff; letter-spacing: -.01em; }
-#ch1 .c1-mo-head h3 em { font-style: normal; color: var(--teal-on-dark); }
-#ch1 .c1-mo-head .tag { position: absolute; right: 0; top: 0; }
-#ch1 .c1-mo-steps { position: absolute; left: 0; top: 190px; width: 1600px; margin: 0; padding: 0; list-style: none;
-  display: grid; grid-template-columns: 1fr 56px 1fr 56px 1fr 56px 1fr; align-items: stretch; }
-#ch1 .c1-mo-step { position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: 12px; height: 236px; padding: 28px 26px;
-  border-radius: 14px; background: rgba(16,47,77,.78); border: 1.5px solid rgba(143,179,217,.3); }
-#ch1 .c1-mo-n { position: absolute; right: 22px; top: 20px; font-size: 18px; font-weight: 800; color: #8EA0B4; letter-spacing: .08em; }
-#ch1 .c1-mo-step .ico { font-size: 40px; color: var(--teal-on-dark); }
-#ch1 .c1-mo-step b { font-size: 25px; line-height: 1.15; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: #fff; }
-#ch1 .c1-mo-step p { font-size: 20px; line-height: 1.35; color: #C7D3DF; }
-#ch1 .c1-mo-arrow { display: grid; place-items: center; }
-#ch1 .c1-mo-arrow .ico { font-size: 30px; color: #8EA0B4; }
-#ch1 .c1-mo-x { background: rgba(162,59,59,.2); border: 2px solid #E07F72; box-shadow: 0 0 0 8px rgba(224,127,114,.1); }
-#ch1 .c1-mo-x .ico { color: #E07F72; }
-#ch1 .c1-mo-x .c1-mo-stamp { align-self: flex-start; padding: 4px 14px; border: 3px solid #E07F72; border-radius: 6px; font-size: 34px; letter-spacing: .14em; color: #F2A79C; }
-#ch1 .c1-mo-x p { color: #F3D6D1; }
-#ch1 .c1-mo-track { position: absolute; left: 0; top: 476px; width: 1600px; height: 70px; }
-#ch1 .c1-mo-line { position: absolute; left: 0; top: 0; width: 1414px; height: 0; border-top: 3px dashed rgba(224,127,114,.6); }
-#ch1 .c1-mo-dot { position: absolute; left: 1402px; top: -10px; width: 22px; height: 22px; border-radius: 50%; background: #E07F72; box-shadow: 0 0 0 7px rgba(224,127,114,.22); }
-#ch1 .c1-mo-was { position: absolute; left: 0; top: 18px; font-size: 21px; font-weight: 600; color: #E8B4AC; }
-#ch1 .c1-mo-here { position: absolute; left: 1338px; top: 18px; width: 150px; text-align: center; font-size: 21px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: #F2A79C; }
-#ch1 .c1-mo-close { position: absolute; left: 0; right: 0; top: 640px; text-align: center; font-size: 26px; line-height: 1.35; color: #A9BACB; }
-#ch1 .c1-mo-close b { display: block; margin-top: 8px; font-size: 44px; font-weight: 800; color: #fff; letter-spacing: -.01em; }
-#ch1 .c1-mo-close em { font-style: normal; color: #F2A79C; }
+#ch1 .c1-tx-tag { position: absolute; right: 0; top: 0; }
+#ch1 .c1-tx-time { position: absolute; left: 0; top: 0; font-size: 30px; font-weight: 820; letter-spacing: .18em; text-transform: uppercase; color: #fff; }
+#ch1 .c1-tx-time i { font-style: normal; color: var(--teal-on-dark); }
+#ch1 .c1-tx-scene { position: absolute; left: 0; top: 60px; width: 1600px; height: 300px; overflow: visible; }
+#ch1 .tx-road { stroke: rgba(143,179,217,.45); stroke-width: 3; }
+#ch1 .tx-lane { stroke: rgba(143,179,217,.22); stroke-width: 3; stroke-dasharray: 26 22; }
+#ch1 .tx-dest path { fill: none; stroke: var(--teal-on-dark); stroke-width: 3; } #ch1 .tx-dest circle { fill: var(--teal-on-dark); }
+#ch1 .tx-dest text, #ch1 .tx-check text { fill: #A9BACB; font-size: 18px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+#ch1 .tx-post { fill: #8EA0B4; }
+#ch1 .tx-box { fill: #163A5F; stroke: var(--teal-on-dark); stroke-width: 2.5; }
+#ch1 .tx-cab { fill: #21507E; stroke: var(--teal-on-dark); stroke-width: 2.5; stroke-linejoin: round; }
+#ch1 .tx-win { fill: #0C2238; stroke: var(--teal-on-dark); stroke-opacity: .5; stroke-width: 1.5; }
+#ch1 .tx-wheel { fill: #07121F; stroke: #2B4A69; stroke-width: 3; } #ch1 .tx-hub { fill: var(--teal-on-dark); }
+#ch1 .c1-tx-alert { position: absolute; left: 496px; top: 92px; width: 392px; display: grid; grid-template-columns: 44px 1fr; column-gap: 12px; align-items: center;
+  padding: 14px 20px; border-radius: 12px; background: rgba(162,59,59,.28); border: 2px solid #E07F72; box-shadow: 0 0 0 8px rgba(224,127,114,.1); }
+#ch1 .c1-tx-alert .ico { grid-row: 1 / 3; font-size: 40px; color: #E07F72; }
+#ch1 .c1-tx-alert b { font-size: 28px; font-weight: 850; letter-spacing: .08em; white-space: nowrap; text-transform: uppercase; color: #F2A79C; line-height: 1.1; }
+#ch1 .c1-tx-alert span { font-size: 20px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; color: #F3D6D1; }
+#ch1 .c1-tx-nobody { position: absolute; left: 0; right: 0; top: 352px; text-align: center; font-size: 26px; font-style: italic; color: #C7D3DF; }
+#ch1 .c1-tx-cons { position: absolute; left: 0; top: 410px; width: 1600px; margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+#ch1 .c1-tx-cons li { display: flex; align-items: center; justify-content: center; gap: 14px; height: 72px; border-radius: 12px;
+  background: rgba(16,47,77,.78); border: 1.5px solid rgba(230,181,102,.55); font-size: 24px; font-weight: 750; color: #fff; }
+#ch1 .c1-tx-cons .ico { font-size: 28px; color: #E6B566; }
+#ch1 .c1-tx-idea { position: absolute; left: 0; top: 522px; width: 1600px; text-align: center; }
+#ch1 .c1-tx-err { position: relative; display: inline-block; font-size: 44px; font-weight: 700; color: #C7D3DF; }
+#ch1 .c1-tx-strike { position: absolute; left: -10px; right: -10px; top: 54%; height: 4px; border-radius: 2px; background: #E9EEF3; }
+#ch1 .c1-tx-tax { margin-top: 8px; font-size: 84px; line-height: 1; font-weight: 850; letter-spacing: .04em; text-transform: uppercase; color: #fff; }
+#ch1 .c1-tx-tax em { font-style: normal; color: #E6B566; }
+#ch1 .c1-tx-def { margin-top: 16px; font-size: 26px; color: #A9BACB; }
+#ch1 .c1-tx-next { position: absolute; right: 0; bottom: 0; font-size: 26px; font-weight: 600; color: #A9BACB; }
+#ch1 .c1-tx-next b { color: var(--teal-on-dark); }
 
 /* beat 2 · From Ideation to Creation (full-canvas layer; team-provided journey labels, high-level overview only).
    11 stages on one left → right line; labels alternate above / below so each gets ~270 px of width. */

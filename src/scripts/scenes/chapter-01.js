@@ -1,6 +1,6 @@
-/* CHAPTER 1 · operational questions at scale → from ideation to creation → one operational moment → problem in numbers
+/* CHAPTER 1 · operational questions at scale → from ideation to creation → the ignorance tax (illustrative) → problem in numbers
    → domain map → research vs elicitation → kick-off findings */
-VMS.scene("ch1", ({ tl, q, qa, at, draw }) => {
+VMS.scene("ch1", ({ sc, tl, q, qa, at, draw, reduce }) => {
   tl.from(q(".bg-fleet"), { opacity: 0, duration: 0.8 }, at(0));
   // beat 1: operational questions at real scale — lead (~550 context), Vehicle X + five questions, then the framing line.
   // The chapter canvas (head + ~550 block) stays hidden until Domain orientation; the static fallback shows it as before.
@@ -19,20 +19,40 @@ VMS.scene("ch1", ({ tl, q, qa, at, draw }) => {
   qa(".c1-jo-step").forEach((el, i) => {
     tl.from(el, { opacity: 0, y: el.classList.contains("dn") ? -10 : 10, duration: 0.18 }, at(1) + 0.22 + i * 0.05);
   });
-  // beat 3: one operational moment — mission request → select vehicle → manual license check → EXPIRED → closing line.
-  // Reconstruction of the documented pattern; no count (the 6 vehicles stay on the kick-off findings beat).
+  // beat 3: the ignorance tax — ILLUSTRATIVE scenario, not a client incident (the 6 vehicles stay on the kick-off beat).
+  // The layer is scrubbed in like any beat; the story inside is time-based (VMS.taxIntro, ~11 s): it plays when the presenter
+  // lands on this beat, is completed when they come back from a later beat, and resets when they go back before it.
   tl.to(q(".c1-journey"), { autoAlpha: 0, duration: 0.25 }, at(2));
-  tl.from(q(".c1-moment"), { autoAlpha: 0, duration: 0.12 }, at(2) + 0.1);
-  tl.from(q(".c1-mo-head"), { opacity: 0, y: 12, duration: 0.2 }, at(2) + 0.12);
-  const steps = qa(".c1-mo-step"), arrows = qa(".c1-mo-arrow");
-  steps.forEach((el, i) => {
-    tl.from(el, { opacity: 0, y: 14, duration: 0.14 }, at(2) + 0.22 + i * 0.12);
-    if (arrows[i]) tl.from(arrows[i], { opacity: 0, x: -8, duration: 0.08 }, at(2) + 0.3 + i * 0.12);
-  });
-  tl.from(q(".c1-mo-stamp"), { opacity: 0, scale: 1.25, transformOrigin: "0% 50%", duration: 0.1 }, at(2) + 0.64);
-  tl.from(q(".c1-mo-line"), { scaleX: 0, transformOrigin: "0% 50%", duration: 0.14 }, at(2) + 0.7);
-  tl.from([q(".c1-mo-was"), q(".c1-mo-dot"), q(".c1-mo-here")], { opacity: 0, duration: 0.1 }, at(2) + 0.76);
-  tl.from(q(".c1-mo-close"), { opacity: 0, y: 10, duration: 0.14 }, at(2) + 0.84);
+  tl.from(q(".c1-moment"), { autoAlpha: 0, duration: 0.15 }, at(2) + 0.1);
+  const incident = [q(".c1-tx-time"), q(".c1-tx-scene"), q(".c1-tx-alert"), q(".c1-tx-nobody"), q(".c1-tx-cons")];
+  const tax = VMS.taxIntro = gsap.timeline({ paused: true, defaults: { ease: "power2.out" } })
+    .from([q(".c1-tx-time"), q(".c1-tx-tag")], { opacity: 0, y: 12, duration: 0.5 }, 0)                       // 1 · Monday morning
+    .from([q(".tx-road"), q(".tx-lane"), q(".tx-dest")], { opacity: 0, duration: 0.5 }, 0.2)
+    .from(q(".tx-truck"), { x: -260, duration: 2.3, ease: "power2.out" }, 0.4)                                // truck heads for the delivery
+    .from(q(".tx-check"), { opacity: 0, duration: 0.3 }, 1.6)                                                  // 2 · checkpoint
+    .from(q(".tx-arm"), { rotation: -82, svgOrigin: "906 139", duration: 0.5, ease: "power2.inOut" }, 2.0)
+    .from(q(".c1-tx-alert"), { opacity: 0, scale: 1.18, duration: 0.35, ease: "back.out(2)" }, 3.0)           // 3 · status reveal
+    .from(q(".c1-tx-nobody"), { opacity: 0, y: 8, duration: 0.4 }, 3.7)
+    .from(Array.from(q(".c1-tx-cons").children), { opacity: 0, y: 14, stagger: 0.4, duration: 0.35 }, 4.6)    // 4 · consequences
+    .to(incident, { opacity: 0.28, duration: 0.6 }, 7.0)                                                      // 5 · from incident to idea
+    .from(q(".c1-tx-err"), { opacity: 0, y: 12, duration: 0.5 }, 7.2)
+    .from(q(".c1-tx-strike"), { scaleX: 0, transformOrigin: "0% 50%", duration: 0.4, ease: "power1.inOut" }, 8.2)
+    .to(q(".c1-tx-err"), { opacity: 0.4, duration: 0.4 }, 8.6)                                                 // 6 · the ignorance tax
+    .from(q(".c1-tx-tax"), { opacity: 0, scale: 0.92, duration: 0.6 }, 8.7)
+    .from(q(".c1-tx-def"), { opacity: 0, y: 10, duration: 0.5 }, 9.4)
+    .from(q(".c1-tx-next"), { opacity: 0, x: -12, duration: 0.5 }, 10.4);                                      // 7 · hand-off
+  if (reduce) tax.progress(1);
+  else {
+    let last = 0;
+    const check = (self) => {
+      const t = self.progress * 7;                    // timeline time: this beat is settled at t = 3
+      if (t < 2.5) { if (tax.progress() > 0) tax.pause(0); }
+      else if (t >= 2.85 && t <= 3.35) { if (tax.progress() === 0 && !tax.isActive()) { if (last > 3.35) tax.progress(1); else tax.restart(); } }
+      else if (t > 3.6 && tax.progress() < 1) tax.progress(1);
+      last = t;
+    };
+    ScrollTrigger.create({ trigger: sc, start: "top bottom", end: "bottom bottom", onUpdate: check, onRefresh: check });
+  }
   // beat 4: the problem in numbers — external industry / market context (not the organization's data).
   // Reveal order: 79% → 63% → 17.7% → $448–$760/day → Egypt context → closing statement.
   tl.to(q(".c1-moment"), { autoAlpha: 0, duration: 0.25 }, at(3));

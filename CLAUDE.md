@@ -119,6 +119,8 @@ qa/                        GENERATED output; qa/shots/ and qa/sheets/ are gitign
   when the prologue arrives (`top 40%`), completed instantly on a jump past it, reset when the presenter goes back to the opening; `[0,1)` the `.p-team` frame fades out and
   the question + background labels appear; `[1,2)` converge. `.p-team` is `display:none` without `html.anim`, so the static /
   no-GSAP fallback shows the prologue's final (converged) state like every other scene, without the team frame.
+- Ch 1 beat 3 (presentation beat 7, "The ignorance tax") is scrubbed in like any beat, but its story is the time-based `VMS.taxIntro` (~11 s):
+  it plays when the presenter lands on the beat, is completed when they return from a later beat, and resets when they go back before it.
 - Helpers passed to builders: `tl, q, qa, at, draw(els,pos,opt)` (SVG stroke draw), `count(el,to,pos,dur)`, `reduce`.
 - Content is visible by default. `html.anim` is added only after every timeline builds, so animations use `tl.from(...)`.
   If a builder throws, the whole page reverts to the static stacked narrative. Keep that property.
