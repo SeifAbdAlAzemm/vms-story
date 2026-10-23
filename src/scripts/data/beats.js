@@ -1,5 +1,5 @@
 /* =====================================================================
-   PRESENTER BEATS — 34 narrative states, ~18¾ minutes (estimate; re-time in rehearsal).
+   PRESENTER BEATS — 36 narrative states, ~19¼ minutes (estimate; re-time in rehearsal).
    scene  : id of the <section class="scene"> the beat belongs to (beats are
             ordered; the build checks the count per scene matches data-beats)
    thread : golden-thread step(s) that light up at this beat (optional; string or array)
@@ -8,6 +8,10 @@
    ===================================================================== */
 (function (D) {
   D.beats = [
+    // ---------------- COVER (~0:08) ----------------
+    { scene: "cover", chapter: "prologue", title: "From scattered records to clearer fleet decisions",
+      notes: { key: "This project is about moving from fragmented operational information toward clearer fleet decisions.", why: "A cover statement for 5–10 seconds. It frames the talk; VMS itself is defined on the next beat. It is a business analysis proposal, not a system that has been built.", value: "Sets the promise the ending returns to: clearer fleet decisions.", next: "So what is VMS?" } },
+
     // ---------------- OPENING (~0:15) ----------------
     { scene: "opening", chapter: "prologue", title: "What is VMS?",
       notes: { key: "VMS, the Vehicle Management System: one centralized system for managing the complete vehicle lifecycle — vehicle, driver, movement, maintenance, fuel and licensing.", why: "The audience should know what the system is before they meet the team or the BA journey.", value: "A shared definition in a few seconds. The problem, the scale and the findings come later in the story.", next: "Before the problem, the people: meet the team." } },
@@ -84,7 +88,7 @@
     { scene: "ch8c", chapter: "ch8", title: "The prototype: requirements take shape", thread: "prototype",
       notes: { key: "Requirements → backlog → design. The team-created prototype's License Register shows license records, expiry status and renewal states — where our golden thread lands in the product experience. The outlined column is license status, the thing US-16 asks the system to calculate.", why: "Design ran as a parallel track — analysis, review, wireframes, prototype — and became concrete as modules were approved. The Movement and Maintenance dashboards show the same thinking for two more modules.", value: "Analysis and design evolved together. This is a prototype with illustrative data: not production software, and its records and counts are not business baselines.", next: "Step back. Where did all of this start?" } },
 
-    // ---------------- FINALE · retrospective → convergence → close (~2:15) ----------------
+    // ---------------- FINALE · retrospective → convergence → the next decision → close (~2:45) ----------------
     { scene: "ch5a", chapter: "finale", title: "Pains and needs",
       notes: { key: "We started from real pains: expired licenses found too late, late returns, no fuel traceability, maintenance by hand.", why: "Features that do not trace to a pain are wish-list items.", value: "Keeps the feature list anchored to evidence.", next: "Each pain became concrete capabilities." } },
     { scene: "ch5a", chapter: "finale", title: "Pains become features",
@@ -92,7 +96,9 @@
     { scene: "finale-a", chapter: "finale", title: "Everything converges",
       notes: { key: "Overview, scope, stakeholders, RACI, features, BRD, BPMN, stories, criteria, Jira, prototype — all converge into one VMS definition.", why: "Each artifact answered a different question.", value: "Together they reduced uncertainty and unlocked the next decision.", next: "And the team changed too." } },
     { scene: "finale-a", chapter: "finale", title: "Two stories meet",
-      notes: { key: "The backgrounds we started with converge again: team transformation and project transformation are the same story.", why: "Different perspectives made the review loop valuable.", value: "One mindset, one baseline, one product definition.", next: "Close." } },
+      notes: { key: "The backgrounds we started with converge again: team transformation and project transformation are the same story.", why: "Different perspectives made the review loop valuable.", value: "One mindset, one baseline, one product definition.", next: "And that brings us to the next decision." } },
+    { scene: "finale-n", chapter: "finale", title: "The next decision",
+      notes: { key: "The analysis does not claim the investment decision is already made. It gives stakeholders a defined scope, measurable success criteria and evidence for deciding what comes next.", why: "This is a BA proposal and product definition: not a claim that the full system has been implemented, and not a financial forecast. The success measures are still to be agreed; the BRD's targets are proposed and confirmed by the Sponsor once baseline figures arrive.", value: "Ends on the decision the audience can take, not on what we produced: more vehicles need clearer decisions, and the first step is defined.", next: "Close." } },
     { scene: "finale-b", chapter: "finale", title: "Closing",
       notes: { key: "We did not produce a collection of documents. We turned one operational problem into a structured, verified and traceable product definition.", why: "Each artifact answered a different question, reduced uncertainty and unlocked the next decision.", value: "Thank the panel.", next: "Open for questions — free scroll or Home to revisit any chapter." } },
   ];

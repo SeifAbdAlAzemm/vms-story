@@ -58,8 +58,9 @@
     ctx = gsap.context(() => { V.scenes.forEach(buildScene); });
     V.root.classList.add("anim");
     ScrollTrigger.refresh();
-    if (V.intro && !reduce && window.scrollY < 4 && !location.hash) V.intro.play(0);
-    else if (V.intro) V.intro.progress(1);
+    // the cover plays on load; every later time-based intro is triggered by its own scene (opening, prologue, ch1)
+    if (V.coverIntro && !reduce && window.scrollY < 4 && !location.hash) V.coverIntro.play(0);
+    else if (V.coverIntro) V.coverIntro.progress(1);
   } catch (err) {
     try { if (ctx) ctx.revert(); } catch (_) { /* nothing left to revert */ }
     try { if (window.ScrollTrigger) ScrollTrigger.getAll().forEach((t) => t.kill()); } catch (_) { /* ignore */ }

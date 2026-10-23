@@ -10,3 +10,16 @@
 #opening .o-area span { font-size: 24px; font-weight: 650; color: #EAF2F7; white-space: nowrap; }
 #opening .o-car { position: absolute; left: 760px; top: 248px; width: 840px; height: 389px; overflow: visible; }
 #opening .o-speed { opacity: 0; }   /* only visible during the entry move */
+
+/* COVER · from scattered records to clearer fleet decisions (1 beat, dark). Statement left, record fragments settling right. */
+#cover .cv-kicker { position: absolute; left: 0; top: 214px; font-size: 20px; color: var(--teal-on-dark); }
+#cover .cv-title { position: absolute; left: 0; top: 258px; width: 1080px; font-size: 82px; font-weight: 820; line-height: 1.04; letter-spacing: -.01em; color: #fff; }
+#cover .cv-title span { display: block; white-space: nowrap; } #cover .cv-title em { font-style: normal; color: var(--teal-on-dark); }
+#cover .cv-rule { position: absolute; left: 0; top: 556px; width: 88px; height: 4px; border-radius: 2px; background: var(--teal-on-dark); }
+#cover .cv-sub { position: absolute; left: 0; top: 582px; font-size: 22px; font-weight: 800; letter-spacing: .22em; text-transform: uppercase; color: #C9D4E0; }
+#cover .cv-recs { position: absolute; left: 1120px; top: 236px; width: 480px; height: 366px; overflow: visible; }
+#cover .rec rect { fill: rgba(14,42,71,.65); stroke: rgba(143,179,217,.45); stroke-width: 1.5; }
+#cover .rec path { stroke: rgba(143,179,217,.45); stroke-width: 3; stroke-linecap: round; fill: none; }
+#cover .rec-hl rect { stroke: var(--teal-on-dark); stroke-width: 2.5; fill: rgba(111,194,184,.12); }
+#cover .rec-hl path { stroke: var(--teal-on-dark); }
+

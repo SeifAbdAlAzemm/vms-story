@@ -12,6 +12,11 @@ VMS.scene("finale-a", ({ tl, q, qa, at, draw }) => {
   tl.from(qa(".f-bg"), { opacity: 0, x: (i) => (i - 2) * 160, stagger: 0.06, duration: 0.5 }, at(1) + 0.05);
   tl.from(q(".f-merge"), { opacity: 0, y: 12, duration: 0.4 }, at(1) + 0.5);
 });
+VMS.scene("finale-n", ({ tl, q, qa, at }) => {
+  // one beat: title (header entry) → progression → the three decision anchors
+  tl.from(qa(".nd-steps li"), { opacity: 0, y: 14, stagger: 0.08, duration: 0.25 }, at(0) + 0.25);
+  tl.from(qa(".nd-anchors li"), { opacity: 0, y: 18, stagger: 0.08, duration: 0.3 }, at(0) + 0.5);
+});
 VMS.scene("finale-b", ({ tl, q, at }) => {
   tl.from(q(".fb-from"), { opacity: 0, x: -30, duration: 0.5 }, at(0) + 0.05);
   tl.from(q(".fb-arrow"), { opacity: 0, duration: 0.4 }, at(0) + 0.2);
