@@ -62,3 +62,69 @@ html:not(.anim) #ch1 .c1-ask { display: none; }
 #ch1 .c1-ask-close { position: absolute; left: 0; right: 0; top: 700px; text-align: center; font-size: 28px; line-height: 1.35; color: #A9BACB; }
 #ch1 .c1-ask-close b { display: block; font-size: 44px; font-weight: 800; color: #fff; letter-spacing: -.01em; }
 #ch1 .c1-ask-close em { font-style: normal; color: #E6B566; }
+
+/* beat 2 · the problem in numbers (full-canvas layer; external industry / market context, not the organization's data) */
+#ch1 .c1-pin { position: absolute; inset: 0; pointer-events: none; }
+html:not(.anim) #ch1 .c1-pin { display: none; }
+#ch1 .c1-pin-head { position: absolute; left: 0; top: 0; width: 1600px; }
+#ch1 .c1-pin-head h3 { margin-top: 8px; font-size: 34px; line-height: 1.22; font-weight: 750; color: #fff; letter-spacing: -.01em; }
+#ch1 .c1-pin-head h3 em { font-style: normal; color: #E6B566; }
+#ch1 .c1-pin-head .tag { position: absolute; right: 0; top: 0; }
+#ch1 .c1-pin .eyebrow { font-size: 15px; }
+#ch1 .c1-pin-ops { position: absolute; left: 0; top: 140px; width: 960px; }
+#ch1 .c1-pin-stats { margin-top: 16px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+#ch1 .c1-stat { padding-left: 22px; border-left: 2px solid rgba(143,179,217,.28); }
+#ch1 .c1-stat .ico { font-size: 26px; color: #8EA0B4; }
+#ch1 .c1-stat b { display: block; margin-top: 4px; font-size: 92px; line-height: 1; font-weight: 820; color: #fff; letter-spacing: -.03em; }
+#ch1 .c1-stat p { margin-top: 10px; font-size: 20px; line-height: 1.32; color: #D4DEE8; min-height: 53px; }
+#ch1 .c1-stat .src, #ch1 .c1-pin-fin .src, #ch1 .c1-pin-eg .src { display: block; margin-top: 8px; font-size: 14px; }
+#ch1 .c1-pin-fin { position: absolute; left: 0; top: 418px; width: 960px; padding: 18px 0 18px 26px; border-left: 4px solid #E6B566;
+  background: linear-gradient(90deg, rgba(230,181,102,.13), rgba(230,181,102,0) 85%); }
+#ch1 .c1-pin-fin .eyebrow { color: #E6B566; }
+#ch1 .c1-pin-cost { display: block; margin-top: 6px; font-size: 128px; line-height: 1; font-weight: 820; color: #E6B566; letter-spacing: -.035em; white-space: nowrap; }
+#ch1 .c1-pin-cost small { display: inline-block; margin-left: 14px; vertical-align: 6px; font-size: 30px; line-height: 1.12; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; color: #F0D9AE; }
+#ch1 .c1-pin-fin p { margin-top: 10px; font-size: 24px; color: #fff; font-weight: 600; }
+#ch1 .c1-pin-eg { position: absolute; left: 1020px; top: 140px; width: 580px; height: 533px; padding: 26px 32px; border-radius: 14px;
+  background: rgba(16,47,77,.62); border: 1.5px solid rgba(111,194,184,.45); display: flex; flex-direction: column; justify-content: space-between; }
+#ch1 .c1-eg-row { margin-top: 0; }
+#ch1 .c1-eg-row b { display: block; font-size: 80px; line-height: 1; font-weight: 820; color: #fff; letter-spacing: -.03em; }
+#ch1 .c1-eg-row p { margin-top: 8px; font-size: 20px; line-height: 1.32; color: #D4DEE8; }
+#ch1 .c1-eg-mkt { padding-top: 22px; border-top: 1px solid rgba(143,179,217,.25); }
+#ch1 .c1-eg-mkt b { font-size: 54px; color: var(--teal-on-dark); white-space: nowrap; }
+#ch1 .c1-eg-mkt b i { font-style: normal; font-weight: 500; color: #8EA0B4; }
+#ch1 .c1-eg-mkt p span { display: block; margin-top: 2px; font-size: 17px; color: #A9BACB; }
+#ch1 .c1-pin-eg .src { margin-top: 0; }
+#ch1 .c1-pin-close { position: absolute; left: 0; right: 0; top: 692px; text-align: center; font-size: 26px; line-height: 1.35; color: #A9BACB; }
+#ch1 .c1-pin-close b { display: block; margin-top: 2px; font-size: 40px; font-weight: 800; color: #fff; letter-spacing: -.01em; }
+#ch1 .c1-pin-close em { font-style: normal; color: #E6B566; }
+#ch1 .c1-pin-note { position: absolute; left: 0; right: 0; bottom: 0; text-align: center; font-size: 15px; }
+
+/* beat 5 · one operational moment (full-canvas layer; reconstruction of the documented pattern, not an incident report) */
+#ch1 .c1-moment { position: absolute; inset: 0; pointer-events: none; }
+html:not(.anim) #ch1 .c1-moment { display: none; }
+#ch1 .c1-mo-head { position: absolute; left: 0; top: 0; width: 1600px; }
+#ch1 .c1-mo-head h3 { margin-top: 8px; font-size: 34px; line-height: 1.22; font-weight: 750; color: #fff; letter-spacing: -.01em; }
+#ch1 .c1-mo-head h3 em { font-style: normal; color: var(--teal-on-dark); }
+#ch1 .c1-mo-head .tag { position: absolute; right: 0; top: 0; }
+#ch1 .c1-mo-steps { position: absolute; left: 0; top: 190px; width: 1600px; margin: 0; padding: 0; list-style: none;
+  display: grid; grid-template-columns: 1fr 56px 1fr 56px 1fr 56px 1fr; align-items: stretch; }
+#ch1 .c1-mo-step { position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: 12px; height: 236px; padding: 28px 26px;
+  border-radius: 14px; background: rgba(16,47,77,.78); border: 1.5px solid rgba(143,179,217,.3); }
+#ch1 .c1-mo-n { position: absolute; right: 22px; top: 20px; font-size: 18px; font-weight: 800; color: #8EA0B4; letter-spacing: .08em; }
+#ch1 .c1-mo-step .ico { font-size: 40px; color: var(--teal-on-dark); }
+#ch1 .c1-mo-step b { font-size: 25px; line-height: 1.15; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: #fff; }
+#ch1 .c1-mo-step p { font-size: 20px; line-height: 1.35; color: #C7D3DF; }
+#ch1 .c1-mo-arrow { display: grid; place-items: center; }
+#ch1 .c1-mo-arrow .ico { font-size: 30px; color: #8EA0B4; }
+#ch1 .c1-mo-x { background: rgba(162,59,59,.2); border: 2px solid #E07F72; box-shadow: 0 0 0 8px rgba(224,127,114,.1); }
+#ch1 .c1-mo-x .ico { color: #E07F72; }
+#ch1 .c1-mo-x .c1-mo-stamp { align-self: flex-start; padding: 4px 14px; border: 3px solid #E07F72; border-radius: 6px; font-size: 34px; letter-spacing: .14em; color: #F2A79C; }
+#ch1 .c1-mo-x p { color: #F3D6D1; }
+#ch1 .c1-mo-track { position: absolute; left: 0; top: 476px; width: 1600px; height: 70px; }
+#ch1 .c1-mo-line { position: absolute; left: 0; top: 0; width: 1414px; height: 0; border-top: 3px dashed rgba(224,127,114,.6); }
+#ch1 .c1-mo-dot { position: absolute; left: 1402px; top: -10px; width: 22px; height: 22px; border-radius: 50%; background: #E07F72; box-shadow: 0 0 0 7px rgba(224,127,114,.22); }
+#ch1 .c1-mo-was { position: absolute; left: 0; top: 18px; font-size: 21px; font-weight: 600; color: #E8B4AC; }
+#ch1 .c1-mo-here { position: absolute; left: 1338px; top: 18px; width: 150px; text-align: center; font-size: 21px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: #F2A79C; }
+#ch1 .c1-mo-close { position: absolute; left: 0; right: 0; top: 640px; text-align: center; font-size: 26px; line-height: 1.35; color: #A9BACB; }
+#ch1 .c1-mo-close b { display: block; margin-top: 8px; font-size: 44px; font-weight: 800; color: #fff; letter-spacing: -.01em; }
+#ch1 .c1-mo-close em { font-style: normal; color: #F2A79C; }

@@ -12,12 +12,12 @@ Evidence map and known content risks: `SOURCES.md`. Technical how-to: `CLAUDE.md
 - Target: Chrome / Edge, presenter-driven with keyboard or clicker. English on screen.
 - Viewports that must work: 1920×1080, 1366×768, 1280×800, 1024×768, plus 125% and 150% OS scaling.
 
-## 2. Structure — 34 beats, about 19 minutes
+## 2. Structure — 36 beats, about 19¾ minutes
 | Part | Beats | Scenes |
 |---|---|---|
 | Opening: What is VMS? (title, one-line definition, six lifecycle areas, vehicle) | 1 | opening |
 | Prologue: meet the team → different backgrounds → one BA mindset | 3 | prologue |
-| 1 · The world we entered (operational questions at ~550-vehicle scale → domain orientation → research vs elicitation → kick-off) | 4 | ch1 |
+| 1 · The world we entered (operational questions at ~550-vehicle scale → the problem in numbers → domain orientation → research vs elicitation → one operational moment → kick-off) | 6 | ch1 |
 | 2 · How we worked | 3 | ch2 |
 | 3 · The boundary | 2 | ch3 |
 | 4 · People and ownership | 3 | ch4 |
@@ -73,6 +73,8 @@ Each scene ends with an "Unlocks →" line that hands over to the next question.
   - **Prepared for:** Test & UAT, Deploy & Transition, Operate & Evaluate
 - Verification is **performed**. Validation is **partial / pending** (BRD sign-off and As-Is confirmation, ISS-10).
 - Email is not stated as a finalised notification channel (ISS-06 open). The acceptance criteria shown are channel-independent.
+- "The problem in numbers" (Ch 1 beat 2) shows **external industry and market statistics, as context only**: 79% / 63% (Vimcar survey, UK), 17.7% (Motive / Wakefield), $448–$760 per vehicle / day, average vehicle downtime cost (Element Fleet Management, citing Work Truck Magazine), ~10.4M licensed vehicles 2024 and ~USD 163M → ~229M market 2025 → 2031 (Ken Research). Figures and source labels exactly as supplied by Seif (23 Oct 2026). Never present them as the organization's, its fleet's or this project's figures, and add no further statistics. The on-screen "context only" tag and footnote stay.
+- "One operational moment" (Ch 1 beat 5, before the kick-off findings) is a **storytelling reconstruction of the documented pattern** (Kick-off MOM: paper + Excel; expiry found only when a vehicle was assigned/used for a mission; no proactive monitoring), not an incident report. Steps: Mission request → Select vehicle → Manual license check → Expired. It never shows the number 6 (revealed on the kick-off beat, which stays the formal start of the golden thread) and adds no consequences (checkpoints, fines, delays, accidents, losses), dates or people.
 - Jira: state only what the screenshots show (7 epics, a reporter per epic, all visible items To Do, VMS-16 = US-16 text). **Never state a total Jira story count.** Never recreate fake Jira.
 - BPMN: keep the process document's own role labels. Role mapping goes in presenter notes. Movement and Maintenance BPMN appear as thumbnails only.
 - Backgrounds are shown without names: no person ↔ background mapping anywhere.
@@ -116,3 +118,5 @@ Each scene ends with an "Unlocks →" line that hands over to the next question.
 - Unreleased (proposed v2.0.0, beat count changed) — Meet the Team added as Prologue beat 1; Prologue 2 → 3 beats, total 32 → 33. Confirmed team list locked (§7a).
 - Unreleased — Opening "What is VMS?" added as a standalone scene before the Prologue (§6a); 15 → 16 scenes, 33 → 34 beats (≈ +15 s). Meet the Team now plays when the presenter arrives from the opening.
 - Unreleased — Ch 1 opens with "Operational questions" (full-canvas layer inside ch1, hidden in the static fallback). It replaces the standalone Fleet Challenge beat: the ~550 vehicles / several departments / manual + Excel context moved into its lead line, and the ~550 block stays on the Ch 1 canvas from Domain orientation on. Total stays 34 beats. The five questions are a BA storytelling synthesis of documented problems, not kick-off quotes; the closing line is narrative framing, not a statistic.
+- Unreleased — Ch 1 beat 2 "The problem in numbers" added after Operational questions, before Domain orientation (full-canvas layer, hidden in the static fallback). External industry / market context only (§7). Ch 1 4 → 5 beats; total 34 → 35 beats (≈ +30 s).
+- Unreleased — Ch 1 beat 5 "One operational moment" added after Research vs elicitation, before What the kick-off revealed (full-canvas layer, hidden in the static fallback). Reconstruction of the documented pattern (§7). Ch 1 5 → 6 beats; total 35 → 36 beats (≈ +15–20 s).

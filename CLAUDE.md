@@ -4,7 +4,7 @@ Technical guide for this repo. Locked narrative/evidence decisions: `docs/DECISI
 
 ## What this is
 An offline, scroll-driven HTML narrative for the VMS Business Analysis final project:
-34 presenter beats (about 19 min). It is **not** a website and **not** a slide deck.
+36 presenter beats (about 19¾ min). It is **not** a website and **not** a slide deck.
 GitHub Pages serves root `index.html` from `master`.
 
 ## Default mode: fast iteration
@@ -104,7 +104,7 @@ qa/                        GENERATED output; qa/shots/ and qa/sheets/ are gitign
 ## Scene model (read before touching a scene)
 - Each scene is `<section class="scene" id data-beats data-chapter data-theme>` → sticky `.stage` (100vh) → `.safe`, a 1600×900 canvas scaled by `engine.layout()`.
   Everything inside `.safe` is positioned in canvas px. Keep content inside 1600×900, and keep the `.unlocks` line at the bottom.
-- Scenes, in order (beats): opening 1 · prologue 3 · ch1 4 · ch2 3 · ch3 2 · ch4 3 · ch5a 2 · ch5b 2 · ch6a 1 · ch6b 2 · ch7 3 · ch8a 3 · ch8b 1 · ch8c 1 · finale-a 2 · finale-b 1 = **34**.
+- Scenes, in order (beats): opening 1 · prologue 3 · ch1 6 · ch2 3 · ch3 2 · ch4 3 · ch5a 2 · ch5b 2 · ch6a 1 · ch6b 2 · ch7 3 · ch8a 3 · ch8b 1 · ch8c 1 · finale-a 2 · finale-b 1 = **36**.
 - Timeline: one paused GSAP timeline per scene, duration = beats, scrubbed by ScrollTrigger (`top bottom` → `bottom bottom`, scrub 0.6).
   `at(k)` is the start of the move into beat k. Beat 0 animates during the scene's entry `[0,1)`, and beat k animates in `[k, k+1)`.
   **Never let a scene's tweens run past `beats`.** `boot.js` records overruns in `VMS.warnings` (visible in the console).
@@ -138,7 +138,7 @@ npm ci            # only if node_modules is missing
 The build fails on: unresolved `@render/@include` markers · scene `data-beats` total ≠ `beats.js` length or a beat in the wrong scene ·
 any external `src`/`href`/`url()` · banned strings · prototype filenames outside `prototype_0[1-5].(png|jpg|jpeg|webp)`.
 
-Expected summary: 16 scenes · 34 beats · Jira 2 · process 3 · `Prototype: 3/3` · ≈0.68 MB · 0 external requests.
+Expected summary: 16 scenes · 36 beats · Jira 2 · process 3 · `Prototype: 3/3` · ≈0.68 MB · 0 external requests.
 Mention the summary only if something differs from this.
 
 ## Screenshot of one beat
@@ -164,13 +164,13 @@ Mention the summary only if something differs from this.
 1. `data-beats` on the section.
 2. Entry in `beats.js` at the right position, with notes.
 3. Choreography in `scenes/<chapter>.js` for the new `at(k)`.
-4. The beat count (now 34) in the `beats.js` header, `src/index.html` counters, this file's scene list and `SOURCES.md` beat numbers.
+4. The beat count (now 36) in the `beats.js` header, `src/index.html` counters, this file's scene list and `SOURCES.md` beat numbers.
 5. Keep the hard-coded references below correct, but **don't run the QA suite** for this alone.
 6. Build (it checks the scene/beat mapping), then screenshot the new/affected beats.
 
-Hard-coded beat references (all in `tools/qa.mjs` unless noted): `beats === 34` (functional) and `rows.length === 34` (reduced);
-the rail chapter-jump target (ch7 → beat 24); the stakeholder popover beat (`positions[13]`, first ch4 beat); the viewport sample
-indices `[0,1,2,3,7,15,19,23,25,28,29,30]`; the reduced-motion sample indices `[0,1,2,3,10,21,25,30,33]`; the perf phase's 33 Next presses;
+Hard-coded beat references (all in `tools/qa.mjs` unless noted): `beats === 36` (functional) and `rows.length === 36` (reduced);
+the rail chapter-jump target (ch7 → beat 26); the stakeholder popover beat (`positions[15]`, first ch4 beat); the viewport sample
+indices `[0,1,2,3,5,8,9,17,21,25,27,30,31,32]`; the reduced-motion sample indices `[0,1,2,3,12,23,27,32,35]`; the perf phase's 35 Next presses;
 the scrub scene list; `tools/README.dist.txt` (prototype beat number).
 
 **New scene:**
@@ -225,5 +225,5 @@ Release checklist (final approval only):
 - [ ] full QA passes; console clean; no timeline warnings
 - [ ] contact sheets inspected
 - [ ] keyboard navigation lands on exact beats; notes and Present work
-- [ ] build summary as expected (34 beats, 0 external requests, Prototype 3/3)
+- [ ] build summary as expected (36 beats, 0 external requests, Prototype 3/3)
 - [ ] `SOURCES.md` / `docs/DECISIONS.md` reflect any changed fact, source or locked decision

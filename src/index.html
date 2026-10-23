@@ -45,7 +45,7 @@
   <div class="rail-loop" id="reviewGlyph" title="Review loop: create · review · align · improve · approve">
     <svg viewBox="0 0 24 24" class="ico"><use href="#i-refresh-ccw"/></svg><span>Review loop</span>
   </div>
-  <div class="rail-count" id="beatCounter" aria-live="polite">01 / 34</div>
+  <div class="rail-count" id="beatCounter" aria-live="polite">01 / 36</div>
   <div class="controls" aria-label="Presenter controls">
   <button type="button" id="btnPrev" aria-label="Previous beat"><svg class="ico"><use href="#i-chevron-left"/></svg></button>
   <button type="button" id="btnNext" aria-label="Next beat"><svg class="ico"><use href="#i-chevron-right"/></svg></button>
@@ -57,7 +57,7 @@
 
 
 <aside class="notes" id="notes" aria-label="Presenter notes" hidden>
-  <div class="n-head"><span id="nBeat">01 / 34</span><b id="nTitle"></b></div>
+  <div class="n-head"><span id="nBeat">01 / 36</span><b id="nTitle"></b></div>
   <div class="n-grid">
     <div><h5>Key message</h5><p id="nKey"></p></div>
     <div><h5>Why it matters</h5><p id="nWhy"></p></div>
@@ -148,7 +148,7 @@
 <!-- =====================================================================
      CHAPTER 1 · THE WORLD WE ENTERED   (4 beats)
      ===================================================================== -->
-<section class="scene" id="ch1" data-beats="4" data-chapter="ch1" data-theme="dark">
+<section class="scene" id="ch1" data-beats="6" data-chapter="ch1" data-theme="dark">
   <div class="stage"><div class="bg bg-dark"><div class="bg-fleet"></div></div>
   <div class="safe">
     <header class="head"><p class="kicker">01 · The world we entered</p>
@@ -181,6 +181,53 @@
         <li class="c1-q q5"><span class="c1-qm">?</span>Which mission is vehicle X currently assigned to?</li>
       </ul>
       <p class="c1-ask-close">If answering these takes more than a few seconds,<br><b>you have a <em>visibility</em> problem.</b></p>
+    </div>
+
+    <!-- beat 2 · the problem in numbers. EXTERNAL industry / market statistics supplied by the team (context only):
+         they do not describe the VMS organization, its fleet or this project. Source labels exactly as supplied.
+         Full-canvas layer: in for this beat only, out before the domain map. Hidden in the static fallback. -->
+    <div class="c1-pin" aria-label="The problem in numbers: external industry and market context">
+      <div class="c1-pin-head"><p class="kicker">The problem in numbers</p>
+        <h3>The visibility gap is not unique to us — it is a wider <em>fleet-management</em> problem.</h3>
+        <span class="tag tag-vis">External industry data · context only</span></div>
+      <div class="c1-pin-ops"><span class="eyebrow">Operational pain</span>
+        <div class="c1-pin-stats">
+          <div class="c1-stat"><svg class="ico"><use href="#i-file-spreadsheet"/></svg><b>79%</b><p>of SME fleet managers use more than five spreadsheets</p><span class="src">Source: Vimcar survey, UK</span></div>
+          <div class="c1-stat"><svg class="ico"><use href="#i-history"/></svg><b>63%</b><p>of SME fleet managers admit to missing deadlines</p><span class="src">Source: Vimcar survey, UK</span></div>
+          <div class="c1-stat"><svg class="ico"><use href="#i-receipt"/></svg><b>17.7%</b><p>unmonitored operational overspending</p><span class="src">Source: Motive / Wakefield</span></div>
+        </div></div>
+      <div class="c1-pin-fin"><span class="eyebrow">Financial impact</span>
+        <b class="c1-pin-cost">$448–$760<small>per vehicle<br>/ day</small></b>
+        <p>average vehicle downtime cost</p><span class="src">Source: Element Fleet Management, citing Work Truck Magazine</span></div>
+      <div class="c1-pin-eg"><span class="eyebrow eyebrow-teal">Egypt · local market context</span>
+        <div class="c1-eg-row"><b>~10.4M</b><p>licensed vehicles in Egypt in 2024</p></div>
+        <div class="c1-eg-row c1-eg-mkt"><b>$163M <i>→</i> $229M</b><p>Egypt fleet management solutions market<span>2025 → 2031 (projected)</span></p></div>
+        <span class="src">Source: Ken Research</span></div>
+      <p class="c1-pin-close">Fleet visibility is not just an administrative problem —<br><b>it affects <em>control</em>, <em>cost</em> and <em>operational continuity</em>.</b></p>
+      <p class="src c1-pin-note">External industry and market statistics, shown for context only. They do not describe the VMS organization, its fleet or this project.</p>
+    </div>
+
+    <!-- beat 5 · a real operational moment. Storytelling RECONSTRUCTION of the documented pattern (Kick-off MOM: paper + Excel;
+         expiry discovered only when the organization tried to assign/use a vehicle for a mission; no proactive monitoring).
+         Not an incident report. No count here: the 6 vehicles are revealed on the next beat (kick-off findings).
+         Full-canvas layer: in for this beat only, out before the kick-off findings. Hidden in the static fallback. -->
+    <div class="c1-moment" aria-label="One operational moment before VMS">
+      <div class="c1-mo-head"><p class="kicker">Before VMS · one ordinary moment</p>
+        <h3>What the manual process looked like when a vehicle was actually <em>needed</em></h3>
+        <span class="tag tag-vis">Reconstructed from the documented pattern</span></div>
+      <ol class="c1-mo-steps">
+        <li class="c1-mo-step"><span class="c1-mo-n">1</span><svg class="ico"><use href="#i-clipboard-list"/></svg><b>Mission request</b><p>A vehicle is needed for a mission</p></li>
+        <li class="c1-mo-arrow" aria-hidden="true"><svg class="ico"><use href="#i-arrow-right"/></svg></li>
+        <li class="c1-mo-step"><span class="c1-mo-n">2</span><svg class="ico"><use href="#i-car"/></svg><b>Select vehicle</b><p>A vehicle is chosen for it</p></li>
+        <li class="c1-mo-arrow" aria-hidden="true"><svg class="ico"><use href="#i-arrow-right"/></svg></li>
+        <li class="c1-mo-step"><span class="c1-mo-n">3</span><svg class="ico"><use href="#i-file-spreadsheet"/></svg><b>Manual license check</b><p>Its validity is looked up by hand, in paper and Excel records</p></li>
+        <li class="c1-mo-arrow" aria-hidden="true"><svg class="ico"><use href="#i-arrow-right"/></svg></li>
+        <li class="c1-mo-step c1-mo-x"><span class="c1-mo-n">4</span><svg class="ico"><use href="#i-triangle-alert"/></svg><b class="c1-mo-stamp">Expired</b><p>Only now does anyone see it</p></li>
+      </ol>
+      <div class="c1-mo-track" aria-hidden="true"><i class="c1-mo-line"></i><i class="c1-mo-dot"></i>
+        <span class="c1-mo-was">The license was already expired — but nothing surfaced it proactively</span><span class="c1-mo-here">Found here</span></div>
+      <p class="c1-mo-close"><span>The process depended on someone checking at the right moment.</span>
+        <b>The problem was discovered at the moment of use — <em>not before it.</em></b></p>
     </div>
 
     <div class="c1-domain">
