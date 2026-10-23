@@ -10,8 +10,7 @@ Precedence applied: Project Scope > BRD-VMS-003 v3.0 > Consolidated Feature List
 | prototype_03.png · **License Register** (hero) | Final team-created prototype export | Ch 07 · beat 29 |
 | prototype_04.png · **Movement Dashboard** | Final team-created prototype export | Ch 07 · beat 29 |
 | prototype_01.png · **Maintenance Dashboard** | Final team-created prototype export | Ch 07 · beat 29 |
-| mission-tobe / maintenance-tobe / license-tobe thumbnails | VMS Business Process Documentation (BPMN SVGs) | Ch 06 "Also modelled" strip |
-| License As-Is / To-Be BPMN | Redrawn from the same document; the document's own role labels kept | Ch 06 · beats 24–26 |
+| Vehicle Assignment & Return As-Is / To-Be BPMN (main) · Vehicle Retirement As-Is / To-Be (secondary) | **Team-provided process source** (four diagrams, Seif, 24 Oct 2026), redrawn as SVG; labels kept, Retirement translated from Arabic; no reference IDs added beyond those legible in the diagrams | Ch 06 · beats 24–26 |
 | Inter variable font (OFL) | rsms/inter | Whole page |
 | Lucide icons (ISC) | lucide.dev | Whole page |
 
@@ -43,7 +42,7 @@ Precedence applied: Project Scope > BRD-VMS-003 v3.0 > Consolidated Feature List
 | 04 · Capabilities | 67 features / 12 groups; golden-thread chip F-13 · F-42 (both in the consolidated list); MoSCoW 33 Must · 3 Should · 13 Could · 13 Won't · 5 not yet prioritised (F-47, F-49–F-52) | Feature List — recounted from the table |
 | Finale · retrospective | Pains → capability → features (F-13 · F-42, F-32 · F-45, F-37 · F-38, F-22 · F-23), all Must — beats 30–31 | Feature List (A04) · Kick-off MOM · BRD §4.2 / §8.1 |
 | 05 · Baseline | 3 OBJ · 42 BR (40 Must) · 16 BRL · 10 NFR · 11 KPI · 31 RAID (10 R · 6 A · 4 C · 11 I) · 7 DEP; objective targets | BRD-VMS-003 v3.0 — recounted |
-| 06 · Process | License As-Is / To-Be | Business Process Documentation |
+| 06 · Process | Assignment As-Is (BRD §8.1 #3–4, MVP Journey 3 "today", not observed on site — ASM-01; pain point BRD §8.1 #3; MVP Journey 2 step 5) · Assignment To-Be (license + class check, refuse / record / end / close custody; "usable" = Valid, Near-Expiry or Under Renewal, no override) · Retirement As-Is / To-Be (officer → committee → Head of Authority; To-Be adds VMS status update) | Team-provided process source |
 | 07 · Backlog (beat 27) | User Stories & Exception Handling, example US-01 Add Vehicle: story, trace, required fields, 4 criteria (condensed), exception rows 1, 2, 5 | Module 01 V.02, US-01 |
 | 07 · Backlog (beat 27) | Exception rows 3–4: double Save → one record; network failure → "Connection error, please try again", no partial record, retry | **Team exception-handling scenarios** (Seif, 24 Oct 2026), not in US-01's own text |
 | 07 · Jira | Only what is visible: 7 epics, a reporter per epic, all visible items To Do, VMS-16 text = US-16 | Screenshots |
@@ -51,7 +50,7 @@ Precedence applied: Project Scope > BRD-VMS-003 v3.0 > Consolidated Feature List
 
 ## Known content risks (non-blocking, disclosed in notes)
 1. "6 vehicles" exists only in the kick-off MOM; the BRD lists baseline figures as not yet supplied (ISS-05).
-2. BPMN role labels ("Fleet Coordinator") differ from BRD role names; the mapping is in presenter notes.
+2. BPMN role labels ("Movements Officer", "Decommissioning Officer") differ from BRD role names (Movement Dispatcher); kept as drawn by the team.
 3. The Simple RACI image (A05) differs from the full RACI workbook on some decisions (e.g. roles & access).
 4. License stories exist twice: US-16 (Module 01) and US-01/02 (Module 05 Notifications).
 5. Notification channels are still open (ISS-06); no channel is presented as final.

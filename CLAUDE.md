@@ -88,7 +88,7 @@ src/
     scenes/<chapter>.js    VMS.scene("<id>", helpers => …) choreography per scene
   assets/
     fonts/                 Inter variable (OFL)          icons/sprite.svg  Lucide symbols (tools/make-sprite.cjs)
-    jira/                  2 real Jira crops             process/          BPMN thumbnails + source SVGs
+    jira/                  2 real Jira crops             process/          old BPMN thumbnails (unused since 24 Oct 2026)
     prototype/             prototype_01…05.png (top design-review bar cropped); original/ = untouched exports
 tools/
   build.mjs                assembles dist/index.html (single file, everything inlined) + verification
@@ -141,7 +141,7 @@ npm ci            # only if node_modules is missing
 The build fails on: unresolved `@render/@include` markers · scene `data-beats` total ≠ `beats.js` length or a beat in the wrong scene ·
 any external `src`/`href`/`url()` · banned strings · prototype filenames outside `prototype_0[1-5].(png|jpg|jpeg|webp)`.
 
-Expected summary: 16 scenes · 34 beats · Jira 2 · process 3 · `Prototype: 3/3` · ≈0.68 MB · 0 external requests.
+Expected summary: 16 scenes · 34 beats · Jira 2 · process 0 (Ch 06 BPMN is inline SVG) · `Prototype: 3/3` · ≈0.68 MB · 0 external requests.
 Mention the summary only if something differs from this.
 
 ## Screenshot of one beat
