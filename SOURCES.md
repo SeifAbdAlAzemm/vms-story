@@ -5,13 +5,13 @@ Precedence applied: Project Scope > BRD-VMS-003 v3.0 > Consolidated Feature List
 ## Real assets embedded (cropped only, never edited)
 | Asset | Source | Used in |
 |---|---|---|
-| jira-epics.png | Jira list view screenshot (team-supplied) | Ch 8 · beat 28 |
-| jira-backlog.png | Jira backlog screenshot, rows VMS-16 – VMS-23 | Ch 8 · beat 28 |
-| prototype_03.png · **License Register** (hero) | Final team-created prototype export | Ch 8 · beat 29 |
-| prototype_04.png · **Movement Dashboard** | Final team-created prototype export | Ch 8 · beat 29 |
-| prototype_01.png · **Maintenance Dashboard** | Final team-created prototype export | Ch 8 · beat 29 |
+| jira-epics.png | Jira list view screenshot (team-supplied) | Ch 8 · beat 29 |
+| jira-backlog.png | Jira backlog screenshot, rows VMS-16 – VMS-23 | Ch 8 · beat 29 |
+| prototype_03.png · **License Register** (hero) | Final team-created prototype export | Ch 8 · beat 30 |
+| prototype_04.png · **Movement Dashboard** | Final team-created prototype export | Ch 8 · beat 30 |
+| prototype_01.png · **Maintenance Dashboard** | Final team-created prototype export | Ch 8 · beat 30 |
 | mission-tobe / maintenance-tobe / license-tobe thumbnails | VMS Business Process Documentation (BPMN SVGs) | Ch 7 "Also modelled" strip |
-| License As-Is / To-Be BPMN | Redrawn from the same document; the document's own role labels kept | Ch 7 · beats 22–24 |
+| License As-Is / To-Be BPMN | Redrawn from the same document; the document's own role labels kept | Ch 7 · beats 23–25 |
 | Inter variable font (OFL) | rsms/inter | Whole page |
 | Lucide icons (ISC) | lucide.dev | Whole page |
 
@@ -27,6 +27,7 @@ Precedence applied: Project Scope > BRD-VMS-003 v3.0 > Consolidated Feature List
 ## Facts by chapter → source
 | Chapter | Facts | Source |
 |---|---|---|
+| Prologue | Team Mentor + 12 team members (names, spelling, order) — beat 1 | **Team-provided fact — confirmed by Seif** (23 Oct 2026). Not a business-document fact |
 | Prologue | 5 backgrounds, 13-session journey | Team brief (locked answers) |
 | 1 · World | ~550 vehicles | BRD §4.1 |
 | 1 · World | 9 kick-off findings, 7 open topics, "6 vehicles had already exceeded their license validity" (labelled **Kick-off finding**, not a BRD baseline) | Kick-off MOM |
@@ -47,7 +48,7 @@ Precedence applied: Project Scope > BRD-VMS-003 v3.0 > Consolidated Feature List
 4. License stories exist twice: US-16 (Module 01) and US-01/02 (Module 05 Notifications).
 5. Notification channels are still open (ISS-06); no channel is presented as final.
 6. Validation is partial: BRD sign-off and As-Is confirmation pending (ISS-10).
-7. Team list unconfirmed — no credits shown; Jira reporter names appear only because they are in the real screenshot.
+7. Team list confirmed by Seif (23 Oct 2026) and shown in Prologue beat 1 as a team-provided fact (spelling and order locked, DECISIONS §7a). Backgrounds are still not mapped to names. Jira reporter names appear only because they are in the real screenshot.
 8. Jira total story count not verifiable from the screenshots and is not claimed.
 9. Closing line reads "structured, **verified**, and traceable" (approved in director review).
 10. Roles & Permissions stories (RP-01–RP-19) carry no F / BR / BRL trace IDs, unlike the other modules.

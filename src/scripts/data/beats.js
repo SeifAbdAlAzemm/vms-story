@@ -1,5 +1,5 @@
 /* =====================================================================
-   PRESENTER BEATS — 32 narrative states, ~18–19 minutes.
+   PRESENTER BEATS — 33 narrative states, ~19 minutes.
    scene  : id of the <section class="scene"> the beat belongs to (beats are
             ordered; the build checks the count per scene matches data-beats)
    thread : golden-thread step that lights up at this beat (optional)
@@ -8,7 +8,9 @@
    ===================================================================== */
 (function (D) {
   D.beats = [
-    // ---------------- PROLOGUE (~0:45) ----------------
+    // ---------------- PROLOGUE (~1:10) ----------------
+    { scene: "prologue", chapter: "prologue", title: "Meet the team",
+      notes: { key: "This is our team: our mentor, Sayed Helika, and twelve team members.", why: "The audience meets the actual people before the project.", value: "Names first, then where we came from, then the mindset we built together: one continuous opening.", next: "Who are we beyond our names? We came from different backgrounds." } },
     { scene: "prologue", chapter: "prologue", title: "Different disciplines arrive",
       notes: { key: "We came from different backgrounds.", why: "The audience should see the team before the project: UI/UX, BA, technical, marketing, technical and non-technical people.", value: "Diversity is the reason review mattered later.", next: "Pause, then show how those backgrounds became one way of thinking." } },
     { scene: "prologue", chapter: "prologue", title: "One team, one BA mindset",

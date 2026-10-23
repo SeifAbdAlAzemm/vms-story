@@ -44,7 +44,7 @@
   <div class="rail-loop" id="reviewGlyph" title="Review loop: create · review · align · improve · approve">
     <svg viewBox="0 0 24 24" class="ico"><use href="#i-refresh-ccw"/></svg><span>Review loop</span>
   </div>
-  <div class="rail-count" id="beatCounter" aria-live="polite">01 / 32</div>
+  <div class="rail-count" id="beatCounter" aria-live="polite">01 / 33</div>
   <div class="controls" aria-label="Presenter controls">
   <button type="button" id="btnPrev" aria-label="Previous beat"><svg class="ico"><use href="#i-chevron-left"/></svg></button>
   <button type="button" id="btnNext" aria-label="Next beat"><svg class="ico"><use href="#i-chevron-right"/></svg></button>
@@ -56,7 +56,7 @@
 
 
 <aside class="notes" id="notes" aria-label="Presenter notes" hidden>
-  <div class="n-head"><span id="nBeat">01 / 32</span><b id="nTitle"></b></div>
+  <div class="n-head"><span id="nBeat">01 / 33</span><b id="nTitle"></b></div>
   <div class="n-grid">
     <div><h5>Key message</h5><p id="nKey"></p></div>
     <div><h5>Why it matters</h5><p id="nWhy"></p></div>
@@ -69,12 +69,13 @@
 <main id="story">
 
 <!-- =====================================================================
-     PROLOGUE · DIFFERENT BACKGROUNDS → ONE BA MINDSET   (2 beats)
+     PROLOGUE · MEET THE TEAM → DIFFERENT BACKGROUNDS → ONE BA MINDSET   (3 beats)
      ===================================================================== -->
-<section class="scene" id="prologue" data-beats="2" data-chapter="prologue" data-theme="dark" data-entry="intro">
+<section class="scene" id="prologue" data-beats="3" data-chapter="prologue" data-theme="dark" data-entry="intro">
   <div class="stage"><div class="bg bg-dark"><div class="bg-grid"></div></div>
   <div class="safe">
     <p class="kicker p-kicker">Vehicle Management System · Final Business Analysis Project</p>
+    <div class="p-team"><!--@render:teamCredits--></div>
     <h1 class="p-q"><span>Who are we?</span></h1>
     <p class="p-sub">We came from different backgrounds.</p>
     <div class="p-labels"><!--@render:prologueLabels--></div>

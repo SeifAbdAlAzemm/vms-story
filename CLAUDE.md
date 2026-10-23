@@ -5,7 +5,7 @@ Technical guide for working inside this repository. Narrative and evidence rules
 
 ## What this is
 An offline, scroll-driven HTML narrative for the VMS Business Analysis final project:
-32 presenter beats (about 18–19 min). It is **not** a website and **not** a slide deck.
+33 presenter beats (about 19 min). It is **not** a website and **not** a slide deck.
 The approved build is deployed with GitHub Pages from `index.html` at the repo root on `master`.
 
 ## Golden rules
@@ -51,11 +51,14 @@ qa/                        GENERATED QA output (shots/, sheets/, report.json, QA
 ## Scene model (read before touching any scene)
 - Each scene is `<section class="scene" id data-beats data-chapter data-theme>` → sticky `.stage` (100vh) → `.safe`, a 1600×900 canvas scaled by `engine.layout()`.
   Everything inside `.safe` is positioned in canvas px. Keep content inside 1600×900, and keep the `.unlocks` line at the bottom.
-- Scenes, in order (beats): prologue 2 · ch1 4 · ch2 3 · ch3 2 · ch4 3 · ch5a 2 · ch5b 2 · ch6a 1 · ch6b 2 · ch7 3 · ch8a 3 · ch8b 1 · ch8c 1 · finale-a 2 · finale-b 1 = **32**.
+- Scenes, in order (beats): prologue 3 · ch1 4 · ch2 3 · ch3 2 · ch4 3 · ch5a 2 · ch5b 2 · ch6a 1 · ch6b 2 · ch7 3 · ch8a 3 · ch8b 1 · ch8c 1 · finale-a 2 · finale-b 1 = **33**.
 - Timeline: one paused GSAP timeline per scene, duration = beats, scrubbed by ScrollTrigger (`top bottom` → `bottom bottom`, scrub 0.6).
   `at(k)` is the start of the move into beat k. Beat 0 animates during the scene's entry `[0,1)`, and beat k animates in `[k, k+1)`.
   **Never let a scene's tweens run past `beats`.** `boot.js` records overruns in `VMS.warnings`, and QA fails on any.
-- The prologue uses `data-entry="intro"` (pinned at `top top`, plus a time-based intro).
+- The prologue uses `data-entry="intro"` (pinned at `top top`, plus a time-based intro). Its timeline is 2 units for 3 beats:
+  beat 1 Meet the Team = the time-based `VMS.intro` (heading → mentor → 3 member columns); `[0,1)` the `.p-team` frame fades out and
+  the question + background labels appear; `[1,2)` converge. `.p-team` is `display:none` without `html.anim`, so the static /
+  no-GSAP fallback shows the prologue's final (converged) state like every other scene, without the team frame.
 - Helpers passed to builders: `tl, q, qa, at, draw(els,pos,opt)` (SVG stroke draw), `count(el,to,pos,dur)`, `reduce`.
 - Content is visible by default. `html.anim` is added only after every timeline builds, so animations use `tl.from(...)`.
   If a builder throws, the whole page reverts to the static stacked narrative. Keep that property.
@@ -83,7 +86,7 @@ The build fails on:
 - prototype filenames outside `prototype_0[1-5].(png|jpg|jpeg|webp)`
 
 The build prints: scenes/beats · Jira assets · process thumbnails · `Prototype: X/3 real images found (…)` · HTML size · external requests (must be 0).
-Expected today: 15 scenes · 32 beats · 2 · 3 · 3/3 · ≈0.67 MB · 0.
+Expected today: 15 scenes · 33 beats · 2 · 3 · 3/3 · ≈0.67 MB · 0.
 
 **Environments:**
 - Cowork may use an isolated Linux/cloud environment for build and QA verification.
@@ -118,7 +121,10 @@ npm run qa                                        # all phases, ≈ 15–20 min
   - **Tier 1 · one scene's layout/animation/image:** Tier 0 + `functional,viewports,reduced`. Check the scrub frames if entry animation changed.
   - **Tier 2 · beat count, navigation, chrome, build tooling, performance, several chapters:** a short plan first, then full `npm run qa` and every contact sheet.
 - Long runs: a local shell with a short per-command limit can't hold a full QA run. Run phases separately, or run QA in an environment with long-running commands and Chromium preinstalled.
-- Hard-coded expectations to update if the beat count changes: `beats === 32` in qa.mjs (functional and reduced phases), the viewport sample indices `[1,5,13,17,21,23,26,27,28]`, and the scrub scene list.
+- Hard-coded expectations to update if the beat count changes (all in qa.mjs): `beats === 33` (functional) and `rows.length === 33` (reduced);
+  the rail chapter-jump target (ch7 → beat 23); the stakeholder popover beat (`positions[12]`, first ch4 beat); the viewport sample
+  indices `[0,1,2,6,14,18,22,24,27,28,29]`; the reduced-motion sample indices `[0,1,2,9,20,24,29,32]`; the perf phase's 32 Next presses;
+  and the scrub scene list. Also `tools/README.dist.txt` (prototype beat number) and the beat numbers in `SOURCES.md`.
 
 ## Release (GitHub Pages)
 Pages serves root `index.html` from `master`. Release = copy the verified build to the root:
@@ -149,7 +155,7 @@ Committing, merging to `master` and pushing are Seif's decisions. Pushing `maste
 2. Entry in `beats.js` at the right position, with notes.
 3. Choreography in `scenes/<chapter>.js` for the new `at(k)`.
 4. QA hard-codes (above).
-5. "32" in `beats.js` header, `src/index.html` counters, README and `SOURCES.md`.
+5. The beat count (now 33) in `beats.js` header, `src/index.html` counters, README and `SOURCES.md`.
 6. Build (it checks the scene/beat mapping), then full QA.
 
 **New scene:**
@@ -161,7 +167,7 @@ Committing, merging to `master` and pushing are Seif's decisions. Pushing `maste
 **Performance budget:** ≤ 30 ScrollTriggers (now 15), ≤ 3,000 DOM nodes (now ≈1,745), ≤ 6 heavy scenes, HTML ≈ under 1 MB.
 
 ## Verification checklist (every change)
-- [ ] build passes with expected summary (32 beats, 0 external requests, Prototype 3/3)
+- [ ] build passes with expected summary (33 beats, 0 external requests, Prototype 3/3)
 - [ ] relevant QA phases pass; console clean; no timeline warnings
 - [ ] contact sheets / screenshots of the touched beats inspected at 1920×1080 and 1366×768
 - [ ] keyboard navigation still lands on exact beats; notes and Present still work

@@ -1,4 +1,4 @@
-/* PROLOGUE · different backgrounds → one BA mindset */
+/* PROLOGUE · meet the team → different backgrounds → one BA mindset */
 #prologue .p-kicker { position: absolute; left: 0; top: 0; color: var(--teal-on-dark); }
 #prologue .p-q { position: absolute; left: 0; right: 0; margin: 0 auto; width: fit-content; top: 70px; text-align: center; font-size: 76px; font-weight: 780; letter-spacing: -.02em; color: #fff; }
 #prologue .p-sub { position: absolute; left: 0; right: 0; margin: 0 auto; width: fit-content; top: 178px; text-align: center; font-size: 30px; color: #C9D4E0; }
@@ -14,3 +14,16 @@
 #prologue .p-ticks::before { content: ""; position: absolute; left: 0; right: 0; top: 7px; height: 2px; background: rgba(111,194,184,.4); }
 #prologue .p-ticks i { position: relative; width: 16px; height: 16px; border-radius: 50%; background: var(--teal-on-dark); }
 #prologue .p-line { position: absolute; left: 0; right: 0; margin: 0 auto; width: fit-content; top: 730px; text-align: center; font-size: 28px; color: #C9D4E0; }
+
+/* beat 1 · meet the team (opening credit frame). Static / no-GSAP mode shows the scene's
+   final state (converged), so the frame exists only in animation mode. */
+html:not(.anim) #prologue .p-team { display: none; }
+#prologue .p-team { position: absolute; left: 0; top: 0; width: 1600px; height: 900px; text-align: center; }
+#prologue .pt-head { position: absolute; left: 0; right: 0; margin: 0 auto; width: fit-content; top: 84px; font-size: 84px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; line-height: 1.05; color: #fff; }
+#prologue .pt-role { display: block; font-size: 18px; font-weight: 800; letter-spacing: .24em; text-transform: uppercase; color: var(--teal-on-dark); }
+#prologue .pt-mentor { position: absolute; left: 0; right: 0; top: 236px; }
+#prologue .pt-mname { display: block; margin-top: 12px; font-size: 46px; font-weight: 740; line-height: 1.1; color: #fff; }
+#prologue .pt-members { position: absolute; left: 0; right: 0; top: 404px; }
+#prologue .pt-grid { margin: 34px auto 0; width: 1380px; display: grid; grid-template-columns: repeat(3, 1fr); column-gap: 30px; }
+#prologue .pt-col { list-style: none; margin: 0; padding: 0; display: grid; row-gap: 30px; }
+#prologue .pt-col li { font-size: 38px; font-weight: 620; line-height: 1.15; color: #EAF2F7; white-space: nowrap; }

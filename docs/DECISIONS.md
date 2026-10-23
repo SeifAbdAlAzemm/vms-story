@@ -12,10 +12,10 @@ Evidence map and known content risks: `SOURCES.md`. Technical how-to: `CLAUDE.md
 - Target: Chrome / Edge, presenter-driven with keyboard or clicker. English on screen.
 - Viewports that must work: 1920×1080, 1366×768, 1280×800, 1024×768, plus 125% and 150% OS scaling.
 
-## 2. Structure — 32 beats, about 18–19 minutes
+## 2. Structure — 33 beats, about 19 minutes
 | Part | Beats | Scenes |
 |---|---|---|
-| Prologue: different backgrounds → one BA mindset | 2 | prologue |
+| Prologue: meet the team → different backgrounds → one BA mindset | 3 | prologue |
 | 1 · The world we entered | 4 | ch1 |
 | 2 · How we worked | 3 | ch2 |
 | 3 · The boundary | 2 | ch3 |
@@ -74,8 +74,17 @@ Each scene ends with an "Unlocks →" line that hands over to the next question.
 - Email is not stated as a finalised notification channel (ISS-06 open). The acceptance criteria shown are channel-independent.
 - Jira: state only what the screenshots show (7 epics, a reporter per epic, all visible items To Do, VMS-16 = US-16 text). **Never state a total Jira story count.** Never recreate fake Jira.
 - BPMN: keep the process document's own role labels. Role mapping goes in presenter notes. Movement and Maintenance BPMN appear as thumbnails only.
-- Backgrounds are shown without names. No team credits unless a confirmed team list exists.
+- Backgrounds are shown without names: no person ↔ background mapping anywhere.
 - Closing line (approved): "We did not produce a collection of documents. We turned one operational problem into a structured, **verified**, and traceable product definition."
+
+## 7a. Team credits (locked)
+- Prologue beat 1 "Meet the Team" shows the confirmed final team list. It is a **team-provided fact, confirmed by Seif (23 Oct 2026)**, not a business-document fact.
+- Spelling and order are locked. Change them only when Seif explicitly asks. Data: `D.team` in `src/scripts/data/project.js`.
+  - Team Mentor: Sayed Helika
+  - Team Members: Gehad Alkady · Mohamed Tokhy · Mohamed Abdelhay · Aya Saied · Esraa Alawadly · Mostafa ElKaramany · Soha Sayed · Sara Amrousy · Hesham Khaled · Mohamed Ghallab · Seif Abd Al-Azem · Eman Hawary
+- Layout: "MEET THE TEAM" heading, the mentor above the team, 12 members as 3 columns × 4 read column by column in the order above. No photos, avatars, individual cards or decoration.
+- The mentor is not presented as an employee of the organisation, and the frame does not tie the mentor to the kick-off's Business Owner role.
+- Animation stays restrained: heading → mentor → member columns as groups (never name by name). Then the frame hands over to "Different disciplines arrive" within the same scene.
 
 ## 8. Prototype rules
 - Only the final team-created exports (19 Oct 2026) are valid. The old temporary / inspiration UI images must never be bundled, cropped, referenced or used as evidence. The build enforces this.
@@ -97,3 +106,4 @@ Each scene ends with an "Unlocks →" line that hands over to the next question.
 
 ## Change log
 - v1.0.0 — approved baseline (32 beats, real prototype in ch8c).
+- Unreleased (proposed v2.0.0, beat count changed) — Meet the Team added as Prologue beat 1; Prologue 2 → 3 beats, total 32 → 33. Confirmed team list locked (§7a).

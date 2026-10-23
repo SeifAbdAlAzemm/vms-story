@@ -16,6 +16,13 @@ export function makeRenderers(D, ctx) {
     railTicks: () => `<ol class="rail-ticks">${D.chapters.map((c) => `<li data-chapter="${c.id}"><button type="button" aria-label="Go to ${esc(c.title)}" title="${esc(c.title)}"></button></li>`).join("")}</ol>`,
 
     /* ---------- prologue ---------- */
+    teamCredits: () => {
+      const cols = [0, 4, 8].map((s) => D.team.members.slice(s, s + 4));
+      return `<h2 class="pt-head">Meet the Team</h2>
+      <div class="pt-mentor"><span class="pt-role">Team Mentor</span><b class="pt-mname">${esc(D.team.mentor)}</b></div>
+      <div class="pt-members"><span class="pt-role">Team Members</span>
+        <div class="pt-grid">${cols.map((c, i) => `<ul class="pt-col" data-i="${i}">${c.map((n) => `<li>${esc(n)}</li>`).join("")}</ul>`).join("")}</div></div>`;
+    },
     prologueLabels: () => D.backgrounds.map((b, i) => `<span class="p-label" data-i="${i}"><span class="p-in">${esc(b)}</span></span>`).join(""),
     sessionTicks: () => Array.from({ length: 13 }, (_, i) => `<i data-i="${i}"></i>`).join(""),
 

@@ -35,6 +35,16 @@
 
   /* ---------- Prologue (TEAM) ---------- */
   D.backgrounds = ["UI/UX", "Business Analysis", "Software / Technical", "Marketing", "Technical & Non-Technical"];
+  // TEAM: confirmed final team list (Seif, 23 Oct 2026). Spelling and order are locked (docs/DECISIONS.md §7a).
+  // Not a business-document fact. Shown as 3 columns × 4, read column by column in this order.
+  D.team = {
+    mentor: "Sayed Helika",
+    members: [
+      "Gehad Alkady", "Mohamed Tokhy", "Mohamed Abdelhay", "Aya Saied",
+      "Esraa Alawadly", "Mostafa ElKaramany", "Soha Sayed", "Sara Amrousy",
+      "Hesham Khaled", "Mohamed Ghallab", "Seif Abd Al-Azem", "Eman Hawary",
+    ],
+  };
 
   /* ---------- Chapter 1 ---------- */
   D.fleet = { approx: "~550", note: "vehicles used daily by several departments", source: "BRD-VMS-003 §4.1 (approximately 550)" };
