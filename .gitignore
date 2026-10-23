@@ -13,6 +13,10 @@ test-results/
 coverage/
 qa-output/
 screenshots/
+qa/shots/
+qa/sheets/
+qa/report.json
+qa/QA-REPORT.md
 
 # Logs
 *.log
