@@ -20,6 +20,7 @@
 #ch5b .c5-total { position: absolute; left: 0; top: 176px; width: 560px; }
 #ch5b .c5-big { display: block; font-size: 150px; line-height: .9; font-weight: 820; color: var(--navy); letter-spacing: -.03em; }
 #ch5b .c5-big span { display: block; }
+#ch5b .c5-thread { position: absolute; left: 206px; top: 56px; border: 1.5px solid var(--gold); }   /* golden thread: F-13 · F-42 are in the consolidated list */
 #ch5b .c5-cap { font-size: 26px; color: var(--slate); margin-top: 4px; }
 #ch5b .c5-cap b { color: var(--ink); }
 #ch5b .c5-groups { list-style: none; margin-top: 20px; display: flex; flex-direction: column; gap: 7px; }

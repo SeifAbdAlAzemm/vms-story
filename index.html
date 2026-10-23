@@ -375,7 +375,7 @@ html:not(.anim) #ch1 .c1-pin { display: none; }
 #ch1 .c1-pin-close em { font-style: normal; color: #E6B566; }
 #ch1 .c1-pin-note { position: absolute; left: 0; right: 0; bottom: 0; text-align: center; font-size: 15px; }
 
-/* beat 5 · one operational moment (full-canvas layer; reconstruction of the documented pattern, not an incident report) */
+/* beat 3 · one operational moment (full-canvas layer; reconstruction of the documented pattern, not an incident report) */
 #ch1 .c1-moment { position: absolute; inset: 0; pointer-events: none; }
 html:not(.anim) #ch1 .c1-moment { display: none; }
 #ch1 .c1-mo-head { position: absolute; left: 0; top: 0; width: 1600px; }
@@ -405,29 +405,32 @@ html:not(.anim) #ch1 .c1-moment { display: none; }
 #ch1 .c1-mo-close b { display: block; margin-top: 8px; font-size: 44px; font-weight: 800; color: #fff; letter-spacing: -.01em; }
 #ch1 .c1-mo-close em { font-style: normal; color: #F2A79C; }
 
+/* beat 2 · From Ideation to Creation (full-canvas layer; team-provided journey labels, high-level overview only).
+   11 stages on one left → right line; labels alternate above / below so each gets ~270 px of width. */
+#ch1 .c1-journey { position: absolute; inset: 0; pointer-events: none; }
+html:not(.anim) #ch1 .c1-journey { display: none; }
+#ch1 .c1-jo-head { position: absolute; left: 0; top: 0; width: 1600px; }
+#ch1 .c1-jo-head h3 { margin-top: 8px; font-size: 52px; line-height: 1.1; font-weight: 820; color: #fff; letter-spacing: .02em; text-transform: uppercase; }
+#ch1 .c1-jo-head h3 em { font-style: normal; color: var(--teal-on-dark); }
+#ch1 .c1-jo-head .tag { position: absolute; right: 0; top: 0; }
+#ch1 .c1-jo-line { position: absolute; left: 40px; top: 520px; width: 1520px; height: 4px; }
+#ch1 .c1-jo-line i { display: block; height: 100%; border-radius: 2px; background: linear-gradient(90deg, rgba(111,194,184,.3), var(--teal-on-dark)); }
+#ch1 .c1-jo-line::after { content: ""; position: absolute; right: -14px; top: -8px; border-left: 16px solid var(--teal-on-dark); border-top: 10px solid transparent; border-bottom: 10px solid transparent; }
+#ch1 .c1-jo-steps { position: absolute; left: 0; top: 522px; width: 1600px; height: 0; margin: 0; padding: 0; list-style: none; }
+#ch1 .c1-jo-step { position: absolute; top: 0; width: 0; height: 0; }
+#ch1 .c1-jo-dot { position: absolute; left: -24px; top: -24px; width: 48px; height: 48px; border-radius: 50%; display: grid; place-items: center;
+  background: #10283F; border: 3px solid var(--teal-on-dark); font-size: 20px; font-weight: 820; color: #fff; font-variant-numeric: tabular-nums; }
+#ch1 .c1-jo-step:last-child .c1-jo-dot { background: var(--teal-on-dark); color: var(--midnight); }
+#ch1 .c1-jo-stem { position: absolute; left: -1px; width: 2px; height: 46px; background: rgba(143,179,217,.45); }
+#ch1 .c1-jo-step.up .c1-jo-stem { bottom: 24px; }
+#ch1 .c1-jo-step.dn .c1-jo-stem { top: 24px; }
+#ch1 .c1-jo-step b { position: absolute; left: -130px; width: 260px; text-align: center; font-size: 23px; line-height: 1.22; font-weight: 700; color: #fff; }
+#ch1 .c1-jo-step.up b { bottom: 82px; }
+#ch1 .c1-jo-step.dn b { top: 82px; }
+
 /* styles/scenes/chapter-02.css */
 /* CHAPTER 2 · how we worked */
-#ch2 .c2-life { position: absolute; left: 0; top: 168px; width: 1600px; }
-#ch2 .c2-lifehead { display: flex; justify-content: space-between; align-items: baseline; }
-#ch2 .c2-lifehead b { font-size: 22px; color: var(--navy); }
-#ch2 .legend { display: flex; align-items: center; gap: 8px; font-size: 16px; color: var(--slate); }
-#ch2 .legend .st { display: inline-block; width: 16px; height: 16px; border-radius: 4px; margin-left: 10px; }
-.st.applied { background: var(--navy); }
-.st.partial { background: repeating-linear-gradient(135deg, var(--navy-3) 0 4px, #fff 4px 7px); border: 1.5px solid var(--navy-3); }
-.st.prepared { border: 2px dashed var(--slate-2); }
-#ch2 .c2-stages { list-style: none; margin-top: 12px; display: grid; grid-template-columns: repeat(7, 1fr); gap: 12px; }
-#ch2 .stg { border-radius: 8px; padding: 14px 14px 12px; min-height: 196px; position: relative; }
-#ch2 .stg-applied { background: var(--navy); color: #fff; }
-#ch2 .stg-partial { background: repeating-linear-gradient(135deg, #E9EFF6 0 10px, #F7F9FC 10px 20px); border: 2px solid var(--navy-3); color: var(--ink); }
-#ch2 .stg-prepared { border: 2px dashed #A8B4C2; background: #fff; color: var(--slate); }
-#ch2 .stg-n { font-size: 16px; font-weight: 800; opacity: .7; }
-#ch2 .stg b { display: block; margin-top: 2px; font-size: 22px; line-height: 1.15; min-height: 52px; }
-#ch2 .stg-badge { display: inline-block; margin-top: 6px; font-size: 13px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; padding: 3px 8px; border-radius: 4px; }
-#ch2 .stg-applied .stg-badge { background: rgba(111,194,184,.25); color: #BFE6E0; }
-#ch2 .stg-partial .stg-badge { background: var(--steel-l); color: var(--steel); }
-#ch2 .stg-prepared .stg-badge { background: #EEF1F4; color: var(--slate); }
-#ch2 .stg p { margin-top: 8px; font-size: 16px; line-height: 1.3; }
-#ch2 .c2-flow { position: absolute; left: 0; top: 440px; width: 1600px; height: 400px; }
+#ch2 .c2-flow { position: absolute; left: 0; top: 300px; width: 1600px; height: 400px; }
 #ch2 .c2-streams { position: absolute; left: 0; top: 10px; width: 1260px; height: 360px; overflow: visible; }
 #ch2 .sp, #ch2 .mg { fill: none; stroke: #9DB2C7; stroke-width: 2.5; }
 #ch2 .mg { stroke: var(--teal); }
@@ -539,6 +542,7 @@ html:not(.anim) #ch1 .c1-moment { display: none; }
 #ch5b .c5-total { position: absolute; left: 0; top: 176px; width: 560px; }
 #ch5b .c5-big { display: block; font-size: 150px; line-height: .9; font-weight: 820; color: var(--navy); letter-spacing: -.03em; }
 #ch5b .c5-big span { display: block; }
+#ch5b .c5-thread { position: absolute; left: 206px; top: 56px; border: 1.5px solid var(--gold); }   /* golden thread: F-13 · F-42 are in the consolidated list */
 #ch5b .c5-cap { font-size: 26px; color: var(--slate); margin-top: 4px; }
 #ch5b .c5-cap b { color: var(--ink); }
 #ch5b .c5-groups { list-style: none; margin-top: 20px; display: flex; flex-direction: column; gap: 7px; }
@@ -655,15 +659,7 @@ html:not(.anim) #ch1 .c1-moment { display: none; }
 #ch7 .unlocks { bottom: 0; }
 
 /* styles/scenes/chapter-08.css */
-/* CHAPTER 8 · from requirement to backlog */
-#ch8a .c8-chain { position: absolute; left: 0; top: 176px; width: 400px; list-style: none; display: flex; flex-direction: column; gap: 22px; }
-#ch8a .ch { position: relative; padding: 12px 16px 12px 20px; border-radius: 8px; background: #fff; border: 1.5px solid var(--gold); min-height: 100px; }
-#ch8a .ch + .ch::before { content: ""; position: absolute; left: 30px; top: -24px; width: 3px; height: 24px; background: var(--gold); }
-#ch8a .ch-id { display: block; font-size: 19px; font-weight: 820; color: var(--gold); letter-spacing: .02em; }
-#ch8a .ch-t { display: block; margin-top: 4px; font-size: 18px; line-height: 1.3; color: var(--ink); }
-#ch8a .ch-kickoff { background: var(--gold-l); }
-#ch8a .ch-story { background: var(--navy); border-color: var(--navy); }
-#ch8a .ch-story .ch-id { color: var(--gold-on-dark); } #ch8a .ch-story .ch-t { color: #fff; }
+/* CHAPTER 8 · from requirement to backlog (ch8a = story + Given / When / Then) */
 #ch8a .c8-story { position: absolute; left: 440px; top: 176px; width: 680px; }
 #ch8a .st-card { border-radius: 12px; background: var(--navy); color: #fff; padding: 20px 24px; }
 #ch8a .st-top { display: flex; gap: 12px; align-items: baseline; }
@@ -678,22 +674,6 @@ html:not(.anim) #ch1 .c1-moment { display: none; }
 #ch8a .ac-n em { font-style: normal; color: var(--teal); letter-spacing: .04em; }
 #ch8a .gwt { display: grid; grid-template-columns: 70px 1fr; font-size: 19px; line-height: 1.32; color: var(--ink); }
 #ch8a .gwt b { font-size: 15px; padding-top: 2px; font-weight: 820; letter-spacing: .1em; text-transform: uppercase; color: var(--teal); }
-#ch8a .c8-quality { position: absolute; left: 1160px; top: 176px; width: 440px; }
-#ch8a .c8-qh { font-size: 17px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--slate-2); }
-#ch8a .c8-quality ul { list-style: none; margin-top: 10px; display: flex; flex-direction: column; gap: 8px; }
-#ch8a .c8-quality li { display: grid; grid-template-columns: 30px 1fr; gap: 10px; align-items: start; padding: 9px 12px; border-radius: 8px; background: #fff; border: 1px solid var(--line-2); }
-#ch8a .c8-quality li .ico { font-size: 24px; color: var(--teal); margin-top: 2px; }
-#ch8a .c8-quality li.q-open .ico { color: var(--amber); }
-#ch8a .c8-quality b { display: block; font-size: 18px; color: var(--ink); }
-#ch8a .c8-quality span { display: block; font-size: 15px; color: var(--slate); line-height: 1.3; margin-top: 1px; }
-#ch8a .c8-backlog { position: absolute; left: 1160px; top: 632px; width: 440px; }
-#ch8a .bk-head b { font-size: 46px; font-weight: 820; color: var(--navy); }
-#ch8a .bk-head span { margin-left: 8px; font-size: 19px; color: var(--slate); }
-#ch8a .bk { list-style: none; margin-top: 4px; display: flex; flex-direction: column; gap: 5px; }
-#ch8a .bk li { display: grid; grid-template-columns: 230px 1fr 28px; gap: 10px; align-items: center; font-size: 15px; color: var(--ink); }
-#ch8a .bb { height: 12px; background: var(--line-2); border-radius: 3px; overflow: hidden; }
-#ch8a .bb i { display: block; height: 100%; background: var(--navy-3); transform-origin: left; }
-#ch8a .bv { font-weight: 800; text-align: right; font-variant-numeric: tabular-nums; }
 
 #ch8b .jf { position: absolute; top: 250px; width: 780px; }
 #ch8b .jf-epics { left: 0; } #ch8b .jf-backlog { left: 820px; }
@@ -859,13 +839,13 @@ html:not(.anim) #ch1 .c1-moment { display: none; }
   <div class="rail-label"><b>13-SESSION BA JOURNEY</b><span id="railChapter">Prologue</span></div>
   <div class="rail-track">
     <div class="rail-line"><i id="railFill"></i></div>
-    <ol class="rail-ticks"><li data-chapter="prologue"><button type="button" aria-label="Go to Prologue" title="Prologue"></button></li><li data-chapter="ch1"><button type="button" aria-label="Go to 01 · The world we entered" title="01 · The world we entered"></button></li><li data-chapter="ch2"><button type="button" aria-label="Go to 02 · How we worked" title="02 · How we worked"></button></li><li data-chapter="ch3"><button type="button" aria-label="Go to 03 · The boundary" title="03 · The boundary"></button></li><li data-chapter="ch4"><button type="button" aria-label="Go to 04 · People and ownership" title="04 · People and ownership"></button></li><li data-chapter="ch5"><button type="button" aria-label="Go to 05 · Capabilities and priorities" title="05 · Capabilities and priorities"></button></li><li data-chapter="ch6"><button type="button" aria-label="Go to 06 · The baseline" title="06 · The baseline"></button></li><li data-chapter="ch7"><button type="button" aria-label="Go to 07 · How work flows" title="07 · How work flows"></button></li><li data-chapter="ch8"><button type="button" aria-label="Go to 08 · From requirement to backlog" title="08 · From requirement to backlog"></button></li><li data-chapter="finale"><button type="button" aria-label="Go to Finale" title="Finale"></button></li></ol>
+    <ol class="rail-ticks"><li data-chapter="prologue"><button type="button" aria-label="Go to Prologue" title="Prologue"></button></li><li data-chapter="ch1"><button type="button" aria-label="Go to 01 · The world we entered" title="01 · The world we entered"></button></li><li data-chapter="ch2"><button type="button" aria-label="Go to 02 · How we worked" title="02 · How we worked"></button></li><li data-chapter="ch4"><button type="button" aria-label="Go to 03 · People and ownership" title="03 · People and ownership"></button></li><li data-chapter="ch5"><button type="button" aria-label="Go to 04 · Capabilities and priorities" title="04 · Capabilities and priorities"></button></li><li data-chapter="ch6"><button type="button" aria-label="Go to 05 · The baseline" title="05 · The baseline"></button></li><li data-chapter="ch7"><button type="button" aria-label="Go to 06 · How work flows" title="06 · How work flows"></button></li><li data-chapter="ch8"><button type="button" aria-label="Go to 07 · From requirement to backlog" title="07 · From requirement to backlog"></button></li><li data-chapter="finale"><button type="button" aria-label="Go to Finale" title="Finale"></button></li></ol>
     <div class="design-track" id="designTrack" aria-hidden="true"><i></i><span>Design track · wireframes &amp; prototype</span></div>
   </div>
   <div class="rail-loop" id="reviewGlyph" title="Review loop: create · review · align · improve · approve">
     <svg viewBox="0 0 24 24" class="ico"><use href="#i-refresh-ccw"/></svg><span>Review loop</span>
   </div>
-  <div class="rail-count" id="beatCounter" aria-live="polite">01 / 36</div>
+  <div class="rail-count" id="beatCounter" aria-live="polite">01 / 34</div>
   <div class="controls" aria-label="Presenter controls">
   <button type="button" id="btnPrev" aria-label="Previous beat"><svg class="ico"><use href="#i-chevron-left"/></svg></button>
   <button type="button" id="btnNext" aria-label="Next beat"><svg class="ico"><use href="#i-chevron-right"/></svg></button>
@@ -877,7 +857,7 @@ html:not(.anim) #ch1 .c1-moment { display: none; }
 
 
 <aside class="notes" id="notes" aria-label="Presenter notes" hidden>
-  <div class="n-head"><span id="nBeat">01 / 36</span><b id="nTitle"></b></div>
+  <div class="n-head"><span id="nBeat">01 / 34</span><b id="nTitle"></b></div>
   <div class="n-grid">
     <div><h5>Key message</h5><p id="nKey"></p></div>
     <div><h5>Why it matters</h5><p id="nWhy"></p></div>
@@ -969,9 +949,9 @@ html:not(.anim) #ch1 .c1-moment { display: none; }
 </section>
 
 <!-- =====================================================================
-     CHAPTER 1 · THE WORLD WE ENTERED   (4 beats)
+     CHAPTER 1 · THE WORLD WE ENTERED   (7 beats)
      ===================================================================== -->
-<section class="scene" id="ch1" data-beats="6" data-chapter="ch1" data-theme="dark">
+<section class="scene" id="ch1" data-beats="7" data-chapter="ch1" data-theme="dark">
   <div class="stage"><div class="bg bg-dark"><div class="bg-fleet"></div></div>
   <div class="safe">
     <header class="head"><p class="kicker">01 · The world we entered</p>
@@ -1006,7 +986,17 @@ html:not(.anim) #ch1 .c1-moment { display: none; }
       <p class="c1-ask-close">If answering these takes more than a few seconds,<br><b>you have a <em>visibility</em> problem.</b></p>
     </div>
 
-    <!-- beat 2 · the problem in numbers. EXTERNAL industry / market statistics supplied by the team (context only):
+    <!-- beat 2 · From Ideation to Creation. TEAM-PROVIDED journey labels (Seif, 24 Oct 2026; D.journey), high-level overview only:
+         no per-stage detail, no session mapping. Full-canvas layer: in for this beat only. Hidden in the static fallback. -->
+    <div class="c1-journey" aria-label="From ideation to creation: our journey">
+      <div class="c1-jo-head"><p class="kicker">Our journey</p>
+        <h3>From <em>Ideation</em> to <em>Creation</em></h3>
+        <span class="tag tag-vis">High-level overview</span></div>
+      <div class="c1-jo-line" aria-hidden="true"><i></i></div>
+      <ol class="c1-jo-steps"><li class="c1-jo-step up" data-i="0" style="left:110px"><span class="c1-jo-dot">1</span><i class="c1-jo-stem"></i><b>Kick-off Meeting</b></li><li class="c1-jo-step dn" data-i="1" style="left:248px"><span class="c1-jo-dot">2</span><i class="c1-jo-stem"></i><b>Stakeholder Analysis &amp; RACI</b></li><li class="c1-jo-step up" data-i="2" style="left:386px"><span class="c1-jo-dot">3</span><i class="c1-jo-stem"></i><b>Persona</b></li><li class="c1-jo-step dn" data-i="3" style="left:524px"><span class="c1-jo-dot">4</span><i class="c1-jo-stem"></i><b>Feature List</b></li><li class="c1-jo-step up" data-i="4" style="left:662px"><span class="c1-jo-dot">5</span><i class="c1-jo-stem"></i><b>Verification &amp; Validation</b></li><li class="c1-jo-step dn" data-i="5" style="left:800px"><span class="c1-jo-dot">6</span><i class="c1-jo-stem"></i><b>BRD</b></li><li class="c1-jo-step up" data-i="6" style="left:938px"><span class="c1-jo-dot">7</span><i class="c1-jo-stem"></i><b>User Story Mapping</b></li><li class="c1-jo-step dn" data-i="7" style="left:1076px"><span class="c1-jo-dot">8</span><i class="c1-jo-stem"></i><b>User Stories &amp; Exceptions</b></li><li class="c1-jo-step up" data-i="8" style="left:1214px"><span class="c1-jo-dot">9</span><i class="c1-jo-stem"></i><b>Jira</b></li><li class="c1-jo-step dn" data-i="9" style="left:1352px"><span class="c1-jo-dot">10</span><i class="c1-jo-stem"></i><b>BPMN</b></li><li class="c1-jo-step up" data-i="10" style="left:1490px"><span class="c1-jo-dot">11</span><i class="c1-jo-stem"></i><b>Wireframes</b></li></ol>
+    </div>
+
+    <!-- beat 4 · the problem in numbers. EXTERNAL industry / market statistics supplied by the team (context only):
          they do not describe the VMS organization, its fleet or this project. Source labels exactly as supplied.
          Full-canvas layer: in for this beat only, out before the domain map. Hidden in the static fallback. -->
     <div class="c1-pin" aria-label="The problem in numbers: external industry and market context">
@@ -1030,10 +1020,10 @@ html:not(.anim) #ch1 .c1-moment { display: none; }
       <p class="src c1-pin-note">External industry and market statistics, shown for context only. They do not describe the VMS organization, its fleet or this project.</p>
     </div>
 
-    <!-- beat 5 · a real operational moment. Storytelling RECONSTRUCTION of the documented pattern (Kick-off MOM: paper + Excel;
+    <!-- beat 3 · a real operational moment. Storytelling RECONSTRUCTION of the documented pattern (Kick-off MOM: paper + Excel;
          expiry discovered only when the organization tried to assign/use a vehicle for a mission; no proactive monitoring).
-         Not an incident report. No count here: the 6 vehicles are revealed on the next beat (kick-off findings).
-         Full-canvas layer: in for this beat only, out before the kick-off findings. Hidden in the static fallback. -->
+         Not an incident report. No count here: the 6 vehicles are revealed on the kick-off findings beat.
+         Full-canvas layer: in for this beat only, out before the problem in numbers. Hidden in the static fallback. -->
     <div class="c1-moment" aria-label="One operational moment before VMS">
       <div class="c1-mo-head"><p class="kicker">Before VMS · one ordinary moment</p>
         <h3>What the manual process looked like when a vehicle was actually <em>needed</em></h3>
@@ -1078,19 +1068,13 @@ html:not(.anim) #ch1 .c1-moment { display: none; }
 </section>
 
 <!-- =====================================================================
-     CHAPTER 2 · HOW WE WORKED   (3 beats)
+     CHAPTER 2 · HOW WE WORKED   (2 beats)
      ===================================================================== -->
-<section class="scene" id="ch2" data-beats="3" data-chapter="ch2" data-theme="light">
+<section class="scene" id="ch2" data-beats="2" data-chapter="ch2" data-theme="light">
   <div class="stage"><div class="bg bg-light"></div>
   <div class="safe">
     <header class="head"><p class="kicker">02 · How we worked</p>
       <h2 class="title">How did a diverse team analyze one problem — without fragmenting the understanding?</h2></header>
-
-    <div class="c2-life">
-      <div class="c2-lifehead"><b>The BA lifecycle we learned to think in</b>
-        <span class="legend"><i class="st applied"></i>Applied <i class="st partial"></i>Partially applied <i class="st prepared"></i>Prepared for</span></div>
-      <ol class="c2-stages"><li class="stg stg-applied"><span class="stg-n">1</span><b>Discovery</b><span class="stg-badge">Applied</span><p>Kick-off, stakeholders, initial features</p></li><li class="stg stg-partial"><span class="stg-n">2</span><b>Planning</b><span class="stg-badge">Partially applied</span><p>Team organization, kick-off prep, scope</p></li><li class="stg stg-applied"><span class="stg-n">3</span><b>Analysis</b><span class="stg-badge">Applied</span><p>Features, BRD, BPMN, user stories, AC</p></li><li class="stg stg-partial"><span class="stg-n">4</span><b>Design &amp; Build</b><span class="stg-badge">Partially applied</span><p>Backlog refinement in Jira, prototype</p></li><li class="stg stg-prepared"><span class="stg-n">5</span><b>Test &amp; UAT</b><span class="stg-badge">Prepared for</span><p>Testable acceptance criteria</p></li><li class="stg stg-prepared"><span class="stg-n">6</span><b>Deploy &amp; Transition</b><span class="stg-badge">Prepared for</span><p>Cut-over plan, adoption risks (NFR-ADO-01)</p></li><li class="stg stg-prepared"><span class="stg-n">7</span><b>Operate &amp; Evaluate</b><span class="stg-badge">Prepared for</span><p>11 defined KPIs</p></li></ol>
-    </div>
 
     <div class="c2-flow"><svg class="c2-streams" viewBox="0 0 1260 360" role="img" aria-label="One team splits into seven work streams, passes through a review loop, and reconverges into one baseline">
         <g class="split"><path class="sp" data-i="0" pathLength="1" d="M150 176 C 220 176, 220 26, 290 26 L 820 26"/><path class="sp" data-i="1" pathLength="1" d="M150 176 C 220 176, 220 76, 290 76 L 820 76"/><path class="sp" data-i="2" pathLength="1" d="M150 176 C 220 176, 220 126, 290 126 L 820 126"/><path class="sp" data-i="3" pathLength="1" d="M150 176 C 220 176, 220 176, 290 176 L 820 176"/><path class="sp" data-i="4" pathLength="1" d="M150 176 C 220 176, 220 226, 290 226 L 820 226"/><path class="sp" data-i="5" pathLength="1" d="M150 176 C 220 176, 220 276, 290 276 L 820 276"/><path class="sp" data-i="6" pathLength="1" d="M150 176 C 220 176, 220 326, 290 326 L 820 326"/></g><g class="merge"><path class="mg" data-i="0" pathLength="1" d="M1010 26 L1060 26 C 1120 26, 1120 176, 1170 176"/><path class="mg" data-i="1" pathLength="1" d="M1010 76 L1060 76 C 1120 76, 1120 176, 1170 176"/><path class="mg" data-i="2" pathLength="1" d="M1010 126 L1060 126 C 1120 126, 1120 176, 1170 176"/><path class="mg" data-i="3" pathLength="1" d="M1010 176 L1060 176 C 1120 176, 1120 176, 1170 176"/><path class="mg" data-i="4" pathLength="1" d="M1010 226 L1060 226 C 1120 226, 1120 176, 1170 176"/><path class="mg" data-i="5" pathLength="1" d="M1010 276 L1060 276 C 1120 276, 1120 176, 1170 176"/><path class="mg" data-i="6" pathLength="1" d="M1010 326 L1060 326 C 1120 326, 1120 176, 1170 176"/></g>
@@ -1105,30 +1089,7 @@ html:not(.anim) #ch1 .c1-moment { display: none; }
         <p class="src">Evidence: 7 Jira epics, one reporter each · four team BRDs merged (BRD Ref-05) · BRD v2.0 conflict resolution</p>
       </div>
     </div>
-    <p class="unlocks">First, we needed one shared boundary.</p>
-  </div></div>
-</section>
-
-<!-- =====================================================================
-     CHAPTER 3 · THE BOUNDARY   (2 beats)
-     ===================================================================== -->
-<section class="scene" id="ch3" data-beats="2" data-chapter="ch3" data-theme="light">
-  <div class="stage"><div class="bg bg-light"></div>
-  <div class="safe">
-    <header class="head"><p class="kicker">03 · The boundary</p>
-      <h2 class="title">What are we solving — and what are we deliberately <em>not</em> solving?</h2></header>
-    <div class="c3-boundary">
-      <span class="c3-blabel">VMS · Project Scope baseline · 11 areas</span>
-      <div class="c3-groups"><div class="sg sg-navy"><h4>Fleet records</h4><div class="cap"><svg class="ico "><use href="#i-car"/></svg><span>Vehicle Management</span></div><div class="cap"><svg class="ico "><use href="#i-id-card"/></svg><span>Driver Management</span></div><div class="cap"><svg class="ico "><use href="#i-tag"/></svg><span>Vehicle Brands</span></div><div class="cap"><svg class="ico "><use href="#i-landmark"/></svg><span>Licensing Authorities</span></div></div><div class="sg sg-teal"><h4>Operations</h4><div class="cap"><svg class="ico "><use href="#i-route"/></svg><span>Movement Log</span></div><div class="cap"><svg class="ico "><use href="#i-fuel"/></svg><span>Fuel Management</span></div><div class="cap"><svg class="ico "><use href="#i-wrench"/></svg><span>Maintenance Management</span></div><div class="cap"><svg class="ico "><use href="#i-warehouse"/></svg><span>Repair Centers</span></div></div><div class="sg sg-steel"><h4>Control &amp; insight</h4><div class="cap"><svg class="ico "><use href="#i-bell-ring"/></svg><span>Notifications</span></div><div class="cap"><svg class="ico "><use href="#i-lock-keyhole"/></svg><span>Roles &amp; Permissions</span></div><div class="cap"><svg class="ico "><use href="#i-chart-column"/></svg><span>Reports</span></div></div></div>
-      <p class="c3-base">Scope turned a fuzzy problem into an agreed boundary. Where the Feature List differs, the Project Scope wins.</p>
-    </div>
-    <aside class="c3-out">
-      <h3><svg class="ico"><use href="#i-ban"/></svg>Outside this release</h3>
-      <ul class="c3-ex"><li><b>GPS, route tracking &amp; geofencing</b><span>F-36 · F-67 · Phase 2 candidate</span></li><li><b>Online vehicle requests &amp; trip approval</b><span>F-30 · F-31 · boundary still open (ISS-03)</span></li><li><b>Vehicle reservation (advance booking)</b><span>F-35</span></li><li><b>Fuel request &amp; approval flow</b><span>F-41 · fuel is recorded, not requested</span></li></ul>
-      <div class="c3-nomig"><b><svg class="ico "><use href="#i-database"/></svg>No data migration</b><span>F-57 · the system starts with fresh data</span><span class="c3-link"><svg class="ico "><use href="#i-link"/></svg>Kick-off: no historical vehicle data exists</span></div>
-      <p class="src">5 of 18 documented exclusions · BRD §6.2 · changes need a Sponsor-approved change request</p>
-    </aside>
-    <p class="unlocks">Now that the boundary was clear: who matters inside it?</p>
+    <p class="unlocks">Next: who matters — and who decides?</p>
   </div></div>
 </section>
 
@@ -1138,7 +1099,7 @@ html:not(.anim) #ch1 .c1-moment { display: none; }
 <section class="scene" id="ch4" data-beats="3" data-chapter="ch4" data-theme="light">
   <div class="stage"><div class="bg bg-light"></div>
   <div class="safe">
-    <header class="head"><p class="kicker">04 · People and ownership</p>
+    <header class="head"><p class="kicker">03 · People and ownership</p>
       <h2 class="title">Who matters — and who decides?</h2></header>
     <div class="c4-matrix">
       <div class="c4-yaxis"><span>POWER</span></div>
@@ -1153,33 +1114,7 @@ html:not(.anim) #ch1 .c1-moment { display: none; }
       <p class="c4-msg">Knowing who matters was not enough — we also needed to know <b>who decides</b>.</p>
     </div>
     <div class="stake-pop" id="stakePop" role="dialog" aria-live="polite" hidden></div>
-    <p class="unlocks">With ownership clear, needs could become capabilities.</p>
-  </div></div>
-</section>
-
-<!-- =====================================================================
-     CHAPTER 5A · PAINS → FEATURES   (2 beats)
-     ===================================================================== -->
-<section class="scene" id="ch5a" data-beats="2" data-chapter="ch5" data-theme="light">
-  <div class="stage"><div class="bg bg-light"></div>
-  <div class="safe">
-    <header class="head"><p class="kicker">05 · Capabilities and priorities</p>
-      <h2 class="title">What must the system do — and what can wait?</h2></header>
-    <div class="c5-cols"><span>Pain / need</span><span>Capability → feature</span></div>
-    <div class="c5-rows"><div class="pr is-thread" data-i="0">
-        <div class="pain"><b>Expired licenses found too late</b><span class="src">Kick-off · BRD §4.2</span><span class="tag tag-gold">Golden thread</span></div>
-        <svg class="pr-arrow" viewBox="0 0 120 40" aria-hidden="true"><path pathLength="1" d="M4 20 H108"/><path class="pr-head" d="M100 11 L112 20 L100 29"/></svg>
-        <div class="feats"><div class="feat"><span class="id">F-13</span><b>Vehicle License / Document Tracking</b><span class="must">Must</span></div><div class="feat"><span class="id">F-42</span><b>Vehicle License Expiry Notifications</b><span class="must">Must</span></div></div></div><div class="pr" data-i="1">
-        <div class="pain"><b>Late returns noticed late</b><span class="src">BRD §4.2 · §8.1</span></div>
-        <svg class="pr-arrow" viewBox="0 0 120 40" aria-hidden="true"><path pathLength="1" d="M4 20 H108"/><path class="pr-head" d="M100 11 L112 20 L100 29"/></svg>
-        <div class="feats"><div class="feat"><span class="id">F-32</span><b>Trip / Movement Status Tracking</b><span class="must">Must</span></div><div class="feat"><span class="id">F-45</span><b>Overdue/Expiry Return Notifications</b><span class="must">Must</span></div></div></div><div class="pr" data-i="2">
-        <div class="pain"><b>No fuel traceability</b><span class="src">Kick-off · BRD §4.2</span></div>
-        <svg class="pr-arrow" viewBox="0 0 120 40" aria-hidden="true"><path pathLength="1" d="M4 20 H108"/><path class="pr-head" d="M100 11 L112 20 L100 29"/></svg>
-        <div class="feats"><div class="feat"><span class="id">F-37</span><b>Record Fuel Transaction</b><span class="must">Must</span></div><div class="feat"><span class="id">F-38</span><b>Fuel Transaction Traceability &amp; Analysis</b><span class="must">Must</span></div></div></div><div class="pr" data-i="3">
-        <div class="pain"><b>Maintenance tracked by hand</b><span class="src">Kick-off · BRD §8.1</span></div>
-        <svg class="pr-arrow" viewBox="0 0 120 40" aria-hidden="true"><path pathLength="1" d="M4 20 H108"/><path class="pr-head" d="M100 11 L112 20 L100 29"/></svg>
-        <div class="feats"><div class="feat"><span class="id">F-22</span><b>Create &amp; Classify Maintenance Record</b><span class="must">Must</span></div><div class="feat"><span class="id">F-23</span><b>Preventive Maintenance Scheduling &amp; Due Reminders</b><span class="must">Must</span></div></div></div></div>
-    <p class="src src-foot">Feature names and IDs: Consolidated Feature List (A04) · all eight are Must</p>
+    <p class="unlocks">With ownership clear: what must the system actually do?</p>
   </div></div>
 </section>
 
@@ -1189,10 +1124,11 @@ html:not(.anim) #ch1 .c1-moment { display: none; }
 <section class="scene" id="ch5b" data-beats="2" data-chapter="ch5" data-theme="light">
   <div class="stage"><div class="bg bg-light"></div>
   <div class="safe">
-    <header class="head"><p class="kicker">05 · Capabilities and priorities</p>
+    <header class="head"><p class="kicker">04 · Capabilities and priorities</p>
       <h2 class="title">Good analysis is also deciding what <em>not</em> to build.</h2></header>
     <div class="c5-total">
       <div class="c5-big"><span data-count="67">67</span></div>
+      <span class="tag tag-gold c5-thread" title="Golden thread: license expiry features in the consolidated list">F-13 · F-42</span>
       <p class="c5-cap">features in <b>12 capability groups</b></p>
       <ol class="c5-groups"><li data-i="0"><span class="gn">Vehicle Management</span><span class="gb"><i style="width:100%"></i></span><span class="gv">14</span></li><li data-i="1"><span class="gn">Movements / Trips</span><span class="gb"><i style="width:57.14285714285714%"></i></span><span class="gv">8</span></li><li data-i="2"><span class="gn">Notifications</span><span class="gb"><i style="width:50%"></i></span><span class="gv">7</span></li><li data-i="3"><span class="gn">Driver Management</span><span class="gb"><i style="width:35.714285714285715%"></i></span><span class="gv">5</span></li><li data-i="4"><span class="gn">Fuel</span><span class="gb"><i style="width:35.714285714285715%"></i></span><span class="gv">5</span></li><li data-i="5"><span class="gn">Maintenance</span><span class="gb"><i style="width:28.57142857142857%"></i></span><span class="gv">4</span></li><li data-i="6"><span class="gn">Roles &amp; Permissions</span><span class="gb"><i style="width:28.57142857142857%"></i></span><span class="gv">4</span></li><li data-i="7"><span class="gn">Repair Centers</span><span class="gb"><i style="width:21.428571428571427%"></i></span><span class="gv">3</span></li><li data-i="8"><span class="gn">Reports &amp; Dashboard</span><span class="gb"><i style="width:21.428571428571427%"></i></span><span class="gv">3</span></li><li data-i="9"><span class="gn">Vehicle Assignment</span><span class="gb"><i style="width:14.285714285714285%"></i></span><span class="gv">2</span></li><li data-i="10"><span class="gn">Platform decisions</span><span class="gb"><i style="width:14.285714285714285%"></i></span><span class="gv">2</span></li><li data-i="11" class="fut"><span class="gn">Future enhancements</span><span class="gb"><i style="width:71.42857142857143%"></i></span><span class="gv">10</span></li></ol>
     </div>
@@ -1219,7 +1155,7 @@ html:not(.anim) #ch1 .c1-moment { display: none; }
 <section class="scene" id="ch6a" data-beats="1" data-chapter="ch6" data-theme="light">
   <div class="stage"><div class="bg bg-light"></div>
   <div class="safe">
-    <header class="head"><p class="kicker">06 · The baseline</p>
+    <header class="head"><p class="kicker">05 · The baseline</p>
       <h2 class="title">Did we get it right?</h2></header>
     <ol class="c6-stages"><li data-i="0">Draft</li><li data-i="1">Reviewed</li><li data-i="2">Aligned</li><li data-i="3">Consolidated</li></ol>
     <div class="c6-gate"><div class="vv vv-ver"><span class="vv-k">Verification</span><h3>Have we documented it correctly and consistently?</h3><span class="vv-st st-done"><svg class="ico "><use href="#i-circle-check"/></svg>Performed</span>
@@ -1231,12 +1167,36 @@ html:not(.anim) #ch1 .c1-moment { display: none; }
 </section>
 
 <!-- =====================================================================
+     CHAPTER 6 · THE BASELINE · SYSTEM BOUNDARY → DELIBERATELY OUTSIDE   (2 beats)
+     Scene id stays "ch3" (styles/scenes/chapter-03.css, scripts/scenes/chapter-03.js); it now belongs to chapter 05 · The baseline (rail id ch6).
+     ===================================================================== -->
+<section class="scene" id="ch3" data-beats="2" data-chapter="ch6" data-theme="light">
+  <div class="stage"><div class="bg bg-light"></div>
+  <div class="safe">
+    <header class="head"><p class="kicker">05 · The baseline</p>
+      <h2 class="title">What are we solving — and what are we deliberately <em>not</em> solving?</h2></header>
+    <div class="c3-boundary">
+      <span class="c3-blabel">VMS · Project Scope baseline · 11 areas</span>
+      <div class="c3-groups"><div class="sg sg-navy"><h4>Fleet records</h4><div class="cap"><svg class="ico "><use href="#i-car"/></svg><span>Vehicle Management</span></div><div class="cap"><svg class="ico "><use href="#i-id-card"/></svg><span>Driver Management</span></div><div class="cap"><svg class="ico "><use href="#i-tag"/></svg><span>Vehicle Brands</span></div><div class="cap"><svg class="ico "><use href="#i-landmark"/></svg><span>Licensing Authorities</span></div></div><div class="sg sg-teal"><h4>Operations</h4><div class="cap"><svg class="ico "><use href="#i-route"/></svg><span>Movement Log</span></div><div class="cap"><svg class="ico "><use href="#i-fuel"/></svg><span>Fuel Management</span></div><div class="cap"><svg class="ico "><use href="#i-wrench"/></svg><span>Maintenance Management</span></div><div class="cap"><svg class="ico "><use href="#i-warehouse"/></svg><span>Repair Centers</span></div></div><div class="sg sg-steel"><h4>Control &amp; insight</h4><div class="cap"><svg class="ico "><use href="#i-bell-ring"/></svg><span>Notifications</span></div><div class="cap"><svg class="ico "><use href="#i-lock-keyhole"/></svg><span>Roles &amp; Permissions</span></div><div class="cap"><svg class="ico "><use href="#i-chart-column"/></svg><span>Reports</span></div></div></div>
+      <p class="c3-base">Scope turned a fuzzy problem into an agreed boundary. Where the Feature List differs, the Project Scope wins.</p>
+    </div>
+    <aside class="c3-out">
+      <h3><svg class="ico"><use href="#i-ban"/></svg>Outside this release</h3>
+      <ul class="c3-ex"><li><b>GPS, route tracking &amp; geofencing</b><span>F-36 · F-67 · Phase 2 candidate</span></li><li><b>Online vehicle requests &amp; trip approval</b><span>F-30 · F-31 · boundary still open (ISS-03)</span></li><li><b>Vehicle reservation (advance booking)</b><span>F-35</span></li><li><b>Fuel request &amp; approval flow</b><span>F-41 · fuel is recorded, not requested</span></li></ul>
+      <div class="c3-nomig"><b><svg class="ico "><use href="#i-database"/></svg>No data migration</b><span>F-57 · the system starts with fresh data</span><span class="c3-link"><svg class="ico "><use href="#i-link"/></svg>Kick-off: no historical vehicle data exists</span></div>
+      <p class="src">5 of 18 documented exclusions · BRD §6.2 · changes need a Sponsor-approved change request</p>
+    </aside>
+    <p class="unlocks">Inside and outside agreed — now everything converges into one baseline.</p>
+  </div></div>
+</section>
+
+<!-- =====================================================================
      CHAPTER 6B · CONVERGENCE INTO THE BRD   (2 beats)
      ===================================================================== -->
 <section class="scene" id="ch6b" data-beats="2" data-chapter="ch6" data-theme="light">
   <div class="stage"><div class="bg bg-light"></div>
   <div class="safe">
-    <header class="head"><p class="kicker">06 · The baseline</p>
+    <header class="head"><p class="kicker">05 · The baseline</p>
       <h2 class="title">The BRD became one coherent baseline.</h2></header>
     <div class="c6-hub"><svg class="hub-lines" viewBox="0 0 720 720" aria-hidden="true"><path data-i="0" pathLength="1" d="M360 105 L360 360"/><path data-i="1" pathLength="1" d="M595 201 L360 360"/><path data-i="2" pathLength="1" d="M652 417 L360 360"/><path data-i="3" pathLength="1" d="M490 590 L360 360"/><path data-i="4" pathLength="1" d="M230 590 L360 360"/><path data-i="5" pathLength="1" d="M68 417 L360 360"/><path data-i="6" pathLength="1" d="M125 201 L360 360"/></svg>
         <div class="hub-core"><b>BRD-VMS-003</b><span>v3.0 · consolidated</span><span class="hub-th tag tag-gold">BR-033 · BRL-04</span></div>
@@ -1255,7 +1215,7 @@ html:not(.anim) #ch1 .c1-moment { display: none; }
 <section class="scene" id="ch7" data-beats="3" data-chapter="ch7" data-theme="light">
   <div class="stage"><div class="bg bg-light"></div>
   <div class="safe">
-    <header class="head"><p class="kicker">07 · How work flows</p>
+    <header class="head"><p class="kicker">06 · How work flows</p>
       <h2 class="title">How does the work move today — and how should it work tomorrow?</h2>
       <p class="c7-sub">Primary process · Vehicle License / Document Expiry Management</p></header>
 
@@ -1348,14 +1308,13 @@ html:not(.anim) #ch1 .c1-moment { display: none; }
 </section>
 
 <!-- =====================================================================
-     CHAPTER 8A · REQUIREMENT → STORY → CRITERIA → BACKLOG   (3 beats)
+     CHAPTER 8A · STORY → GIVEN / WHEN / THEN   (1 beat)
      ===================================================================== -->
-<section class="scene" id="ch8a" data-beats="3" data-chapter="ch8" data-theme="light">
+<section class="scene" id="ch8a" data-beats="1" data-chapter="ch8" data-theme="light">
   <div class="stage"><div class="bg bg-light"></div>
   <div class="safe">
-    <header class="head"><p class="kicker">08 · From requirement to backlog</p>
+    <header class="head"><p class="kicker">07 · From requirement to backlog</p>
       <h2 class="title">How does a delivery team build this?</h2></header>
-    <ol class="c8-chain"><li class="ch ch-kickoff" data-i="0"><span class="ch-id">Kick-off finding</span><span class="ch-t">6 vehicles found with expired licenses</span></li><li class="ch" data-i="1"><span class="ch-id">OBJ-01</span><span class="ch-t">Compliance &amp; control: no vehicle on an expired license</span></li><li class="ch" data-i="2"><span class="ch-id">BR-033 · BRL-04</span><span class="ch-t">Notify as a license approaches or reaches expiry — at 30, 15 and 7 days</span></li><li class="ch" data-i="3"><span class="ch-id">F-13 · F-42</span><span class="ch-t">License tracking · license expiry notifications</span></li><li class="ch ch-story" data-i="4"><span class="ch-id">US-16</span><span class="ch-t">Vehicle License Status and Expiry Notifications</span></li></ol>
     <div class="c8-story"><div class="st-card"><div class="st-top"><span class="st-id">US-16</span><b>Vehicle License Status and Expiry Notifications</b></div>
         <p class="st-text"><span class="k">As a</span> <b>Fleet Director</b>, <span class="k">I want</span> the system to calculate each license's status and warn me 30, 15 and 7 days before expiry and on the day it expires, <span class="k">so that</span> no vehicle works on an expired license without us knowing.</p>
         <span class="src">Trace: F-13 · BR-033 · BRL-04 · BR-016 · ASM-03 · A-09 · A-16 · Module 01 V.02</span></div></div>
@@ -1363,8 +1322,6 @@ html:not(.anim) #ch1 .c1-moment { display: none; }
         <p class="gwt g"><b>Given</b> a license has 30, 15 or 7 days left</p><p class="gwt w"><b>When</b> the daily check runs</p><p class="gwt t"><b>Then</b> one notification is sent for that threshold</p></div><div class="ac" data-i="1"><span class="ac-n">AC 2<em>BR-033</em></span>
         <p class="gwt g"><b>Given</b> a license expires today or has expired</p><p class="gwt w"><b>When</b> the daily check runs</p><p class="gwt t"><b>Then</b> its status becomes Expired and one “License expired” notification is sent</p></div><div class="ac" data-i="2"><span class="ac-n">AC 4<em>US-16</em></span>
         <p class="gwt g"><b>Given</b> a license is renewed before the next threshold</p><p class="gwt w"><b>When</b> the renewal is saved</p><p class="gwt t"><b>Then</b> pending notifications are cancelled and the status is recalculated</p></div></div>
-    <div class="c8-quality"><b class="c8-qh">Quality layers around the story</b><ul><li data-i="0" class=""><svg class="ico "><use href="#i-table"/></svg><div><b>Field specification</b><span>4 fields with type, limits and validation</span></div></li><li data-i="1" class=""><svg class="ico "><use href="#i-triangle-alert"/></svg><div><b>Edge cases</b><span>8 exception scenarios, e.g. duplicates, archived vehicles</span></div></li><li data-i="2" class=""><svg class="ico "><use href="#i-scale"/></svg><div><b>Business rules</b><span>BRL-04 thresholds · BR-016 warns on movements, no auto-block</span></div></li><li data-i="3" class=""><svg class="ico "><use href="#i-link"/></svg><div><b>Dependency</b><span>DEP-03: initial license data from the Fleet Director's team</span></div></li><li data-i="4" class="q-open"><svg class="ico "><use href="#i-circle-help"/></svg><div><b>Assumption · open question</b><span>ASM-03 alerts without an account · ISS-06 channels open</span></div></li></ul></div>
-    <div class="c8-backlog"><div class="bk-head"><b data-count="86">86</b><span>user stories · 6 modules</span></div><ol class="bk"><li data-i="0"><span class="bn">Vehicle Management</span><span class="bb"><i style="width:100%"></i></span><span class="bv">19</span></li><li data-i="1"><span class="bn">Driver Management &amp; Assignment</span><span class="bb"><i style="width:63.1578947368421%"></i></span><span class="bv">12</span></li><li data-i="2"><span class="bn">Maintenance &amp; Repair Centers</span><span class="bb"><i style="width:73.68421052631578%"></i></span><span class="bv">14</span></li><li data-i="3"><span class="bn">Movements &amp; Fuel</span><span class="bb"><i style="width:36.84210526315789%"></i></span><span class="bv">7</span></li><li data-i="4"><span class="bn">Notifications</span><span class="bb"><i style="width:78.94736842105263%"></i></span><span class="bv">15</span></li><li data-i="5"><span class="bn">Roles &amp; Permissions</span><span class="bb"><i style="width:100%"></i></span><span class="bv">19</span></li></ol></div>
   </div></div>
 </section>
 
@@ -1374,7 +1331,7 @@ html:not(.anim) #ch1 .c1-moment { display: none; }
 <section class="scene" id="ch8b" data-beats="1" data-chapter="ch8" data-theme="light">
   <div class="stage"><div class="bg bg-light"></div>
   <div class="safe">
-    <header class="head"><p class="kicker">08 · From requirement to backlog</p>
+    <header class="head"><p class="kicker">07 · From requirement to backlog</p>
       <h2 class="title">Documentation became actionable work.</h2></header>
     <figure class="jf jf-epics"><div class="jf-frame"><img src="data:image/webp;base64,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" alt="Jira list view of the VMS project showing seven epics, each with a reporter and status To Do"></div>
           <figcaption><span class="jf-k">Real Jira · epics view</span><ul><li><svg class="ico "><use href="#i-circle-check"/></svg>7 epics: six modules + BRD &amp; Other documents</li><li><svg class="ico "><use href="#i-circle-check"/></svg>A different reporter on each epic</li><li><svg class="ico "><use href="#i-circle-check"/></svg>All visible items: To Do — prepared for delivery</li></ul></figcaption></figure>
@@ -1394,7 +1351,7 @@ html:not(.anim) #ch1 .c1-moment { display: none; }
 <section class="scene" id="ch8c" data-beats="1" data-chapter="ch8" data-theme="light">
   <div class="stage"><div class="bg bg-light"></div>
   <div class="safe">
-    <header class="head"><p class="kicker">08 · From requirement to backlog</p>
+    <header class="head"><p class="kicker">07 · From requirement to backlog</p>
       <h2 class="title">Analysis and design evolved together.</h2></header>
     <div class="pt"><ol class="pt-phases" style="grid-template-columns:3fr 2fr 1fr"><li data-i="0"><span>Requirements</span></li><li data-i="1"><span>Backlog</span></li><li data-i="2"><span>Design</span></li></ol>
         <div class="pt-line" aria-hidden="true"><i></i></div>
@@ -1413,7 +1370,34 @@ html:not(.anim) #ch1 .c1-moment { display: none; }
         <p class="src">Ran alongside the analysis; became more concrete as modules were approved.</p></div>
     </div>
     <p class="pr-label">Team-created prototype · illustrative data</p>
-    <p class="unlocks">Step back. What did all of this become?</p>
+    <p class="unlocks">Step back. Where did all of this start?</p>
+  </div></div>
+</section>
+
+<!-- =====================================================================
+     FINALE · RETROSPECTIVE · PAINS → FEATURES   (2 beats)
+     Scene id stays "ch5a" (styles/scenes/chapter-05.css, scripts/scenes/chapter-05.js); it now opens the Finale.
+     ===================================================================== -->
+<section class="scene" id="ch5a" data-beats="2" data-chapter="finale" data-theme="light">
+  <div class="stage"><div class="bg bg-light"></div>
+  <div class="safe">
+    <header class="head"><p class="kicker">Finale · Looking back</p>
+      <h2 class="title">It all started with real pains.</h2></header>
+    <div class="c5-cols"><span>Pain / need</span><span>Capability → feature</span></div>
+    <div class="c5-rows"><div class="pr is-thread" data-i="0">
+        <div class="pain"><b>Expired licenses found too late</b><span class="src">Kick-off · BRD §4.2</span><span class="tag tag-gold">Golden thread</span></div>
+        <svg class="pr-arrow" viewBox="0 0 120 40" aria-hidden="true"><path pathLength="1" d="M4 20 H108"/><path class="pr-head" d="M100 11 L112 20 L100 29"/></svg>
+        <div class="feats"><div class="feat"><span class="id">F-13</span><b>Vehicle License / Document Tracking</b><span class="must">Must</span></div><div class="feat"><span class="id">F-42</span><b>Vehicle License Expiry Notifications</b><span class="must">Must</span></div></div></div><div class="pr" data-i="1">
+        <div class="pain"><b>Late returns noticed late</b><span class="src">BRD §4.2 · §8.1</span></div>
+        <svg class="pr-arrow" viewBox="0 0 120 40" aria-hidden="true"><path pathLength="1" d="M4 20 H108"/><path class="pr-head" d="M100 11 L112 20 L100 29"/></svg>
+        <div class="feats"><div class="feat"><span class="id">F-32</span><b>Trip / Movement Status Tracking</b><span class="must">Must</span></div><div class="feat"><span class="id">F-45</span><b>Overdue/Expiry Return Notifications</b><span class="must">Must</span></div></div></div><div class="pr" data-i="2">
+        <div class="pain"><b>No fuel traceability</b><span class="src">Kick-off · BRD §4.2</span></div>
+        <svg class="pr-arrow" viewBox="0 0 120 40" aria-hidden="true"><path pathLength="1" d="M4 20 H108"/><path class="pr-head" d="M100 11 L112 20 L100 29"/></svg>
+        <div class="feats"><div class="feat"><span class="id">F-37</span><b>Record Fuel Transaction</b><span class="must">Must</span></div><div class="feat"><span class="id">F-38</span><b>Fuel Transaction Traceability &amp; Analysis</b><span class="must">Must</span></div></div></div><div class="pr" data-i="3">
+        <div class="pain"><b>Maintenance tracked by hand</b><span class="src">Kick-off · BRD §8.1</span></div>
+        <svg class="pr-arrow" viewBox="0 0 120 40" aria-hidden="true"><path pathLength="1" d="M4 20 H108"/><path class="pr-head" d="M100 11 L112 20 L100 29"/></svg>
+        <div class="feats"><div class="feat"><span class="id">F-22</span><b>Create &amp; Classify Maintenance Record</b><span class="must">Must</span></div><div class="feat"><span class="id">F-23</span><b>Preventive Maintenance Scheduling &amp; Due Reminders</b><span class="must">Must</span></div></div></div></div>
+    <p class="src src-foot">Feature names and IDs: Consolidated Feature List (A04) · all eight are Must</p>
   </div></div>
 </section>
 
@@ -1493,16 +1477,16 @@ html:not(.anim) #ch1 .c1-moment { display: none; }
 (function (D) {
 
   /* ---------- Chapters on the journey rail (no session-number mapping) ---------- */
+  // Visible chapter numbers are continuous (01–07); ids are internal and keep their original names.
   D.chapters = [
     { id: "prologue", label: "Team", title: "Prologue" },
     { id: "ch1", label: "World", title: "01 · The world we entered" },
     { id: "ch2", label: "Ways of working", title: "02 · How we worked" },
-    { id: "ch3", label: "Boundary", title: "03 · The boundary" },
-    { id: "ch4", label: "People", title: "04 · People and ownership" },
-    { id: "ch5", label: "Capabilities", title: "05 · Capabilities and priorities" },
-    { id: "ch6", label: "Baseline", title: "06 · The baseline" },
-    { id: "ch7", label: "Process", title: "07 · How work flows" },
-    { id: "ch8", label: "Backlog", title: "08 · From requirement to backlog" },
+    { id: "ch4", label: "People", title: "03 · People and ownership" },
+    { id: "ch5", label: "Capabilities", title: "04 · Capabilities and priorities" },
+    { id: "ch6", label: "Baseline", title: "05 · The baseline" },
+    { id: "ch7", label: "Process", title: "06 · How work flows" },
+    { id: "ch8", label: "Backlog", title: "07 · From requirement to backlog" },
     { id: "finale", label: "Convergence", title: "Finale" },
   ];
   D.designTrackFrom = "ch5"; // TEAM: wireframes/prototype ran in parallel with analysis
@@ -1558,23 +1542,17 @@ html:not(.anim) #ch1 .c1-moment { display: none; }
   ];
   D.kickoffThread = { h: "6 vehicles had already exceeded their license validity", p: "Discovered only when the organization tried to assign them to a mission", tag: "Kick-off finding" };
   D.openTopics = ["Fleet planning", "Vehicle cost", "Driver performance", "Fleet ownership", "Vehicle prioritization", "Driver employment model", "Business priority"];
+  // TEAM: "From Ideation to Creation" journey labels, provided and approved by Seif (24 Oct 2026). High-level overview of
+  // the team's path, not a source-document fact and not a session/artifact mapping. Labels and order exactly as supplied.
+  D.journey = ["Kick-off Meeting", "Stakeholder Analysis & RACI", "Persona", "Feature List", "Verification & Validation", "BRD",
+    "User Story Mapping", "User Stories & Exceptions", "Jira", "BPMN", "Wireframes"];
 
-  /* ---------- Chapter 2 · lifecycle (TEAM model, states locked) ---------- */
-  D.lifecycle = [
-    { n: 1, name: "Discovery", state: "applied", line: "Kick-off, stakeholders, initial features" },
-    { n: 2, name: "Planning", state: "partial", line: "Team organization, kick-off prep, scope" },
-    { n: 3, name: "Analysis", state: "applied", line: "Features, BRD, BPMN, user stories, AC" },
-    { n: 4, name: "Design & Build", state: "partial", line: "Backlog refinement in Jira, prototype" },
-    { n: 5, name: "Test & UAT", state: "prepared", line: "Testable acceptance criteria" },
-    { n: 6, name: "Deploy & Transition", state: "prepared", line: "Cut-over plan, adoption risks (NFR-ADO-01)" },
-    { n: 7, name: "Operate & Evaluate", state: "prepared", line: "11 defined KPIs" },
-  ];
-  D.lifecycleStates = { applied: "Applied", partial: "Partially applied", prepared: "Prepared for" };
+  /* ---------- Chapter 2 ---------- */
   // SRC: Jira epics screenshot (7 epics)
   D.streams = ["Vehicle Management", "Driver Management & Assignment", "Maintenance & Repair Centers", "Movements & Fuel", "Notifications", "Roles & Permissions", "BRD & Other documents"];
   D.reviewLoop = ["Create", "Review", "Align", "Improve", "Approve"];
 
-  /* ---------- Chapter 3 · scope (SRC: Project Scope §1.1–1.11, BRD §6) ---------- */
+  /* ---------- Chapter 6 · system boundary + exclusions (scene ch3) (SRC: Project Scope §1.1–1.11, BRD §6) ---------- */
   D.scopeGroups = [
     { name: "Fleet records", tone: "navy", items: [["car", "Vehicle Management"], ["id-card", "Driver Management"], ["tag", "Vehicle Brands"], ["landmark", "Licensing Authorities"]] },
     { name: "Operations", tone: "teal", items: [["route", "Movement Log"], ["fuel", "Fuel Management"], ["wrench", "Maintenance Management"], ["warehouse", "Repair Centers"]] },
@@ -1709,16 +1687,8 @@ html:not(.anim) #ch1 .c1-moment { display: none; }
 
 </script>
 <script>/* requirements.js */
-/* SRC: BRD-VMS-003 v3.0 (OBJ-01, BR-033, BRL-04), Feature List (F-13, F-42),
-   Module 01 Vehicle Management V.02 (US-16), final module backlogs (story counts). */
+/* SRC: BRD-VMS-003 v3.0 (BR-033, BRL-04), Module 01 Vehicle Management V.02 (US-16 story, trace, criteria). */
 (function (D) {
-  D.chain = [
-    { id: "Kick-off finding", t: "6 vehicles found with expired licenses", kind: "kickoff" },
-    { id: "OBJ-01", t: "Compliance & control: no vehicle on an expired license" },
-    { id: "BR-033 · BRL-04", t: "Notify as a license approaches or reaches expiry — at 30, 15 and 7 days" },
-    { id: "F-13 · F-42", t: "License tracking · license expiry notifications" },
-    { id: "US-16", t: "Vehicle License Status and Expiry Notifications", kind: "story" },
-  ];
   D.story = {
     id: "US-16",
     title: "Vehicle License Status and Expiry Notifications",
@@ -1733,19 +1703,6 @@ html:not(.anim) #ch1 .c1-moment { display: none; }
     { g: "a license expires today or has expired", w: "the daily check runs", t: "its status becomes Expired and one “License expired” notification is sent", b: "BR-033", n: 2 },
     { g: "a license is renewed before the next threshold", w: "the renewal is saved", t: "pending notifications are cancelled and the status is recalculated", b: "US-16", n: 4 },
   ];
-  D.qualityLayers = [
-    { icon: "table", h: "Field specification", p: "4 fields with type, limits and validation", e: "src" },
-    { icon: "triangle-alert", h: "Edge cases", p: "8 exception scenarios, e.g. duplicates, archived vehicles", e: "src" },
-    { icon: "scale", h: "Business rules", p: "BRL-04 thresholds · BR-016 warns on movements, no auto-block", e: "src" },
-    { icon: "link", h: "Dependency", p: "DEP-03: initial license data from the Fleet Director's team", e: "src" },
-    { icon: "circle-help", h: "Assumption · open question", p: "ASM-03 alerts without an account · ISS-06 channels open", e: "open" },
-  ];
-  // Counted from the final version of each module document
-  D.modules = [
-    ["Vehicle Management", 19], ["Driver Management & Assignment", 12], ["Maintenance & Repair Centers", 14],
-    ["Movements & Fuel", 7], ["Notifications", 15], ["Roles & Permissions", 19],
-  ];
-  D.storyTotal = 86;
 })(window.VMS_DATA = window.VMS_DATA || {});
 
 </script>
@@ -1823,10 +1780,10 @@ html:not(.anim) #ch1 .c1-moment { display: none; }
 </script>
 <script>/* beats.js */
 /* =====================================================================
-   PRESENTER BEATS — 36 narrative states, ~19.75 minutes.
+   PRESENTER BEATS — 34 narrative states, ~18¾ minutes (estimate; re-time in rehearsal).
    scene  : id of the <section class="scene"> the beat belongs to (beats are
             ordered; the build checks the count per scene matches data-beats)
-   thread : golden-thread step that lights up at this beat (optional)
+   thread : golden-thread step(s) that light up at this beat (optional; string or array)
    notes  : key = key message, why = why it matters, value = value added,
             next = transition. Notes never appear in presentation mode.
    ===================================================================== */
@@ -1844,33 +1801,27 @@ html:not(.anim) #ch1 .c1-moment { display: none; }
     { scene: "prologue", chapter: "prologue", title: "One team, one BA mindset",
       notes: { key: "Over a 13-session bootcamp we learned to approach problems through one shared BA mindset.", why: "Every session we learned a BA concept and applied it to the same project.", value: "One mindset meant one standard of evidence across very different people.", next: "Then we were handed a real problem: roughly 550 vehicles, run by hand — where simple questions had no quick answer." } },
 
-    // ---------------- CHAPTER 1 (~3:20) ----------------
+    // ---------------- CHAPTER 1 (~3:50) ----------------
     { scene: "ch1", chapter: "ch1", title: "Questions nobody could answer quickly",
-      notes: { key: "Imagine managing roughly 550 vehicles across several departments, with the information scattered across manual records and Excel files — and you need an answer right now. Is its license still valid? Who is responsible for this vehicle? What was its average fuel consumption last month? What has it cost us in maintenance so far? Which mission is it currently assigned to? If answering takes more than a few seconds, you have a visibility problem.", why: "Scale and manual tracking are a source fact (BRD §4.1: approximately 550 vehicles, several departments, by hand and in separate Excel files). The five questions are our BA synthesis, not quotes from the kick-off. Each maps to a documented problem: records on paper and in Excel; license expiry noticed only when a vehicle is requested; no fuel traceability; maintenance and cost visibility (a BRD objective, and vehicle cost an open kick-off topic); no actual movement tracking; fleet ownership still an open topic.", value: "Scale first, then the visibility gap — felt before we explain how we investigated it. Do not answer the questions, and do not add figures. If asked about live location: GPS stays out of scope; mission assignment comes from movement orders.", next: "And this is not only our problem — industry data shows the same pattern." } },
+      notes: { key: "Imagine managing roughly 550 vehicles across several departments, with the information scattered across manual records and Excel files — and you need an answer right now. Is its license still valid? Who is responsible for this vehicle? What was its average fuel consumption last month? What has it cost us in maintenance so far? Which mission is it currently assigned to? If answering takes more than a few seconds, you have a visibility problem.", why: "Scale and manual tracking are a source fact (BRD §4.1: approximately 550 vehicles, several departments, by hand and in separate Excel files). The five questions are our BA synthesis, not quotes from the kick-off. Each maps to a documented problem: records on paper and in Excel; license expiry noticed only when a vehicle is requested; no fuel traceability; maintenance and cost visibility (a BRD objective, and vehicle cost an open kick-off topic); no actual movement tracking; fleet ownership still an open topic.", value: "Scale first, then the visibility gap — felt before we explain how we investigated it. Do not answer the questions, and do not add figures. If asked about live location: GPS stays out of scope; mission assignment comes from movement orders.", next: "Before we unpack that problem, here is the journey we took — from ideation to creation." } },
+    { scene: "ch1", chapter: "ch1", title: "From Ideation to Creation",
+      notes: { key: "Our journey from ideation to creation: kick-off meeting, stakeholder analysis and RACI, persona, feature list, verification and validation, BRD, user story mapping, user stories and exceptions, Jira, BPMN, wireframes.", why: "Team-provided overview of the path we followed. It is a map, not a deep dive: name the stages, don't explain each one.", value: "The audience sees the whole arc before we zoom into one operational moment.", next: "Where does it start? With one ordinary moment, before VMS." } },
+    { scene: "ch1", chapter: "ch1", title: "One operational moment",
+      notes: { key: "A vehicle is needed for a mission. One is selected. Its license has to be checked by hand, in paper and Excel records. Only at that point does anyone see it has expired. The problem was already there; nobody could see it in advance.", why: "This is a storytelling RECONSTRUCTION of the documented pattern, not a verbatim incident report: no real date, person or event. Grounded in the Kick-off MOM: vehicle management on paper and Excel; a mission triggers a movement order and the person responsible picks the vehicle; license expiry was discovered only when the organization tried to assign or use the vehicle for a mission; a gap in proactive license monitoring. 'Checked by hand' is our reading of the paper/Excel process. Do not add consequences (fines, delays, accidents, losses) and do not say the number here.", value: "Turns the abstract visibility gap into one human moment: people were not careless; the process depended on someone remembering to check at the right moment. Reactive by design. Keep it to 15–20 seconds.", next: "And this is not only our problem — industry data shows the same pattern." } },
     { scene: "ch1", chapter: "ch1", title: "The problem in numbers",
       notes: { key: "This is not only our problem. In a UK survey by Vimcar, 79% of SME fleet managers use more than five spreadsheets and 63% admit to missing deadlines. Motive and Wakefield put unmonitored operational overspending at 17.7%. Element Fleet Management, citing Work Truck Magazine, puts average vehicle downtime at $448 to $760 per vehicle, per day. Closer to home: about 10.4 million licensed vehicles in Egypt in 2024, and a fleet management solutions market of about $163 million in 2025, projected to reach $229 million by 2031.", why: "These are EXTERNAL industry and market statistics, shown as context only. They do not describe our organization: 79% is not our spreadsheet count, 17.7% is not our overspending, $448–$760 per vehicle per day is not our downtime cost, and the market figures are not our project size. Our own facts start again on the next beat.", value: "Shows the visibility gap is a recognised fleet-management problem with cost and continuity consequences — not a local inconvenience. Keep it to 25–30 seconds: read the numbers, don't analyse them. If challenged, name the source on screen; we add no figures beyond these.", next: "Before we could fix that, we had to understand how fleet management usually works — the world this system operates in." } },
     { scene: "ch1", chapter: "ch1", title: "Domain orientation",
       notes: { key: "We first researched how fleet management usually works: vehicles, drivers, movements, maintenance, fuel, licensing.", why: "Without domain vocabulary you cannot ask the client good questions.", value: "Gave us a map to structure the kick-off.", next: "But research only tells you how the domain usually works." } },
     { scene: "ch1", chapter: "ch1", title: "Research vs elicitation",
-      notes: { key: "Research: how does fleet management usually work? Elicitation: how does THIS organization actually work?", why: "The kick-off's Business Owner role was played by our BA Bootcamp Mentor, acting as the client representative.", value: "Moves us from generic assumptions to organization-specific facts.", next: "Before the findings, picture what the manual process looked like in one ordinary moment." } },
-    { scene: "ch1", chapter: "ch1", title: "One operational moment",
-      notes: { key: "A vehicle is needed for a mission. One is selected. Its license has to be checked by hand, in paper and Excel records. Only at that point does anyone see it has expired. The problem was already there; nobody could see it in advance.", why: "This is a storytelling RECONSTRUCTION of the documented pattern, not a verbatim incident report: no real date, person or event. Grounded in the Kick-off MOM: vehicle management on paper and Excel; a mission triggers a movement order and the person responsible picks the vehicle; license expiry was discovered only when the organization tried to assign or use the vehicle for a mission; a gap in proactive license monitoring. 'Checked by hand' is our reading of the paper/Excel process. Do not add consequences (fines, delays, accidents, losses) and do not say the number here.", value: "Turns the abstract visibility gap into one human moment: people were not careless; the process depended on someone remembering to check at the right moment. Reactive by design. Keep it to 15–20 seconds.", next: "And when we asked the client what was really happening, we discovered this was not an isolated case." } },
+      notes: { key: "Research: how does fleet management usually work? Elicitation: how does THIS organization actually work?", why: "The kick-off's Business Owner role was played by our BA Bootcamp Mentor, acting as the client representative.", value: "Moves us from generic assumptions to organization-specific facts.", next: "So we asked. Here is what the kick-off revealed." } },
     { scene: "ch1", chapter: "ch1", title: "What the kick-off revealed", thread: "kickoff",
       notes: { key: "Paper and Excel, movement orders, odometer and fuel recorded after return, no fuel traceability, no historical data — and six vehicles already past their license validity.", why: "The six vehicles were discovered only when someone tried to assign them. That is a kick-off finding, not an official BRD baseline.", value: "This one finding becomes our golden thread; watch it travel through every artifact. Seven topics were still unanswered.", next: "Too much uncertainty to guess. Too much work for one stream." } },
 
-    // ---------------- CHAPTER 2 (~1:45) ----------------
-    { scene: "ch2", chapter: "ch2", title: "The lifecycle we learned to think in",
-      notes: { key: "We learned the full BA lifecycle and applied the stages that fit a bootcamp project.", why: "Discovery and Analysis were applied; Planning and Design & Build partially; Test, Deploy and Operate were not executed.", value: "For the later stages we prepared what they need: testable criteria, a cut-over plan, defined KPIs.", next: "Then we organized the work." } },
+    // ---------------- CHAPTER 2 (~1:05) ----------------
     { scene: "ch2", chapter: "ch2", title: "One team, parallel streams",
       notes: { key: "We split into balanced sub-teams, one per module plus a BRD stream.", why: "Seven streams in parallel is the only way to cover the scope in thirteen sessions.", value: "Each stream had a clear owner — later visible as one reporter per Jira epic.", next: "But splitting work is risky unless it comes back together." } },
     { scene: "ch2", chapter: "ch2", title: "Review, align, reconverge",
-      notes: { key: "We divided the work — not the understanding. Review was not a phase; it was our operating rhythm.", why: "Create, review, align, improve, approve — after every deliverable, not only at the end.", value: "Four individual BRDs became one; the v2.0 revision resolved the contradictions we found.", next: "First, we needed one shared boundary." } },
-
-    // ---------------- CHAPTER 3 (~1:15) ----------------
-    { scene: "ch3", chapter: "ch3", title: "The system boundary",
-      notes: { key: "The Project Overview and Scope turned a fuzzy problem into an agreed boundary: eleven areas inside VMS.", why: "Research and elicitation produced many possible needs; scope chose which belong.", value: "Every later artifact measures itself against this one baseline. Where the Feature List differed, the Scope won.", next: "Just as important is what stays outside." } },
-    { scene: "ch3", chapter: "ch3", title: "Deliberately outside",
-      notes: { key: "GPS, online requests and trip approval, reservations and fuel approval stay out of this release — and there is no data migration.", why: "The kick-off told us there is no historical vehicle data, so the system starts fresh.", value: "Writing exclusions down prevents scope creep; any change needs a Sponsor-approved change request.", next: "Now that the boundary was clear: who matters inside it?" } },
+      notes: { key: "We divided the work — not the understanding. Review was not a phase; it was our operating rhythm.", why: "Create, review, align, improve, approve — after every deliverable, not only at the end.", value: "Four individual BRDs became one; the v2.0 revision resolved the contradictions we found.", next: "Next question: who matters — and who decides?" } },
 
     // ---------------- CHAPTER 4 (~1:45) ----------------
     { scene: "ch4", chapter: "ch4", title: "Power / Interest",
@@ -1878,21 +1829,21 @@ html:not(.anim) #ch1 .c1-moment { display: none; }
     { scene: "ch4", chapter: "ch4", title: "Engagement strategies",
       notes: { key: "Manage Closely are consulted before decisions in a weekly workshop; Keep Satisfied get figures first; Keep Informed get demos.", why: "Placement note: the Decommissioning Committee and IT Director placements differ from their raw scores; we kept the team's agreed grid.", value: "Engagement effort goes where it changes outcomes.", next: "Knowing who matters was not enough." } },
     { scene: "ch4", chapter: "ch4", title: "Who decides: RACI",
-      notes: { key: "Our Simple RACI: ten key decisions, exactly one Accountable each.", why: "The full workbook covers 63 activities with one Accountable each; it refines some assignments, for example roles and access.", value: "Removes ambiguity about who signs off — before requirements are written.", next: "With ownership clear, needs could become capabilities." } },
+      notes: { key: "Our Simple RACI: ten key decisions, exactly one Accountable each.", why: "The full workbook covers 63 activities with one Accountable each; it refines some assignments, for example roles and access.", value: "Removes ambiguity about who signs off — before requirements are written.", next: "With ownership clear: what must the system actually do?" } },
 
-    // ---------------- CHAPTER 5 (~2:30) ----------------
-    { scene: "ch5a", chapter: "ch5", title: "Pains and needs",
-      notes: { key: "We started from real pains: expired licenses found too late, late returns, no fuel traceability, maintenance by hand.", why: "Features that do not trace to a pain are wish-list items.", value: "Keeps the feature list anchored to evidence.", next: "Each pain became concrete capabilities." } },
-    { scene: "ch5a", chapter: "ch5", title: "Pains become features", thread: "feature",
-      notes: { key: "Pain, capability, feature: license expiry became F-13 and F-42; late returns F-32 and F-45; fuel F-37 and F-38; maintenance F-22 and F-23.", why: "Every feature has a stable ID we reuse down to the user stories and Jira.", value: "The golden thread now has a feature ID.", next: "Across the whole scope that gave us a lot of capability." } },
-    { scene: "ch5b", chapter: "ch5", title: "67 features, 12 groups",
-      notes: { key: "The four team lists consolidated into 67 features in twelve capability groups.", why: "Grouping lets stakeholders review a module at a time.", value: "One consolidated, numbered list instead of four overlapping drafts.", next: "But not every useful idea belongs in this release." } },
+    // ---------------- CHAPTER 5 (~1:15) ----------------
+    { scene: "ch5b", chapter: "ch5", title: "67 features, 12 groups", thread: "feature",
+      notes: { key: "The four team lists consolidated into 67 features in twelve capability groups.", why: "Grouping lets stakeholders review a module at a time.", value: "One consolidated, numbered list instead of four overlapping drafts. The gold chip: our thread's features, F-13 and F-42, are part of this list.", next: "But not every useful idea belongs in this release." } },
     { scene: "ch5b", chapter: "ch5", title: "MoSCoW: now vs not now",
       notes: { key: "Good analysis is also deciding what NOT to build: 33 Must, 3 Should, 13 Could, 13 Won't — and 5 still in discussion, which are not a MoSCoW category.", why: "We log every movement but not GPS; we record fuel but don't approve it; one dashboard now, advanced analytics later.", value: "Protects the release boundary and focuses effort on required business value.", next: "Before formalizing these decisions, we checked them." } },
 
-    // ---------------- CHAPTER 6 (~2:00) ----------------
+    // ---------------- CHAPTER 6 · verification → boundary → BRD (~3:15) ----------------
     { scene: "ch6a", chapter: "ch6", title: "Verification and validation",
-      notes: { key: "Verification — have we documented it correctly? — was performed. Validation — are these the right needs? — is partially complete.", why: "Processes are documented as approved; BRD sign-off by the Sponsor and the Fleet Director's As-Is confirmation are still pending.", value: "We catch problems before they become expensive requirements, and we say honestly what is still open.", next: "Then everything came together." } },
+      notes: { key: "Verification — have we documented it correctly? — was performed. Validation — are these the right needs? — is partially complete.", why: "Processes are documented as approved; BRD sign-off by the Sponsor and the Fleet Director's As-Is confirmation are still pending.", value: "We catch problems before they become expensive requirements, and we say honestly what is still open.", next: "Then we confirmed the boundary: what is inside VMS?" } },
+    { scene: "ch3", chapter: "ch6", title: "The system boundary",
+      notes: { key: "The Project Overview and Scope turned a fuzzy problem into an agreed boundary: eleven areas inside VMS.", why: "Research and elicitation produced many possible needs; scope chose which belong.", value: "Every later artifact measures itself against this one baseline. Where the Feature List differed, the Scope won.", next: "Just as important is what stays outside." } },
+    { scene: "ch3", chapter: "ch6", title: "Deliberately outside",
+      notes: { key: "GPS, online requests and trip approval, reservations and fuel approval stay out of this release — and there is no data migration.", why: "The kick-off told us there is no historical vehicle data, so the system starts fresh.", value: "Writing exclusions down prevents scope creep; any change needs a Sponsor-approved change request.", next: "Inside and outside agreed — now everything converges into one baseline." } },
     { scene: "ch6b", chapter: "ch6", title: "Everything converges into the BRD", thread: "requirement",
       notes: { key: "Until this point the analysis lived across several artifacts. BRD-VMS-003 brought the business into one coherent baseline.", why: "Objectives, 42 requirements, 16 rules, 10 NFRs, 11 KPIs, RAID and dependencies in one place.", value: "Our thread becomes BR-033 and business rule BRL-04: alerts at 30, 15 and 7 days.", next: "And the BRD made success measurable." } },
     { scene: "ch6b", chapter: "ch6", title: "Measurable objectives",
@@ -1906,19 +1857,19 @@ html:not(.anim) #ch1 .c1-moment { display: none; }
     { scene: "ch7", chapter: "ch7", title: "To-Be: monitored, reminded, flagged",
       notes: { key: "Store and monitor the expiry date, generate reminders, check renewal, flag and notify — the coordinator acts on alerts.", why: "This is the team's approved To-Be MVP; renewal itself stays outside the system.", value: "Expired licenses stop going unnoticed. We also modelled vehicle missions and preventive maintenance.", next: "Now the business was understood. But how does a delivery team build it?" } },
 
-    // ---------------- CHAPTER 8 (~2:45) ----------------
-    { scene: "ch8a", chapter: "ch8", title: "The traceability chain", thread: "story",
-      notes: { key: "Kick-off problem, OBJ-01, BR-033 and BRL-04, features F-13 and F-42, user story US-16.", why: "Every layer can be traced back to the business need.", value: "Nobody has to wonder why a story exists.", next: "Now make it testable." } },
-    { scene: "ch8a", chapter: "ch8", title: "Given, when, then", thread: "criteria",
-      notes: { key: "US-16 in the Fleet Director's words, then acceptance criteria in Given / When / Then.", why: "3 of the story's 6 criteria are shown (source numbering AC 1, 2, 4) — the ones that do not depend on the notification channel, which is still open (ISS-06).", value: "Requirements became behavior that can actually be tested.", next: "And each story carries more than criteria." } },
-    { scene: "ch8a", chapter: "ch8", title: "Quality layers and the backlog",
-      notes: { key: "Field specifications, edge cases, rules, dependencies, assumptions and open questions surround the story — across 86 stories in six modules.", why: "Final QA also found one controlled gap: the Roles & Permissions stories do not yet carry trace IDs to BR-038/BR-039.", value: "A delivery team gets testable, bounded units of work.", next: "Then documentation had to become actionable." } },
+    // ---------------- CHAPTER 8 (~1:45) ----------------
+    { scene: "ch8a", chapter: "ch8", title: "Given, when, then", thread: ["story", "criteria"],
+      notes: { key: "Our thread's story, US-16, in the Fleet Director's words, then acceptance criteria in Given / When / Then.", why: "3 of the story's 6 criteria are shown (source numbering AC 1, 2, 4) — the ones that do not depend on the notification channel, which is still open (ISS-06).", value: "Requirements became behavior that can actually be tested.", next: "Then documentation had to become actionable." } },
     { scene: "ch8b", chapter: "ch8", title: "Jira: epics, backlog, VMS-16", thread: "jira",
       notes: { key: "Seven epics: the six modules plus BRD & Other documents, each with a different reporter, all To Do. In the backlog, VMS-16 carries the same story as US-16: calculate each license's status and warn at 30, 15 and 7 days.", why: "From a sentence in the kick-off to a backlog item a developer can pick up.", value: "Documentation became actionable work. We don't claim a total Jira count — only what the screenshots show.", next: "Meanwhile, design was giving the requirements a shape." } },
     { scene: "ch8c", chapter: "ch8", title: "The prototype: requirements take shape", thread: "prototype",
-      notes: { key: "Requirements → backlog → design. The team-created prototype's License Register shows license records, expiry status and renewal states — where our golden thread lands in the product experience. The outlined column is license status, the thing US-16 asks the system to calculate.", why: "Design ran as a parallel track — analysis, review, wireframes, prototype — and became concrete as modules were approved. The Movement and Maintenance dashboards show the same thinking for two more modules.", value: "Analysis and design evolved together. This is a prototype with illustrative data: not production software, and its records and counts are not business baselines.", next: "Step back. What did all of this become?" } },
+      notes: { key: "Requirements → backlog → design. The team-created prototype's License Register shows license records, expiry status and renewal states — where our golden thread lands in the product experience. The outlined column is license status, the thing US-16 asks the system to calculate.", why: "Design ran as a parallel track — analysis, review, wireframes, prototype — and became concrete as modules were approved. The Movement and Maintenance dashboards show the same thinking for two more modules.", value: "Analysis and design evolved together. This is a prototype with illustrative data: not production software, and its records and counts are not business baselines.", next: "Step back. Where did all of this start?" } },
 
-    // ---------------- FINALE (~1:00) ----------------
+    // ---------------- FINALE · retrospective → convergence → close (~2:15) ----------------
+    { scene: "ch5a", chapter: "finale", title: "Pains and needs",
+      notes: { key: "We started from real pains: expired licenses found too late, late returns, no fuel traceability, maintenance by hand.", why: "Features that do not trace to a pain are wish-list items.", value: "Keeps the feature list anchored to evidence.", next: "Each pain became concrete capabilities." } },
+    { scene: "ch5a", chapter: "finale", title: "Pains become features",
+      notes: { key: "Pain, capability, feature: license expiry became F-13 and F-42; late returns F-32 and F-45; fuel F-37 and F-38; maintenance F-22 and F-23.", why: "Every feature has a stable ID we reuse down to the user stories and Jira.", value: "Looking back: this is where the golden thread became a feature ID — F-13 and F-42.", next: "And every artifact we built converges into one VMS definition." } },
     { scene: "finale-a", chapter: "finale", title: "Everything converges",
       notes: { key: "Overview, scope, stakeholders, RACI, features, BRD, BPMN, stories, criteria, Jira, prototype — all converge into one VMS definition.", why: "Each artifact answered a different question.", value: "Together they reduced uncertainty and unlocked the next decision.", next: "And the team changed too." } },
     { scene: "finale-a", chapter: "finale", title: "Two stories meet",
@@ -1966,7 +1917,7 @@ window.VMS = (function () {
   function firstBeatOfChapter(id) { return (D.beats || []).findIndex((b) => b.chapter === id); }
   function threadLitAt(i) {
     const lit = new Set();
-    (D.beats || []).forEach((b, j) => { if (j <= i && b.thread) lit.add(b.thread); });
+    (D.beats || []).forEach((b, j) => { if (j <= i && b.thread) [].concat(b.thread).forEach((t) => lit.add(t)); });
     return lit;
   }
 
@@ -2331,7 +2282,8 @@ VMS.scene("prologue", ({ sc, tl, q, qa, reduce }) => {
 
 </script>
 <script>/* chapter-01.js */
-/* CHAPTER 1 · operational questions at scale → problem in numbers → domain map → research vs elicitation → one operational moment → kick-off findings */
+/* CHAPTER 1 · operational questions at scale → from ideation to creation → one operational moment → problem in numbers
+   → domain map → research vs elicitation → kick-off findings */
 VMS.scene("ch1", ({ tl, q, qa, at, draw }) => {
   tl.from(q(".bg-fleet"), { opacity: 0, duration: 0.8 }, at(0));
   // beat 1: operational questions at real scale — lead (~550 context), Vehicle X + five questions, then the framing line.
@@ -2343,79 +2295,81 @@ VMS.scene("ch1", ({ tl, q, qa, at, draw }) => {
   tl.from(q(".c1-ask-links"), { opacity: 0, duration: 0.3 }, at(0) + 0.38);   // dashed links keep their dashes (no stroke draw)
   tl.from(qa(".c1-q"), { opacity: 0, y: 10, stagger: 0.06, duration: 0.25 }, at(0) + 0.4);
   tl.from(q(".c1-ask-close"), { opacity: 0, y: 12, duration: 0.22 }, at(0) + 0.76);
-  // beat 2: the problem in numbers — external industry / market context (not the organization's data).
-  // Reveal order: 79% → 63% → 17.7% → $448–$760/day → Egypt context → closing statement.
+  // beat 2: From Ideation to Creation — team-provided journey overview. The line draws left → right, stages follow it.
   tl.to(q(".c1-ask"), { autoAlpha: 0, duration: 0.25 }, at(1));
-  tl.from(q(".c1-pin"), { autoAlpha: 0, duration: 0.15 }, at(1) + 0.1);
-  tl.from(q(".c1-pin-head"), { opacity: 0, y: 12, duration: 0.25 }, at(1) + 0.12);
-  tl.from(q(".c1-pin-ops .eyebrow"), { opacity: 0, duration: 0.2 }, at(1) + 0.2);
-  tl.from(qa(".c1-stat"), { opacity: 0, y: 14, stagger: 0.1, duration: 0.2 }, at(1) + 0.22);
-  tl.from(q(".c1-pin-fin"), { opacity: 0, x: -24, duration: 0.25 }, at(1) + 0.52);
-  tl.from(q(".c1-pin-eg"), { opacity: 0, y: 14, duration: 0.22 }, at(1) + 0.66);
-  tl.from([q(".c1-pin-close"), q(".c1-pin-note")], { opacity: 0, y: 10, duration: 0.18 }, at(1) + 0.8);
-  // leaving it: the layer clears and the chapter canvas arrives as the domain map builds
-  tl.to(q(".c1-pin"), { autoAlpha: 0, duration: 0.25 }, at(2));
-  tl.fromTo(base, { opacity: 0 }, { opacity: 1, duration: 0.35 }, at(2) + 0.05);
-  // beat 3: domain orientation
-  tl.from(q(".dm-core"), { opacity: 0, scale: 0.6, transformOrigin: "50% 50%", duration: 0.35 }, at(2));
-  tl.from(qa(".dm-core-t"), { opacity: 0, duration: 0.3 }, at(2) + 0.1);
-  draw(qa(".dm-link"), at(2) + 0.15, { duration: 0.4, stagger: 0.04 });
-  tl.from(qa(".dm-node"), { opacity: 0, scale: 0.8, transformOrigin: "50% 50%", stagger: 0.06, duration: 0.35 }, at(2) + 0.3);
-  tl.from(q(".c1-domain .tag"), { opacity: 0, duration: 0.3 }, at(2) + 0.6);
-  // beat 4: research vs elicitation
-  tl.to(q(".bg-fleet"), { opacity: 0.18, duration: 0.5 }, at(3));
-  tl.from(q(".c1-divider"), { scaleY: 0, transformOrigin: "50% 0%", duration: 0.5 }, at(3));
-  tl.from(q(".c1-domain .c1-colhead"), { opacity: 0, y: 14, duration: 0.4 }, at(3) + 0.1);
-  tl.from(q(".c1-elic .c1-colhead"), { opacity: 0, x: 30, duration: 0.45 }, at(3) + 0.25);
-  // beat 5: one operational moment — mission request → select vehicle → manual license check → EXPIRED → closing line.
-  // Reconstruction of the documented pattern; no count (the 6 vehicles stay on the next beat). The research/elicitation
-  // canvas steps aside for this beat and returns for the kick-off findings.
-  const canvas = [q(".head"), q(".c1-scale"), q(".c1-domain"), q(".c1-divider"), q(".c1-elic")];
-  tl.to(canvas, { opacity: 0, duration: 0.2 }, at(4));
-  tl.from(q(".c1-moment"), { autoAlpha: 0, duration: 0.12 }, at(4) + 0.1);
-  tl.from(q(".c1-mo-head"), { opacity: 0, y: 12, duration: 0.2 }, at(4) + 0.12);
+  tl.from(q(".c1-journey"), { autoAlpha: 0, duration: 0.15 }, at(1) + 0.1);
+  tl.from(q(".c1-jo-head"), { opacity: 0, y: 12, duration: 0.25 }, at(1) + 0.12);
+  tl.from(q(".c1-jo-line i"), { scaleX: 0, transformOrigin: "0% 50%", duration: 0.55, ease: "none" }, at(1) + 0.2);
+  qa(".c1-jo-step").forEach((el, i) => {
+    tl.from(el, { opacity: 0, y: el.classList.contains("dn") ? -10 : 10, duration: 0.18 }, at(1) + 0.22 + i * 0.05);
+  });
+  // beat 3: one operational moment — mission request → select vehicle → manual license check → EXPIRED → closing line.
+  // Reconstruction of the documented pattern; no count (the 6 vehicles stay on the kick-off findings beat).
+  tl.to(q(".c1-journey"), { autoAlpha: 0, duration: 0.25 }, at(2));
+  tl.from(q(".c1-moment"), { autoAlpha: 0, duration: 0.12 }, at(2) + 0.1);
+  tl.from(q(".c1-mo-head"), { opacity: 0, y: 12, duration: 0.2 }, at(2) + 0.12);
   const steps = qa(".c1-mo-step"), arrows = qa(".c1-mo-arrow");
   steps.forEach((el, i) => {
-    tl.from(el, { opacity: 0, y: 14, duration: 0.14 }, at(4) + 0.22 + i * 0.12);
-    if (arrows[i]) tl.from(arrows[i], { opacity: 0, x: -8, duration: 0.08 }, at(4) + 0.3 + i * 0.12);
+    tl.from(el, { opacity: 0, y: 14, duration: 0.14 }, at(2) + 0.22 + i * 0.12);
+    if (arrows[i]) tl.from(arrows[i], { opacity: 0, x: -8, duration: 0.08 }, at(2) + 0.3 + i * 0.12);
   });
-  tl.from(q(".c1-mo-stamp"), { opacity: 0, scale: 1.25, transformOrigin: "0% 50%", duration: 0.1 }, at(4) + 0.64);
-  tl.from(q(".c1-mo-line"), { scaleX: 0, transformOrigin: "0% 50%", duration: 0.14 }, at(4) + 0.7);
-  tl.from([q(".c1-mo-was"), q(".c1-mo-dot"), q(".c1-mo-here")], { opacity: 0, duration: 0.1 }, at(4) + 0.76);
-  tl.from(q(".c1-mo-close"), { opacity: 0, y: 10, duration: 0.14 }, at(4) + 0.84);
-  // beat 6: kick-off findings, golden thread begins (the canvas returns; the moment clears)
-  tl.to(q(".c1-moment"), { autoAlpha: 0, duration: 0.25 }, at(5));
-  tl.to(canvas, { opacity: 1, duration: 0.3 }, at(5) + 0.05);
-  tl.from(qa(".kf"), { opacity: 0, y: 16, stagger: 0.05, duration: 0.4 }, at(5));
-  tl.from(q(".kf-thread"), { opacity: 0, scale: 0.96, duration: 0.45 }, at(5) + 0.38);
-  tl.from(q(".c1-open"), { opacity: 0, duration: 0.25 }, at(5) + 0.42);
-  tl.from(qa(".topic"), { opacity: 0, y: 8, stagger: 0.03, duration: 0.25 }, at(5) + 0.48);
-  tl.from([q(".unlocks"), q(".src-foot")], { opacity: 0, duration: 0.3 }, at(5) + 0.62);
+  tl.from(q(".c1-mo-stamp"), { opacity: 0, scale: 1.25, transformOrigin: "0% 50%", duration: 0.1 }, at(2) + 0.64);
+  tl.from(q(".c1-mo-line"), { scaleX: 0, transformOrigin: "0% 50%", duration: 0.14 }, at(2) + 0.7);
+  tl.from([q(".c1-mo-was"), q(".c1-mo-dot"), q(".c1-mo-here")], { opacity: 0, duration: 0.1 }, at(2) + 0.76);
+  tl.from(q(".c1-mo-close"), { opacity: 0, y: 10, duration: 0.14 }, at(2) + 0.84);
+  // beat 4: the problem in numbers — external industry / market context (not the organization's data).
+  // Reveal order: 79% → 63% → 17.7% → $448–$760/day → Egypt context → closing statement.
+  tl.to(q(".c1-moment"), { autoAlpha: 0, duration: 0.25 }, at(3));
+  tl.from(q(".c1-pin"), { autoAlpha: 0, duration: 0.15 }, at(3) + 0.1);
+  tl.from(q(".c1-pin-head"), { opacity: 0, y: 12, duration: 0.25 }, at(3) + 0.12);
+  tl.from(q(".c1-pin-ops .eyebrow"), { opacity: 0, duration: 0.2 }, at(3) + 0.2);
+  tl.from(qa(".c1-stat"), { opacity: 0, y: 14, stagger: 0.1, duration: 0.2 }, at(3) + 0.22);
+  tl.from(q(".c1-pin-fin"), { opacity: 0, x: -24, duration: 0.25 }, at(3) + 0.52);
+  tl.from(q(".c1-pin-eg"), { opacity: 0, y: 14, duration: 0.22 }, at(3) + 0.66);
+  tl.from([q(".c1-pin-close"), q(".c1-pin-note")], { opacity: 0, y: 10, duration: 0.18 }, at(3) + 0.8);
+  // leaving it: the layer clears and the chapter canvas arrives as the domain map builds
+  tl.to(q(".c1-pin"), { autoAlpha: 0, duration: 0.25 }, at(4));
+  tl.fromTo(base, { opacity: 0 }, { opacity: 1, duration: 0.35 }, at(4) + 0.05);
+  // beat 5: domain orientation
+  tl.from(q(".dm-core"), { opacity: 0, scale: 0.6, transformOrigin: "50% 50%", duration: 0.35 }, at(4));
+  tl.from(qa(".dm-core-t"), { opacity: 0, duration: 0.3 }, at(4) + 0.1);
+  draw(qa(".dm-link"), at(4) + 0.15, { duration: 0.4, stagger: 0.04 });
+  tl.from(qa(".dm-node"), { opacity: 0, scale: 0.8, transformOrigin: "50% 50%", stagger: 0.06, duration: 0.35 }, at(4) + 0.3);
+  tl.from(q(".c1-domain .tag"), { opacity: 0, duration: 0.3 }, at(4) + 0.6);
+  // beat 6: research vs elicitation
+  tl.to(q(".bg-fleet"), { opacity: 0.18, duration: 0.5 }, at(5));
+  tl.from(q(".c1-divider"), { scaleY: 0, transformOrigin: "50% 0%", duration: 0.5 }, at(5));
+  tl.from(q(".c1-domain .c1-colhead"), { opacity: 0, y: 14, duration: 0.4 }, at(5) + 0.1);
+  tl.from(q(".c1-elic .c1-colhead"), { opacity: 0, x: 30, duration: 0.45 }, at(5) + 0.25);
+  // beat 7: kick-off findings, golden thread begins
+  tl.from(qa(".kf"), { opacity: 0, y: 16, stagger: 0.05, duration: 0.4 }, at(6));
+  tl.from(q(".kf-thread"), { opacity: 0, scale: 0.96, duration: 0.45 }, at(6) + 0.38);
+  tl.from(q(".c1-open"), { opacity: 0, duration: 0.25 }, at(6) + 0.42);
+  tl.from(qa(".topic"), { opacity: 0, y: 8, stagger: 0.03, duration: 0.25 }, at(6) + 0.48);
+  tl.from([q(".unlocks"), q(".src-foot")], { opacity: 0, duration: 0.3 }, at(6) + 0.62);
 });
 
 </script>
 <script>/* chapter-02.js */
-/* CHAPTER 2 · lifecycle → split into streams → review loop → reconverge */
+/* CHAPTER 2 · split into streams → review loop → reconverge */
 VMS.scene("ch2", ({ tl, q, qa, at, draw }) => {
-  tl.from(q(".c2-lifehead"), { opacity: 0, duration: 0.4 }, at(0) + 0.1);
-  tl.from(qa(".stg"), { opacity: 0, y: 22, stagger: 0.06, duration: 0.42 }, at(0) + 0.15);
-  // beat 2: split
-  tl.from(q(".team-node"), { opacity: 0, scale: 0.4, transformOrigin: "50% 50%", duration: 0.35 }, at(1));
-  draw(qa(".sp"), at(1) + 0.15, { duration: 0.5, stagger: 0.04 });
-  tl.from(qa(".sl"), { opacity: 0, x: -12, stagger: 0.04, duration: 0.4 }, at(1) + 0.3);
-  // beat 3: review loop and reconvergence
-  tl.from(q(".rl rect"), { opacity: 0, scaleY: 0.8, transformOrigin: "50% 50%", duration: 0.35 }, at(2));
-  tl.from(qa(".rl-w"), { opacity: 0, y: 8, stagger: 0.06, duration: 0.3 }, at(2) + 0.1);
-  tl.from(q(".rl-arc"), { opacity: 0, duration: 0.3 }, at(2) + 0.35);
-  draw(qa(".mg"), at(2) + 0.35, { duration: 0.4, stagger: 0.03 });
-  tl.from(q(".base-node"), { opacity: 0, scale: 0.4, transformOrigin: "50% 50%", duration: 0.3 }, at(2) + 0.6);
-  tl.from(q(".c2-msg"), { opacity: 0, x: 20, duration: 0.4 }, at(2) + 0.5);
-  tl.from(q(".unlocks"), { opacity: 0, duration: 0.3 }, at(2) + 0.62);
+  // beat 1: split
+  tl.from(q(".team-node"), { opacity: 0, scale: 0.4, transformOrigin: "50% 50%", duration: 0.35 }, at(0) + 0.1);
+  draw(qa(".sp"), at(0) + 0.25, { duration: 0.5, stagger: 0.04 });
+  tl.from(qa(".sl"), { opacity: 0, x: -12, stagger: 0.04, duration: 0.4 }, at(0) + 0.4);
+  // beat 2: review loop and reconvergence
+  tl.from(q(".rl rect"), { opacity: 0, scaleY: 0.8, transformOrigin: "50% 50%", duration: 0.35 }, at(1));
+  tl.from(qa(".rl-w"), { opacity: 0, y: 8, stagger: 0.06, duration: 0.3 }, at(1) + 0.1);
+  tl.from(q(".rl-arc"), { opacity: 0, duration: 0.3 }, at(1) + 0.35);
+  draw(qa(".mg"), at(1) + 0.35, { duration: 0.4, stagger: 0.03 });
+  tl.from(q(".base-node"), { opacity: 0, scale: 0.4, transformOrigin: "50% 50%", duration: 0.3 }, at(1) + 0.6);
+  tl.from(q(".c2-msg"), { opacity: 0, x: 20, duration: 0.4 }, at(1) + 0.5);
+  tl.from(q(".unlocks"), { opacity: 0, duration: 0.3 }, at(1) + 0.62);
 });
 
 </script>
 <script>/* chapter-03.js */
-/* CHAPTER 3 · boundary → exclusions (no data migration ← kick-off) */
+/* scene ch3, now in CHAPTER 6 (after verification & validation) · boundary → exclusions (no data migration ← kick-off) */
 VMS.scene("ch3", ({ tl, q, qa, at }) => {
   tl.from(q(".c3-boundary"), { opacity: 0, scale: 0.97, duration: 0.5 }, at(0) + 0.05);
   tl.from(qa(".c3-groups .cap"), { opacity: 0, y: 14, stagger: 0.04, duration: 0.35 }, at(0) + 0.2);
@@ -2450,7 +2404,7 @@ VMS.scene("ch4", ({ tl, q, qa, at }) => {
 
 </script>
 <script>/* chapter-05.js */
-/* CHAPTER 5 · pains → features ; 67 features → MoSCoW → now vs not now */
+/* ch5a (now the Finale retrospective) · pains → features ; ch5b (Chapter 5) · 67 features → MoSCoW → now vs not now */
 VMS.scene("ch5a", ({ tl, q, qa, at, draw }) => {
   tl.from(q(".c5-cols"), { opacity: 0, duration: 0.35 }, at(0) + 0.05);
   tl.from(qa(".pain"), { opacity: 0, x: -24, stagger: 0.08, duration: 0.45 }, at(0) + 0.1);
@@ -2464,6 +2418,7 @@ VMS.scene("ch5b", ({ tl, q, qa, at, count }) => {
   count(q(".c5-big span"), 67, at(0) + 0.05, 0.6);
   tl.from(q(".c5-big"), { opacity: 0, y: 20, duration: 0.4 }, at(0) + 0.05);
   tl.from(q(".c5-cap"), { opacity: 0, duration: 0.3 }, at(0) + 0.2);
+  tl.from(q(".c5-thread"), { opacity: 0, scale: 0.9, duration: 0.25 }, at(0) + 0.55);   // golden thread: Feature step
   tl.from(qa(".c5-groups li"), { opacity: 0, stagger: 0.025, duration: 0.3 }, at(0) + 0.25);
   tl.from(qa(".gb i"), { scaleX: 0, stagger: 0.025, duration: 0.35 }, at(0) + 0.25);
   // beat 2: MoSCoW + now vs not now
@@ -2529,22 +2484,14 @@ VMS.scene("ch7", ({ tl, q, qa, at }) => {
 
 </script>
 <script>/* chapter-08.js */
-/* CHAPTER 8 · chain → story + Given/When/Then → quality + backlog ; Jira evidence */
-VMS.scene("ch8a", ({ tl, q, qa, at, count }) => {
-  tl.from(qa(".ch"), { opacity: 0, y: 16, stagger: 0.08, duration: 0.4 }, at(0) + 0.1);
-  // beat 2: story and criteria
-  tl.from(q(".st-card"), { opacity: 0, y: 20, duration: 0.45 }, at(1));
+/* CHAPTER 8 · story + Given/When/Then ; Jira evidence ; prototype reveal */
+VMS.scene("ch8a", ({ tl, q, qa, at }) => {
+  // one beat: the US-16 story card, then three channel-independent criteria in Given / When / Then
+  tl.from(q(".st-card"), { opacity: 0, y: 20, duration: 0.4 }, at(0) + 0.1);
   qa(".ac").forEach((ac, i) => {
-    tl.from(ac, { opacity: 0, duration: 0.25 }, at(1) + 0.2 + i * 0.15);
-    tl.from(ac.querySelectorAll(".gwt"), { opacity: 0, x: 14, stagger: 0.06, duration: 0.25 }, at(1) + 0.25 + i * 0.15);
+    tl.from(ac, { opacity: 0, duration: 0.2 }, at(0) + 0.35 + i * 0.15);
+    tl.from(ac.querySelectorAll(".gwt"), { opacity: 0, x: 14, stagger: 0.05, duration: 0.2 }, at(0) + 0.38 + i * 0.15);
   });
-  // beat 3: quality layers and the six-module backlog
-  tl.from(q(".c8-qh"), { opacity: 0, duration: 0.3 }, at(2));
-  tl.from(qa(".c8-quality li"), { opacity: 0, x: 20, stagger: 0.06, duration: 0.35 }, at(2) + 0.05);
-  tl.from(q(".bk-head"), { opacity: 0, duration: 0.3 }, at(2) + 0.3);
-  count(q(".bk-head b"), 86, at(2) + 0.3, 0.5);
-  tl.from(qa(".bb i"), { scaleX: 0, stagger: 0.04, duration: 0.35 }, at(2) + 0.35);
-  tl.from(qa(".bk li"), { opacity: 0, stagger: 0.04, duration: 0.25 }, at(2) + 0.35);
 });
 VMS.scene("ch8b", ({ tl, q, qa, at }) => {
   // one beat: epics, then backlog, then the golden thread lands on VMS-16

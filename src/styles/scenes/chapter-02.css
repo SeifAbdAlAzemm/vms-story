@@ -1,25 +1,5 @@
 /* CHAPTER 2 · how we worked */
-#ch2 .c2-life { position: absolute; left: 0; top: 168px; width: 1600px; }
-#ch2 .c2-lifehead { display: flex; justify-content: space-between; align-items: baseline; }
-#ch2 .c2-lifehead b { font-size: 22px; color: var(--navy); }
-#ch2 .legend { display: flex; align-items: center; gap: 8px; font-size: 16px; color: var(--slate); }
-#ch2 .legend .st { display: inline-block; width: 16px; height: 16px; border-radius: 4px; margin-left: 10px; }
-.st.applied { background: var(--navy); }
-.st.partial { background: repeating-linear-gradient(135deg, var(--navy-3) 0 4px, #fff 4px 7px); border: 1.5px solid var(--navy-3); }
-.st.prepared { border: 2px dashed var(--slate-2); }
-#ch2 .c2-stages { list-style: none; margin-top: 12px; display: grid; grid-template-columns: repeat(7, 1fr); gap: 12px; }
-#ch2 .stg { border-radius: 8px; padding: 14px 14px 12px; min-height: 196px; position: relative; }
-#ch2 .stg-applied { background: var(--navy); color: #fff; }
-#ch2 .stg-partial { background: repeating-linear-gradient(135deg, #E9EFF6 0 10px, #F7F9FC 10px 20px); border: 2px solid var(--navy-3); color: var(--ink); }
-#ch2 .stg-prepared { border: 2px dashed #A8B4C2; background: #fff; color: var(--slate); }
-#ch2 .stg-n { font-size: 16px; font-weight: 800; opacity: .7; }
-#ch2 .stg b { display: block; margin-top: 2px; font-size: 22px; line-height: 1.15; min-height: 52px; }
-#ch2 .stg-badge { display: inline-block; margin-top: 6px; font-size: 13px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; padding: 3px 8px; border-radius: 4px; }
-#ch2 .stg-applied .stg-badge { background: rgba(111,194,184,.25); color: #BFE6E0; }
-#ch2 .stg-partial .stg-badge { background: var(--steel-l); color: var(--steel); }
-#ch2 .stg-prepared .stg-badge { background: #EEF1F4; color: var(--slate); }
-#ch2 .stg p { margin-top: 8px; font-size: 16px; line-height: 1.3; }
-#ch2 .c2-flow { position: absolute; left: 0; top: 440px; width: 1600px; height: 400px; }
+#ch2 .c2-flow { position: absolute; left: 0; top: 300px; width: 1600px; height: 400px; }
 #ch2 .c2-streams { position: absolute; left: 0; top: 10px; width: 1260px; height: 360px; overflow: visible; }
 #ch2 .sp, #ch2 .mg { fill: none; stroke: #9DB2C7; stroke-width: 2.5; }
 #ch2 .mg { stroke: var(--teal); }

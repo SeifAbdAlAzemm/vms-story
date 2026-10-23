@@ -44,10 +44,10 @@ export function makeRenderers(D, ctx) {
     },
     kickoffFindings: () => D.kickoffFindings.map((f) => `<div class="kf"><span class="kf-i">${ico(f.icon)}</span><div><b>${esc(f.h)}</b><p>${esc(f.p)}</p></div></div>`).join(""),
     kickoffThread: () => `<div class="kf-thread"><span class="kf-num">6</span><div><b>${esc(D.kickoffThread.h)}</b><p>${esc(D.kickoffThread.p)}</p></div><span class="tag tag-gold">${esc(D.kickoffThread.tag)}</span></div>`,
+    journey: () => D.journey.map((t, i) => `<li class="c1-jo-step ${i % 2 ? "dn" : "up"}" data-i="${i}" style="left:${110 + i * 138}px"><span class="c1-jo-dot">${i + 1}</span><i class="c1-jo-stem"></i><b>${esc(t)}</b></li>`).join(""),
     openTopics: () => D.openTopics.map((t) => `<span class="topic">${ico("circle-help")}${esc(t)}</span>`).join(""),
 
     /* ---------- chapter 2 ---------- */
-    lifecycle: () => D.lifecycle.map((s) => `<li class="stg stg-${s.state}"><span class="stg-n">${s.n}</span><b>${esc(s.name)}</b><span class="stg-badge">${esc(D.lifecycleStates[s.state])}</span><p>${esc(s.line)}</p></li>`).join(""),
     streams: () => {
       const n = D.streams.length, top = 26, gap = 50, cy = top + gap * (n - 1) / 2;
       const ys = D.streams.map((_, i) => top + gap * i);
@@ -118,18 +118,12 @@ export function makeRenderers(D, ctx) {
     brdLayers: () => D.brdLayers.map((l, i) => `<li data-i="${i}"><b>${esc(l.v)}</b><span>${esc(l.l)}${l.s ? `<small>${esc(l.s)}</small>` : ""}</span></li>`).join(""),
     objectives: () => D.objectives.map((o) => `<div class="obj${o.thread ? " is-thread" : ""}"><div class="oh"><span class="id">${esc(o.id)}</span><b>${esc(o.name)}</b></div><div class="oks">${o.k.map(([v, l, t]) => `<div class="ok"><strong>${esc(v)}</strong><span>${esc(l)}</span><em>${esc(t)}</em></div>`).join("")}</div></div>`).join("") + `<p class="src obj-note">${esc(D.objectivesNote)}</p>`,
 
-    /* ---------- chapter 8 ---------- */
-    chain: () => D.chain.map((c, i) => `<li class="ch${c.kind ? " ch-" + c.kind : ""}" data-i="${i}"><span class="ch-id">${esc(c.id)}</span><span class="ch-t">${esc(c.t)}</span></li>`).join(""),
+    /* ---------- chapter 8 · Given / When / Then, Jira ---------- */
     story: () => `<div class="st-card"><div class="st-top"><span class="st-id">${esc(D.story.id)}</span><b>${esc(D.story.title)}</b></div>
         <p class="st-text"><span class="k">As a</span> <b>${esc(D.story.as)}</b>, <span class="k">I want</span> ${esc(D.story.want)}, <span class="k">so that</span> ${esc(D.story.so)}.</p>
         <span class="src">${esc(D.story.trace)} · Module 01 V.02</span></div>`,
     criteria: () => D.criteria.map((c, i) => `<div class="ac" data-i="${i}"><span class="ac-n">AC ${c.n || i + 1}<em>${esc(c.b)}</em></span>
         <p class="gwt g"><b>Given</b> ${esc(c.g)}</p><p class="gwt w"><b>When</b> ${esc(c.w)}</p><p class="gwt t"><b>Then</b> ${esc(c.t)}</p></div>`).join(""),
-    quality: () => D.qualityLayers.map((q, i) => `<li data-i="${i}" class="${q.e === "open" ? "q-open" : ""}">${ico(q.icon)}<div><b>${esc(q.h)}</b><span>${esc(q.p)}</span></div></li>`).join(""),
-    modules: () => {
-      const max = Math.max(...D.modules.map((m) => m[1]));
-      return `<div class="bk-head"><b data-count="${D.storyTotal}">${D.storyTotal}</b><span>user stories · ${D.modules.length} modules</span></div><ol class="bk">${D.modules.map(([n, v], i) => `<li data-i="${i}"><span class="bn">${esc(n)}</span><span class="bb"><i style="width:${(v / max) * 100}%"></i></span><span class="bv">${v}</span></li>`).join("")}</ol>`;
-    },
     jira: () => {
       const J = D.jira, H = J.backlog.highlight;
       return `<figure class="jf jf-epics"><div class="jf-frame"><img src="@asset(${J.epics.file})" alt="${esc(J.epics.alt)}"></div>

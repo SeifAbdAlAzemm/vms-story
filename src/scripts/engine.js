@@ -34,7 +34,7 @@ window.VMS = (function () {
   function firstBeatOfChapter(id) { return (D.beats || []).findIndex((b) => b.chapter === id); }
   function threadLitAt(i) {
     const lit = new Set();
-    (D.beats || []).forEach((b, j) => { if (j <= i && b.thread) lit.add(b.thread); });
+    (D.beats || []).forEach((b, j) => { if (j <= i && b.thread) [].concat(b.thread).forEach((t) => lit.add(t)); });
     return lit;
   }
 

@@ -12,29 +12,32 @@ Evidence map and known content risks: `SOURCES.md`. Technical how-to: `CLAUDE.md
 - Target: Chrome / Edge, presenter-driven with keyboard or clicker. English on screen.
 - Viewports that must work: 1920×1080, 1366×768, 1280×800, 1024×768, plus 125% and 150% OS scaling.
 
-## 2. Structure — 36 beats, about 19¾ minutes
+## 2. Structure — 34 beats, about 18¾ minutes
 | Part | Beats | Scenes |
 |---|---|---|
 | Opening: What is VMS? (title, one-line definition, six lifecycle areas, vehicle) | 1 | opening |
 | Prologue: meet the team → different backgrounds → one BA mindset | 3 | prologue |
-| 1 · The world we entered (operational questions at ~550-vehicle scale → the problem in numbers → domain orientation → research vs elicitation → one operational moment → kick-off) | 6 | ch1 |
-| 2 · How we worked | 3 | ch2 |
-| 3 · The boundary | 2 | ch3 |
-| 4 · People and ownership | 3 | ch4 |
-| 5 · Capabilities and priorities | 4 | ch5a, ch5b |
-| 6 · The baseline | 3 | ch6a, ch6b |
-| 7 · How work flows | 3 | ch7 |
-| 8 · From requirement to backlog (and design) | 5 | ch8a (3), ch8b Jira (1), ch8c prototype reveal (1) |
-| Finale: convergence + closing frame | 3 | finale-a, finale-b |
+| 1 · The world we entered (operational questions at ~550-vehicle scale → from ideation to creation → one operational moment → the problem in numbers → domain orientation → research vs elicitation → kick-off) | 7 | ch1 |
+| 2 · How we worked (parallel streams → review, align, reconverge) | 2 | ch2 |
+| 3 · People and ownership | 3 | ch4 |
+| 4 · Capabilities and priorities (67 features → MoSCoW) | 2 | ch5b |
+| 5 · The baseline (verification & validation → system boundary → deliberately outside → BRD → measurable objectives) | 5 | ch6a, ch3, ch6b |
+| 6 · How work flows | 3 | ch7 |
+| 7 · From requirement to backlog (and design) (Given/When/Then → Jira → prototype) | 3 | ch8a, ch8b, ch8c |
+| Finale: pains and needs → pains become features → everything converges → two stories meet → closing | 5 | ch5a, finale-a, finale-b |
+
+Visible chapter numbers are continuous, 01–07 (Seif, 24 Oct 2026). Internal rail ids `ch4`…`ch8` are unchanged and display as 03…07.
+Removed (24 Oct 2026, Seif): "The lifecycle we learned to think in", "The traceability chain", "Quality layers and the backlog". Don't recreate them or a replacement traceability slide.
 
 Each scene ends with an "Unlocks →" line that hands over to the next question.
 
 ## 3. Persistent devices (do not remove)
 - **13-SESSION BA JOURNEY rail**: chapters as phases. There is no session → artifact mapping.
 - **Golden thread = vehicle license expiry.** Tracker nodes: Kick-off → Feature → Requirement → BPMN → User story → Criteria → Jira → Prototype.
-  - On screen: kick-off finding → F-13 · F-42 → BR-033 · BRL-04 → To-Be BPMN → US-16 → VMS-16 → License Register.
+  - Tracker progression: Kick-off at the kick-off findings · Feature at 67 features (small gold chip F-13 · F-42 on that beat) · Requirement at the BRD · BPMN at the As-Is · User story + Criteria together at Given / When / Then (the US-16 card) · Jira · Prototype. Pains become features (Finale) is a retrospective and lights nothing new.
+  - On screen: kick-off finding → F-13 · F-42 (chip on 67 features) → BR-033 · BRL-04 → To-Be BPMN → US-16 → VMS-16 → License Register; F-13 · F-42 reappear in the Finale retrospective.
 - **Review loop** CREATE → REVIEW → ALIGN → IMPROVE → APPROVE. It ticks at chapter hand-offs.
-- **Design track** on the rail from Chapter 5 onward: wireframes and the prototype ran in parallel with the analysis.
+- **Design track** on the rail from Chapter 04 (Capabilities and priorities) onward: wireframes and the prototype ran in parallel with the analysis.
 
 ## 4. Controls (locked)
 - → / Space / PgDn = next beat. ← / PgUp = previous. Home = start. End = finale.
@@ -59,22 +62,18 @@ Each scene ends with an "Unlocks →" line that hands over to the next question.
 - Recounted figures (do not change without recounting from the source):
   - 67 features in 12 groups
   - MoSCoW 33 Must · 3 Should · 13 Could · 13 Won't + 5 not yet prioritised (F-47, F-49–F-52)
-  - 86 stories (19 / 12 / 14 / 7 / 15 / 19)
   - BRD: 3 OBJ · 42 BR (40 Must) · 16 BRL · 10 NFR · 11 KPI · 31 RAID · 7 DEP
   - 15 stakeholders identified → 13 in scope
-  - US-16: 4 fields, 8 edge cases, criteria AC 1 / 2 / 4 of 6 (source numbering)
+  - US-16: criteria AC 1 / 2 / 4 of 6 (source numbering)
 
 ## 7. Wording locks
 - "6 vehicles had already exceeded their license validity" is a **Kick-off finding**, never an official BRD baseline (BRD ISS-05: baselines not yet supplied).
 - Business Owner = "Business Owner / Mentor acting as Client Representative". Never present the Mentor as an employee of the organisation.
-- Lifecycle states:
-  - **Applied:** Discovery, Analysis
-  - **Partially applied:** Planning, Design & Build
-  - **Prepared for:** Test & UAT, Deploy & Transition, Operate & Evaluate
+- "From Ideation to Creation" (Ch 1 beat 2) is **team-provided content, approved by Seif (24 Oct 2026)**: Kick-off Meeting → Stakeholder Analysis & RACI → Persona → Feature List → Verification & Validation → BRD → User Story Mapping → User Stories & Exceptions → Jira → BPMN → Wireframes. Labels and order exactly as supplied. High-level overview only: no per-stage detail, no AI Agent, no extra stages, no session mapping.
 - Verification is **performed**. Validation is **partial / pending** (BRD sign-off and As-Is confirmation, ISS-10).
 - Email is not stated as a finalised notification channel (ISS-06 open). The acceptance criteria shown are channel-independent.
-- "The problem in numbers" (Ch 1 beat 2) shows **external industry and market statistics, as context only**: 79% / 63% (Vimcar survey, UK), 17.7% (Motive / Wakefield), $448–$760 per vehicle / day, average vehicle downtime cost (Element Fleet Management, citing Work Truck Magazine), ~10.4M licensed vehicles 2024 and ~USD 163M → ~229M market 2025 → 2031 (Ken Research). Figures and source labels exactly as supplied by Seif (23 Oct 2026). Never present them as the organization's, its fleet's or this project's figures, and add no further statistics. The on-screen "context only" tag and footnote stay.
-- "One operational moment" (Ch 1 beat 5, before the kick-off findings) is a **storytelling reconstruction of the documented pattern** (Kick-off MOM: paper + Excel; expiry found only when a vehicle was assigned/used for a mission; no proactive monitoring), not an incident report. Steps: Mission request → Select vehicle → Manual license check → Expired. It never shows the number 6 (revealed on the kick-off beat, which stays the formal start of the golden thread) and adds no consequences (checkpoints, fines, delays, accidents, losses), dates or people.
+- "The problem in numbers" (Ch 1 beat 4) shows **external industry and market statistics, as context only**: 79% / 63% (Vimcar survey, UK), 17.7% (Motive / Wakefield), $448–$760 per vehicle / day, average vehicle downtime cost (Element Fleet Management, citing Work Truck Magazine), ~10.4M licensed vehicles 2024 and ~USD 163M → ~229M market 2025 → 2031 (Ken Research). Figures and source labels exactly as supplied by Seif (23 Oct 2026). Never present them as the organization's, its fleet's or this project's figures, and add no further statistics. The on-screen "context only" tag and footnote stay.
+- "One operational moment" (Ch 1 beat 3, after From Ideation to Creation and before The problem in numbers) is a **storytelling reconstruction of the documented pattern** (Kick-off MOM: paper + Excel; expiry found only when a vehicle was assigned/used for a mission; no proactive monitoring), not an incident report. Steps: Mission request → Select vehicle → Manual license check → Expired. It never shows the number 6 (revealed on the kick-off beat, which stays the formal start of the golden thread) and adds no consequences (checkpoints, fines, delays, accidents, losses), dates or people.
 - Jira: state only what the screenshots show (7 epics, a reporter per epic, all visible items To Do, VMS-16 = US-16 text). **Never state a total Jira story count.** Never recreate fake Jira.
 - BPMN: keep the process document's own role labels. Role mapping goes in presenter notes. Movement and Maintenance BPMN appear as thumbnails only.
 - Backgrounds are shown without names: no person ↔ background mapping anywhere.
@@ -110,7 +109,7 @@ Each scene ends with an "Unlocks →" line that hands over to the next question.
 - No claim that the prototype's 7 / 30 / 90-day filter implements BRL-04's 30 / 15 / 7 thresholds.
 
 ## 9. Visual identity (approved)
-- Palette and tokens in `src/styles/tokens.css` (navy / teal / amber / gold; gold = golden thread). Inter typography. Dark prologue, Chapter 1 and finale; light chapters 2–8.
+- Palette and tokens in `src/styles/tokens.css` (navy / teal / amber / gold; gold = golden thread). Inter typography. Dark prologue, Chapter 1 and finale; light chapters 02–07 and the Finale retrospective (pains → features).
 - Fixed 1600×900 composition canvas, scaled to the viewport. Projector-safe: nothing important outside it.
 
 ## Change log
@@ -120,3 +119,4 @@ Each scene ends with an "Unlocks →" line that hands over to the next question.
 - Unreleased — Ch 1 opens with "Operational questions" (full-canvas layer inside ch1, hidden in the static fallback). It replaces the standalone Fleet Challenge beat: the ~550 vehicles / several departments / manual + Excel context moved into its lead line, and the ~550 block stays on the Ch 1 canvas from Domain orientation on. Total stays 34 beats. The five questions are a BA storytelling synthesis of documented problems, not kick-off quotes; the closing line is narrative framing, not a statistic.
 - Unreleased — Ch 1 beat 2 "The problem in numbers" added after Operational questions, before Domain orientation (full-canvas layer, hidden in the static fallback). External industry / market context only (§7). Ch 1 4 → 5 beats; total 34 → 35 beats (≈ +30 s).
 - Unreleased — Ch 1 beat 5 "One operational moment" added after Research vs elicitation, before What the kick-off revealed (full-canvas layer, hidden in the static fallback). Reconstruction of the documented pattern (§7). Ch 1 5 → 6 beats; total 35 → 36 beats (≈ +15–20 s).
+- Unreleased — Storyline restructure (Seif, 24 Oct 2026; structural, proposed v2.0.0). Removed "The traceability chain" and "Quality layers and the backlog" (no hidden beats, no replacement slide). "The lifecycle we learned to think in" replaced by "From Ideation to Creation" (team-provided 11-stage journey) as Ch 1 beat 2. Order changed: One operational moment now follows the journey; System boundary + Deliberately outside moved into The baseline after Verification & validation; Pains and needs + Pains become features moved to the Finale as a retrospective. Golden-thread tracker kept (Feature lights at 67 features, with an F-13 · F-42 chip; Story + Criteria at Given / When / Then). Chapter labels renumbered to a continuous 01–07. Total 36 → 34 beats (≈ −1 min); 16 scenes unchanged.

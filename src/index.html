@@ -45,7 +45,7 @@
   <div class="rail-loop" id="reviewGlyph" title="Review loop: create · review · align · improve · approve">
     <svg viewBox="0 0 24 24" class="ico"><use href="#i-refresh-ccw"/></svg><span>Review loop</span>
   </div>
-  <div class="rail-count" id="beatCounter" aria-live="polite">01 / 36</div>
+  <div class="rail-count" id="beatCounter" aria-live="polite">01 / 34</div>
   <div class="controls" aria-label="Presenter controls">
   <button type="button" id="btnPrev" aria-label="Previous beat"><svg class="ico"><use href="#i-chevron-left"/></svg></button>
   <button type="button" id="btnNext" aria-label="Next beat"><svg class="ico"><use href="#i-chevron-right"/></svg></button>
@@ -57,7 +57,7 @@
 
 
 <aside class="notes" id="notes" aria-label="Presenter notes" hidden>
-  <div class="n-head"><span id="nBeat">01 / 36</span><b id="nTitle"></b></div>
+  <div class="n-head"><span id="nBeat">01 / 34</span><b id="nTitle"></b></div>
   <div class="n-grid">
     <div><h5>Key message</h5><p id="nKey"></p></div>
     <div><h5>Why it matters</h5><p id="nWhy"></p></div>
@@ -146,9 +146,9 @@
 </section>
 
 <!-- =====================================================================
-     CHAPTER 1 · THE WORLD WE ENTERED   (4 beats)
+     CHAPTER 1 · THE WORLD WE ENTERED   (7 beats)
      ===================================================================== -->
-<section class="scene" id="ch1" data-beats="6" data-chapter="ch1" data-theme="dark">
+<section class="scene" id="ch1" data-beats="7" data-chapter="ch1" data-theme="dark">
   <div class="stage"><div class="bg bg-dark"><div class="bg-fleet"></div></div>
   <div class="safe">
     <header class="head"><p class="kicker">01 · The world we entered</p>
@@ -183,7 +183,17 @@
       <p class="c1-ask-close">If answering these takes more than a few seconds,<br><b>you have a <em>visibility</em> problem.</b></p>
     </div>
 
-    <!-- beat 2 · the problem in numbers. EXTERNAL industry / market statistics supplied by the team (context only):
+    <!-- beat 2 · From Ideation to Creation. TEAM-PROVIDED journey labels (Seif, 24 Oct 2026; D.journey), high-level overview only:
+         no per-stage detail, no session mapping. Full-canvas layer: in for this beat only. Hidden in the static fallback. -->
+    <div class="c1-journey" aria-label="From ideation to creation: our journey">
+      <div class="c1-jo-head"><p class="kicker">Our journey</p>
+        <h3>From <em>Ideation</em> to <em>Creation</em></h3>
+        <span class="tag tag-vis">High-level overview</span></div>
+      <div class="c1-jo-line" aria-hidden="true"><i></i></div>
+      <ol class="c1-jo-steps"><!--@render:journey--></ol>
+    </div>
+
+    <!-- beat 4 · the problem in numbers. EXTERNAL industry / market statistics supplied by the team (context only):
          they do not describe the VMS organization, its fleet or this project. Source labels exactly as supplied.
          Full-canvas layer: in for this beat only, out before the domain map. Hidden in the static fallback. -->
     <div class="c1-pin" aria-label="The problem in numbers: external industry and market context">
@@ -207,10 +217,10 @@
       <p class="src c1-pin-note">External industry and market statistics, shown for context only. They do not describe the VMS organization, its fleet or this project.</p>
     </div>
 
-    <!-- beat 5 · a real operational moment. Storytelling RECONSTRUCTION of the documented pattern (Kick-off MOM: paper + Excel;
+    <!-- beat 3 · a real operational moment. Storytelling RECONSTRUCTION of the documented pattern (Kick-off MOM: paper + Excel;
          expiry discovered only when the organization tried to assign/use a vehicle for a mission; no proactive monitoring).
-         Not an incident report. No count here: the 6 vehicles are revealed on the next beat (kick-off findings).
-         Full-canvas layer: in for this beat only, out before the kick-off findings. Hidden in the static fallback. -->
+         Not an incident report. No count here: the 6 vehicles are revealed on the kick-off findings beat.
+         Full-canvas layer: in for this beat only, out before the problem in numbers. Hidden in the static fallback. -->
     <div class="c1-moment" aria-label="One operational moment before VMS">
       <div class="c1-mo-head"><p class="kicker">Before VMS · one ordinary moment</p>
         <h3>What the manual process looked like when a vehicle was actually <em>needed</em></h3>
@@ -251,19 +261,13 @@
 </section>
 
 <!-- =====================================================================
-     CHAPTER 2 · HOW WE WORKED   (3 beats)
+     CHAPTER 2 · HOW WE WORKED   (2 beats)
      ===================================================================== -->
-<section class="scene" id="ch2" data-beats="3" data-chapter="ch2" data-theme="light">
+<section class="scene" id="ch2" data-beats="2" data-chapter="ch2" data-theme="light">
   <div class="stage"><div class="bg bg-light"></div>
   <div class="safe">
     <header class="head"><p class="kicker">02 · How we worked</p>
       <h2 class="title">How did a diverse team analyze one problem — without fragmenting the understanding?</h2></header>
-
-    <div class="c2-life">
-      <div class="c2-lifehead"><b>The BA lifecycle we learned to think in</b>
-        <span class="legend"><i class="st applied"></i>Applied <i class="st partial"></i>Partially applied <i class="st prepared"></i>Prepared for</span></div>
-      <ol class="c2-stages"><!--@render:lifecycle--></ol>
-    </div>
 
     <div class="c2-flow"><!--@render:streams-->
       <div class="c2-msg">
@@ -271,30 +275,7 @@
         <p class="src">Evidence: 7 Jira epics, one reporter each · four team BRDs merged (BRD Ref-05) · BRD v2.0 conflict resolution</p>
       </div>
     </div>
-    <p class="unlocks">First, we needed one shared boundary.</p>
-  </div></div>
-</section>
-
-<!-- =====================================================================
-     CHAPTER 3 · THE BOUNDARY   (2 beats)
-     ===================================================================== -->
-<section class="scene" id="ch3" data-beats="2" data-chapter="ch3" data-theme="light">
-  <div class="stage"><div class="bg bg-light"></div>
-  <div class="safe">
-    <header class="head"><p class="kicker">03 · The boundary</p>
-      <h2 class="title">What are we solving — and what are we deliberately <em>not</em> solving?</h2></header>
-    <div class="c3-boundary">
-      <span class="c3-blabel">VMS · Project Scope baseline · 11 areas</span>
-      <div class="c3-groups"><!--@render:scopeGroups--></div>
-      <p class="c3-base">Scope turned a fuzzy problem into an agreed boundary. Where the Feature List differs, the Project Scope wins.</p>
-    </div>
-    <aside class="c3-out">
-      <h3><svg class="ico"><use href="#i-ban"/></svg>Outside this release</h3>
-      <ul class="c3-ex"><!--@render:exclusions--></ul>
-      <!--@render:noMigration-->
-      <p class="src">5 of 18 documented exclusions · BRD §6.2 · changes need a Sponsor-approved change request</p>
-    </aside>
-    <p class="unlocks">Now that the boundary was clear: who matters inside it?</p>
+    <p class="unlocks">Next: who matters — and who decides?</p>
   </div></div>
 </section>
 
@@ -304,7 +285,7 @@
 <section class="scene" id="ch4" data-beats="3" data-chapter="ch4" data-theme="light">
   <div class="stage"><div class="bg bg-light"></div>
   <div class="safe">
-    <header class="head"><p class="kicker">04 · People and ownership</p>
+    <header class="head"><p class="kicker">03 · People and ownership</p>
       <h2 class="title">Who matters — and who decides?</h2></header>
     <div class="c4-matrix">
       <div class="c4-yaxis"><span>POWER</span></div>
@@ -319,21 +300,7 @@
       <p class="c4-msg">Knowing who matters was not enough — we also needed to know <b>who decides</b>.</p>
     </div>
     <div class="stake-pop" id="stakePop" role="dialog" aria-live="polite" hidden></div>
-    <p class="unlocks">With ownership clear, needs could become capabilities.</p>
-  </div></div>
-</section>
-
-<!-- =====================================================================
-     CHAPTER 5A · PAINS → FEATURES   (2 beats)
-     ===================================================================== -->
-<section class="scene" id="ch5a" data-beats="2" data-chapter="ch5" data-theme="light">
-  <div class="stage"><div class="bg bg-light"></div>
-  <div class="safe">
-    <header class="head"><p class="kicker">05 · Capabilities and priorities</p>
-      <h2 class="title">What must the system do — and what can wait?</h2></header>
-    <div class="c5-cols"><span>Pain / need</span><span>Capability → feature</span></div>
-    <div class="c5-rows"><!--@render:painRows--></div>
-    <p class="src src-foot">Feature names and IDs: Consolidated Feature List (A04) · all eight are Must</p>
+    <p class="unlocks">With ownership clear: what must the system actually do?</p>
   </div></div>
 </section>
 
@@ -343,10 +310,11 @@
 <section class="scene" id="ch5b" data-beats="2" data-chapter="ch5" data-theme="light">
   <div class="stage"><div class="bg bg-light"></div>
   <div class="safe">
-    <header class="head"><p class="kicker">05 · Capabilities and priorities</p>
+    <header class="head"><p class="kicker">04 · Capabilities and priorities</p>
       <h2 class="title">Good analysis is also deciding what <em>not</em> to build.</h2></header>
     <div class="c5-total">
       <div class="c5-big"><span data-count="67">67</span></div>
+      <span class="tag tag-gold c5-thread" title="Golden thread: license expiry features in the consolidated list">F-13 · F-42</span>
       <p class="c5-cap">features in <b>12 capability groups</b></p>
       <ol class="c5-groups"><!--@render:featureGroups--></ol>
     </div>
@@ -364,10 +332,34 @@
 <section class="scene" id="ch6a" data-beats="1" data-chapter="ch6" data-theme="light">
   <div class="stage"><div class="bg bg-light"></div>
   <div class="safe">
-    <header class="head"><p class="kicker">06 · The baseline</p>
+    <header class="head"><p class="kicker">05 · The baseline</p>
       <h2 class="title">Did we get it right?</h2></header>
     <ol class="c6-stages"><!--@render:vvStages--></ol>
     <div class="c6-gate"><!--@render:vvCards--></div>
+  </div></div>
+</section>
+
+<!-- =====================================================================
+     CHAPTER 6 · THE BASELINE · SYSTEM BOUNDARY → DELIBERATELY OUTSIDE   (2 beats)
+     Scene id stays "ch3" (styles/scenes/chapter-03.css, scripts/scenes/chapter-03.js); it now belongs to chapter 05 · The baseline (rail id ch6).
+     ===================================================================== -->
+<section class="scene" id="ch3" data-beats="2" data-chapter="ch6" data-theme="light">
+  <div class="stage"><div class="bg bg-light"></div>
+  <div class="safe">
+    <header class="head"><p class="kicker">05 · The baseline</p>
+      <h2 class="title">What are we solving — and what are we deliberately <em>not</em> solving?</h2></header>
+    <div class="c3-boundary">
+      <span class="c3-blabel">VMS · Project Scope baseline · 11 areas</span>
+      <div class="c3-groups"><!--@render:scopeGroups--></div>
+      <p class="c3-base">Scope turned a fuzzy problem into an agreed boundary. Where the Feature List differs, the Project Scope wins.</p>
+    </div>
+    <aside class="c3-out">
+      <h3><svg class="ico"><use href="#i-ban"/></svg>Outside this release</h3>
+      <ul class="c3-ex"><!--@render:exclusions--></ul>
+      <!--@render:noMigration-->
+      <p class="src">5 of 18 documented exclusions · BRD §6.2 · changes need a Sponsor-approved change request</p>
+    </aside>
+    <p class="unlocks">Inside and outside agreed — now everything converges into one baseline.</p>
   </div></div>
 </section>
 
@@ -377,7 +369,7 @@
 <section class="scene" id="ch6b" data-beats="2" data-chapter="ch6" data-theme="light">
   <div class="stage"><div class="bg bg-light"></div>
   <div class="safe">
-    <header class="head"><p class="kicker">06 · The baseline</p>
+    <header class="head"><p class="kicker">05 · The baseline</p>
       <h2 class="title">The BRD became one coherent baseline.</h2></header>
     <div class="c6-hub"><!--@render:brdHub--></div>
     <ol class="c6-layers"><!--@render:brdLayers--></ol>
@@ -394,7 +386,7 @@
 <section class="scene" id="ch7" data-beats="3" data-chapter="ch7" data-theme="light">
   <div class="stage"><div class="bg bg-light"></div>
   <div class="safe">
-    <header class="head"><p class="kicker">07 · How work flows</p>
+    <header class="head"><p class="kicker">06 · How work flows</p>
       <h2 class="title">How does the work move today — and how should it work tomorrow?</h2>
       <p class="c7-sub">Primary process · Vehicle License / Document Expiry Management</p></header>
 
@@ -487,18 +479,15 @@
 </section>
 
 <!-- =====================================================================
-     CHAPTER 8A · REQUIREMENT → STORY → CRITERIA → BACKLOG   (3 beats)
+     CHAPTER 8A · STORY → GIVEN / WHEN / THEN   (1 beat)
      ===================================================================== -->
-<section class="scene" id="ch8a" data-beats="3" data-chapter="ch8" data-theme="light">
+<section class="scene" id="ch8a" data-beats="1" data-chapter="ch8" data-theme="light">
   <div class="stage"><div class="bg bg-light"></div>
   <div class="safe">
-    <header class="head"><p class="kicker">08 · From requirement to backlog</p>
+    <header class="head"><p class="kicker">07 · From requirement to backlog</p>
       <h2 class="title">How does a delivery team build this?</h2></header>
-    <ol class="c8-chain"><!--@render:chain--></ol>
     <div class="c8-story"><!--@render:story--></div>
     <div class="c8-ac"><!--@render:criteria--></div>
-    <div class="c8-quality"><b class="c8-qh">Quality layers around the story</b><ul><!--@render:quality--></ul></div>
-    <div class="c8-backlog"><!--@render:modules--></div>
   </div></div>
 </section>
 
@@ -508,7 +497,7 @@
 <section class="scene" id="ch8b" data-beats="1" data-chapter="ch8" data-theme="light">
   <div class="stage"><div class="bg bg-light"></div>
   <div class="safe">
-    <header class="head"><p class="kicker">08 · From requirement to backlog</p>
+    <header class="head"><p class="kicker">07 · From requirement to backlog</p>
       <h2 class="title">Documentation became actionable work.</h2></header>
     <!--@render:jira-->
     <p class="unlocks">Meanwhile, design was giving the requirements a shape.</p>
@@ -522,7 +511,7 @@
 <section class="scene" id="ch8c" data-beats="1" data-chapter="ch8" data-theme="light">
   <div class="stage"><div class="bg bg-light"></div>
   <div class="safe">
-    <header class="head"><p class="kicker">08 · From requirement to backlog</p>
+    <header class="head"><p class="kicker">07 · From requirement to backlog</p>
       <h2 class="title">Analysis and design evolved together.</h2></header>
     <div class="pt"><!--@render:protoThread--></div>
     <figure class="pr-hero">
@@ -539,7 +528,22 @@
         <p class="src">Ran alongside the analysis; became more concrete as modules were approved.</p></div>
     </div>
     <p class="pr-label"><!--@render:protoLabel--></p>
-    <p class="unlocks">Step back. What did all of this become?</p>
+    <p class="unlocks">Step back. Where did all of this start?</p>
+  </div></div>
+</section>
+
+<!-- =====================================================================
+     FINALE · RETROSPECTIVE · PAINS → FEATURES   (2 beats)
+     Scene id stays "ch5a" (styles/scenes/chapter-05.css, scripts/scenes/chapter-05.js); it now opens the Finale.
+     ===================================================================== -->
+<section class="scene" id="ch5a" data-beats="2" data-chapter="finale" data-theme="light">
+  <div class="stage"><div class="bg bg-light"></div>
+  <div class="safe">
+    <header class="head"><p class="kicker">Finale · Looking back</p>
+      <h2 class="title">It all started with real pains.</h2></header>
+    <div class="c5-cols"><span>Pain / need</span><span>Capability → feature</span></div>
+    <div class="c5-rows"><!--@render:painRows--></div>
+    <p class="src src-foot">Feature names and IDs: Consolidated Feature List (A04) · all eight are Must</p>
   </div></div>
 </section>
 

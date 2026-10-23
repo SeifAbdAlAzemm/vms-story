@@ -1,4 +1,4 @@
-/* CHAPTER 3 · boundary → exclusions (no data migration ← kick-off) */
+/* scene ch3, now in CHAPTER 6 (after verification & validation) · boundary → exclusions (no data migration ← kick-off) */
 VMS.scene("ch3", ({ tl, q, qa, at }) => {
   tl.from(q(".c3-boundary"), { opacity: 0, scale: 0.97, duration: 0.5 }, at(0) + 0.05);
   tl.from(qa(".c3-groups .cap"), { opacity: 0, y: 14, stagger: 0.04, duration: 0.35 }, at(0) + 0.2);

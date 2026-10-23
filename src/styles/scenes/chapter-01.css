@@ -99,7 +99,7 @@ html:not(.anim) #ch1 .c1-pin { display: none; }
 #ch1 .c1-pin-close em { font-style: normal; color: #E6B566; }
 #ch1 .c1-pin-note { position: absolute; left: 0; right: 0; bottom: 0; text-align: center; font-size: 15px; }
 
-/* beat 5 · one operational moment (full-canvas layer; reconstruction of the documented pattern, not an incident report) */
+/* beat 3 · one operational moment (full-canvas layer; reconstruction of the documented pattern, not an incident report) */
 #ch1 .c1-moment { position: absolute; inset: 0; pointer-events: none; }
 html:not(.anim) #ch1 .c1-moment { display: none; }
 #ch1 .c1-mo-head { position: absolute; left: 0; top: 0; width: 1600px; }
@@ -128,3 +128,26 @@ html:not(.anim) #ch1 .c1-moment { display: none; }
 #ch1 .c1-mo-close { position: absolute; left: 0; right: 0; top: 640px; text-align: center; font-size: 26px; line-height: 1.35; color: #A9BACB; }
 #ch1 .c1-mo-close b { display: block; margin-top: 8px; font-size: 44px; font-weight: 800; color: #fff; letter-spacing: -.01em; }
 #ch1 .c1-mo-close em { font-style: normal; color: #F2A79C; }
+
+/* beat 2 · From Ideation to Creation (full-canvas layer; team-provided journey labels, high-level overview only).
+   11 stages on one left → right line; labels alternate above / below so each gets ~270 px of width. */
+#ch1 .c1-journey { position: absolute; inset: 0; pointer-events: none; }
+html:not(.anim) #ch1 .c1-journey { display: none; }
+#ch1 .c1-jo-head { position: absolute; left: 0; top: 0; width: 1600px; }
+#ch1 .c1-jo-head h3 { margin-top: 8px; font-size: 52px; line-height: 1.1; font-weight: 820; color: #fff; letter-spacing: .02em; text-transform: uppercase; }
+#ch1 .c1-jo-head h3 em { font-style: normal; color: var(--teal-on-dark); }
+#ch1 .c1-jo-head .tag { position: absolute; right: 0; top: 0; }
+#ch1 .c1-jo-line { position: absolute; left: 40px; top: 520px; width: 1520px; height: 4px; }
+#ch1 .c1-jo-line i { display: block; height: 100%; border-radius: 2px; background: linear-gradient(90deg, rgba(111,194,184,.3), var(--teal-on-dark)); }
+#ch1 .c1-jo-line::after { content: ""; position: absolute; right: -14px; top: -8px; border-left: 16px solid var(--teal-on-dark); border-top: 10px solid transparent; border-bottom: 10px solid transparent; }
+#ch1 .c1-jo-steps { position: absolute; left: 0; top: 522px; width: 1600px; height: 0; margin: 0; padding: 0; list-style: none; }
+#ch1 .c1-jo-step { position: absolute; top: 0; width: 0; height: 0; }
+#ch1 .c1-jo-dot { position: absolute; left: -24px; top: -24px; width: 48px; height: 48px; border-radius: 50%; display: grid; place-items: center;
+  background: #10283F; border: 3px solid var(--teal-on-dark); font-size: 20px; font-weight: 820; color: #fff; font-variant-numeric: tabular-nums; }
+#ch1 .c1-jo-step:last-child .c1-jo-dot { background: var(--teal-on-dark); color: var(--midnight); }
+#ch1 .c1-jo-stem { position: absolute; left: -1px; width: 2px; height: 46px; background: rgba(143,179,217,.45); }
+#ch1 .c1-jo-step.up .c1-jo-stem { bottom: 24px; }
+#ch1 .c1-jo-step.dn .c1-jo-stem { top: 24px; }
+#ch1 .c1-jo-step b { position: absolute; left: -130px; width: 260px; text-align: center; font-size: 23px; line-height: 1.22; font-weight: 700; color: #fff; }
+#ch1 .c1-jo-step.up b { bottom: 82px; }
+#ch1 .c1-jo-step.dn b { top: 82px; }

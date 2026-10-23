@@ -7,16 +7,16 @@
 (function (D) {
 
   /* ---------- Chapters on the journey rail (no session-number mapping) ---------- */
+  // Visible chapter numbers are continuous (01–07); ids are internal and keep their original names.
   D.chapters = [
     { id: "prologue", label: "Team", title: "Prologue" },
     { id: "ch1", label: "World", title: "01 · The world we entered" },
     { id: "ch2", label: "Ways of working", title: "02 · How we worked" },
-    { id: "ch3", label: "Boundary", title: "03 · The boundary" },
-    { id: "ch4", label: "People", title: "04 · People and ownership" },
-    { id: "ch5", label: "Capabilities", title: "05 · Capabilities and priorities" },
-    { id: "ch6", label: "Baseline", title: "06 · The baseline" },
-    { id: "ch7", label: "Process", title: "07 · How work flows" },
-    { id: "ch8", label: "Backlog", title: "08 · From requirement to backlog" },
+    { id: "ch4", label: "People", title: "03 · People and ownership" },
+    { id: "ch5", label: "Capabilities", title: "04 · Capabilities and priorities" },
+    { id: "ch6", label: "Baseline", title: "05 · The baseline" },
+    { id: "ch7", label: "Process", title: "06 · How work flows" },
+    { id: "ch8", label: "Backlog", title: "07 · From requirement to backlog" },
     { id: "finale", label: "Convergence", title: "Finale" },
   ];
   D.designTrackFrom = "ch5"; // TEAM: wireframes/prototype ran in parallel with analysis
@@ -72,23 +72,17 @@
   ];
   D.kickoffThread = { h: "6 vehicles had already exceeded their license validity", p: "Discovered only when the organization tried to assign them to a mission", tag: "Kick-off finding" };
   D.openTopics = ["Fleet planning", "Vehicle cost", "Driver performance", "Fleet ownership", "Vehicle prioritization", "Driver employment model", "Business priority"];
+  // TEAM: "From Ideation to Creation" journey labels, provided and approved by Seif (24 Oct 2026). High-level overview of
+  // the team's path, not a source-document fact and not a session/artifact mapping. Labels and order exactly as supplied.
+  D.journey = ["Kick-off Meeting", "Stakeholder Analysis & RACI", "Persona", "Feature List", "Verification & Validation", "BRD",
+    "User Story Mapping", "User Stories & Exceptions", "Jira", "BPMN", "Wireframes"];
 
-  /* ---------- Chapter 2 · lifecycle (TEAM model, states locked) ---------- */
-  D.lifecycle = [
-    { n: 1, name: "Discovery", state: "applied", line: "Kick-off, stakeholders, initial features" },
-    { n: 2, name: "Planning", state: "partial", line: "Team organization, kick-off prep, scope" },
-    { n: 3, name: "Analysis", state: "applied", line: "Features, BRD, BPMN, user stories, AC" },
-    { n: 4, name: "Design & Build", state: "partial", line: "Backlog refinement in Jira, prototype" },
-    { n: 5, name: "Test & UAT", state: "prepared", line: "Testable acceptance criteria" },
-    { n: 6, name: "Deploy & Transition", state: "prepared", line: "Cut-over plan, adoption risks (NFR-ADO-01)" },
-    { n: 7, name: "Operate & Evaluate", state: "prepared", line: "11 defined KPIs" },
-  ];
-  D.lifecycleStates = { applied: "Applied", partial: "Partially applied", prepared: "Prepared for" };
+  /* ---------- Chapter 2 ---------- */
   // SRC: Jira epics screenshot (7 epics)
   D.streams = ["Vehicle Management", "Driver Management & Assignment", "Maintenance & Repair Centers", "Movements & Fuel", "Notifications", "Roles & Permissions", "BRD & Other documents"];
   D.reviewLoop = ["Create", "Review", "Align", "Improve", "Approve"];
 
-  /* ---------- Chapter 3 · scope (SRC: Project Scope §1.1–1.11, BRD §6) ---------- */
+  /* ---------- Chapter 6 · system boundary + exclusions (scene ch3) (SRC: Project Scope §1.1–1.11, BRD §6) ---------- */
   D.scopeGroups = [
     { name: "Fleet records", tone: "navy", items: [["car", "Vehicle Management"], ["id-card", "Driver Management"], ["tag", "Vehicle Brands"], ["landmark", "Licensing Authorities"]] },
     { name: "Operations", tone: "teal", items: [["route", "Movement Log"], ["fuel", "Fuel Management"], ["wrench", "Maintenance Management"], ["warehouse", "Repair Centers"]] },

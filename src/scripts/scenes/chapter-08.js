@@ -1,19 +1,11 @@
-/* CHAPTER 8 · chain → story + Given/When/Then → quality + backlog ; Jira evidence */
-VMS.scene("ch8a", ({ tl, q, qa, at, count }) => {
-  tl.from(qa(".ch"), { opacity: 0, y: 16, stagger: 0.08, duration: 0.4 }, at(0) + 0.1);
-  // beat 2: story and criteria
-  tl.from(q(".st-card"), { opacity: 0, y: 20, duration: 0.45 }, at(1));
+/* CHAPTER 8 · story + Given/When/Then ; Jira evidence ; prototype reveal */
+VMS.scene("ch8a", ({ tl, q, qa, at }) => {
+  // one beat: the US-16 story card, then three channel-independent criteria in Given / When / Then
+  tl.from(q(".st-card"), { opacity: 0, y: 20, duration: 0.4 }, at(0) + 0.1);
   qa(".ac").forEach((ac, i) => {
-    tl.from(ac, { opacity: 0, duration: 0.25 }, at(1) + 0.2 + i * 0.15);
-    tl.from(ac.querySelectorAll(".gwt"), { opacity: 0, x: 14, stagger: 0.06, duration: 0.25 }, at(1) + 0.25 + i * 0.15);
+    tl.from(ac, { opacity: 0, duration: 0.2 }, at(0) + 0.35 + i * 0.15);
+    tl.from(ac.querySelectorAll(".gwt"), { opacity: 0, x: 14, stagger: 0.05, duration: 0.2 }, at(0) + 0.38 + i * 0.15);
   });
-  // beat 3: quality layers and the six-module backlog
-  tl.from(q(".c8-qh"), { opacity: 0, duration: 0.3 }, at(2));
-  tl.from(qa(".c8-quality li"), { opacity: 0, x: 20, stagger: 0.06, duration: 0.35 }, at(2) + 0.05);
-  tl.from(q(".bk-head"), { opacity: 0, duration: 0.3 }, at(2) + 0.3);
-  count(q(".bk-head b"), 86, at(2) + 0.3, 0.5);
-  tl.from(qa(".bb i"), { scaleX: 0, stagger: 0.04, duration: 0.35 }, at(2) + 0.35);
-  tl.from(qa(".bk li"), { opacity: 0, stagger: 0.04, duration: 0.25 }, at(2) + 0.35);
 });
 VMS.scene("ch8b", ({ tl, q, qa, at }) => {
   // one beat: epics, then backlog, then the golden thread lands on VMS-16
