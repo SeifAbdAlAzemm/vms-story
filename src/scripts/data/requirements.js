@@ -1,17 +1,26 @@
-/* SRC: BRD-VMS-003 v3.0 (BR-033, BRL-04), Module 01 Vehicle Management V.02 (US-16 story, trace, criteria). */
+/* Beat 27 · User Stories & Exception Handling, shown through US-01 Add Vehicle.
+   SRC: Module 01 Vehicle Management V.02, US-01 (story, required fields, criteria, duplicate / required-field / permission behaviour).
+   TEAM: exception rows 3–4 (double Save, network failure) from the team's exception-handling example (Seif, 24 Oct 2026),
+   not stated in US-01's own text. Wording condensed for the screen; meaning kept. */
 (function (D) {
-  D.story = {
-    id: "US-16",
-    title: "Vehicle License Status and Expiry Notifications",
-    trace: "Trace: F-13 · BR-033 · BRL-04 · BR-016 · ASM-03 · A-09 · A-16",
+  D.usExample = {
+    id: "US-01", name: "Add Vehicle", trace: "Trace: F-01 · BR-001 · BRL-13 · NFR-SEC-02",
     as: "Fleet Director",
-    want: "the system to calculate each license's status and warn me 30, 15 and 7 days before expiry and on the day it expires",
-    so: "no vehicle works on an expired license without us knowing",
+    want: "to add a new vehicle with its master data",
+    so: "every vehicle in the fleet is held in one central record",
+    defined: ["Required inputs and data types", "Acceptance criteria", "Business rules and validation", "Exception and error-handling scenarios"],
+    criteria: [
+      { g: "I have Create permission", w: "I open Add Vehicle", t: "the form shows the required fields: Plate Number, VIN/Chassis, Model, Type, Brand" },
+      { g: "all required fields are valid", w: "I click Save", t: "the vehicle is created as Active/Available with its Vehicle ID" },
+      { g: "the Plate Number already exists", w: "I click Save", t: "a duplicate error appears and no record is created" },
+      { g: "a required field is empty or invalid", w: "I click Save", t: "validation feedback is shown and no record is created" },
+    ],
+    exceptions: [
+      { s: "Duplicate Plate Number or VIN/Chassis Number", b: "Inline duplicate error; no record is created" },
+      { s: "Required field empty or only spaces", b: "Field highlighted, “This field is required”, entered data kept" },
+      { s: "Save clicked twice rapidly", b: "Only one vehicle record is created", team: true },
+      { s: "Network fails during Save", b: "“Connection error, please try again”; no partial record, retry allowed", team: true },
+      { s: "User lacks Create permission", b: "Access denied and the attempt is logged" },
+    ],
   };
-  // 3 of the 6 source criteria (source numbering kept). Chosen because they do not depend on the unresolved notification channel (ISS-06)
-  D.criteria = [
-    { g: "a license has 30, 15 or 7 days left", w: "the daily check runs", t: "one notification is sent for that threshold", b: "BRL-04", n: 1 },
-    { g: "a license expires today or has expired", w: "the daily check runs", t: "its status becomes Expired and one “License expired” notification is sent", b: "BR-033", n: 2 },
-    { g: "a license is renewed before the next threshold", w: "the renewal is saved", t: "pending notifications are cancelled and the status is recalculated", b: "US-16", n: 4 },
-  ];
 })(window.VMS_DATA = window.VMS_DATA || {});

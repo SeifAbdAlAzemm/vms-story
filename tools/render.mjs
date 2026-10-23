@@ -125,12 +125,20 @@ export function makeRenderers(D, ctx) {
     brdLayers: () => D.brdLayers.map((l, i) => `<li data-i="${i}"><b>${esc(l.v)}</b><span>${esc(l.l)}${l.s ? `<small>${esc(l.s)}</small>` : ""}</span></li>`).join(""),
     objectives: () => D.objectives.map((o) => `<div class="obj${o.thread ? " is-thread" : ""}"><div class="oh"><span class="id">${esc(o.id)}</span><b>${esc(o.name)}</b></div><div class="oks">${o.k.map(([v, l, t]) => `<div class="ok"><strong>${esc(v)}</strong><span>${esc(l)}</span><em>${esc(t)}</em></div>`).join("")}</div></div>`).join("") + `<p class="src obj-note">${esc(D.objectivesNote)}</p>`,
 
-    /* ---------- chapter 8 · Given / When / Then, Jira ---------- */
-    story: () => `<div class="st-card"><div class="st-top"><span class="st-id">${esc(D.story.id)}</span><b>${esc(D.story.title)}</b></div>
-        <p class="st-text"><span class="k">As a</span> <b>${esc(D.story.as)}</b>, <span class="k">I want</span> ${esc(D.story.want)}, <span class="k">so that</span> ${esc(D.story.so)}.</p>
-        <span class="src">${esc(D.story.trace)} · Module 01 V.02</span></div>`,
-    criteria: () => D.criteria.map((c, i) => `<div class="ac" data-i="${i}"><span class="ac-n">AC ${c.n || i + 1}<em>${esc(c.b)}</em></span>
-        <p class="gwt g"><b>Given</b> ${esc(c.g)}</p><p class="gwt w"><b>When</b> ${esc(c.w)}</p><p class="gwt t"><b>Then</b> ${esc(c.t)}</p></div>`).join(""),
+    /* ---------- chapter 8 · user stories & exception handling (US-01), Jira ---------- */
+    usExample: () => {
+      const U = D.usExample;
+      return `<div class="us-left">
+          <div class="us-card"><span class="us-k">User story · ${esc(U.id)}</span>
+            <p class="us-text">“<span class="k">As a</span> <b>${esc(U.as)}</b>, <span class="k">I want</span> ${esc(U.want)}, <span class="k">so that</span> ${esc(U.so)}.”</p>
+            <span class="src">${esc(U.trace)}</span></div>
+          <div class="us-def"><b class="us-h">What I defined</b><ul>${U.defined.map((d) => `<li>${ico("circle-check")}<span>${esc(d)}</span></li>`).join("")}</ul></div>
+        </div>
+        <div class="us-ac"><b class="us-h">Acceptance criteria</b><ol>${U.criteria.map((c, i) => `<li data-i="${i}"><span class="us-n">${i + 1}</span><p><b>Given</b> ${esc(c.g)}, <b>When</b> ${esc(c.w)}, <b>Then</b> ${esc(c.t)}.</p></li>`).join("")}</ol></div>
+        <div class="us-ex"><div class="us-exh">${ico("triangle-alert")}<b>Exception handling</b></div>
+          <table><thead><tr><th>Scenario</th><th>Expected system behavior</th></tr></thead>
+          <tbody>${U.exceptions.map((e, i) => `<tr data-i="${i}"><td><span class="us-xn">${i + 1}</span>${esc(e.s)}</td><td>${esc(e.b)}</td></tr>`).join("")}</tbody></table></div>`;
+    },
     jira: () => {
       const J = D.jira, H = J.backlog.highlight;
       return `<figure class="jf jf-epics"><div class="jf-frame"><img src="@asset(${J.epics.file})" alt="${esc(J.epics.alt)}"></div>

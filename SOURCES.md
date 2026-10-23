@@ -44,7 +44,8 @@ Precedence applied: Project Scope > BRD-VMS-003 v3.0 > Consolidated Feature List
 | Finale · retrospective | Pains → capability → features (F-13 · F-42, F-32 · F-45, F-37 · F-38, F-22 · F-23), all Must — beats 30–31 | Feature List (A04) · Kick-off MOM · BRD §4.2 / §8.1 |
 | 05 · Baseline | 3 OBJ · 42 BR (40 Must) · 16 BRL · 10 NFR · 11 KPI · 31 RAID (10 R · 6 A · 4 C · 11 I) · 7 DEP; objective targets | BRD-VMS-003 v3.0 — recounted |
 | 06 · Process | License As-Is / To-Be | Business Process Documentation |
-| 07 · Backlog | US-16 text, trace, AC 1/2/4 of 6 | Module 01 V.02 |
+| 07 · Backlog (beat 27) | User Stories & Exception Handling, example US-01 Add Vehicle: story, trace, required fields, 4 criteria (condensed), exception rows 1, 2, 5 | Module 01 V.02, US-01 |
+| 07 · Backlog (beat 27) | Exception rows 3–4: double Save → one record; network failure → "Connection error, please try again", no partial record, retry | **Team exception-handling scenarios** (Seif, 24 Oct 2026), not in US-01's own text |
 | 07 · Jira | Only what is visible: 7 epics, a reporter per epic, all visible items To Do, VMS-16 text = US-16 | Screenshots |
 | 07 · Prototype | Golden thread end to end: kick-off finding → BR-033 · BRL-04 → To-Be BPMN → US-16 → VMS-16 → License Register. Framed as "analysis and design evolved together" — never as built or implemented software | Prototype exports · traceability above |
 

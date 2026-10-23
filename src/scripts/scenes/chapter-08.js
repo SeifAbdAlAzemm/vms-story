@@ -1,11 +1,12 @@
-/* CHAPTER 8 · story + Given/When/Then ; Jira evidence ; prototype reveal */
+/* CHAPTER 8 (07) · user stories & exception handling (US-01) ; Jira evidence ; prototype reveal */
 VMS.scene("ch8a", ({ tl, q, qa, at }) => {
-  // one beat: the US-16 story card, then three channel-independent criteria in Given / When / Then
-  tl.from(q(".st-card"), { opacity: 0, y: 20, duration: 0.4 }, at(0) + 0.1);
-  qa(".ac").forEach((ac, i) => {
-    tl.from(ac, { opacity: 0, duration: 0.2 }, at(0) + 0.35 + i * 0.15);
-    tl.from(ac.querySelectorAll(".gwt"), { opacity: 0, x: 14, stagger: 0.05, duration: 0.2 }, at(0) + 0.38 + i * 0.15);
-  });
+  // one beat: story → what was defined → acceptance criteria → exception handling
+  tl.from(q(".us-card"), { opacity: 0, y: 16, duration: 0.22 }, at(0) + 0.1);
+  tl.from(q(".us-def"), { opacity: 0, y: 12, duration: 0.2 }, at(0) + 0.22);
+  tl.from(qa(".us-ac .us-h, .us-ac li"), { opacity: 0, x: 16, stagger: 0.05, duration: 0.18 }, at(0) + 0.3);
+  tl.from(q(".us-exh"), { opacity: 0, duration: 0.15 }, at(0) + 0.56);
+  tl.from(qa(".us-ex thead, .us-ex tbody tr"), { opacity: 0, y: 8, stagger: 0.04, duration: 0.15 }, at(0) + 0.58);
+  tl.from(q(".src-foot"), { opacity: 0, duration: 0.15 }, at(0) + 0.8);
 });
 VMS.scene("ch8b", ({ tl, q, qa, at }) => {
   // one beat: epics, then backlog, then the golden thread lands on VMS-16
