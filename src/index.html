@@ -45,7 +45,7 @@
   <div class="rail-loop" id="reviewGlyph" title="Review loop: create · review · align · improve · approve">
     <svg viewBox="0 0 24 24" class="ico"><use href="#i-refresh-ccw"/></svg><span>Review loop</span>
   </div>
-  <div class="rail-count" id="beatCounter" aria-live="polite">01 / 36</div>
+  <div class="rail-count" id="beatCounter" aria-live="polite">01 / 37</div>
   <div class="controls" aria-label="Presenter controls">
   <button type="button" id="btnPrev" aria-label="Previous beat"><svg class="ico"><use href="#i-chevron-left"/></svg></button>
   <button type="button" id="btnNext" aria-label="Next beat"><svg class="ico"><use href="#i-chevron-right"/></svg></button>
@@ -57,7 +57,7 @@
 
 
 <aside class="notes" id="notes" aria-label="Presenter notes" hidden>
-  <div class="n-head"><span id="nBeat">01 / 36</span><b id="nTitle"></b></div>
+  <div class="n-head"><span id="nBeat">01 / 37</span><b id="nTitle"></b></div>
   <div class="n-grid">
     <div><h5>Key message</h5><p id="nKey"></p></div>
     <div><h5>Why it matters</h5><p id="nWhy"></p></div>
@@ -329,7 +329,22 @@
       <p class="c4-msg">Knowing who matters was not enough — we also needed to know <b>who decides</b>.</p>
     </div>
     <div class="stake-pop" id="stakePop" role="dialog" aria-live="polite" hidden></div>
-    <p class="unlocks">With ownership clear: what must the system actually do?</p>
+    <p class="unlocks">With ownership clear: who are we actually designing for?</p>
+  </div></div>
+</section>
+
+<!-- =====================================================================
+     CHAPTER 4P · PERSONAS · who are we designing for?   (1 beat, dark)
+     Team-created BA personas (Seif, 24 Oct 2026), labelled on screen. Not verified employee profiles; demographic detail left off.
+     ===================================================================== -->
+<section class="scene" id="ch4p" data-beats="1" data-chapter="ch4" data-theme="dark">
+  <div class="stage"><div class="bg bg-dark"><div class="bg-grid"></div></div>
+  <div class="safe">
+    <header class="head"><p class="kicker">03 · People and ownership</p>
+      <h2 class="title title-light">Who are we actually designing these capabilities for?</h2></header>
+    <span class="tag tag-vis ps-tag">Team-created personas · based on discovery &amp; analysis</span>
+    <div class="ps-row"><!--@render:personas--></div>
+    <p class="unlocks">Once we understood their goals and pain points, those needs started becoming features.</p>
   </div></div>
 </section>
 

@@ -76,6 +76,13 @@ export function makeRenderers(D, ctx) {
       const chips = D.stakeholders.map((s, i) => (s.q === q ? `<button type="button" class="chip" data-i="${i}">${esc(s.n)}</button>` : "")).join("");
       return `<div class="quad q-${q}"><h4>${esc(Q.name)}</h4><span class="ax">${esc(Q.ax)}</span><div class="chips">${chips}</div><p class="strat">${esc(Q.strategy)}</p></div>`;
     }).join(""),
+    personas: () => D.personas.map((p, i) => `<article class="ps" data-i="${i}">
+        <header class="ps-h"><span class="ps-av">${ico(p.icon)}</span><div><b class="ps-role">${esc(p.role)}</b><span class="ps-name">${esc(p.name)}</span></div></header>
+        <p class="ps-prof">${esc(p.profile)}</p>
+        <blockquote class="ps-q">“${esc(p.quote)}”</blockquote>
+        ${[["Behaviour", p.behaviour, "ps-b"], ["Goals", p.goals, "ps-g"], ["Pain points", p.pains, "ps-p"]].map(([h, items, cls]) =>
+          `<div class="ps-sec ${cls}"><h4>${h}</h4><ul>${items.map((t) => `<li>${esc(t)}</li>`).join("")}</ul></div>`).join("")}
+      </article>`).join(""),
     raciTable: () => `<table class="raci"><thead><tr><th class="dec">Decision</th>${D.raciRoles.map((r) => `<th>${esc(r)}</th>`).join("")}</tr></thead><tbody>${D.raciRows.map(([d, cells], r) => `<tr data-r="${r}"><td class="dec">${esc(d)}</td>${cells.map((v) => `<td class="rc rc-${raciClass(v)}">${esc(v)}</td>`).join("")}</tr>`).join("")}</tbody></table>`,
 
     /* ---------- chapter 5 ---------- */

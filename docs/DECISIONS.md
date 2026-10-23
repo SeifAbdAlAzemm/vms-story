@@ -12,7 +12,7 @@ Evidence map and known content risks: `SOURCES.md`. Technical how-to: `CLAUDE.md
 - Target: Chrome / Edge, presenter-driven with keyboard or clicker. English on screen.
 - Viewports that must work: 1920×1080, 1366×768, 1280×800, 1024×768, plus 125% and 150% OS scaling.
 
-## 2. Structure — 36 beats, about 19¼ minutes
+## 2. Structure — 37 beats, about 20 minutes
 | Part | Beats | Scenes |
 |---|---|---|
 | Cover: From scattered records to clearer fleet decisions (A Business Analysis Proposal) | 1 | cover |
@@ -20,7 +20,7 @@ Evidence map and known content risks: `SOURCES.md`. Technical how-to: `CLAUDE.md
 | Prologue: meet the team → different backgrounds → one BA mindset | 3 | prologue |
 | 1 · The world we entered (operational questions at ~550-vehicle scale → from ideation to creation → one operational moment → the problem in numbers → domain orientation → research vs elicitation → kick-off) | 7 | ch1 |
 | 2 · How we worked (parallel streams → review, align, reconverge) | 2 | ch2 |
-| 3 · People and ownership | 3 | ch4 |
+| 3 · People and ownership (power / interest → engagement → RACI → personas) | 4 | ch4, ch4p |
 | 4 · Capabilities and priorities (67 features → MoSCoW) | 2 | ch5b |
 | 5 · The baseline (verification & validation → system boundary → deliberately outside → BRD → measurable objectives) | 5 | ch6a, ch3, ch6b |
 | 6 · How work flows | 3 | ch7 |
@@ -69,15 +69,15 @@ Each scene ends with an "Unlocks →" line that hands over to the next question.
 ## 7. Wording locks
 - "6 vehicles had already exceeded their license validity" is a **Kick-off finding**, never an official BRD baseline (BRD ISS-05: baselines not yet supplied).
 - Business Owner = "Business Owner / Mentor acting as Client Representative". Never present the Mentor as an employee of the organisation.
-- "From Ideation to Creation" (Ch 1 beat 2) is **team-provided content, approved by Seif (24 Oct 2026)**: Kick-off Meeting → Stakeholder Analysis & RACI → Persona → Feature List → Verification & Validation → BRD → User Story Mapping → User Stories & Exceptions → Jira → BPMN → Wireframes. Labels and order exactly as supplied. High-level overview only: no per-stage detail, no AI Agent, no extra stages, no session mapping.
+- "From Ideation to Creation" (Ch 1 beat 2) is **team-provided content, approved by Seif (24 Oct 2026)**: Kick-off Meeting → Stakeholder Analysis & RACI → Persona → Feature List → Verification & Validation → BRD → BPMN → User Stories & Exceptions → Jira → Prototype & Wireframes. Labels and order exactly as supplied. High-level overview only: no per-stage detail, no AI Agent, no extra stages, no session mapping.
 - Verification is **performed**. Validation is **partial / pending** (BRD sign-off and As-Is confirmation, ISS-10).
-- The V&V beat (beat 20) explains V&V through one worked example, F-04 Vehicle List, Search & Filter (Seif, 24 Oct 2026). "Before" = the Feature List wording, verbatim. "After" = the team's verification review, summarised and consistent with US-04. The 6 ambiguous points are shown as **marked [CONFIRM] for the stakeholder**, never as closed. The partial-validation status stays in the footnote and notes.
+- The V&V beat (beat 21) explains V&V through one worked example, F-04 Vehicle List, Search & Filter (Seif, 24 Oct 2026). "Before" = the Feature List wording, verbatim. "After" = the team's verification review, summarised and consistent with US-04. The 6 ambiguous points are shown as **marked [CONFIRM] for the stakeholder**, never as closed. The partial-validation status stays in the footnote and notes.
 - Email is not stated as a finalised notification channel (ISS-06 open).
-- Beat 28 "User Stories & Exception Handling" (Seif, 24 Oct 2026) uses US-01 Add Vehicle as its example, not the golden-thread story US-16. Vehicle ID is system-generated in US-01, so it is not listed as a user-entered duplicate.
+- Beat 29 "User Stories & Exception Handling" (Seif, 24 Oct 2026) uses US-01 Add Vehicle as its example, not the golden-thread story US-16. Vehicle ID is system-generated in US-01, so it is not listed as a user-entered duplicate.
 - "The problem in numbers" (Ch 1 beat 4) shows **external industry and market statistics, as context only**: 79% / 63% (Vimcar survey, UK), 17.7% (Motive / Wakefield), $448–$760 per vehicle / day, average vehicle downtime cost (Element Fleet Management, citing Work Truck Magazine), ~10.4M licensed vehicles 2024 and ~USD 163M → ~229M market 2025 → 2031 (Ken Research). Figures and source labels exactly as supplied by Seif (23 Oct 2026). Never present them as the organization's, its fleet's or this project's figures, and add no further statistics. The on-screen "context only" tag and footnote stay.
 - "One operational moment" (Ch 1 beat 3, presentation beat 8; Seif, 24 Oct 2026) is now **"The ignorance tax": an ILLUSTRATIVE fleet scenario**, a typical consequence of poor operational visibility, **not an incident at the VMS organization**. Monday 08:15 → truck stopped at a checkpoint → license expired 3 days ago, nobody noticed → driver stuck / delivery delayed / customer waiting / fine issued → "Human error?" crossed out → THE IGNORANCE TAX → "One bad day? The industry data says otherwise." No fine amount or other numbers, no police imagery, and never linked to the kick-off's 6 vehicles (that documented finding stays on the kick-off beat). The on-screen "Illustrative fleet scenario" tag stays.
 - Jira: state only what the screenshots show (7 epics, a reporter per epic, all visible items To Do, VMS-16 = US-16 text). **Never state a total Jira story count.** Never recreate fake Jira.
-- BPMN (06 · How work flows, Seif 24 Oct 2026): main process = Vehicle Assignment & Return, As-Is → VMS (System) lane inserted → To-Be; secondary = Vehicle Retirement As-Is (beats 25–26) / To-Be (beat 27). Redrawn from the team's four BPMN diagrams (recorded as team-provided process source); their labels and role names kept (Movements Officer, Driver, VMS (System)); Retirement translated from Arabic. Beat titles: As-Is: reactive by design · A system lane appears · To-Be: checked, recorded, released. Gold = the license path (no view of either license / check both licenses / refuse custody). The "6 vehicles" kick-off callout sits on the As-Is as a visual link, not a process-document fact. Blurry reference IDs in the To-Be annotations are left off rather than guessed.
+- BPMN (06 · How work flows, Seif 24 Oct 2026): main process = Vehicle Assignment & Return, As-Is → VMS (System) lane inserted → To-Be; secondary = Vehicle Retirement As-Is (beats 26–27) / To-Be (beat 28). Redrawn from the team's four BPMN diagrams (recorded as team-provided process source); their labels and role names kept (Movements Officer, Driver, VMS (System)); Retirement translated from Arabic. Beat titles: As-Is: reactive by design · A system lane appears · To-Be: checked, recorded, released. Gold = the license path (no view of either license / check both licenses / refuse custody). The "6 vehicles" kick-off callout sits on the As-Is as a visual link, not a process-document fact. Blurry reference IDs in the To-Be annotations are left off rather than guessed.
 - Backgrounds are shown without names: no person ↔ background mapping anywhere.
 - Closing line (approved): "We did not produce a collection of documents. We turned one operational problem into a structured, **verified**, and traceable product definition."
 
@@ -89,7 +89,10 @@ Each scene ends with an "Unlocks →" line that hands over to the next question.
 
 ## 6b. Cover and The next decision (Seif, 24 Oct 2026)
 - Cover (beat 1, before What is VMS?): "VEHICLE MANAGEMENT SYSTEM · From scattered records to clearer fleet decisions. · A BUSINESS ANALYSIS PROPOSAL", verbatim from the designer handoff. Original composition (no office/person image); plays on load. What is VMS? now plays its intro when the presenter arrives from the cover.
-- The next decision (beat 35, after Two stories meet, before Closing): "THE NEXT DECISION · More vehicles. Clearer decisions. A defined first step. · Proposed scope. Success measures to agree. Evidence to guide the investment." Decision-oriented, not a summary. Never add the handoff's ROI / payback figures (5% improvement, EGP 150,000, 50% ROI, 8-month payback, EGP 3M); they are illustrative assumptions, not a forecast. The Closing beat stays the final beat.
+- The next decision (beat 36, after Two stories meet, before Closing): "THE NEXT DECISION · More vehicles. Clearer decisions. A defined first step. · Proposed scope. Success measures to agree. Evidence to guide the investment." Decision-oriented, not a summary. Never add the handoff's ROI / payback figures (5% improvement, EGP 150,000, 50% ROI, 8-month payback, EGP 3M); they are illustrative assumptions, not a forecast. The Closing beat stays the final beat.
+
+## 6c. Personas (Seif, 24 Oct 2026)
+- Beat 18, after Who decides: RACI and before 67 features: two team-created BA personas (Fleet Director, Operations Director), dark scene `ch4p`, labelled "Team-created personas · based on discovery & analysis". They represent user needs and behaviour, not verified employee profiles. Ages, marital status, education and location stay off the slide; no new persona facts.
 
 ## 7a. Team credits (locked)
 - Prologue beat 1 "Meet the Team" (presentation beat 3, right after the opening) shows the confirmed final team list. It is a **team-provided fact, confirmed by Seif (23 Oct 2026)**, not a business-document fact.
@@ -127,3 +130,4 @@ Each scene ends with an "Unlocks →" line that hands over to the next question.
 - Unreleased — Ch 1 beat 5 "One operational moment" added after Research vs elicitation, before What the kick-off revealed (full-canvas layer, hidden in the static fallback). Reconstruction of the documented pattern (§7). Ch 1 5 → 6 beats; total 35 → 36 beats (≈ +15–20 s).
 - Unreleased — Storyline restructure (Seif, 24 Oct 2026; structural, proposed v2.0.0). Removed "The traceability chain" and "Quality layers and the backlog" (no hidden beats, no replacement slide). "The lifecycle we learned to think in" replaced by "From Ideation to Creation" (team-provided 11-stage journey) as Ch 1 beat 2. Order changed: One operational moment now follows the journey; System boundary + Deliberately outside moved into The baseline after Verification & validation; Pains and needs + Pains become features moved to the Finale as a retrospective. Golden-thread tracker kept (Feature lights at 67 features, with an F-13 · F-42 chip; Story + Criteria at Given / When / Then). Chapter labels renumbered to a continuous 01–07. Total 36 → 34 beats (≈ −1 min); 16 scenes unchanged.
 - Unreleased — Cover (beat 1) and The next decision (beat 35) added (Seif, 24 Oct 2026, §6b). 16 → 18 scenes, 34 → 36 beats (≈ +40 s). The opening's time-based intro moved from page load to arrival from the cover.
+- Unreleased — Personas beat added after RACI (§6c). 18 → 19 scenes, 36 → 37 beats (≈ +45 s).

@@ -16,3 +16,13 @@ VMS.scene("ch4", ({ tl, q, qa, at }) => {
   tl.from(qa(".rc-a, .rc-ra"), { scale: 0.55, opacity: 0.25, stagger: 0.035, duration: 0.25 }, at(2) + 0.35);
   tl.from(q(".unlocks"), { opacity: 0, duration: 0.3 }, at(2) + 0.62);
 });
+VMS.scene("ch4p", ({ tl, q, qa, at }) => {
+  // one beat: label → the two personas (header, quote, then behaviour / goals / pains) → hand-off to features
+  tl.from(q(".ps-tag"), { opacity: 0, duration: 0.2 }, at(0) + 0.08);
+  qa(".ps").forEach((p, i) => {
+    tl.from(p, { opacity: 0, x: i ? 30 : -30, duration: 0.3 }, at(0) + 0.12 + i * 0.1);
+    tl.from(p.querySelectorAll(".ps-q, .ps-sec"), { opacity: 0, y: 10, stagger: 0.06, duration: 0.18 }, at(0) + 0.35 + i * 0.1);
+  });
+  tl.from(q(".unlocks"), { opacity: 0, duration: 0.2 }, at(0) + 0.75);
+});
+

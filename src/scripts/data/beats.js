@@ -1,5 +1,5 @@
 /* =====================================================================
-   PRESENTER BEATS — 36 narrative states, ~19¼ minutes (estimate; re-time in rehearsal).
+   PRESENTER BEATS — 37 narrative states, ~20 minutes (estimate; re-time in rehearsal).
    scene  : id of the <section class="scene"> the beat belongs to (beats are
             ordered; the build checks the count per scene matches data-beats)
    thread : golden-thread step(s) that light up at this beat (optional; string or array)
@@ -46,13 +46,15 @@
     { scene: "ch2", chapter: "ch2", title: "Review, align, reconverge",
       notes: { key: "We divided the work — not the understanding. Review was not a phase; it was our operating rhythm.", why: "Create, review, align, improve, approve — after every deliverable, not only at the end.", value: "Four individual BRDs became one; the v2.0 revision resolved the contradictions we found.", next: "Next question: who matters — and who decides?" } },
 
-    // ---------------- CHAPTER 4 (~1:45) ----------------
+    // ---------------- CHAPTER 4 (~2:30) · stakeholders → engagement → RACI → personas ----------------
     { scene: "ch4", chapter: "ch4", title: "Power / Interest",
       notes: { key: "Fifteen parties identified, thirteen in scope, each scored for power and interest with a written justification.", why: "Two external parties do not use the system and were kept out.", value: "Shows who can stop the project and who lives with it every day.", next: "Each quadrant needed a different strategy." } },
     { scene: "ch4", chapter: "ch4", title: "Engagement strategies",
       notes: { key: "Manage Closely are consulted before decisions in a weekly workshop; Keep Satisfied get figures first; Keep Informed get demos.", why: "Placement note: the Decommissioning Committee and IT Director placements differ from their raw scores; we kept the team's agreed grid.", value: "Engagement effort goes where it changes outcomes.", next: "Knowing who matters was not enough." } },
     { scene: "ch4", chapter: "ch4", title: "Who decides: RACI",
-      notes: { key: "Our Simple RACI: ten key decisions, exactly one Accountable each.", why: "The full workbook covers 63 activities with one Accountable each; it refines some assignments, for example roles and access.", value: "Removes ambiguity about who signs off — before requirements are written.", next: "With ownership clear: what must the system actually do?" } },
+      notes: { key: "Our Simple RACI: ten key decisions, exactly one Accountable each.", why: "The full workbook covers 63 activities with one Accountable each; it refines some assignments, for example roles and access.", value: "Removes ambiguity about who signs off — before requirements are written.", next: "With ownership clear: who are we actually designing for?" } },
+    { scene: "ch4p", chapter: "ch4", title: "Personas: who we design for",
+      notes: { key: "Stakeholder analysis told us who matters. Personas helped us understand what those users need, how they behave, and what problems they experience: the Fleet Director wants one screen that shows what needs action today; the Operations Director needs the right vehicle ready when it is requested.", why: "These are team-created BA personas built from discovery and analysis. Names and profile details are illustrative of the role, not verified employee profiles; we left ages and other demographics off the slide on purpose.", value: "Brings the audience from the organisation chart to the actual user: their goals and pain points are what the features answer.", next: "Once we understood their goals and pain points, those needs started becoming features." } },
 
     // ---------------- CHAPTER 5 (~1:15) ----------------
     { scene: "ch5b", chapter: "ch5", title: "67 features, 12 groups", thread: "feature",

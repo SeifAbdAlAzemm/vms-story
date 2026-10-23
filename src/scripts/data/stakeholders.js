@@ -24,4 +24,21 @@
     { n: "Stores & Procurement", q: "inf", p: 2, i: 4, role: "Maintenance starts only when oil and parts are available." },
   ];
   D.stakeholderCounts = { identified: 15, inScope: 13 };
+  // TEAM-CREATED BA PERSONAS (Seif, 24 Oct 2026): analysis artifacts representing user needs and behaviour, not verified
+  // employee profiles. On screen: role, short profile, 3 behaviours, 3 goals, 3 pain points, quote. Ages, education and
+  // other demographic details from the persona sheets are deliberately left off the slide.
+  D.personas = [
+    { name: "Eng. Hesham Abdel Hamid", role: "Fleet Director", icon: "car",
+      profile: "25+ years in fleet & logistics operations · runs ~550 vehicles with a small team · reports to the Head of Authority",
+      behaviour: ["Tracks licenses in Excel and paper files, reviewed near the end of each week", "Follows up daily by phone / WhatsApp with dispatchers", "Prefers simple, direct information over long meetings"],
+      goals: ["No vehicle stops because of an expired license", "See fleet availability, maintenance and overdue status clearly", "Understand fuel and maintenance cost per vehicle"],
+      pains: ["License expiry can go unnoticed", "Data is scattered across Excel and paper", "Hard to see which vehicles are becoming expensive to operate"],
+      quote: "I just want one screen that tells me what needs action today." },
+    { name: "Mr. Tarek Soliman", role: "Operations Director", icon: "route",
+      profile: "15+ years in field operations · field teams request vehicles daily · reports shortages and delays to leadership",
+      behaviour: ["Requests vehicles in the morning by phone or WhatsApp", "Follows field teams mainly from mobile", "Thinks in terms of service impact and availability"],
+      goals: ["The right vehicle is ready when requested", "Know request status and expected vehicle availability", "Resolve shortages quickly so service is not interrupted"],
+      pains: ["Vehicles can arrive late or become unavailable unexpectedly", "No clear answer to “when will it arrive?”", "Replacements can be slow during peak periods"],
+      quote: "When I request a vehicle in the morning, the right one has to be ready." },
+  ];
 })(window.VMS_DATA = window.VMS_DATA || {});

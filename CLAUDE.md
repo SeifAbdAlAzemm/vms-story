@@ -4,7 +4,7 @@ Technical guide for this repo. Locked narrative/evidence decisions: `docs/DECISI
 
 ## What this is
 An offline, scroll-driven HTML narrative for the VMS Business Analysis final project:
-36 presenter beats (about 19¼ min). It is **not** a website and **not** a slide deck.
+37 presenter beats (about 20 min). It is **not** a website and **not** a slide deck.
 GitHub Pages serves root `index.html` from `master`.
 
 ## Default mode: fast iteration
@@ -104,7 +104,7 @@ qa/                        GENERATED output; qa/shots/ and qa/sheets/ are gitign
 ## Scene model (read before touching a scene)
 - Each scene is `<section class="scene" id data-beats data-chapter data-theme>` → sticky `.stage` (100vh) → `.safe`, a 1600×900 canvas scaled by `engine.layout()`.
   Everything inside `.safe` is positioned in canvas px. Keep content inside 1600×900, and keep the `.unlocks` line at the bottom.
-- Scenes, in order (beats): cover 1 · opening 1 · prologue 3 · ch1 7 · ch2 2 · ch4 3 · ch5b 2 · ch6a 1 · ch3 2 · ch6b 2 · ch7 3 · ch8a 1 · ch8b 1 · ch8c 1 · ch5a 2 · finale-a 2 · finale-n 1 · finale-b 1 = **36**.
+- Scenes, in order (beats): cover 1 · opening 1 · prologue 3 · ch1 7 · ch2 2 · ch4 3 · ch4p 1 · ch5b 2 · ch6a 1 · ch3 2 · ch6b 2 · ch7 3 · ch8a 1 · ch8b 1 · ch8c 1 · ch5a 2 · finale-a 2 · finale-n 1 · finale-b 1 = **37**.
   Scene ids are not chapter numbers: `ch3` (system boundary, deliberately outside) sits in chapter 05 · The baseline (rail id `ch6`) after `ch6a`, and `ch5a` (pains → features) opens the Finale.
   Visible chapter numbers run 01–07 continuously; rail ids `ch4`…`ch8` show as 03…07.
   Their CSS/JS stay in `chapter-03.*` / `chapter-05.*`. The rail and kickers follow `data-chapter`, not the id.
@@ -144,7 +144,7 @@ npm ci            # only if node_modules is missing
 The build fails on: unresolved `@render/@include` markers · scene `data-beats` total ≠ `beats.js` length or a beat in the wrong scene ·
 any external `src`/`href`/`url()` · banned strings · prototype filenames outside `prototype_0[1-5].(png|jpg|jpeg|webp)`.
 
-Expected summary: 18 scenes · 36 beats · Jira 2 · process 0 (Ch 06 BPMN is inline SVG) · `Prototype: 3/3` · ≈0.68 MB · 0 external requests.
+Expected summary: 19 scenes · 37 beats · Jira 2 · process 0 (Ch 06 BPMN is inline SVG) · `Prototype: 3/3` · ≈0.68 MB · 0 external requests.
 Mention the summary only if something differs from this.
 
 ## Screenshot of one beat
@@ -170,13 +170,13 @@ Mention the summary only if something differs from this.
 1. `data-beats` on the section.
 2. Entry in `beats.js` at the right position, with notes.
 3. Choreography in `scenes/<chapter>.js` for the new `at(k)`.
-4. The beat count (now 36) in the `beats.js` header, `src/index.html` counters, this file's scene list and `SOURCES.md` beat numbers.
+4. The beat count (now 37) in the `beats.js` header, `src/index.html` counters, this file's scene list and `SOURCES.md` beat numbers.
 5. Keep the hard-coded references below correct, but **don't run the QA suite** for this alone.
 6. Build (it checks the scene/beat mapping), then screenshot the new/affected beats.
 
-Hard-coded beat references (all in `tools/qa.mjs` unless noted): `beats === 36` (functional) and `rows.length === 36` (reduced);
-the rail chapter-jump target (ch7 → beat 25); the stakeholder popover beat (`positions[14]`, first ch4 beat); the viewport sample
-indices `[0,1,2,3,4,6,7,8,11,16,18,20,24,26,27,28,29,34]`; the reduced-motion sample indices `[0,1,2,3,4,13,22,26,29,34,35]`; the perf phase's 35 Next presses;
+Hard-coded beat references (all in `tools/qa.mjs` unless noted): `beats === 37` (functional) and `rows.length === 37` (reduced);
+the rail chapter-jump target (ch7 → beat 26); the stakeholder popover beat (`positions[14]`, first ch4 beat); the viewport sample
+indices `[0,1,2,3,4,6,7,8,11,16,17,19,21,25,27,28,29,30,35]`; the reduced-motion sample indices `[0,1,2,3,4,13,17,23,27,30,35,36]`; the perf phase's 36 Next presses;
 the scrub scene list; `tools/README.dist.txt` (prototype beat number).
 
 **New scene:**
@@ -231,5 +231,5 @@ Release checklist (final approval only):
 - [ ] full QA passes; console clean; no timeline warnings
 - [ ] contact sheets inspected
 - [ ] keyboard navigation lands on exact beats; notes and Present work
-- [ ] build summary as expected (36 beats, 0 external requests, Prototype 3/3)
+- [ ] build summary as expected (37 beats, 0 external requests, Prototype 3/3)
 - [ ] `SOURCES.md` / `docs/DECISIONS.md` reflect any changed fact, source or locked decision

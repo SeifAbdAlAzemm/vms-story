@@ -75,7 +75,7 @@
   // TEAM: "From Ideation to Creation" journey labels, provided and approved by Seif (24 Oct 2026). High-level overview of
   // the team's path, not a source-document fact and not a session/artifact mapping. Labels and order exactly as supplied.
   D.journey = ["Kick-off Meeting", "Stakeholder Analysis & RACI", "Persona", "Feature List", "Verification & Validation", "BRD",
-    "User Story Mapping", "User Stories & Exceptions", "Jira", "BPMN", "Wireframes"];
+    "BPMN", "User Stories & Exceptions", "Jira", "Prototype"];
 
   /* ---------- Chapter 2 ---------- */
   // SRC: Jira epics screenshot (7 epics)

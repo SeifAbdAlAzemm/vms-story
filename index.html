@@ -537,6 +537,26 @@ html:not(.anim) #ch1 .c1-journey { display: none; }
 #ch4 .stake-pop p { margin-top: 8px; line-height: 1.35; }
 #ch4 .stake-pop .nt { color: var(--amber); font-size: 15px; }
 
+/* CHAPTER 4P · personas (1 beat, dark). Two team-created personas side by side: role, profile, quote, behaviour / goals / pains. */
+#ch4p .ps-tag { position: absolute; right: 0; top: 0; }
+#ch4p .ps-row { position: absolute; left: 0; top: 140px; width: 1600px; display: grid; grid-template-columns: 1fr 1fr; gap: 36px; }
+#ch4p .ps { border-radius: 14px; background: rgba(16,47,77,.72); border: 1.5px solid rgba(143,179,217,.28); padding: 22px 28px 20px; }
+#ch4p .ps-h { display: flex; align-items: center; gap: 16px; }
+#ch4p .ps-av { display: grid; place-items: center; width: 58px; height: 58px; border-radius: 50%; background: rgba(111,194,184,.14); border: 2px solid var(--teal-on-dark); }
+#ch4p .ps-av .ico { font-size: 28px; color: var(--teal-on-dark); }
+#ch4p .ps-role { display: block; font-size: 28px; font-weight: 800; color: #fff; line-height: 1.1; }
+#ch4p .ps-name { display: block; margin-top: 3px; font-size: 17px; font-weight: 600; color: #A9BACB; }
+#ch4p .ps-prof { margin-top: 12px; font-size: 16px; line-height: 1.4; color: #A9BACB; }
+#ch4p .ps-q { margin: 14px 0 0; padding: 4px 0 4px 16px; border-left: 4px solid var(--teal-on-dark); font-size: 21px; line-height: 1.35; font-style: italic; font-weight: 600; color: #EAF2F7; }
+#ch4p .ps-sec { margin-top: 14px; }
+#ch4p .ps-sec h4 { font-size: 14px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+#ch4p .ps-b h4 { color: #8EA0B4; } #ch4p .ps-g h4 { color: var(--teal-on-dark); } #ch4p .ps-p h4 { color: #E6B566; }
+#ch4p .ps-sec ul { list-style: none; margin-top: 5px; display: flex; flex-direction: column; gap: 4px; }
+#ch4p .ps-sec li { position: relative; padding-left: 18px; font-size: 18px; line-height: 1.3; color: #DCE5EE; }
+#ch4p .ps-sec li::before { content: ""; position: absolute; left: 2px; top: 9px; width: 7px; height: 7px; border-radius: 50%; }
+#ch4p .ps-b li::before { background: #8EA0B4; } #ch4p .ps-g li::before { background: var(--teal-on-dark); } #ch4p .ps-p li::before { background: #E6B566; }
+
+
 /* styles/scenes/chapter-05.css */
 /* CHAPTER 5 · capabilities and priorities */
 #ch5a .c5-cols { position: absolute; left: 0; top: 176px; width: 1600px; display: grid; grid-template-columns: 540px 1fr; font-size: 16px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; color: var(--slate-2); }
@@ -927,7 +947,7 @@ html:not(.anim) #ch7 .ret-asis, html:not(.anim) #ch7 .ret-tag-asis { display: no
   <div class="rail-loop" id="reviewGlyph" title="Review loop: create · review · align · improve · approve">
     <svg viewBox="0 0 24 24" class="ico"><use href="#i-refresh-ccw"/></svg><span>Review loop</span>
   </div>
-  <div class="rail-count" id="beatCounter" aria-live="polite">01 / 36</div>
+  <div class="rail-count" id="beatCounter" aria-live="polite">01 / 37</div>
   <div class="controls" aria-label="Presenter controls">
   <button type="button" id="btnPrev" aria-label="Previous beat"><svg class="ico"><use href="#i-chevron-left"/></svg></button>
   <button type="button" id="btnNext" aria-label="Next beat"><svg class="ico"><use href="#i-chevron-right"/></svg></button>
@@ -939,7 +959,7 @@ html:not(.anim) #ch7 .ret-asis, html:not(.anim) #ch7 .ret-tag-asis { display: no
 
 
 <aside class="notes" id="notes" aria-label="Presenter notes" hidden>
-  <div class="n-head"><span id="nBeat">01 / 36</span><b id="nTitle"></b></div>
+  <div class="n-head"><span id="nBeat">01 / 37</span><b id="nTitle"></b></div>
   <div class="n-grid">
     <div><h5>Key message</h5><p id="nKey"></p></div>
     <div><h5>Why it matters</h5><p id="nWhy"></p></div>
@@ -1091,7 +1111,7 @@ html:not(.anim) #ch7 .ret-asis, html:not(.anim) #ch7 .ret-tag-asis { display: no
         <h3>From <em>Ideation</em> to <em>Creation</em></h3>
         <span class="tag tag-vis">High-level overview</span></div>
       <div class="c1-jo-line" aria-hidden="true"><i></i></div>
-      <ol class="c1-jo-steps"><li class="c1-jo-step up" data-i="0" style="left:110px"><span class="c1-jo-dot">1</span><i class="c1-jo-stem"></i><b>Kick-off Meeting</b></li><li class="c1-jo-step dn" data-i="1" style="left:248px"><span class="c1-jo-dot">2</span><i class="c1-jo-stem"></i><b>Stakeholder Analysis &amp; RACI</b></li><li class="c1-jo-step up" data-i="2" style="left:386px"><span class="c1-jo-dot">3</span><i class="c1-jo-stem"></i><b>Persona</b></li><li class="c1-jo-step dn" data-i="3" style="left:524px"><span class="c1-jo-dot">4</span><i class="c1-jo-stem"></i><b>Feature List</b></li><li class="c1-jo-step up" data-i="4" style="left:662px"><span class="c1-jo-dot">5</span><i class="c1-jo-stem"></i><b>Verification &amp; Validation</b></li><li class="c1-jo-step dn" data-i="5" style="left:800px"><span class="c1-jo-dot">6</span><i class="c1-jo-stem"></i><b>BRD</b></li><li class="c1-jo-step up" data-i="6" style="left:938px"><span class="c1-jo-dot">7</span><i class="c1-jo-stem"></i><b>User Story Mapping</b></li><li class="c1-jo-step dn" data-i="7" style="left:1076px"><span class="c1-jo-dot">8</span><i class="c1-jo-stem"></i><b>User Stories &amp; Exceptions</b></li><li class="c1-jo-step up" data-i="8" style="left:1214px"><span class="c1-jo-dot">9</span><i class="c1-jo-stem"></i><b>Jira</b></li><li class="c1-jo-step dn" data-i="9" style="left:1352px"><span class="c1-jo-dot">10</span><i class="c1-jo-stem"></i><b>BPMN</b></li><li class="c1-jo-step up" data-i="10" style="left:1490px"><span class="c1-jo-dot">11</span><i class="c1-jo-stem"></i><b>Wireframes</b></li></ol>
+      <ol class="c1-jo-steps"><li class="c1-jo-step up" data-i="0" style="left:110px"><span class="c1-jo-dot">1</span><i class="c1-jo-stem"></i><b>Kick-off Meeting</b></li><li class="c1-jo-step dn" data-i="1" style="left:248px"><span class="c1-jo-dot">2</span><i class="c1-jo-stem"></i><b>Stakeholder Analysis &amp; RACI</b></li><li class="c1-jo-step up" data-i="2" style="left:386px"><span class="c1-jo-dot">3</span><i class="c1-jo-stem"></i><b>Persona</b></li><li class="c1-jo-step dn" data-i="3" style="left:524px"><span class="c1-jo-dot">4</span><i class="c1-jo-stem"></i><b>Feature List</b></li><li class="c1-jo-step up" data-i="4" style="left:662px"><span class="c1-jo-dot">5</span><i class="c1-jo-stem"></i><b>Verification &amp; Validation</b></li><li class="c1-jo-step dn" data-i="5" style="left:800px"><span class="c1-jo-dot">6</span><i class="c1-jo-stem"></i><b>BRD</b></li><li class="c1-jo-step up" data-i="6" style="left:938px"><span class="c1-jo-dot">7</span><i class="c1-jo-stem"></i><b>BPMN</b></li><li class="c1-jo-step dn" data-i="7" style="left:1076px"><span class="c1-jo-dot">8</span><i class="c1-jo-stem"></i><b>User Stories &amp; Exceptions</b></li><li class="c1-jo-step up" data-i="8" style="left:1214px"><span class="c1-jo-dot">9</span><i class="c1-jo-stem"></i><b>Jira</b></li><li class="c1-jo-step dn" data-i="9" style="left:1352px"><span class="c1-jo-dot">10</span><i class="c1-jo-stem"></i><b>Prototype</b></li></ol>
     </div>
 
     <!-- beat 4 · the problem in numbers. EXTERNAL industry / market statistics supplied by the team (context only):
@@ -1225,7 +1245,32 @@ html:not(.anim) #ch7 .ret-asis, html:not(.anim) #ch7 .ret-tag-asis { display: no
       <p class="c4-msg">Knowing who matters was not enough — we also needed to know <b>who decides</b>.</p>
     </div>
     <div class="stake-pop" id="stakePop" role="dialog" aria-live="polite" hidden></div>
-    <p class="unlocks">With ownership clear: what must the system actually do?</p>
+    <p class="unlocks">With ownership clear: who are we actually designing for?</p>
+  </div></div>
+</section>
+
+<!-- =====================================================================
+     CHAPTER 4P · PERSONAS · who are we designing for?   (1 beat, dark)
+     Team-created BA personas (Seif, 24 Oct 2026), labelled on screen. Not verified employee profiles; demographic detail left off.
+     ===================================================================== -->
+<section class="scene" id="ch4p" data-beats="1" data-chapter="ch4" data-theme="dark">
+  <div class="stage"><div class="bg bg-dark"><div class="bg-grid"></div></div>
+  <div class="safe">
+    <header class="head"><p class="kicker">03 · People and ownership</p>
+      <h2 class="title title-light">Who are we actually designing these capabilities for?</h2></header>
+    <span class="tag tag-vis ps-tag">Team-created personas · based on discovery &amp; analysis</span>
+    <div class="ps-row"><article class="ps" data-i="0">
+        <header class="ps-h"><span class="ps-av"><svg class="ico "><use href="#i-car"/></svg></span><div><b class="ps-role">Fleet Director</b><span class="ps-name">Eng. Hesham Abdel Hamid</span></div></header>
+        <p class="ps-prof">25+ years in fleet &amp; logistics operations · runs ~550 vehicles with a small team · reports to the Head of Authority</p>
+        <blockquote class="ps-q">“I just want one screen that tells me what needs action today.”</blockquote>
+        <div class="ps-sec ps-b"><h4>Behaviour</h4><ul><li>Tracks licenses in Excel and paper files, reviewed near the end of each week</li><li>Follows up daily by phone / WhatsApp with dispatchers</li><li>Prefers simple, direct information over long meetings</li></ul></div><div class="ps-sec ps-g"><h4>Goals</h4><ul><li>No vehicle stops because of an expired license</li><li>See fleet availability, maintenance and overdue status clearly</li><li>Understand fuel and maintenance cost per vehicle</li></ul></div><div class="ps-sec ps-p"><h4>Pain points</h4><ul><li>License expiry can go unnoticed</li><li>Data is scattered across Excel and paper</li><li>Hard to see which vehicles are becoming expensive to operate</li></ul></div>
+      </article><article class="ps" data-i="1">
+        <header class="ps-h"><span class="ps-av"><svg class="ico "><use href="#i-route"/></svg></span><div><b class="ps-role">Operations Director</b><span class="ps-name">Mr. Tarek Soliman</span></div></header>
+        <p class="ps-prof">15+ years in field operations · field teams request vehicles daily · reports shortages and delays to leadership</p>
+        <blockquote class="ps-q">“When I request a vehicle in the morning, the right one has to be ready.”</blockquote>
+        <div class="ps-sec ps-b"><h4>Behaviour</h4><ul><li>Requests vehicles in the morning by phone or WhatsApp</li><li>Follows field teams mainly from mobile</li><li>Thinks in terms of service impact and availability</li></ul></div><div class="ps-sec ps-g"><h4>Goals</h4><ul><li>The right vehicle is ready when requested</li><li>Know request status and expected vehicle availability</li><li>Resolve shortages quickly so service is not interrupted</li></ul></div><div class="ps-sec ps-p"><h4>Pain points</h4><ul><li>Vehicles can arrive late or become unavailable unexpectedly</li><li>No clear answer to “when will it arrive?”</li><li>Replacements can be slow during peak periods</li></ul></div>
+      </article></div>
+    <p class="unlocks">Once we understood their goals and pain points, those needs started becoming features.</p>
   </div></div>
 </section>
 
@@ -1612,7 +1657,7 @@ html:not(.anim) #ch7 .ret-asis, html:not(.anim) #ch7 .ret-tag-asis { display: no
   // TEAM: "From Ideation to Creation" journey labels, provided and approved by Seif (24 Oct 2026). High-level overview of
   // the team's path, not a source-document fact and not a session/artifact mapping. Labels and order exactly as supplied.
   D.journey = ["Kick-off Meeting", "Stakeholder Analysis & RACI", "Persona", "Feature List", "Verification & Validation", "BRD",
-    "User Story Mapping", "User Stories & Exceptions", "Jira", "BPMN", "Wireframes"];
+    "BPMN", "User Stories & Exceptions", "Jira", "Prototype"];
 
   /* ---------- Chapter 2 ---------- */
   // SRC: Jira epics screenshot (7 epics)
@@ -1713,6 +1758,23 @@ html:not(.anim) #ch7 .ret-asis, html:not(.anim) #ch7 .ret-tag-asis { display: no
     { n: "Stores & Procurement", q: "inf", p: 2, i: 4, role: "Maintenance starts only when oil and parts are available." },
   ];
   D.stakeholderCounts = { identified: 15, inScope: 13 };
+  // TEAM-CREATED BA PERSONAS (Seif, 24 Oct 2026): analysis artifacts representing user needs and behaviour, not verified
+  // employee profiles. On screen: role, short profile, 3 behaviours, 3 goals, 3 pain points, quote. Ages, education and
+  // other demographic details from the persona sheets are deliberately left off the slide.
+  D.personas = [
+    { name: "Eng. Hesham Abdel Hamid", role: "Fleet Director", icon: "car",
+      profile: "25+ years in fleet & logistics operations · runs ~550 vehicles with a small team · reports to the Head of Authority",
+      behaviour: ["Tracks licenses in Excel and paper files, reviewed near the end of each week", "Follows up daily by phone / WhatsApp with dispatchers", "Prefers simple, direct information over long meetings"],
+      goals: ["No vehicle stops because of an expired license", "See fleet availability, maintenance and overdue status clearly", "Understand fuel and maintenance cost per vehicle"],
+      pains: ["License expiry can go unnoticed", "Data is scattered across Excel and paper", "Hard to see which vehicles are becoming expensive to operate"],
+      quote: "I just want one screen that tells me what needs action today." },
+    { name: "Mr. Tarek Soliman", role: "Operations Director", icon: "route",
+      profile: "15+ years in field operations · field teams request vehicles daily · reports shortages and delays to leadership",
+      behaviour: ["Requests vehicles in the morning by phone or WhatsApp", "Follows field teams mainly from mobile", "Thinks in terms of service impact and availability"],
+      goals: ["The right vehicle is ready when requested", "Know request status and expected vehicle availability", "Resolve shortages quickly so service is not interrupted"],
+      pains: ["Vehicles can arrive late or become unavailable unexpectedly", "No clear answer to “when will it arrive?”", "Replacements can be slow during peak periods"],
+      quote: "When I request a vehicle in the morning, the right one has to be ready." },
+  ];
 })(window.VMS_DATA = window.VMS_DATA || {});
 
 </script>
@@ -1872,7 +1934,7 @@ html:not(.anim) #ch7 .ret-asis, html:not(.anim) #ch7 .ret-tag-asis { display: no
 </script>
 <script>/* beats.js */
 /* =====================================================================
-   PRESENTER BEATS — 36 narrative states, ~19¼ minutes (estimate; re-time in rehearsal).
+   PRESENTER BEATS — 37 narrative states, ~20 minutes (estimate; re-time in rehearsal).
    scene  : id of the <section class="scene"> the beat belongs to (beats are
             ordered; the build checks the count per scene matches data-beats)
    thread : golden-thread step(s) that light up at this beat (optional; string or array)
@@ -1919,13 +1981,15 @@ html:not(.anim) #ch7 .ret-asis, html:not(.anim) #ch7 .ret-tag-asis { display: no
     { scene: "ch2", chapter: "ch2", title: "Review, align, reconverge",
       notes: { key: "We divided the work — not the understanding. Review was not a phase; it was our operating rhythm.", why: "Create, review, align, improve, approve — after every deliverable, not only at the end.", value: "Four individual BRDs became one; the v2.0 revision resolved the contradictions we found.", next: "Next question: who matters — and who decides?" } },
 
-    // ---------------- CHAPTER 4 (~1:45) ----------------
+    // ---------------- CHAPTER 4 (~2:30) · stakeholders → engagement → RACI → personas ----------------
     { scene: "ch4", chapter: "ch4", title: "Power / Interest",
       notes: { key: "Fifteen parties identified, thirteen in scope, each scored for power and interest with a written justification.", why: "Two external parties do not use the system and were kept out.", value: "Shows who can stop the project and who lives with it every day.", next: "Each quadrant needed a different strategy." } },
     { scene: "ch4", chapter: "ch4", title: "Engagement strategies",
       notes: { key: "Manage Closely are consulted before decisions in a weekly workshop; Keep Satisfied get figures first; Keep Informed get demos.", why: "Placement note: the Decommissioning Committee and IT Director placements differ from their raw scores; we kept the team's agreed grid.", value: "Engagement effort goes where it changes outcomes.", next: "Knowing who matters was not enough." } },
     { scene: "ch4", chapter: "ch4", title: "Who decides: RACI",
-      notes: { key: "Our Simple RACI: ten key decisions, exactly one Accountable each.", why: "The full workbook covers 63 activities with one Accountable each; it refines some assignments, for example roles and access.", value: "Removes ambiguity about who signs off — before requirements are written.", next: "With ownership clear: what must the system actually do?" } },
+      notes: { key: "Our Simple RACI: ten key decisions, exactly one Accountable each.", why: "The full workbook covers 63 activities with one Accountable each; it refines some assignments, for example roles and access.", value: "Removes ambiguity about who signs off — before requirements are written.", next: "With ownership clear: who are we actually designing for?" } },
+    { scene: "ch4p", chapter: "ch4", title: "Personas: who we design for",
+      notes: { key: "Stakeholder analysis told us who matters. Personas helped us understand what those users need, how they behave, and what problems they experience: the Fleet Director wants one screen that shows what needs action today; the Operations Director needs the right vehicle ready when it is requested.", why: "These are team-created BA personas built from discovery and analysis. Names and profile details are illustrative of the role, not verified employee profiles; we left ages and other demographics off the slide on purpose.", value: "Brings the audience from the organisation chart to the actual user: their goals and pain points are what the features answer.", next: "Once we understood their goals and pain points, those needs started becoming features." } },
 
     // ---------------- CHAPTER 5 (~1:15) ----------------
     { scene: "ch5b", chapter: "ch5", title: "67 features, 12 groups", thread: "feature",
@@ -2540,6 +2604,16 @@ VMS.scene("ch4", ({ tl, q, qa, at }) => {
   tl.from(qa(".rc-a, .rc-ra"), { scale: 0.55, opacity: 0.25, stagger: 0.035, duration: 0.25 }, at(2) + 0.35);
   tl.from(q(".unlocks"), { opacity: 0, duration: 0.3 }, at(2) + 0.62);
 });
+VMS.scene("ch4p", ({ tl, q, qa, at }) => {
+  // one beat: label → the two personas (header, quote, then behaviour / goals / pains) → hand-off to features
+  tl.from(q(".ps-tag"), { opacity: 0, duration: 0.2 }, at(0) + 0.08);
+  qa(".ps").forEach((p, i) => {
+    tl.from(p, { opacity: 0, x: i ? 30 : -30, duration: 0.3 }, at(0) + 0.12 + i * 0.1);
+    tl.from(p.querySelectorAll(".ps-q, .ps-sec"), { opacity: 0, y: 10, stagger: 0.06, duration: 0.18 }, at(0) + 0.35 + i * 0.1);
+  });
+  tl.from(q(".unlocks"), { opacity: 0, duration: 0.2 }, at(0) + 0.75);
+});
+
 
 </script>
 <script>/* chapter-05.js */
