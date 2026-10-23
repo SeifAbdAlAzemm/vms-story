@@ -99,14 +99,21 @@ export function makeRenderers(D, ctx) {
         <div class="pp-later"><span class="id">${esc(p.later[0])} · ${esc(p.later[2])}</span><b>${esc(p.later[1])}</b></div></div>`).join(""),
 
     /* ---------- chapter 6 ---------- */
-    vvStages: () => D.vvStages.map((s, i) => `<li data-i="${i}">${esc(s)}</li>`).join(""),
-    vvCards: () => {
-      const tag = (e) => (e === "src" ? '<span class="tag tag-src">Source</span>' : e === "team" ? '<span class="tag tag-team">Team</span>' : '<span class="tag tag-open">Pending</span>');
-      return `<div class="vv vv-ver"><span class="vv-k">Verification</span><h3>Have we documented it correctly and consistently?</h3><span class="vv-st st-done">${ico("circle-check")}Performed</span>
-          <ul>${D.verification.map((v) => `<li>${ico("circle-check", "ok")}<span>${esc(v.t)}</span>${tag(v.e)}</li>`).join("")}</ul></div>
-        <div class="vv-door" aria-hidden="true">${ico("shield-check")}</div>
-        <div class="vv vv-val"><span class="vv-k">Validation</span><h3>Are these the right business needs?</h3><span class="vv-st st-part">${ico("circle-dashed")}Partially complete</span>
-          <ul>${D.validation.map((v) => `<li class="${v.status}">${ico(v.status === "done" ? "circle-check" : "clock4", v.status === "done" ? "ok" : "wait")}<span>${esc(v.t)}</span>${tag(v.e)}</li>`).join("")}</ul></div>`;
+    vvExample: () => {
+      const X = D.vvExample;
+      return `<div class="vx-ex"><span class="vx-lbl">Worked example</span><b class="vx-id">${esc(X.id)}</b><b class="vx-name">${esc(X.name)}</b><span class="vx-meta">${esc(X.meta)}</span></div>
+        <div class="vx-cmp">
+          <div class="vx-card vx-before"><span class="vx-k">Before verification</span>
+            <p class="vx-q">${esc(X.before)}</p>
+            <b class="vx-sub">Issues found</b>
+            <ul class="vx-issues">${X.issues.map((t) => `<li>${ico("triangle-alert")}<span>${esc(t)}</span></li>`).join("")}</ul>
+            <p class="vx-more">${esc(X.more)}</p></div>
+          <div class="vx-arrow" aria-hidden="true">${ico("arrow-right")}</div>
+          <div class="vx-card vx-after"><span class="vx-k">After verification <span class="tag tag-src">Verification-ready</span></span>
+            <p class="vx-q">${esc(X.after)}</p>
+            <ul class="vx-def">${X.defined.map((d) => `<li${d.open ? ' class="open"' : ""}>${ico(d.open ? "circle-help" : "circle-check")}<b>${esc(d.k)}</b><span>${esc(d.v)}</span></li>`).join("")}</ul></div>
+        </div>
+        <div class="vx-take">${D.vvTakeaway.map((t) => `<div class="vx-t">${ico(t.icon)}<b>${esc(t.k)}</b><span class="vx-tq">${esc(t.q)}</span><span class="vx-ta">${esc(t.a)}</span></div>`).join("")}</div>`;
     },
     brdHub: () => {
       const cx = 360, cy = 360, rx = 300, ry = 255, n = D.brdInputs.length;

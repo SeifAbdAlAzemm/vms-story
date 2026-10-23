@@ -97,18 +97,34 @@
   D.noMigration = { h: "No data migration", s: "F-57 · the system starts with fresh data", link: "Kick-off: no historical vehicle data exists" };
 
   /* ---------- Chapter 6 ---------- */
-  D.vvStages = ["Draft", "Reviewed", "Aligned", "Consolidated"]; // TEAM
-  D.verification = [
-    { t: "Cross-team peer review after each deliverable", e: "team" },
-    { t: "Four team BRDs consolidated into one (BRD Ref-05)", e: "src" },
-    { t: "Internal contradictions resolved in BRD v2.0", e: "src" },
-    { t: "Trace IDs from feature to requirement to story", e: "src" },
-  ];
-  D.validation = [
-    { t: "Needs elicited with the Business Owner / Mentor", e: "src", status: "done" },
-    { t: "As-Is / To-Be processes documented as approved", e: "src", status: "done" },
-    { t: "BRD sign-off — Head of Authority (Sponsor)", e: "open", status: "pending" },
-    { t: "As-Is confirmation — Fleet Director (ISS-10)", e: "open", status: "pending" },
+  // Verification & validation, shown through one worked example: F-04.
+  // before: SRC Consolidated Feature List (A04), F-04 description, verbatim.
+  // issues / after / defined: TEAM verification review of F-04 (screenshots supplied by Seif, 24 Oct 2026), summarised.
+  //   Consistent with Module 01 V.02 US-04 (search on Vehicle ID / Plate / VIN / Model; Type / Brand / Status filters;
+  //   AND across filters; empty state, paging, sorting). The 6 open points went to the stakeholder marked [CONFIRM]: not closed.
+  D.vvExample = {
+    id: "F-04", name: "Vehicle List, Search & Filter", meta: "Must · Confirmed",
+    before: "Browse and filter the vehicle list by attributes such as type, brand, status, and other key fields.",
+    issues: [
+      "“Search” is in the name, but no search fields are defined",
+      "“Other key fields” is vague, so it can't be tested",
+      "Several filters at once: AND or OR?",
+      "Browse undefined: paging, sorting, empty results",
+      "Archived vehicles and performance not addressed",
+    ],
+    more: "+ 8 more points in the verification review",
+    after: "Authorized users can view, search and filter the vehicle list using defined search fields and attributes, with clear handling of empty results and large result sets.",
+    defined: [
+      { k: "Search", v: "Vehicle ID · Plate Number · VIN/Chassis · Model" },
+      { k: "Filters", v: "Type · Brand · Status" },
+      { k: "Logic", v: "Multiple filters use AND · search works with filters" },
+      { k: "Baseline", v: "Empty state · Pagination · Sorting" },
+      { k: "Open points", v: "6 marked [CONFIRM] for the stakeholder", open: true },
+    ],
+  };
+  D.vvTakeaway = [
+    { k: "Validation", q: "Are we solving the right need?", a: "Checked with the stakeholder", icon: "messages-square" },
+    { k: "Verification", q: "Did we write it the right way?", a: "Clear, specific and testable", icon: "list-checks" },
   ];
   D.brdInputs = ["Problem", "Scope", "Stakeholders", "RACI", "Features", "Rules", "Open questions"];
   D.brdLayers = [

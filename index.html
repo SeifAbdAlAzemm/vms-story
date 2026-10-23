@@ -576,25 +576,43 @@ html:not(.anim) #ch1 .c1-journey { display: none; }
 #ch5b .pp-vs { display: grid; place-items: center; color: var(--mute); font-size: 24px; }
 
 /* styles/scenes/chapter-06.css */
-/* CHAPTER 6 · the baseline */
-#ch6a .c6-stages { position: absolute; left: 0; top: 170px; width: 1600px; list-style: none; display: flex; justify-content: center; gap: 0; }
-#ch6a .c6-stages li { font-size: 19px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--steel); padding: 8px 22px; background: var(--steel-l); position: relative; }
-#ch6a .c6-stages li:first-child { border-radius: 20px 0 0 20px; } #ch6a .c6-stages li:last-child { border-radius: 0 20px 20px 0; background: var(--teal); color: #fff; }
-#ch6a .c6-stages li + li { margin-left: 4px; }
-#ch6a .c6-gate { position: absolute; left: 0; top: 262px; width: 1600px; height: 500px; display: grid; grid-template-columns: 1fr 120px 1fr; }
-#ch6a .vv { border-radius: 14px; padding: 28px 32px; background: #fff; border: 1px solid var(--line); position: relative; }
-#ch6a .vv-ver { border-top: 0; box-shadow: inset 0 6px 0 var(--teal); }
-#ch6a .vv-val { box-shadow: inset 0 6px 0 var(--amber); }
-#ch6a .vv-k { font-size: 18px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; color: var(--slate-2); }
-#ch6a .vv h3 { margin-top: 6px; font-size: 32px; line-height: 1.2; color: var(--navy); max-width: 600px; }
-#ch6a .vv-st { display: inline-flex; align-items: center; gap: 8px; margin-top: 14px; font-size: 18px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; padding: 6px 14px; border-radius: 6px; }
-#ch6a .st-done { background: var(--teal-l); color: var(--teal); } #ch6a .st-part { background: var(--amber-l); color: var(--amber); }
-#ch6a .vv ul { list-style: none; margin-top: 26px; display: flex; flex-direction: column; gap: 20px; }
-#ch6a .vv li { display: grid; grid-template-columns: 30px 1fr auto; gap: 12px; align-items: center; font-size: 23px; color: var(--ink); line-height: 1.25; }
-#ch6a .vv li .ico { font-size: 26px; }
-#ch6a .ico.ok { color: var(--teal); } #ch6a .ico.wait { color: var(--amber); }
-#ch6a .vv li.pending span:not(.tag) { color: var(--slate); }
-#ch6a .vv-door { display: grid; place-items: center; color: var(--navy); font-size: 64px; }
+/* CHAPTER 6 (shown as 05 · The baseline) · ch6a = V&V worked example (F-04) ; ch6b = BRD */
+#ch6a .c6-sub { margin-top: 6px; font-size: 22px; font-weight: 600; color: var(--slate); }
+#ch6a .vx-ex { position: absolute; left: 0; top: 196px; width: 1600px; display: flex; align-items: baseline; gap: 14px; }
+#ch6a .vx-lbl { font-size: 15px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; color: var(--slate-2); }
+#ch6a .vx-id { font-size: 26px; font-weight: 820; color: var(--teal); }
+#ch6a .vx-name { font-size: 26px; font-weight: 760; color: var(--navy); }
+#ch6a .vx-meta { font-size: 17px; font-weight: 650; color: var(--slate-2); }
+#ch6a .vx-cmp { position: absolute; left: 0; top: 248px; width: 1600px; height: 476px; display: grid; grid-template-columns: 700px 1fr 800px; }
+#ch6a .vx-card { border-radius: 14px; background: #fff; border: 1px solid var(--line); padding: 22px 28px; }
+#ch6a .vx-before { box-shadow: inset 0 6px 0 var(--amber); }
+#ch6a .vx-after { box-shadow: inset 0 6px 0 var(--teal); }
+#ch6a .vx-k { display: flex; align-items: center; gap: 12px; font-size: 18px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+#ch6a .vx-before .vx-k { color: var(--amber); } #ch6a .vx-after .vx-k { color: var(--teal); }
+#ch6a .vx-k .tag { letter-spacing: .06em; }
+#ch6a .vx-q { margin-top: 12px; padding-left: 16px; border-left: 4px solid var(--line); font-size: 21px; line-height: 1.38; color: var(--ink); }
+#ch6a .vx-before .vx-q { font-style: italic; color: var(--slate); }
+#ch6a .vx-after .vx-q { border-left-color: var(--teal); }
+#ch6a .vx-sub { display: block; margin-top: 18px; font-size: 15px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--slate-2); }
+#ch6a .vx-issues, #ch6a .vx-def { list-style: none; margin-top: 8px; display: flex; flex-direction: column; }
+#ch6a .vx-issues li { display: grid; grid-template-columns: 30px 1fr; gap: 10px; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--line-2); font-size: 20px; line-height: 1.25; color: var(--ink); }
+#ch6a .vx-issues .ico { font-size: 22px; color: var(--amber); }
+#ch6a .vx-more { margin-top: 8px; font-size: 16px; color: var(--slate-2); }
+#ch6a .vx-arrow { display: grid; place-items: center; color: var(--teal); font-size: 44px; }
+#ch6a .vx-def { margin-top: 14px; }
+#ch6a .vx-def li { display: grid; grid-template-columns: 30px 140px 1fr; gap: 10px; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--line-2); font-size: 20px; line-height: 1.25; }
+#ch6a .vx-def .ico { font-size: 22px; color: var(--teal); }
+#ch6a .vx-def b { font-size: 15px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--slate-2); }
+#ch6a .vx-def span { color: var(--ink); font-weight: 600; }
+#ch6a .vx-def li.open .ico { color: var(--amber); }
+#ch6a .vx-def li.open span { color: var(--amber); }
+#ch6a .vx-take { position: absolute; left: 0; top: 748px; width: 1600px; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+#ch6a .vx-t { display: grid; grid-template-columns: 40px auto 1fr; grid-template-rows: auto auto; column-gap: 14px; align-items: center; padding: 14px 22px; border-radius: 12px; background: var(--navy); color: #fff; }
+#ch6a .vx-t .ico { grid-row: 1 / 3; font-size: 32px; color: var(--teal-on-dark); }
+#ch6a .vx-t b { grid-row: 1 / 3; font-size: 24px; font-weight: 820; padding-right: 8px; }
+#ch6a .vx-tq { font-size: 21px; font-weight: 700; }
+#ch6a .vx-ta { font-size: 16px; color: #A9BDD2; }
+#ch6a .src-foot { font-size: 14px; }
 
 #ch6b .c6-hub { position: absolute; left: 0; top: 160px; width: 720px; height: 720px; }
 #ch6b .hub-lines { position: absolute; inset: 0; width: 720px; height: 720px; }
@@ -1150,19 +1168,28 @@ html:not(.anim) #ch1 .c1-journey { display: none; }
 </section>
 
 <!-- =====================================================================
-     CHAPTER 6A · VERIFICATION / VALIDATION GATE   (1 beat)
+     CHAPTER 6A · VERIFICATION & VALIDATION, shown through one worked example (F-04)   (1 beat)
      ===================================================================== -->
 <section class="scene" id="ch6a" data-beats="1" data-chapter="ch6" data-theme="light">
   <div class="stage"><div class="bg bg-light"></div>
   <div class="safe">
     <header class="head"><p class="kicker">05 · The baseline</p>
-      <h2 class="title">Did we get it right?</h2></header>
-    <ol class="c6-stages"><li data-i="0">Draft</li><li data-i="1">Reviewed</li><li data-i="2">Aligned</li><li data-i="3">Consolidated</li></ol>
-    <div class="c6-gate"><div class="vv vv-ver"><span class="vv-k">Verification</span><h3>Have we documented it correctly and consistently?</h3><span class="vv-st st-done"><svg class="ico "><use href="#i-circle-check"/></svg>Performed</span>
-          <ul><li><svg class="ico ok"><use href="#i-circle-check"/></svg><span>Cross-team peer review after each deliverable</span><span class="tag tag-team">Team</span></li><li><svg class="ico ok"><use href="#i-circle-check"/></svg><span>Four team BRDs consolidated into one (BRD Ref-05)</span><span class="tag tag-src">Source</span></li><li><svg class="ico ok"><use href="#i-circle-check"/></svg><span>Internal contradictions resolved in BRD v2.0</span><span class="tag tag-src">Source</span></li><li><svg class="ico ok"><use href="#i-circle-check"/></svg><span>Trace IDs from feature to requirement to story</span><span class="tag tag-src">Source</span></li></ul></div>
-        <div class="vv-door" aria-hidden="true"><svg class="ico "><use href="#i-shield-check"/></svg></div>
-        <div class="vv vv-val"><span class="vv-k">Validation</span><h3>Are these the right business needs?</h3><span class="vv-st st-part"><svg class="ico "><use href="#i-circle-dashed"/></svg>Partially complete</span>
-          <ul><li class="done"><svg class="ico ok"><use href="#i-circle-check"/></svg><span>Needs elicited with the Business Owner / Mentor</span><span class="tag tag-src">Source</span></li><li class="done"><svg class="ico ok"><use href="#i-circle-check"/></svg><span>As-Is / To-Be processes documented as approved</span><span class="tag tag-src">Source</span></li><li class="pending"><svg class="ico wait"><use href="#i-clock4"/></svg><span>BRD sign-off — Head of Authority (Sponsor)</span><span class="tag tag-open">Pending</span></li><li class="pending"><svg class="ico wait"><use href="#i-clock4"/></svg><span>As-Is confirmation — Fleet Director (ISS-10)</span><span class="tag tag-open">Pending</span></li></ul></div></div>
+      <h2 class="title">Verification &amp; Validation</h2>
+      <p class="c6-sub">Turning vague requirements into clear, testable ones</p></header>
+    <div class="vx-ex"><span class="vx-lbl">Worked example</span><b class="vx-id">F-04</b><b class="vx-name">Vehicle List, Search &amp; Filter</b><span class="vx-meta">Must · Confirmed</span></div>
+        <div class="vx-cmp">
+          <div class="vx-card vx-before"><span class="vx-k">Before verification</span>
+            <p class="vx-q">Browse and filter the vehicle list by attributes such as type, brand, status, and other key fields.</p>
+            <b class="vx-sub">Issues found</b>
+            <ul class="vx-issues"><li><svg class="ico "><use href="#i-triangle-alert"/></svg><span>“Search” is in the name, but no search fields are defined</span></li><li><svg class="ico "><use href="#i-triangle-alert"/></svg><span>“Other key fields” is vague, so it can't be tested</span></li><li><svg class="ico "><use href="#i-triangle-alert"/></svg><span>Several filters at once: AND or OR?</span></li><li><svg class="ico "><use href="#i-triangle-alert"/></svg><span>Browse undefined: paging, sorting, empty results</span></li><li><svg class="ico "><use href="#i-triangle-alert"/></svg><span>Archived vehicles and performance not addressed</span></li></ul>
+            <p class="vx-more">+ 8 more points in the verification review</p></div>
+          <div class="vx-arrow" aria-hidden="true"><svg class="ico "><use href="#i-arrow-right"/></svg></div>
+          <div class="vx-card vx-after"><span class="vx-k">After verification <span class="tag tag-src">Verification-ready</span></span>
+            <p class="vx-q">Authorized users can view, search and filter the vehicle list using defined search fields and attributes, with clear handling of empty results and large result sets.</p>
+            <ul class="vx-def"><li><svg class="ico "><use href="#i-circle-check"/></svg><b>Search</b><span>Vehicle ID · Plate Number · VIN/Chassis · Model</span></li><li><svg class="ico "><use href="#i-circle-check"/></svg><b>Filters</b><span>Type · Brand · Status</span></li><li><svg class="ico "><use href="#i-circle-check"/></svg><b>Logic</b><span>Multiple filters use AND · search works with filters</span></li><li><svg class="ico "><use href="#i-circle-check"/></svg><b>Baseline</b><span>Empty state · Pagination · Sorting</span></li><li class="open"><svg class="ico "><use href="#i-circle-help"/></svg><b>Open points</b><span>6 marked [CONFIRM] for the stakeholder</span></li></ul></div>
+        </div>
+        <div class="vx-take"><div class="vx-t"><svg class="ico "><use href="#i-messages-square"/></svg><b>Validation</b><span class="vx-tq">Are we solving the right need?</span><span class="vx-ta">Checked with the stakeholder</span></div><div class="vx-t"><svg class="ico "><use href="#i-list-checks"/></svg><b>Verification</b><span class="vx-tq">Did we write it the right way?</span><span class="vx-ta">Clear, specific and testable</span></div></div>
+    <p class="src src-foot">“Before”: Consolidated Feature List (A04), F-04 · “After”: team verification review, consistent with Module 01 US-04 · Overall validation still partial: BRD sign-off and As-Is confirmation pending (ISS-10)</p>
   </div></div>
 </section>
 
@@ -1567,18 +1594,34 @@ html:not(.anim) #ch1 .c1-journey { display: none; }
   D.noMigration = { h: "No data migration", s: "F-57 · the system starts with fresh data", link: "Kick-off: no historical vehicle data exists" };
 
   /* ---------- Chapter 6 ---------- */
-  D.vvStages = ["Draft", "Reviewed", "Aligned", "Consolidated"]; // TEAM
-  D.verification = [
-    { t: "Cross-team peer review after each deliverable", e: "team" },
-    { t: "Four team BRDs consolidated into one (BRD Ref-05)", e: "src" },
-    { t: "Internal contradictions resolved in BRD v2.0", e: "src" },
-    { t: "Trace IDs from feature to requirement to story", e: "src" },
-  ];
-  D.validation = [
-    { t: "Needs elicited with the Business Owner / Mentor", e: "src", status: "done" },
-    { t: "As-Is / To-Be processes documented as approved", e: "src", status: "done" },
-    { t: "BRD sign-off — Head of Authority (Sponsor)", e: "open", status: "pending" },
-    { t: "As-Is confirmation — Fleet Director (ISS-10)", e: "open", status: "pending" },
+  // Verification & validation, shown through one worked example: F-04.
+  // before: SRC Consolidated Feature List (A04), F-04 description, verbatim.
+  // issues / after / defined: TEAM verification review of F-04 (screenshots supplied by Seif, 24 Oct 2026), summarised.
+  //   Consistent with Module 01 V.02 US-04 (search on Vehicle ID / Plate / VIN / Model; Type / Brand / Status filters;
+  //   AND across filters; empty state, paging, sorting). The 6 open points went to the stakeholder marked [CONFIRM]: not closed.
+  D.vvExample = {
+    id: "F-04", name: "Vehicle List, Search & Filter", meta: "Must · Confirmed",
+    before: "Browse and filter the vehicle list by attributes such as type, brand, status, and other key fields.",
+    issues: [
+      "“Search” is in the name, but no search fields are defined",
+      "“Other key fields” is vague, so it can't be tested",
+      "Several filters at once: AND or OR?",
+      "Browse undefined: paging, sorting, empty results",
+      "Archived vehicles and performance not addressed",
+    ],
+    more: "+ 8 more points in the verification review",
+    after: "Authorized users can view, search and filter the vehicle list using defined search fields and attributes, with clear handling of empty results and large result sets.",
+    defined: [
+      { k: "Search", v: "Vehicle ID · Plate Number · VIN/Chassis · Model" },
+      { k: "Filters", v: "Type · Brand · Status" },
+      { k: "Logic", v: "Multiple filters use AND · search works with filters" },
+      { k: "Baseline", v: "Empty state · Pagination · Sorting" },
+      { k: "Open points", v: "6 marked [CONFIRM] for the stakeholder", open: true },
+    ],
+  };
+  D.vvTakeaway = [
+    { k: "Validation", q: "Are we solving the right need?", a: "Checked with the stakeholder", icon: "messages-square" },
+    { k: "Verification", q: "Did we write it the right way?", a: "Clear, specific and testable", icon: "list-checks" },
   ];
   D.brdInputs = ["Problem", "Scope", "Stakeholders", "RACI", "Features", "Rules", "Open questions"];
   D.brdLayers = [
@@ -1839,7 +1882,7 @@ html:not(.anim) #ch1 .c1-journey { display: none; }
 
     // ---------------- CHAPTER 6 · verification → boundary → BRD (~3:15) ----------------
     { scene: "ch6a", chapter: "ch6", title: "Verification and validation",
-      notes: { key: "Verification — have we documented it correctly? — was performed. Validation — are these the right needs? — is partially complete.", why: "Processes are documented as approved; BRD sign-off by the Sponsor and the Fleet Director's As-Is confirmation are still pending.", value: "We catch problems before they become expensive requirements, and we say honestly what is still open.", next: "Then we confirmed the boundary: what is inside VMS?" } },
+      notes: { key: "One requirement, before and after. F-04 in the Feature List said: browse and filter by type, brand, status 'and other key fields'. Verification found it vague and untestable. The refined wording names the search fields, the filter fields, AND logic for multiple filters, and baseline list behaviour: empty state, pagination, sorting.", why: "Verification asks: did we write it the right way, clear and testable? Validation asks: are we solving the right need? That is checked with the stakeholder, so the six open points went to them marked [CONFIRM]. They are not closed yet. Overall validation is still partial: BRD sign-off and the Fleet Director's As-Is confirmation are pending (ISS-10).", value: "Nobody can test 'other key fields'; a QA engineer can test the after version. The same detail reappears in US-04's acceptance criteria (AND across filters, empty state, sorting, 25 per page).", next: "Then we confirmed the boundary: what is inside VMS?" } },
     { scene: "ch3", chapter: "ch6", title: "The system boundary",
       notes: { key: "The Project Overview and Scope turned a fuzzy problem into an agreed boundary: eleven areas inside VMS.", why: "Research and elicitation produced many possible needs; scope chose which belong.", value: "Every later artifact measures itself against this one baseline. Where the Feature List differed, the Scope won.", next: "Just as important is what stays outside." } },
     { scene: "ch3", chapter: "ch6", title: "Deliberately outside",
@@ -2434,13 +2477,17 @@ VMS.scene("ch5b", ({ tl, q, qa, at, count }) => {
 
 </script>
 <script>/* chapter-06.js */
-/* CHAPTER 6 · verification / validation gate ; artifacts converge into the BRD */
+/* CHAPTER 6 (05 · The baseline) · V&V worked example (F-04) ; artifacts converge into the BRD */
 VMS.scene("ch6a", ({ tl, q, qa, at }) => {
-  tl.from(qa(".c6-stages li"), { opacity: 0, x: -14, stagger: 0.08, duration: 0.3 }, at(0) + 0.05);
-  tl.from(q(".vv-ver"), { opacity: 0, x: -30, duration: 0.5 }, at(0) + 0.15);
-  tl.from(q(".vv-door"), { opacity: 0, scale: 0.7, duration: 0.4 }, at(0) + 0.35);
-  tl.from(q(".vv-val"), { opacity: 0, x: 30, duration: 0.5 }, at(0) + 0.4);
-  tl.from(qa(".vv li"), { opacity: 0, y: 8, stagger: 0.03, duration: 0.3 }, at(0) + 0.45);
+  // one beat: the example → before (vague wording + issues) → after (refined wording + what became defined) → takeaway
+  tl.from(q(".vx-ex"), { opacity: 0, y: 10, duration: 0.2 }, at(0) + 0.1);
+  tl.from(q(".vx-before"), { opacity: 0, x: -24, duration: 0.25 }, at(0) + 0.16);
+  tl.from(qa(".vx-issues li"), { opacity: 0, x: -10, stagger: 0.04, duration: 0.15 }, at(0) + 0.26);
+  tl.from(q(".vx-arrow"), { opacity: 0, x: -10, duration: 0.15 }, at(0) + 0.46);
+  tl.from(q(".vx-after"), { opacity: 0, x: 24, duration: 0.25 }, at(0) + 0.5);
+  tl.from(qa(".vx-def li"), { opacity: 0, x: 10, stagger: 0.04, duration: 0.15 }, at(0) + 0.58);
+  tl.from(qa(".vx-t"), { opacity: 0, y: 12, stagger: 0.06, duration: 0.18 }, at(0) + 0.74);
+  tl.from(q(".src-foot"), { opacity: 0, duration: 0.15 }, at(0) + 0.8);
 });
 VMS.scene("ch6b", ({ tl, q, qa, at, draw }) => {
   const chips = qa(".hub-chip");
