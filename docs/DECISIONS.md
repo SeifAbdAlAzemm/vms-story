@@ -34,9 +34,8 @@ Each scene ends with an "Unlocks →" line that hands over to the next question.
 
 ## 3. Persistent devices (do not remove)
 - **13-SESSION BA JOURNEY rail**: chapters as phases. There is no session → artifact mapping.
-- **Golden thread = vehicle license expiry.** Tracker nodes: Kick-off → Feature → Requirement → BPMN → User story → Criteria → Jira → Prototype.
-  - Tracker progression: Kick-off at the kick-off findings · Feature at 67 features (small gold chip F-13 · F-42 on that beat) · Requirement at the BRD · BPMN at the As-Is (the license blind spot at assignment) · User story + Criteria together at Given / When / Then (the US-16 card) · Jira · Prototype. Pains become features (Finale) is a retrospective and lights nothing new.
-  - On screen: kick-off finding → F-13 · F-42 (chip on 67 features) → BR-033 · BRL-04 → To-Be BPMN (VMS checks both licenses before custody) → US-16 → VMS-16 → License Register; F-13 · F-42 reappear in the Finale retrospective.
+- **Golden thread tracker = the BA journey** (top-right, Seif 24 Oct 2026): Stakeholder Analysis (beat 15, Power / Interest) → Persona (beat 18) → Verification & Validation (beat 21) → BRD (beat 24, Everything converges into the BRD) → User Stories (beat 29). Each milestone lights on its beat and stays lit; the old tracker (Kick-off → Feature → Requirement → BPMN → Story → Criteria → Jira → Prototype) is retired.
+  - The on-screen golden-thread content is unchanged: vehicle license expiry, shown in gold (kick-off finding, F-13 · F-42 chip, BR-033 · BRL-04, the license path in the BPMN, VMS-16, License Register).
 - **Review loop** CREATE → REVIEW → ALIGN → IMPROVE → APPROVE. It ticks at chapter hand-offs.
 - **Design track** on the rail from Chapter 04 (Capabilities and priorities) onward: wireframes and the prototype ran in parallel with the analysis.
 
@@ -131,3 +130,4 @@ Each scene ends with an "Unlocks →" line that hands over to the next question.
 - Unreleased — Storyline restructure (Seif, 24 Oct 2026; structural, proposed v2.0.0). Removed "The traceability chain" and "Quality layers and the backlog" (no hidden beats, no replacement slide). "The lifecycle we learned to think in" replaced by "From Ideation to Creation" (team-provided 11-stage journey) as Ch 1 beat 2. Order changed: One operational moment now follows the journey; System boundary + Deliberately outside moved into The baseline after Verification & validation; Pains and needs + Pains become features moved to the Finale as a retrospective. Golden-thread tracker kept (Feature lights at 67 features, with an F-13 · F-42 chip; Story + Criteria at Given / When / Then). Chapter labels renumbered to a continuous 01–07. Total 36 → 34 beats (≈ −1 min); 16 scenes unchanged.
 - Unreleased — Cover (beat 1) and The next decision (beat 35) added (Seif, 24 Oct 2026, §6b). 16 → 18 scenes, 34 → 36 beats (≈ +40 s). The opening's time-based intro moved from page load to arrival from the cover.
 - Unreleased — Personas beat added after RACI (§6c). 18 → 19 scenes, 36 → 37 beats (≈ +45 s).
+- Unreleased — Golden thread tracker re-pointed to the BA journey: Stakeholder Analysis → Persona → Verification & Validation → BRD → User Stories (beats 15 · 18 · 21 · 24 · 29). Beat content unchanged.

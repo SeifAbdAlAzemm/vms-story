@@ -21,16 +21,14 @@
   ];
   D.designTrackFrom = "ch5"; // TEAM: wireframes/prototype ran in parallel with analysis
 
-  /* ---------- Golden thread: vehicle license expiry (story order) ---------- */
+  /* ---------- Golden thread tracker: the BA journey through five key analysis artifacts (Seif, 24 Oct 2026) ----------
+     Each milestone lights on its beat (beats.js `thread`) and stays lit. Story order = presentation order. */
   D.thread = [
-    { id: "kickoff", label: "Kick-off" },
-    { id: "feature", label: "Feature" },
-    { id: "requirement", label: "Requirement" },
-    { id: "bpmn", label: "BPMN" },
-    { id: "story", label: "User story" },
-    { id: "criteria", label: "Criteria" },
-    { id: "jira", label: "Jira" },
-    { id: "prototype", label: "Prototype" },
+    { id: "stakeholders", label: "Stakeholder Analysis" },
+    { id: "persona", label: "Persona" },
+    { id: "vv", label: "Verification & Validation" },
+    { id: "brd", label: "BRD" },
+    { id: "stories", label: "User Stories" },
   ];
 
   /* ---------- Opening · What is VMS? ---------- */
