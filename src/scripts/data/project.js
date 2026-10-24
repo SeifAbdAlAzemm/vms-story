@@ -85,20 +85,6 @@
   D.streams = ["Vehicle Management", "Driver Management & Assignment", "Maintenance & Repair Centers", "Movements & Fuel", "Notifications", "Roles & Permissions", "BRD & Other documents"];
   D.reviewLoop = ["Create", "Review", "Align", "Improve", "Approve"];
 
-  /* ---------- Chapter 6 · system boundary + exclusions (scene ch3) (SRC: Project Scope §1.1–1.11, BRD §6) ---------- */
-  D.scopeGroups = [
-    { name: "Fleet records", tone: "navy", items: [["car", "Vehicle Management"], ["id-card", "Driver Management"], ["tag", "Vehicle Brands"], ["landmark", "Licensing Authorities"]] },
-    { name: "Operations", tone: "teal", items: [["route", "Movement Log"], ["fuel", "Fuel Management"], ["wrench", "Maintenance Management"], ["warehouse", "Repair Centers"]] },
-    { name: "Control & insight", tone: "steel", items: [["bell-ring", "Notifications"], ["lock-keyhole", "Roles & Permissions"], ["chart-column", "Reports"]] },
-  ];
-  D.exclusions = [
-    { h: "GPS, route tracking & geofencing", s: "F-36 · F-67 · Phase 2 candidate" },
-    { h: "Online vehicle requests & trip approval", s: "F-30 · F-31 · boundary still open (ISS-03)" },
-    { h: "Vehicle reservation (advance booking)", s: "F-35" },
-    { h: "Fuel request & approval flow", s: "F-41 · fuel is recorded, not requested" },
-  ];
-  D.noMigration = { h: "No data migration", s: "F-57 · the system starts with fresh data", link: "Kick-off: no historical vehicle data exists" };
-
   /* ---------- Chapter 6 ---------- */
   // Verification & validation, shown through one worked example: F-04.
   // before: SRC Consolidated Feature List (A04), F-04 description, verbatim.
@@ -129,8 +115,18 @@
     { k: "Validation", q: "Are we solving the right need?", a: "Checked with the stakeholder", icon: "messages-square" },
     { k: "Verification", q: "Did we write it the right way?", a: "Clear, specific and testable", icon: "list-checks" },
   ];
+  // How the BRD evolved (SRC: BRD-VMS-003 §1.1 revision history: v1.0 consolidated baseline merging all individual BRDs;
+  // v2.0 conflict-resolution revision, contradictions found in the audit resolved (Appendix B); cover: v3.0 consolidated,
+  // conflict-resolved, for mentor and Sponsor review; Ref-05: four individual team BRDs merged).
+  D.brdEvolution = [
+    { k: "Individual drafts", t: "Four individual team BRDs, drafted separately.", art: "drafts" },
+    { k: "V1 · Consolidated baseline", t: "The individual drafts were brought together into one consolidated BRD.", art: "v1" },
+    { k: "V2 · Align & resolve", t: "Conflicts and inconsistencies found in the review were resolved.", art: "v2" },
+    { k: "V3 · Refined baseline", t: "One coherent, conflict-resolved baseline, ready for Mentor / Sponsor review.", art: "v3" },
+  ];
   D.brdInputs = ["Problem", "Scope", "Stakeholders", "RACI", "Features", "Rules", "Open questions"];
   D.brdLayers = [
+    { v: "11", l: "Scope areas in", s: "18 documented exclusions out" },
     { v: "3", l: "Objectives" },
     { v: "42", l: "Business requirements", s: "40 Must" },
     { v: "16", l: "Business rules" },

@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="styles/scenes/prologue.css">
 <link rel="stylesheet" href="styles/scenes/chapter-01.css">
 <link rel="stylesheet" href="styles/scenes/chapter-02.css">
-<link rel="stylesheet" href="styles/scenes/chapter-03.css">
+<link rel="stylesheet" href="styles/scenes/chapter-06-evolution.css">
 <link rel="stylesheet" href="styles/scenes/chapter-04.css">
 <link rel="stylesheet" href="styles/scenes/chapter-05.css">
 <link rel="stylesheet" href="styles/scenes/chapter-06.css">
@@ -45,7 +45,7 @@
   <div class="rail-loop" id="reviewGlyph" title="Review loop: create · review · align · improve · approve">
     <svg viewBox="0 0 24 24" class="ico"><use href="#i-refresh-ccw"/></svg><span>Review loop</span>
   </div>
-  <div class="rail-count" id="beatCounter" aria-live="polite">01 / 39</div>
+  <div class="rail-count" id="beatCounter" aria-live="polite">01 / 38</div>
   <div class="controls" aria-label="Presenter controls">
   <button type="button" id="btnPrev" aria-label="Previous beat"><svg class="ico"><use href="#i-chevron-left"/></svg></button>
   <button type="button" id="btnNext" aria-label="Next beat"><svg class="ico"><use href="#i-chevron-right"/></svg></button>
@@ -57,7 +57,7 @@
 
 
 <aside class="notes" id="notes" aria-label="Presenter notes" hidden>
-  <div class="n-head"><span id="nBeat">01 / 39</span><b id="nTitle"></b></div>
+  <div class="n-head"><span id="nBeat">01 / 38</span><b id="nTitle"></b></div>
   <div class="n-grid">
     <div><h5>Key message</h5><p id="nKey"></p></div>
     <div><h5>Why it matters</h5><p id="nWhy"></p></div>
@@ -395,31 +395,24 @@
 </section>
 
 <!-- =====================================================================
-     CHAPTER 6 · THE BASELINE · SYSTEM BOUNDARY → DELIBERATELY OUTSIDE   (2 beats)
-     Scene id stays "ch3" (styles/scenes/chapter-03.css, scripts/scenes/chapter-03.js); it now belongs to chapter 05 · The baseline (rail id ch6).
+     CHAPTER 6E · HOW THE BRD EVOLVED   (1 beat)
+     Individual drafts → v1.0 consolidated → v2.0 conflict resolution → v3.0 refined baseline (BRD-VMS-003 revision history).
+     The standalone Scope beats were removed (Seif, 24 Oct 2026); Scope now appears as a layer of the BRD convergence.
      ===================================================================== -->
-<section class="scene" id="ch3" data-beats="2" data-chapter="ch6" data-theme="light">
+<section class="scene" id="ch6e" data-beats="1" data-chapter="ch6" data-theme="light">
   <div class="stage"><div class="bg bg-light"></div>
   <div class="safe">
     <header class="head"><p class="kicker">05 · The baseline</p>
-      <h2 class="title">What are we solving — and what are we deliberately <em>not</em> solving?</h2></header>
-    <div class="c3-boundary">
-      <span class="c3-blabel">VMS · Project Scope baseline · 11 areas</span>
-      <div class="c3-groups"><!--@render:scopeGroups--></div>
-      <p class="c3-base">Scope turned a fuzzy problem into an agreed boundary. Where the Feature List differs, the Project Scope wins.</p>
-    </div>
-    <aside class="c3-out">
-      <h3><svg class="ico"><use href="#i-ban"/></svg>Outside this release</h3>
-      <ul class="c3-ex"><!--@render:exclusions--></ul>
-      <!--@render:noMigration-->
-      <p class="src">5 of 18 documented exclusions · BRD §6.2 · changes need a Sponsor-approved change request</p>
-    </aside>
-    <p class="unlocks">Inside and outside agreed — now everything converges into one baseline.</p>
+      <h2 class="title">How the BRD evolved</h2></header>
+    <ol class="ev-line"><!--@render:brdEvolution--></ol>
+    <p class="ev-take">We did not just merge documents. <b>We reviewed, aligned and refined them into one business baseline.</b></p>
+    <p class="src src-foot">Source: BRD-VMS-003 · revision history (v1.0 consolidated, v2.0 conflict resolution) · v3.0 · Ref-05 four individual team BRDs</p>
+    <p class="unlocks">The result: one baseline that brings every decision together.</p>
   </div></div>
 </section>
 
 <!-- =====================================================================
-     CHAPTER 6B · CONVERGENCE INTO THE BRD   (2 beats)
+     CHAPTER 6B · CONVERGENCE INTO THE BRD (scope is one of its layers)   (2 beats)
      ===================================================================== -->
 <section class="scene" id="ch6b" data-beats="2" data-chapter="ch6" data-theme="light">
   <div class="stage"><div class="bg bg-light"></div>
@@ -611,7 +604,7 @@
 <script src="scripts/scenes/prologue.js"></script>
 <script src="scripts/scenes/chapter-01.js"></script>
 <script src="scripts/scenes/chapter-02.js"></script>
-<script src="scripts/scenes/chapter-03.js"></script>
+<script src="scripts/scenes/chapter-06-evolution.js"></script>
 <script src="scripts/scenes/chapter-04.js"></script>
 <script src="scripts/scenes/chapter-05.js"></script>
 <script src="scripts/scenes/chapter-06.js"></script>

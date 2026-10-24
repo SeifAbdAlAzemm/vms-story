@@ -5,12 +5,12 @@ Precedence applied: Project Scope > BRD-VMS-003 v3.0 > Consolidated Feature List
 ## Real assets embedded (cropped only, never edited)
 | Asset | Source | Used in |
 |---|---|---|
-| jira-epics.png | Jira list view screenshot (team-supplied) | Ch 07 · beat 31 |
-| jira-backlog.png | Jira backlog screenshot, rows VMS-16 – VMS-23 | Ch 07 · beat 31 |
-| prototype_03.png · **License Register** (hero) | Final team-created prototype export | Ch 07 · beat 32 |
-| prototype_04.png · **Movement Dashboard** | Final team-created prototype export | Ch 07 · beat 32 |
-| prototype_01.png · **Maintenance Dashboard** | Final team-created prototype export | Ch 07 · beat 32 |
-| Vehicle Assignment & Return As-Is / To-Be BPMN (main) · Vehicle Retirement As-Is / To-Be (secondary) | **Team-provided process source** (four diagrams, Seif, 24 Oct 2026), redrawn as SVG; labels kept, Retirement translated from Arabic; no reference IDs added beyond those legible in the diagrams | Ch 06 · beats 27–29 |
+| jira-epics.png | Jira list view screenshot (team-supplied) | Ch 07 · beat 30 |
+| jira-backlog.png | Jira backlog screenshot, rows VMS-16 – VMS-23 | Ch 07 · beat 30 |
+| prototype_03.png · **License Register** (hero) | Final team-created prototype export | Ch 07 · beat 31 |
+| prototype_04.png · **Movement Dashboard** | Final team-created prototype export | Ch 07 · beat 31 |
+| prototype_01.png · **Maintenance Dashboard** | Final team-created prototype export | Ch 07 · beat 31 |
+| Vehicle Assignment & Return As-Is / To-Be BPMN (main) · Vehicle Retirement As-Is / To-Be (secondary) | **Team-provided process source** (four diagrams, Seif, 24 Oct 2026), redrawn as SVG; labels kept, Retirement translated from Arabic; no reference IDs added beyond those legible in the diagrams | Ch 06 · beats 26–28 |
 | Inter variable font (OFL) | rsms/inter | Whole page |
 | Lucide icons (ISC) | lucide.dev | Whole page |
 
@@ -39,17 +39,17 @@ Precedence applied: Project Scope > BRD-VMS-003 v3.0 > Consolidated Feature List
 | 1 · World | 9 kick-off findings, 7 open topics, "6 vehicles had already exceeded their license validity" (labelled **Kick-off finding**, not a BRD baseline) | Kick-off MOM |
 | 2 · How we worked | 7 Jira epics; 4 team BRDs merged (BRD Ref-05) | Jira screenshot · BRD |
 | 05 · Baseline (V&V, beat 22) | F-04 worked example: before = F-04 description, verbatim; issues, after-wording, search fields (Vehicle ID, Plate Number, VIN/Chassis, Model), filter fields (Type, Brand, Status), AND logic, baseline (empty state, pagination, sorting), "+8 more points", "6 marked [CONFIRM]" | Feature List (A04) · **team verification review of F-04** (screenshots, Seif, 24 Oct 2026), summarised; consistent with Module 01 V.02 US-04 |
-| 05 · Baseline (boundary, beats 23–24) | 11 scope areas; 5 of 18 documented exclusions shown; F-57 no migration | Project Scope · BRD §6.2 · Feature List |
+| 05 · Baseline (BRD evolution, beat 23) | Individual drafts → v1.0 consolidated baseline → v2.0 align & resolve → v3.0 refined baseline; "four individual team BRDs" | BRD-VMS-003 §1.1 revision history (v1.0, v2.0), cover (v3.0: consolidated, conflict-resolved, for mentor and Sponsor review), §17 Ref-05. Takeaway line = narrative framing |
 | 03 · People | 15 identified → 13 in scope; quadrants; 10-row Simple RACI | Stakeholder Analysis (A05) |
 | 03 · People (beat 19) | Personas: Fleet Director (Eng. Hesham Abdel Hamid) and Operations Director (Mr. Tarek Soliman): profile line, 3 behaviours, 3 goals, 3 pain points, quote each | **Team-created BA personas** (Seif, 24 Oct 2026), labelled on screen; not verified employee profiles. Ages and other demographics left off the slide |
 | 04 · Capabilities | 67 features / 12 groups; golden-thread chip F-13 · F-42 (both in the consolidated list); MoSCoW 33 Must · 3 Should · 13 Could · 13 Won't · 5 not yet prioritised (F-47, F-49–F-52) | Feature List — recounted from the table |
-| Finale · next decision | "THE NEXT DECISION · More vehicles. Clearer decisions. A defined first step. · Proposed scope. Success measures to agree. Evidence to guide the investment." — beat 37 | **Team-provided wording** (designer handoff, 24 Oct 2026), verbatim. The handoff's alternative ROI / payback scenario (illustrative financial assumptions) is deliberately **not** used |
-| Finale · value of visibility | "The value of visibility · 15% lower maintenance costs · 12% lower fuel costs · GPS fleet tracking — reported average cost reductions · External benchmark. Not a VMS forecast. · Verizon Connect · 2026 Fleet Technology Trends" — beat 38 | **Team-supplied slide image** (handoff image 1), used as supplied. **External benchmark, team-supplied, not checked against the source**; not a VMS forecast, project result or client measurement. GPS tracking is outside this release (F-36, Won't) |
-| Finale · retrospective | Pains → capability → features (F-13 · F-42, F-32 · F-45, F-37 · F-38, F-22 · F-23), all Must — beats 33–34 | Feature List (A04) · Kick-off MOM · BRD §4.2 / §8.1 |
-| 05 · Baseline | 3 OBJ · 42 BR (40 Must) · 16 BRL · 10 NFR · 11 KPI · 31 RAID (10 R · 6 A · 4 C · 11 I) · 7 DEP; objective targets | BRD-VMS-003 v3.0 — recounted |
+| Finale · next decision | "THE NEXT DECISION · More vehicles. Clearer decisions. A defined first step. · Proposed scope. Success measures to agree. Evidence to guide the investment." — beat 36 | **Team-provided wording** (designer handoff, 24 Oct 2026), verbatim. The handoff's alternative ROI / payback scenario (illustrative financial assumptions) is deliberately **not** used |
+| Finale · value of visibility | "The value of visibility · 15% lower maintenance costs · 12% lower fuel costs · GPS fleet tracking — reported average cost reductions · External benchmark. Not a VMS forecast. · Verizon Connect · 2026 Fleet Technology Trends" — beat 37 | **Team-supplied slide image** (handoff image 1), used as supplied. **External benchmark, team-supplied, not checked against the source**; not a VMS forecast, project result or client measurement. GPS tracking is outside this release (F-36, Won't) |
+| Finale · retrospective | Pains → capability → features (F-13 · F-42, F-32 · F-45, F-37 · F-38, F-22 · F-23), all Must — beats 32–33 | Feature List (A04) · Kick-off MOM · BRD §4.2 / §8.1 |
+| 05 · Baseline (BRD, beat 24) | Scope layer: 11 areas in, 18 documented exclusions out (Project Scope §1.1–1.11 · BRD §6.2) · 3 OBJ · 42 BR (40 Must) · 16 BRL · 10 NFR · 11 KPI · 31 RAID (10 R · 6 A · 4 C · 11 I) · 7 DEP; objective targets | BRD-VMS-003 v3.0 — recounted |
 | 06 · Process | Assignment As-Is (BRD §8.1 #3–4, MVP Journey 3 "today", not observed on site — ASM-01; pain point BRD §8.1 #3; MVP Journey 2 step 5) · Assignment To-Be (license + class check, refuse / record / end / close custody; "usable" = Valid, Near-Expiry or Under Renewal, no override) · Retirement As-Is / To-Be (officer → committee → Head of Authority; To-Be adds VMS status update) | Team-provided process source |
-| 07 · Backlog (beat 30) | User Stories & Exception Handling, example US-01 Add Vehicle: story, trace, required fields, 4 criteria (condensed), exception rows 1, 2, 5 | Module 01 V.02, US-01 |
-| 07 · Backlog (beat 30) | Exception rows 3–4: double Save → one record; network failure → "Connection error, please try again", no partial record, retry | **Team exception-handling scenarios** (Seif, 24 Oct 2026), not in US-01's own text |
+| 07 · Backlog (beat 29) | User Stories & Exception Handling, example US-01 Add Vehicle: story, trace, required fields, 4 criteria (condensed), exception rows 1, 2, 5 | Module 01 V.02, US-01 |
+| 07 · Backlog (beat 29) | Exception rows 3–4: double Save → one record; network failure → "Connection error, please try again", no partial record, retry | **Team exception-handling scenarios** (Seif, 24 Oct 2026), not in US-01's own text |
 | 07 · Jira | Only what is visible: 7 epics, a reporter per epic, all visible items To Do, VMS-16 text = US-16 | Screenshots |
 | 07 · Prototype | Golden thread end to end: kick-off finding → BR-033 · BRL-04 → To-Be BPMN → US-16 → VMS-16 → License Register. Framed as "analysis and design evolved together" — never as built or implemented software | Prototype exports · traceability above |
 
@@ -66,6 +66,6 @@ Precedence applied: Project Scope > BRD-VMS-003 v3.0 > Consolidated Feature List
 10. Roles & Permissions stories (RP-01–RP-19) carry no F / BR / BRL trace IDs, unlike the other modules.
 11. The prototype screens contain sample counts (e.g. 90 vehicle licenses, 49 near expiry) that differ from the ~550-vehicle fleet; they are labelled illustrative and not discussed as figures.
 12. The prototype's expiry filter offers 7 / 30 / 90 days, while BRL-04 notifies at 30 / 15 / 7 days. The presentation does not claim the filter implements BRL-04.
-13. The opening definition paraphrases BRD §4.2 ("complete vehicle lifecycle"); BRD §4.2 also lists decommissioning and reporting, which the six opening areas do not show. The opening is an introduction, not a scope statement (the System boundary beat in 05 · The baseline holds the 11 scope areas).
+13. The opening definition paraphrases BRD §4.2 ("complete vehicle lifecycle"); BRD §4.2 also lists decommissioning and reporting, which the six opening areas do not show. The opening is an introduction, not a scope statement (the BRD convergence beat shows scope as one layer: 11 areas in, 18 exclusions out).
 14. Beat 10 statistics are external and were supplied by the team, not drawn from the project documents; the presenter must not apply them to the organization. Be ready in Q&A for the attribution of the ~10.4M licensed-vehicles figure to Ken Research (as supplied).
-15. Beat 38 (value of visibility) quotes an external GPS-tracking benchmark while GPS is out of scope for this release (F-36 Won't). Present it as outside evidence for the value of visibility, never as what VMS will deliver. The Verizon Connect figures were supplied by the team and not independently checked.
+15. Beat 37 (value of visibility) quotes an external GPS-tracking benchmark while GPS is out of scope for this release (F-36 Won't). Present it as outside evidence for the value of visibility, never as what VMS will deliver. The Verizon Connect figures were supplied by the team and not independently checked.

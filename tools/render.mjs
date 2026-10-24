@@ -9,6 +9,8 @@ const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replac
 const ico = (id, cls = "") => `<svg class="ico ${cls}"><use href="#i-${id}"/></svg>`;
 const raciClass = (v) => (v === "R/A" ? "ra" : v ? v.toLowerCase() : "e");
 
+const ART = {"drafts": "<g class=\"ev-doc \" transform=\"translate(24 40) rotate(-10)\"><path d=\"M0 0 H44 L60 16 V80 H0 Z\"/><path class=\"ev-fold\" d=\"M44 0 V16 H60\"/><path class=\"ev-ln\" d=\"M10 30 H48 M10 42 H50 M10 54 H40 M10 66 H46\"/></g><g class=\"ev-doc \" transform=\"translate(78 24) rotate(6)\"><path d=\"M0 0 H44 L60 16 V80 H0 Z\"/><path class=\"ev-fold\" d=\"M44 0 V16 H60\"/><path class=\"ev-ln\" d=\"M10 30 H48 M10 42 H50 M10 54 H40 M10 66 H46\"/></g><g class=\"ev-doc \" transform=\"translate(122 46) rotate(-4)\"><path d=\"M0 0 H44 L60 16 V80 H0 Z\"/><path class=\"ev-fold\" d=\"M44 0 V16 H60\"/><path class=\"ev-ln\" d=\"M10 30 H48 M10 42 H50 M10 54 H40 M10 66 H46\"/></g><g class=\"ev-doc \" transform=\"translate(66 70) rotate(9)\"><path d=\"M0 0 H44 L60 16 V80 H0 Z\"/><path class=\"ev-fold\" d=\"M44 0 V16 H60\"/><path class=\"ev-ln\" d=\"M10 30 H48 M10 42 H50 M10 54 H40 M10 66 H46\"/></g>", "v1": "<g class=\"ev-doc ev-back\" transform=\"translate(96 40) rotate(0)\"><path d=\"M0 0 H44 L60 16 V80 H0 Z\"/><path class=\"ev-fold\" d=\"M44 0 V16 H60\"/><path class=\"ev-ln\" d=\"M10 30 H48 M10 42 H50 M10 54 H40 M10 66 H46\"/></g><g class=\"ev-doc ev-back\" transform=\"translate(88 34) rotate(0)\"><path d=\"M0 0 H44 L60 16 V80 H0 Z\"/><path class=\"ev-fold\" d=\"M44 0 V16 H60\"/><path class=\"ev-ln\" d=\"M10 30 H48 M10 42 H50 M10 54 H40 M10 66 H46\"/></g><g class=\"ev-doc \" transform=\"translate(80 28) rotate(0)\"><path d=\"M0 0 H44 L60 16 V80 H0 Z\"/><path class=\"ev-fold\" d=\"M44 0 V16 H60\"/><path class=\"ev-ln\" d=\"M10 30 H48 M10 42 H50 M10 54 H40 M10 66 H46\"/></g><text class=\"ev-v\" x=\"110\" y=\"138\" text-anchor=\"middle\">v1.0</text>", "v2": "<g class=\"ev-doc ev-mid\" transform=\"translate(80 28) rotate(0)\"><path d=\"M0 0 H44 L60 16 V80 H0 Z\"/><path class=\"ev-fold\" d=\"M44 0 V16 H60\"/><path class=\"ev-ln\" d=\"M10 30 H48 M10 42 H50 M10 54 H40 M10 66 H46\"/></g><path class=\"ev-x\" d=\"M150 42 l14 14 M164 42 l-14 14\"/><path class=\"ev-ok\" d=\"M146 86 l8 8 l16 -16\"/><text class=\"ev-v\" x=\"110\" y=\"138\" text-anchor=\"middle\">v2.0</text>", "v3": "<g class=\"ev-doc ev-final\" transform=\"translate(80 28) rotate(0)\"><path d=\"M0 0 H44 L60 16 V80 H0 Z\"/><path class=\"ev-fold\" d=\"M44 0 V16 H60\"/><path class=\"ev-ln\" d=\"M10 30 H48 M10 42 H50 M10 54 H40 M10 66 H46\"/></g><path class=\"ev-ok ev-ok-final\" d=\"M92 74 l10 10 l20 -20\"/><text class=\"ev-v ev-v-final\" x=\"110\" y=\"138\" text-anchor=\"middle\">v3.0</text>"};
+
 export function makeRenderers(D, ctx) {
   const R = {
     /* ---------- chrome ---------- */
@@ -66,9 +68,6 @@ export function makeRenderers(D, ctx) {
     },
 
     /* ---------- chapter 3 ---------- */
-    scopeGroups: () => D.scopeGroups.map((g) => `<div class="sg sg-${g.tone}"><h4>${esc(g.name)}</h4>${g.items.map(([i, t]) => `<div class="cap">${ico(i)}<span>${esc(t)}</span></div>`).join("")}</div>`).join(""),
-    exclusions: () => D.exclusions.map((e) => `<li><b>${esc(e.h)}</b><span>${esc(e.s)}</span></li>`).join(""),
-    noMigration: () => `<div class="c3-nomig"><b>${ico("database")}${esc(D.noMigration.h)}</b><span>${esc(D.noMigration.s)}</span><span class="c3-link">${ico("link")}${esc(D.noMigration.link)}</span></div>`,
 
     /* ---------- chapter 4 ---------- */
     stakeQuads: () => ["sat", "man", "mon", "inf"].map((q) => {
@@ -106,6 +105,7 @@ export function makeRenderers(D, ctx) {
         <div class="pp-later"><span class="id">${esc(p.later[0])} · ${esc(p.later[2])}</span><b>${esc(p.later[1])}</b></div></div>`).join(""),
 
     /* ---------- chapter 6 ---------- */
+    brdEvolution: () => D.brdEvolution.map((e, i) => `${i ? '<li class="ev-arrow" aria-hidden="true">' + ico("arrow-right") + "</li>" : ""}<li class="ev-st ev-${e.art}" data-i="${i}"><svg class="ev-art" viewBox="0 0 220 150" aria-hidden="true">${ART[e.art]}</svg><b>${esc(e.k)}</b><p>${esc(e.t)}</p></li>`).join(""),
     vvExample: () => {
       const X = D.vvExample;
       return `<div class="vx-ex"><span class="vx-lbl">Worked example</span><b class="vx-id">${esc(X.id)}</b><b class="vx-name">${esc(X.name)}</b><span class="vx-meta">${esc(X.meta)}</span></div>

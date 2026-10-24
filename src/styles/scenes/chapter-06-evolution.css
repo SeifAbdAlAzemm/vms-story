@@ -1,0 +1,22 @@
+/* CHAPTER 6E (05 · The baseline) · how the BRD evolved: drafts → v1 → v2 → v3, one horizontal line, minimal text */
+#ch6e .ev-line { position: absolute; left: 0; top: 214px; width: 1600px; margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: 1fr 56px 1fr 56px 1fr 56px 1fr; align-items: start; }
+#ch6e .ev-st { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 0 6px; }
+#ch6e .ev-art { width: 220px; height: 150px; overflow: visible; }
+#ch6e .ev-doc path:first-child { fill: #fff; stroke: #8A9AAD; stroke-width: 2; stroke-linejoin: round; }
+#ch6e .ev-fold { fill: none; stroke: #8A9AAD; stroke-width: 2; }
+#ch6e .ev-ln { stroke: #C4CFDA; stroke-width: 3; stroke-linecap: round; }
+#ch6e .ev-back path:first-child { fill: #EEF2F6; }
+#ch6e .ev-mid path:first-child, #ch6e .ev-v1 .ev-doc:not(.ev-back) path:first-child { stroke: var(--navy-3); }
+#ch6e .ev-final path:first-child { stroke: var(--teal); stroke-width: 3; fill: var(--teal-l); }
+#ch6e .ev-final .ev-fold { stroke: var(--teal); stroke-width: 3; } #ch6e .ev-final .ev-ln { stroke: #9BCFC8; }
+#ch6e .ev-x { stroke: var(--amber); stroke-width: 3.5; stroke-linecap: round; }
+#ch6e .ev-ok { fill: none; stroke: var(--teal); stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+#ch6e .ev-v { font-size: 16px; font-weight: 800; letter-spacing: .1em; fill: var(--slate-2); }
+#ch6e .ev-v-final { fill: var(--teal); }
+#ch6e .ev-st b { margin-top: 14px; font-size: 21px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--navy); line-height: 1.2; }
+#ch6e .ev-v3 b { color: var(--teal); }
+#ch6e .ev-st p { margin-top: 10px; font-size: 19px; line-height: 1.4; color: var(--slate); max-width: 300px; }
+#ch6e .ev-arrow { display: grid; place-items: center; height: 150px; color: var(--mute); font-size: 34px; }
+#ch6e .ev-take { position: absolute; left: 0; right: 0; top: 640px; text-align: center; font-size: 30px; line-height: 1.35; color: var(--slate); }
+#ch6e .ev-take b { display: block; color: var(--navy); font-weight: 800; }
+#ch6e .src-foot { font-size: 14px; }

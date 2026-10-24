@@ -457,31 +457,29 @@ html:not(.anim) #ch1 .c1-journey { display: none; }
 #ch2 .c2-quote b { color: var(--teal); }
 #ch2 .c2-msg .src { margin-top: 16px; }
 
-/* styles/scenes/chapter-03.css */
-/* CHAPTER 3 · the boundary */
-#ch3 .c3-boundary { position: absolute; left: 0; top: 196px; width: 1000px; height: 640px; border: 2.5px dashed var(--navy); border-radius: 18px; padding: 44px 30px 24px; }
-#ch3 .c3-blabel { position: absolute; top: -16px; left: 26px; background: var(--paper); padding: 0 12px; font-size: 19px; font-weight: 800; letter-spacing: .08em; color: var(--navy); text-transform: uppercase; }
-#ch3 .c3-groups { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
-#ch3 .sg h4 { font-size: 16px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; margin-bottom: 12px; }
-#ch3 .sg-navy h4 { color: var(--navy); } #ch3 .sg-teal h4 { color: var(--teal); } #ch3 .sg-steel h4 { color: var(--steel); }
-#ch3 .cap { display: flex; align-items: center; gap: 14px; height: 106px; padding: 0 16px; margin-bottom: 14px; border-radius: 8px; background: #fff; border: 1px solid var(--line-2); }
-#ch3 .cap .ico { font-size: 30px; }
-#ch3 .sg-navy .ico { color: var(--navy); } #ch3 .sg-teal .ico { color: var(--teal); } #ch3 .sg-steel .ico { color: var(--steel); }
-#ch3 .cap span { font-size: 22px; font-weight: 650; line-height: 1.15; color: var(--ink); }
-#ch3 .c3-base { position: absolute; left: 30px; right: 30px; bottom: 22px; font-size: 19px; color: var(--slate); font-style: italic; }
-#ch3 .c3-out { position: absolute; left: 1060px; top: 196px; width: 540px; height: 640px; }
-#ch3 .c3-out h3 { display: flex; align-items: center; gap: 12px; font-size: 26px; color: var(--amber); }
-#ch3 .c3-out h3 .ico { font-size: 30px; }
-#ch3 .c3-ex { list-style: none; margin-top: 16px; }
-#ch3 .c3-ex li { padding: 13px 0 13px 22px; border-bottom: 1px solid var(--line); position: relative; }
-#ch3 .c3-ex li::before { content: ""; position: absolute; left: 0; top: 25px; width: 12px; height: 2px; background: var(--amber); }
-#ch3 .c3-ex b { display: block; font-size: 21px; color: var(--ink); }
-#ch3 .c3-ex span { display: block; margin-top: 3px; font-size: 16px; color: var(--slate-2); }
-#ch3 .c3-nomig { margin-top: 20px; padding: 18px 20px; border-radius: 10px; background: #fff; border: 2px solid var(--amber); }
-#ch3 .c3-nomig b { display: flex; align-items: center; gap: 10px; font-size: 26px; color: var(--amber); text-transform: uppercase; letter-spacing: .04em; }
-#ch3 .c3-nomig > span { display: block; margin-top: 6px; font-size: 18px; color: var(--ink); }
-#ch3 .c3-link { display: flex !important; align-items: center; gap: 8px; color: var(--slate) !important; font-size: 17px !important; }
-#ch3 .c3-out .src { position: absolute; bottom: 0; left: 0; }
+/* styles/scenes/chapter-06-evolution.css */
+/* CHAPTER 6E (05 · The baseline) · how the BRD evolved: drafts → v1 → v2 → v3, one horizontal line, minimal text */
+#ch6e .ev-line { position: absolute; left: 0; top: 214px; width: 1600px; margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: 1fr 56px 1fr 56px 1fr 56px 1fr; align-items: start; }
+#ch6e .ev-st { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 0 6px; }
+#ch6e .ev-art { width: 220px; height: 150px; overflow: visible; }
+#ch6e .ev-doc path:first-child { fill: #fff; stroke: #8A9AAD; stroke-width: 2; stroke-linejoin: round; }
+#ch6e .ev-fold { fill: none; stroke: #8A9AAD; stroke-width: 2; }
+#ch6e .ev-ln { stroke: #C4CFDA; stroke-width: 3; stroke-linecap: round; }
+#ch6e .ev-back path:first-child { fill: #EEF2F6; }
+#ch6e .ev-mid path:first-child, #ch6e .ev-v1 .ev-doc:not(.ev-back) path:first-child { stroke: var(--navy-3); }
+#ch6e .ev-final path:first-child { stroke: var(--teal); stroke-width: 3; fill: var(--teal-l); }
+#ch6e .ev-final .ev-fold { stroke: var(--teal); stroke-width: 3; } #ch6e .ev-final .ev-ln { stroke: #9BCFC8; }
+#ch6e .ev-x { stroke: var(--amber); stroke-width: 3.5; stroke-linecap: round; }
+#ch6e .ev-ok { fill: none; stroke: var(--teal); stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+#ch6e .ev-v { font-size: 16px; font-weight: 800; letter-spacing: .1em; fill: var(--slate-2); }
+#ch6e .ev-v-final { fill: var(--teal); }
+#ch6e .ev-st b { margin-top: 14px; font-size: 21px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--navy); line-height: 1.2; }
+#ch6e .ev-v3 b { color: var(--teal); }
+#ch6e .ev-st p { margin-top: 10px; font-size: 19px; line-height: 1.4; color: var(--slate); max-width: 300px; }
+#ch6e .ev-arrow { display: grid; place-items: center; height: 150px; color: var(--mute); font-size: 34px; }
+#ch6e .ev-take { position: absolute; left: 0; right: 0; top: 640px; text-align: center; font-size: 30px; line-height: 1.35; color: var(--slate); }
+#ch6e .ev-take b { display: block; color: var(--navy); font-weight: 800; }
+#ch6e .src-foot { font-size: 14px; }
 
 /* styles/scenes/chapter-04.css */
 /* CHAPTER 4 · people and ownership */
@@ -652,8 +650,8 @@ html:not(.anim) #ch1 .c1-journey { display: none; }
 #ch6b .hub-core span { font-size: 17px; color: #BFD0E1; }
 #ch6b .hub-th { margin-top: 6px; background: rgba(226,182,73,.2) !important; color: var(--gold-on-dark) !important; }
 #ch6b .hub-chip { position: absolute; transform: translate(-50%, -50%); padding: 10px 18px; border-radius: 22px; background: #fff; border: 1.5px solid var(--navy-3); font-size: 19px; font-weight: 700; color: var(--navy); white-space: nowrap; }
-#ch6b .c6-layers { position: absolute; left: 760px; top: 190px; width: 300px; list-style: none; display: flex; flex-direction: column; gap: 10px; }
-#ch6b .c6-layers li { display: grid; grid-template-columns: 70px 1fr; align-items: center; gap: 10px; padding: 8px 12px; border-radius: 8px; background: #fff; border: 1px solid var(--line-2); min-height: 74px; }
+#ch6b .c6-layers { position: absolute; left: 760px; top: 176px; width: 300px; list-style: none; display: flex; flex-direction: column; gap: 8px; }
+#ch6b .c6-layers li { display: grid; grid-template-columns: 70px 1fr; align-items: center; gap: 10px; padding: 8px 12px; border-radius: 8px; background: #fff; border: 1px solid var(--line-2); min-height: 72px; }
 #ch6b .c6-layers b { font-size: 34px; font-weight: 820; color: var(--teal); text-align: right; font-variant-numeric: tabular-nums; }
 #ch6b .c6-layers span { font-size: 18px; font-weight: 650; color: var(--ink); line-height: 1.2; }
 #ch6b .c6-layers small { display: block; font-size: 13px; font-weight: 600; color: var(--slate-2); margin-top: 2px; }
@@ -939,7 +937,7 @@ html:not(.anim) #ch7 .ret-asis, html:not(.anim) #ch7 .ret-tag-asis { display: no
   <div class="rail-loop" id="reviewGlyph" title="Review loop: create · review · align · improve · approve">
     <svg viewBox="0 0 24 24" class="ico"><use href="#i-refresh-ccw"/></svg><span>Review loop</span>
   </div>
-  <div class="rail-count" id="beatCounter" aria-live="polite">01 / 39</div>
+  <div class="rail-count" id="beatCounter" aria-live="polite">01 / 38</div>
   <div class="controls" aria-label="Presenter controls">
   <button type="button" id="btnPrev" aria-label="Previous beat"><svg class="ico"><use href="#i-chevron-left"/></svg></button>
   <button type="button" id="btnNext" aria-label="Next beat"><svg class="ico"><use href="#i-chevron-right"/></svg></button>
@@ -951,7 +949,7 @@ html:not(.anim) #ch7 .ret-asis, html:not(.anim) #ch7 .ret-tag-asis { display: no
 
 
 <aside class="notes" id="notes" aria-label="Presenter notes" hidden>
-  <div class="n-head"><span id="nBeat">01 / 39</span><b id="nTitle"></b></div>
+  <div class="n-head"><span id="nBeat">01 / 38</span><b id="nTitle"></b></div>
   <div class="n-grid">
     <div><h5>Key message</h5><p id="nKey"></p></div>
     <div><h5>Why it matters</h5><p id="nWhy"></p></div>
@@ -1334,31 +1332,24 @@ html:not(.anim) #ch7 .ret-asis, html:not(.anim) #ch7 .ret-tag-asis { display: no
 </section>
 
 <!-- =====================================================================
-     CHAPTER 6 · THE BASELINE · SYSTEM BOUNDARY → DELIBERATELY OUTSIDE   (2 beats)
-     Scene id stays "ch3" (styles/scenes/chapter-03.css, scripts/scenes/chapter-03.js); it now belongs to chapter 05 · The baseline (rail id ch6).
+     CHAPTER 6E · HOW THE BRD EVOLVED   (1 beat)
+     Individual drafts → v1.0 consolidated → v2.0 conflict resolution → v3.0 refined baseline (BRD-VMS-003 revision history).
+     The standalone Scope beats were removed (Seif, 24 Oct 2026); Scope now appears as a layer of the BRD convergence.
      ===================================================================== -->
-<section class="scene" id="ch3" data-beats="2" data-chapter="ch6" data-theme="light">
+<section class="scene" id="ch6e" data-beats="1" data-chapter="ch6" data-theme="light">
   <div class="stage"><div class="bg bg-light"></div>
   <div class="safe">
     <header class="head"><p class="kicker">05 · The baseline</p>
-      <h2 class="title">What are we solving — and what are we deliberately <em>not</em> solving?</h2></header>
-    <div class="c3-boundary">
-      <span class="c3-blabel">VMS · Project Scope baseline · 11 areas</span>
-      <div class="c3-groups"><div class="sg sg-navy"><h4>Fleet records</h4><div class="cap"><svg class="ico "><use href="#i-car"/></svg><span>Vehicle Management</span></div><div class="cap"><svg class="ico "><use href="#i-id-card"/></svg><span>Driver Management</span></div><div class="cap"><svg class="ico "><use href="#i-tag"/></svg><span>Vehicle Brands</span></div><div class="cap"><svg class="ico "><use href="#i-landmark"/></svg><span>Licensing Authorities</span></div></div><div class="sg sg-teal"><h4>Operations</h4><div class="cap"><svg class="ico "><use href="#i-route"/></svg><span>Movement Log</span></div><div class="cap"><svg class="ico "><use href="#i-fuel"/></svg><span>Fuel Management</span></div><div class="cap"><svg class="ico "><use href="#i-wrench"/></svg><span>Maintenance Management</span></div><div class="cap"><svg class="ico "><use href="#i-warehouse"/></svg><span>Repair Centers</span></div></div><div class="sg sg-steel"><h4>Control &amp; insight</h4><div class="cap"><svg class="ico "><use href="#i-bell-ring"/></svg><span>Notifications</span></div><div class="cap"><svg class="ico "><use href="#i-lock-keyhole"/></svg><span>Roles &amp; Permissions</span></div><div class="cap"><svg class="ico "><use href="#i-chart-column"/></svg><span>Reports</span></div></div></div>
-      <p class="c3-base">Scope turned a fuzzy problem into an agreed boundary. Where the Feature List differs, the Project Scope wins.</p>
-    </div>
-    <aside class="c3-out">
-      <h3><svg class="ico"><use href="#i-ban"/></svg>Outside this release</h3>
-      <ul class="c3-ex"><li><b>GPS, route tracking &amp; geofencing</b><span>F-36 · F-67 · Phase 2 candidate</span></li><li><b>Online vehicle requests &amp; trip approval</b><span>F-30 · F-31 · boundary still open (ISS-03)</span></li><li><b>Vehicle reservation (advance booking)</b><span>F-35</span></li><li><b>Fuel request &amp; approval flow</b><span>F-41 · fuel is recorded, not requested</span></li></ul>
-      <div class="c3-nomig"><b><svg class="ico "><use href="#i-database"/></svg>No data migration</b><span>F-57 · the system starts with fresh data</span><span class="c3-link"><svg class="ico "><use href="#i-link"/></svg>Kick-off: no historical vehicle data exists</span></div>
-      <p class="src">5 of 18 documented exclusions · BRD §6.2 · changes need a Sponsor-approved change request</p>
-    </aside>
-    <p class="unlocks">Inside and outside agreed — now everything converges into one baseline.</p>
+      <h2 class="title">How the BRD evolved</h2></header>
+    <ol class="ev-line"><li class="ev-st ev-drafts" data-i="0"><svg class="ev-art" viewBox="0 0 220 150" aria-hidden="true"><g class="ev-doc " transform="translate(24 40) rotate(-10)"><path d="M0 0 H44 L60 16 V80 H0 Z"/><path class="ev-fold" d="M44 0 V16 H60"/><path class="ev-ln" d="M10 30 H48 M10 42 H50 M10 54 H40 M10 66 H46"/></g><g class="ev-doc " transform="translate(78 24) rotate(6)"><path d="M0 0 H44 L60 16 V80 H0 Z"/><path class="ev-fold" d="M44 0 V16 H60"/><path class="ev-ln" d="M10 30 H48 M10 42 H50 M10 54 H40 M10 66 H46"/></g><g class="ev-doc " transform="translate(122 46) rotate(-4)"><path d="M0 0 H44 L60 16 V80 H0 Z"/><path class="ev-fold" d="M44 0 V16 H60"/><path class="ev-ln" d="M10 30 H48 M10 42 H50 M10 54 H40 M10 66 H46"/></g><g class="ev-doc " transform="translate(66 70) rotate(9)"><path d="M0 0 H44 L60 16 V80 H0 Z"/><path class="ev-fold" d="M44 0 V16 H60"/><path class="ev-ln" d="M10 30 H48 M10 42 H50 M10 54 H40 M10 66 H46"/></g></svg><b>Individual drafts</b><p>Four individual team BRDs, drafted separately.</p></li><li class="ev-arrow" aria-hidden="true"><svg class="ico "><use href="#i-arrow-right"/></svg></li><li class="ev-st ev-v1" data-i="1"><svg class="ev-art" viewBox="0 0 220 150" aria-hidden="true"><g class="ev-doc ev-back" transform="translate(96 40) rotate(0)"><path d="M0 0 H44 L60 16 V80 H0 Z"/><path class="ev-fold" d="M44 0 V16 H60"/><path class="ev-ln" d="M10 30 H48 M10 42 H50 M10 54 H40 M10 66 H46"/></g><g class="ev-doc ev-back" transform="translate(88 34) rotate(0)"><path d="M0 0 H44 L60 16 V80 H0 Z"/><path class="ev-fold" d="M44 0 V16 H60"/><path class="ev-ln" d="M10 30 H48 M10 42 H50 M10 54 H40 M10 66 H46"/></g><g class="ev-doc " transform="translate(80 28) rotate(0)"><path d="M0 0 H44 L60 16 V80 H0 Z"/><path class="ev-fold" d="M44 0 V16 H60"/><path class="ev-ln" d="M10 30 H48 M10 42 H50 M10 54 H40 M10 66 H46"/></g><text class="ev-v" x="110" y="138" text-anchor="middle">v1.0</text></svg><b>V1 · Consolidated baseline</b><p>The individual drafts were brought together into one consolidated BRD.</p></li><li class="ev-arrow" aria-hidden="true"><svg class="ico "><use href="#i-arrow-right"/></svg></li><li class="ev-st ev-v2" data-i="2"><svg class="ev-art" viewBox="0 0 220 150" aria-hidden="true"><g class="ev-doc ev-mid" transform="translate(80 28) rotate(0)"><path d="M0 0 H44 L60 16 V80 H0 Z"/><path class="ev-fold" d="M44 0 V16 H60"/><path class="ev-ln" d="M10 30 H48 M10 42 H50 M10 54 H40 M10 66 H46"/></g><path class="ev-x" d="M150 42 l14 14 M164 42 l-14 14"/><path class="ev-ok" d="M146 86 l8 8 l16 -16"/><text class="ev-v" x="110" y="138" text-anchor="middle">v2.0</text></svg><b>V2 · Align &amp; resolve</b><p>Conflicts and inconsistencies found in the review were resolved.</p></li><li class="ev-arrow" aria-hidden="true"><svg class="ico "><use href="#i-arrow-right"/></svg></li><li class="ev-st ev-v3" data-i="3"><svg class="ev-art" viewBox="0 0 220 150" aria-hidden="true"><g class="ev-doc ev-final" transform="translate(80 28) rotate(0)"><path d="M0 0 H44 L60 16 V80 H0 Z"/><path class="ev-fold" d="M44 0 V16 H60"/><path class="ev-ln" d="M10 30 H48 M10 42 H50 M10 54 H40 M10 66 H46"/></g><path class="ev-ok ev-ok-final" d="M92 74 l10 10 l20 -20"/><text class="ev-v ev-v-final" x="110" y="138" text-anchor="middle">v3.0</text></svg><b>V3 · Refined baseline</b><p>One coherent, conflict-resolved baseline, ready for Mentor / Sponsor review.</p></li></ol>
+    <p class="ev-take">We did not just merge documents. <b>We reviewed, aligned and refined them into one business baseline.</b></p>
+    <p class="src src-foot">Source: BRD-VMS-003 · revision history (v1.0 consolidated, v2.0 conflict resolution) · v3.0 · Ref-05 four individual team BRDs</p>
+    <p class="unlocks">The result: one baseline that brings every decision together.</p>
   </div></div>
 </section>
 
 <!-- =====================================================================
-     CHAPTER 6B · CONVERGENCE INTO THE BRD   (2 beats)
+     CHAPTER 6B · CONVERGENCE INTO THE BRD (scope is one of its layers)   (2 beats)
      ===================================================================== -->
 <section class="scene" id="ch6b" data-beats="2" data-chapter="ch6" data-theme="light">
   <div class="stage"><div class="bg bg-light"></div>
@@ -1368,7 +1359,7 @@ html:not(.anim) #ch7 .ret-asis, html:not(.anim) #ch7 .ret-tag-asis { display: no
     <div class="c6-hub"><svg class="hub-lines" viewBox="0 0 720 720" aria-hidden="true"><path data-i="0" pathLength="1" d="M360 105 L360 360"/><path data-i="1" pathLength="1" d="M595 201 L360 360"/><path data-i="2" pathLength="1" d="M652 417 L360 360"/><path data-i="3" pathLength="1" d="M490 590 L360 360"/><path data-i="4" pathLength="1" d="M230 590 L360 360"/><path data-i="5" pathLength="1" d="M68 417 L360 360"/><path data-i="6" pathLength="1" d="M125 201 L360 360"/></svg>
         <div class="hub-core"><b>BRD-VMS-003</b><span>v3.0 · consolidated</span><span class="hub-th tag tag-gold">BR-033 · BRL-04</span></div>
         <span class="hub-chip" data-i="0" style="left:360px;top:105px">Problem</span><span class="hub-chip" data-i="1" style="left:595px;top:201px">Scope</span><span class="hub-chip" data-i="2" style="left:652px;top:417px">Stakeholders</span><span class="hub-chip" data-i="3" style="left:490px;top:590px">RACI</span><span class="hub-chip" data-i="4" style="left:230px;top:590px">Features</span><span class="hub-chip" data-i="5" style="left:68px;top:417px">Rules</span><span class="hub-chip" data-i="6" style="left:125px;top:201px">Open questions</span></div>
-    <ol class="c6-layers"><li data-i="0"><b>3</b><span>Objectives</span></li><li data-i="1"><b>42</b><span>Business requirements<small>40 Must</small></span></li><li data-i="2"><b>16</b><span>Business rules</span></li><li data-i="3"><b>10</b><span>Non-functional requirements</span></li><li data-i="4"><b>11</b><span>KPIs</span></li><li data-i="5"><b>31</b><span>RAID entries<small>10 risks · 6 assumptions · 4 constraints · 11 issues</small></span></li><li data-i="6"><b>7</b><span>Dependencies</span></li></ol>
+    <ol class="c6-layers"><li data-i="0"><b>11</b><span>Scope areas in<small>18 documented exclusions out</small></span></li><li data-i="1"><b>3</b><span>Objectives</span></li><li data-i="2"><b>42</b><span>Business requirements<small>40 Must</small></span></li><li data-i="3"><b>16</b><span>Business rules</span></li><li data-i="4"><b>10</b><span>Non-functional requirements</span></li><li data-i="5"><b>11</b><span>KPIs</span></li><li data-i="6"><b>31</b><span>RAID entries<small>10 risks · 6 assumptions · 4 constraints · 11 issues</small></span></li><li data-i="7"><b>7</b><span>Dependencies</span></li></ol>
     <div class="c6-objs"><div class="obj is-thread"><div class="oh"><span class="id">OBJ-01</span><b>Compliance &amp; control</b></div><div class="oks"><div class="ok"><strong>0</strong><span>vehicles operating on an expired license</span><em>within 3 months</em></div><div class="ok"><strong>30·15·7</strong><span>day license alerts, 100% of vehicles &amp; drivers</span><em>within 3 months</em></div></div></div><div class="obj"><div class="oh"><span class="id">OBJ-02</span><b>Vehicle availability &amp; movement control</b></div><div class="oks"><div class="ok"><strong>Same day</strong><span>every late return flagged</span><em>from month 1</em></div><div class="ok"><strong>−30%</strong><span>unplanned vehicle downtime</span><em>within 12 months</em></div></div></div><div class="obj"><div class="oh"><span class="id">OBJ-03</span><b>Maintenance &amp; cost visibility</b></div><div class="oks"><div class="ok"><strong>100%</strong><span>maintenance &amp; oil changes notified</span><em>within 6 months</em></div><div class="ok"><strong>−10%</strong><span>average fuel cost per km</span><em>within 12 months</em></div></div></div><p class="src obj-note">Proposed targets — confirmed by the Sponsor once baseline figures are supplied (ISS-05).</p></div>
     <p class="unlocks">Requirements told us WHAT. Now we needed to understand HOW work moves.</p>
   </div></div>
@@ -1681,20 +1672,6 @@ html:not(.anim) #ch7 .ret-asis, html:not(.anim) #ch7 .ret-tag-asis { display: no
   D.streams = ["Vehicle Management", "Driver Management & Assignment", "Maintenance & Repair Centers", "Movements & Fuel", "Notifications", "Roles & Permissions", "BRD & Other documents"];
   D.reviewLoop = ["Create", "Review", "Align", "Improve", "Approve"];
 
-  /* ---------- Chapter 6 · system boundary + exclusions (scene ch3) (SRC: Project Scope §1.1–1.11, BRD §6) ---------- */
-  D.scopeGroups = [
-    { name: "Fleet records", tone: "navy", items: [["car", "Vehicle Management"], ["id-card", "Driver Management"], ["tag", "Vehicle Brands"], ["landmark", "Licensing Authorities"]] },
-    { name: "Operations", tone: "teal", items: [["route", "Movement Log"], ["fuel", "Fuel Management"], ["wrench", "Maintenance Management"], ["warehouse", "Repair Centers"]] },
-    { name: "Control & insight", tone: "steel", items: [["bell-ring", "Notifications"], ["lock-keyhole", "Roles & Permissions"], ["chart-column", "Reports"]] },
-  ];
-  D.exclusions = [
-    { h: "GPS, route tracking & geofencing", s: "F-36 · F-67 · Phase 2 candidate" },
-    { h: "Online vehicle requests & trip approval", s: "F-30 · F-31 · boundary still open (ISS-03)" },
-    { h: "Vehicle reservation (advance booking)", s: "F-35" },
-    { h: "Fuel request & approval flow", s: "F-41 · fuel is recorded, not requested" },
-  ];
-  D.noMigration = { h: "No data migration", s: "F-57 · the system starts with fresh data", link: "Kick-off: no historical vehicle data exists" };
-
   /* ---------- Chapter 6 ---------- */
   // Verification & validation, shown through one worked example: F-04.
   // before: SRC Consolidated Feature List (A04), F-04 description, verbatim.
@@ -1725,8 +1702,18 @@ html:not(.anim) #ch7 .ret-asis, html:not(.anim) #ch7 .ret-tag-asis { display: no
     { k: "Validation", q: "Are we solving the right need?", a: "Checked with the stakeholder", icon: "messages-square" },
     { k: "Verification", q: "Did we write it the right way?", a: "Clear, specific and testable", icon: "list-checks" },
   ];
+  // How the BRD evolved (SRC: BRD-VMS-003 §1.1 revision history: v1.0 consolidated baseline merging all individual BRDs;
+  // v2.0 conflict-resolution revision, contradictions found in the audit resolved (Appendix B); cover: v3.0 consolidated,
+  // conflict-resolved, for mentor and Sponsor review; Ref-05: four individual team BRDs merged).
+  D.brdEvolution = [
+    { k: "Individual drafts", t: "Four individual team BRDs, drafted separately.", art: "drafts" },
+    { k: "V1 · Consolidated baseline", t: "The individual drafts were brought together into one consolidated BRD.", art: "v1" },
+    { k: "V2 · Align & resolve", t: "Conflicts and inconsistencies found in the review were resolved.", art: "v2" },
+    { k: "V3 · Refined baseline", t: "One coherent, conflict-resolved baseline, ready for Mentor / Sponsor review.", art: "v3" },
+  ];
   D.brdInputs = ["Problem", "Scope", "Stakeholders", "RACI", "Features", "Rules", "Open questions"];
   D.brdLayers = [
+    { v: "11", l: "Scope areas in", s: "18 documented exclusions out" },
     { v: "3", l: "Objectives" },
     { v: "42", l: "Business requirements", s: "40 Must" },
     { v: "16", l: "Business rules" },
@@ -1951,7 +1938,7 @@ html:not(.anim) #ch7 .ret-asis, html:not(.anim) #ch7 .ret-tag-asis { display: no
 </script>
 <script>/* beats.js */
 /* =====================================================================
-   PRESENTER BEATS — 39 narrative states, ~20½ minutes (estimate; re-time in rehearsal).
+   PRESENTER BEATS — 38 narrative states, ~20 minutes (estimate; re-time in rehearsal).
    scene  : id of the <section class="scene"> the beat belongs to (beats are
             ordered; the build checks the count per scene matches data-beats)
    thread : golden-thread tracker milestone(s) that light up at this beat and stay lit (optional; string or array)
@@ -2016,15 +2003,13 @@ html:not(.anim) #ch7 .ret-asis, html:not(.anim) #ch7 .ret-tag-asis { display: no
     { scene: "ch5b", chapter: "ch5", title: "MoSCoW: now vs not now",
       notes: { key: "Good analysis is also deciding what NOT to build: 33 Must, 3 Should, 13 Could, 13 Won't — and 5 still in discussion, which are not a MoSCoW category.", why: "We log every movement but not GPS; we record fuel but don't approve it; one dashboard now, advanced analytics later.", value: "Protects the release boundary and focuses effort on required business value.", next: "Before formalizing these decisions, we checked them." } },
 
-    // ---------------- CHAPTER 6 · verification → boundary → BRD (~3:15) ----------------
+    // ---------------- CHAPTER 6 · verification → BRD evolution → BRD → objectives (~2:30) ----------------
     { scene: "ch6a", chapter: "ch6", title: "Verification and validation", thread: "vv",
-      notes: { key: "One requirement, before and after. F-04 in the Feature List said: browse and filter by type, brand, status 'and other key fields'. Verification found it vague and untestable. The refined wording names the search fields, the filter fields, AND logic for multiple filters, and baseline list behaviour: empty state, pagination, sorting.", why: "Verification asks: did we write it the right way, clear and testable? Validation asks: are we solving the right need? That is checked with the stakeholder, so the six open points went to them marked [CONFIRM]. They are not closed yet. Overall validation is still partial: BRD sign-off and the Fleet Director's As-Is confirmation are pending (ISS-10).", value: "Nobody can test 'other key fields'; a QA engineer can test the after version. The same detail reappears in US-04's acceptance criteria (AND across filters, empty state, sorting, 25 per page).", next: "Then we confirmed the boundary: what is inside VMS?" } },
-    { scene: "ch3", chapter: "ch6", title: "The system boundary", thread: "brd",
-      notes: { key: "The Project Overview and Scope turned a fuzzy problem into an agreed boundary: eleven areas inside VMS.", why: "Research and elicitation produced many possible needs; scope chose which belong.", value: "Every later artifact measures itself against this one baseline. Where the Feature List differed, the Scope won.", next: "Just as important is what stays outside." } },
-    { scene: "ch3", chapter: "ch6", title: "Deliberately outside",
-      notes: { key: "GPS, online requests and trip approval, reservations and fuel approval stay out of this release — and there is no data migration.", why: "The kick-off told us there is no historical vehicle data, so the system starts fresh.", value: "Writing exclusions down prevents scope creep; any change needs a Sponsor-approved change request.", next: "Inside and outside agreed — now everything converges into one baseline." } },
+      notes: { key: "One requirement, before and after. F-04 in the Feature List said: browse and filter by type, brand, status 'and other key fields'. Verification found it vague and untestable. The refined wording names the search fields, the filter fields, AND logic for multiple filters, and baseline list behaviour: empty state, pagination, sorting.", why: "Verification asks: did we write it the right way, clear and testable? Validation asks: are we solving the right need? That is checked with the stakeholder, so the six open points went to them marked [CONFIRM]. They are not closed yet. Overall validation is still partial: BRD sign-off and the Fleet Director's As-Is confirmation are pending (ISS-10).", value: "Nobody can test 'other key fields'; a QA engineer can test the after version. The same detail reappears in US-04's acceptance criteria (AND across filters, empty state, sorting, 25 per page).", next: "The BRD itself went through the same discipline: it evolved." } },
+    { scene: "ch6e", chapter: "ch6", title: "How the BRD evolved", thread: "brd",
+      notes: { key: "We started with separate analysis drafts. V1 consolidated them, V2 resolved the conflicts found during review, and V3 became the refined business baseline used for review and decision-making.", why: "Straight from the BRD's revision history: v1.0 was the consolidated baseline merging all the individual BRDs (four team BRDs, Ref-05); v2.0 was the conflict-resolution revision, resolving internal contradictions found in the audit (Appendix B); v3.0 is consolidated, conflict-resolved and ready for mentor and Sponsor review.", value: "We did not just merge documents. We reviewed, aligned and refined them into one business baseline. About 20–25 seconds.", next: "The result: everything converges into one baseline." } },
     { scene: "ch6b", chapter: "ch6", title: "Everything converges into the BRD",
-      notes: { key: "Until this point the analysis lived across several artifacts. BRD-VMS-003 brought the business into one coherent baseline.", why: "Objectives, 42 requirements, 16 rules, 10 NFRs, 11 KPIs, RAID and dependencies in one place.", value: "Our thread becomes BR-033 and business rule BRL-04: alerts at 30, 15 and 7 days.", next: "And the BRD made success measurable." } },
+      notes: { key: "The BRD was not just a list of requirements. It brought the problem, objectives, scope, requirements, rules, NFRs, KPIs and open business risks into one controlled baseline.", why: "Scope is one of its layers: 11 areas in, 18 documented exclusions out, which is why we no longer show scope as separate slides. With it: 3 objectives, 42 requirements (40 Must), 16 business rules, 10 NFRs, 11 KPIs, 31 RAID entries and 7 dependencies.", value: "Our thread becomes BR-033 and business rule BRL-04: alerts at 30, 15 and 7 days.", next: "And the BRD made success measurable." } },
     { scene: "ch6b", chapter: "ch6", title: "Measurable objectives",
       notes: { key: "Three objectives: compliance and control, availability and movement control, maintenance and cost visibility.", why: "Targets like zero vehicles on an expired license are proposed by the BA team; the Sponsor confirms them once baseline figures arrive.", value: "Turns 'better management' into numbers someone can check.", next: "Requirements told us WHAT. Now we needed to understand HOW work moves." } },
 
@@ -2588,17 +2573,16 @@ VMS.scene("ch2", ({ tl, q, qa, at, draw }) => {
 });
 
 </script>
-<script>/* chapter-03.js */
-/* scene ch3, now in CHAPTER 6 (after verification & validation) · boundary → exclusions (no data migration ← kick-off) */
-VMS.scene("ch3", ({ tl, q, qa, at }) => {
-  tl.from(q(".c3-boundary"), { opacity: 0, scale: 0.97, duration: 0.5 }, at(0) + 0.05);
-  tl.from(qa(".c3-groups .cap"), { opacity: 0, y: 14, stagger: 0.04, duration: 0.35 }, at(0) + 0.2);
-  tl.from(q(".c3-base"), { opacity: 0, duration: 0.3 }, at(0) + 0.6);
-  // beat 2: what stays outside
-  tl.from(q(".c3-out h3"), { opacity: 0, x: 20, duration: 0.4 }, at(1));
-  tl.from(qa(".c3-ex li"), { opacity: 0, x: 24, stagger: 0.07, duration: 0.4 }, at(1) + 0.1);
-  tl.from(q(".c3-nomig"), { opacity: 0, scale: 0.95, duration: 0.4 }, at(1) + 0.45);
-  tl.from([q(".c3-out .src"), q(".unlocks")], { opacity: 0, duration: 0.3 }, at(1) + 0.62);
+<script>/* chapter-06-evolution.js */
+/* CHAPTER 6E (05 · The baseline) · how the BRD evolved: individual drafts → v1.0 → v2.0 → v3.0, then the takeaway */
+VMS.scene("ch6e", ({ tl, q, qa, at }) => {
+  const st = qa(".ev-st"), ar = qa(".ev-arrow");
+  st.forEach((el, i) => {
+    tl.from(el, { opacity: 0, y: 16, duration: 0.18 }, at(0) + 0.12 + i * 0.13);
+    if (ar[i]) tl.from(ar[i], { opacity: 0, x: -8, duration: 0.1 }, at(0) + 0.22 + i * 0.13);
+  });
+  tl.from(q(".ev-take"), { opacity: 0, y: 12, duration: 0.2 }, at(0) + 0.66);
+  tl.from([q(".src-foot"), q(".unlocks")], { opacity: 0, duration: 0.15 }, at(0) + 0.8);
 });
 
 </script>
