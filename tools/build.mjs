@@ -86,8 +86,8 @@ const assetUris = {};
 for (const rel of assetTokens) {
   const abs = path.join(SRC, "assets", rel);
   if (!fs.existsSync(abs)) fail(`missing asset ${rel}`);
-  const width = rel.startsWith("jira/") ? 1720 : 720;
-  assetUris[rel] = await toDataUri(abs, { width, quality: rel.startsWith("jira/") ? 90 : 84 });
+  const width = rel.startsWith("jira/") ? 1720 : rel.startsWith("hero/") ? 1672 : 720;   // hero/ = full-canvas supplied slides, kept at native width
+  assetUris[rel] = await toDataUri(abs, { width, quality: rel.startsWith("jira/") ? 90 : rel.startsWith("hero/") ? 86 : 84 });
 }
 html = html.replace(/@asset\(([^)]+)\)/g, (_, rel) => assetUris[rel]);
 

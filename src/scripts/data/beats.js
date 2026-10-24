@@ -1,5 +1,5 @@
 /* =====================================================================
-   PRESENTER BEATS — 37 narrative states, ~20 minutes (estimate; re-time in rehearsal).
+   PRESENTER BEATS — 39 narrative states, ~20½ minutes (estimate; re-time in rehearsal).
    scene  : id of the <section class="scene"> the beat belongs to (beats are
             ordered; the build checks the count per scene matches data-beats)
    thread : golden-thread tracker milestone(s) that light up at this beat and stay lit (optional; string or array)
@@ -8,10 +8,12 @@
    ===================================================================== */
 (function (D) {
   D.beats = [
-    // ---------------- COVER (~0:08) ----------------
+    // ---------------- COVER + HOOK (~0:30) ----------------
     { scene: "cover", chapter: "prologue", title: "From scattered records to clearer fleet decisions",
-      notes: { key: "This project is about moving from fragmented operational information toward clearer fleet decisions.", why: "A cover statement for 5–10 seconds. It frames the talk; VMS itself is defined on the next beat. It is a business analysis proposal, not a system that has been built.", value: "Sets the promise the ending returns to: clearer fleet decisions.", next: "So what is VMS?" } },
+      notes: { key: "This project is about moving from fragmented operational information toward clearer fleet decisions.", why: "A cover statement for 5–10 seconds. It frames the talk; VMS itself is defined on the next beat. It is a business analysis proposal, not a system that has been built.", value: "Sets the promise the ending returns to: clearer fleet decisions.", next: "Before we define it: how long does one answer take today?" } },
 
+    { scene: "hook", chapter: "prologue", title: "The cost of “let me check”",
+      notes: { key: "Fifteen minutes to find one answer. Every “let me check” means someone digging through paper, spreadsheets or a colleague's memory while a decision waits. What does that waiting cost?", why: "This is an ILLUSTRATIVE scenario, not measured client data, as the slide says. Don't present the 15 minutes as a finding from the organization.", value: "Gets the room thinking about the cost of slow answers before we define the system.", next: "So what is VMS?" } },
     // ---------------- OPENING (~0:15) ----------------
     { scene: "opening", chapter: "prologue", title: "What is VMS?",
       notes: { key: "VMS, the Vehicle Management System: one centralized system for managing the complete vehicle lifecycle — vehicle, driver, movement, maintenance, fuel and licensing.", why: "The audience should know what the system is before they meet the team or the BA journey.", value: "A shared definition in a few seconds. The problem, the scale and the findings come later in the story.", next: "Before the problem, the people: meet the team." } },
@@ -100,7 +102,9 @@
     { scene: "finale-a", chapter: "finale", title: "Two stories meet",
       notes: { key: "The backgrounds we started with converge again: team transformation and project transformation are the same story.", why: "Different perspectives made the review loop valuable.", value: "One mindset, one baseline, one product definition.", next: "And that brings us to the next decision." } },
     { scene: "finale-n", chapter: "finale", title: "The next decision",
-      notes: { key: "The analysis does not claim the investment decision is already made. It gives stakeholders a defined scope, measurable success criteria and evidence for deciding what comes next.", why: "This is a BA proposal and product definition: not a claim that the full system has been implemented, and not a financial forecast. The success measures are still to be agreed; the BRD's targets are proposed and confirmed by the Sponsor once baseline figures arrive.", value: "Ends on the decision the audience can take, not on what we produced: more vehicles need clearer decisions, and the first step is defined.", next: "Close." } },
+      notes: { key: "The analysis does not claim the investment decision is already made. It gives stakeholders a defined scope, measurable success criteria and evidence for deciding what comes next.", why: "This is a BA proposal and product definition: not a claim that the full system has been implemented, and not a financial forecast. The success measures are still to be agreed; the BRD's targets are proposed and confirmed by the Sponsor once baseline figures arrive.", value: "Ends on the decision the audience can take, not on what we produced: more vehicles need clearer decisions, and the first step is defined.", next: "And here is what visibility is worth elsewhere." } },
+    { scene: "finale-v", chapter: "finale", title: "The value of visibility",
+      notes: { key: "External benchmark: fleets using GPS fleet tracking report average cost reductions of 15% in maintenance and 12% in fuel (Verizon Connect, 2026 Fleet Technology Trends).", why: "EXTERNAL benchmark context, as the slide says: not a VMS forecast, not a project result, not client-measured impact. GPS tracking itself is outside this release (F-36, Won't), so use it only as an outside reference for what fleet visibility can be worth.", value: "Ends the argument with outside evidence that visibility pays, right before we close.", next: "Close." } },
     { scene: "finale-b", chapter: "finale", title: "Closing",
       notes: { key: "We did not produce a collection of documents. We turned one operational problem into a structured, verified and traceable product definition.", why: "Each artifact answered a different question, reduced uncertainty and unlocked the next decision.", value: "Thank the panel.", next: "Open for questions — free scroll or Home to revisit any chapter." } },
   ];

@@ -22,7 +22,7 @@ IF THE LAYOUT LOOKS WRONG
   Reset browser zoom with Ctrl + 0 (Cmd + 0 on Mac). The story scales itself to any screen.
 
 PROTOTYPE SCREENS (team-created, illustrative data)
-  Beat 31 shows the team's prototype: License Register (hero), Movement Dashboard
+  Beat 32 shows the team's prototype: License Register (hero), Movement Dashboard
   and Maintenance Dashboard. Their records and counts are sample data — present them
   as illustrative, never as business figures.
   To replace a screen: overwrite src/assets/prototype/prototype_03.png (License Register),

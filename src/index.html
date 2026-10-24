@@ -45,7 +45,7 @@
   <div class="rail-loop" id="reviewGlyph" title="Review loop: create · review · align · improve · approve">
     <svg viewBox="0 0 24 24" class="ico"><use href="#i-refresh-ccw"/></svg><span>Review loop</span>
   </div>
-  <div class="rail-count" id="beatCounter" aria-live="polite">01 / 37</div>
+  <div class="rail-count" id="beatCounter" aria-live="polite">01 / 39</div>
   <div class="controls" aria-label="Presenter controls">
   <button type="button" id="btnPrev" aria-label="Previous beat"><svg class="ico"><use href="#i-chevron-left"/></svg></button>
   <button type="button" id="btnNext" aria-label="Next beat"><svg class="ico"><use href="#i-chevron-right"/></svg></button>
@@ -57,7 +57,7 @@
 
 
 <aside class="notes" id="notes" aria-label="Presenter notes" hidden>
-  <div class="n-head"><span id="nBeat">01 / 37</span><b id="nTitle"></b></div>
+  <div class="n-head"><span id="nBeat">01 / 39</span><b id="nTitle"></b></div>
   <div class="n-grid">
     <div><h5>Key message</h5><p id="nKey"></p></div>
     <div><h5>Why it matters</h5><p id="nWhy"></p></div>
@@ -70,23 +70,33 @@
 <main id="story">
 
 <!-- =====================================================================
-     COVER · FROM SCATTERED RECORDS TO CLEARER FLEET DECISIONS   (1 beat)
-     Team-provided wording (Intro, Hook & Outro designer handoff, 24 Oct 2026), copied verbatim. Time-based on load (VMS.coverIntro):
-     scattered record fragments settle into an ordered grid while the statement builds. Static mode shows the final state.
+     COVER · INTRO   (1 beat)
+     The designer-handoff slide used as supplied (Intro, Hook & Outro handoff, image 2, 1672×941): the text is part of the image.
+     Time-based on load (VMS.coverIntro). Text: VEHICLE MANAGEMENT SYSTEM · From scattered records to clearer fleet decisions. ·
+     A BUSINESS ANALYSIS PROPOSAL
      ===================================================================== -->
 <section class="scene" id="cover" data-beats="1" data-chapter="prologue" data-theme="dark" data-entry="intro">
-  <div class="stage"><div class="bg bg-dark"><div class="bg-grid"></div></div>
+  <div class="stage"><div class="bg hero-bg" style="--hl:#082d45"></div>
   <div class="safe">
-    <p class="kicker cv-kicker">Vehicle Management System</p>
-    <h1 class="cv-title"><span>From scattered records</span><span>to <em>clearer</em></span><span><em>fleet decisions.</em></span></h1>
-    <i class="cv-rule" aria-hidden="true"></i>
-    <p class="cv-sub">A Business Analysis Proposal</p>
-    <svg class="cv-recs" viewBox="0 0 590 450" aria-hidden="true"><g class="rec" data-dx="-95" data-dy="-93" data-rot="-3"><rect x="40" y="40" width="150" height="72" rx="8"/><path d="M56 64 H136 M56 82 H168 M56 98 H110"/></g><g class="rec" data-dx="73" data-dy="-146" data-rot="-24"><rect x="210" y="40" width="150" height="72" rx="8"/><path d="M226 64 H306 M226 82 H338 M226 98 H280"/></g><g class="rec" data-dx="160" data-dy="104" data-rot="-22"><rect x="380" y="40" width="150" height="72" rx="8"/><path d="M396 64 H476 M396 82 H508 M396 98 H450"/></g><g class="rec" data-dx="-73" data-dy="128" data-rot="-25"><rect x="40" y="132" width="150" height="72" rx="8"/><path d="M56 156 H136 M56 174 H168 M56 190 H110"/></g><g class="rec" data-dx="-1" data-dy="-61" data-rot="-26"><rect x="210" y="132" width="150" height="72" rx="8"/><path d="M226 156 H306 M226 174 H338 M226 190 H280"/></g><g class="rec" data-dx="-216" data-dy="52" data-rot="-2"><rect x="380" y="132" width="150" height="72" rx="8"/><path d="M396 156 H476 M396 174 H508 M396 190 H450"/></g><g class="rec" data-dx="-225" data-dy="-47" data-rot="-23"><rect x="40" y="224" width="150" height="72" rx="8"/><path d="M56 248 H136 M56 266 H168 M56 282 H110"/></g><g class="rec rec-hl" data-dx="22" data-dy="47" data-rot="-25"><rect x="210" y="224" width="150" height="72" rx="8"/><path d="M226 248 H306 M226 266 H338 M226 282 H280"/></g><g class="rec" data-dx="163" data-dy="119" data-rot="-21"><rect x="380" y="224" width="150" height="72" rx="8"/><path d="M396 248 H476 M396 266 H508 M396 282 H450"/></g><g class="rec" data-dx="-146" data-dy="152" data-rot="12"><rect x="40" y="316" width="150" height="72" rx="8"/><path d="M56 340 H136 M56 358 H168 M56 374 H110"/></g><g class="rec" data-dx="38" data-dy="-139" data-rot="8"><rect x="210" y="316" width="150" height="72" rx="8"/><path d="M226 340 H306 M226 358 H338 M226 374 H280"/></g><g class="rec" data-dx="39" data-dy="33" data-rot="-25"><rect x="380" y="316" width="150" height="72" rx="8"/><path d="M396 340 H476 M396 358 H508 M396 374 H450"/></g></svg>
+    <img class="hero-img" src="@asset(hero/intro.jpg)" alt="VEHICLE MANAGEMENT SYSTEM. From scattered records to clearer fleet decisions. A BUSINESS ANALYSIS PROPOSAL.">
   </div></div>
 </section>
 
 <!-- =====================================================================
-     OPENING · WHAT IS VMS?   (1 beat; its time-based VMS.intro plays when the presenter arrives from the cover)
+     HOOK · THE COST OF "LET ME CHECK."   (1 beat)
+     The designer-handoff slide used as supplied (image 3). ILLUSTRATIVE scenario, not measured client data: the disclaimer is
+     part of the image and stays visible. Text: THE COST OF "LET ME CHECK." · 15 MINUTES. · To find one answer. ·
+     What does the waiting cost? · Illustrative scenario — not measured client data.
+     ===================================================================== -->
+<section class="scene" id="hook" data-beats="1" data-chapter="prologue" data-theme="dark">
+  <div class="stage"><div class="bg hero-bg" style="--hl:#0f2633"></div>
+  <div class="safe">
+    <img class="hero-img" src="@asset(hero/hook.jpg)" alt="THE COST OF “LET ME CHECK.” 15 MINUTES. To find one answer. What does the waiting cost? Illustrative scenario — not measured client data.">
+  </div></div>
+</section>
+
+<!-- =====================================================================
+     OPENING · WHAT IS VMS?   (1 beat; its time-based VMS.intro plays when the presenter arrives from the hook)
      ===================================================================== -->
 <section class="scene" id="opening" data-beats="1" data-chapter="prologue" data-theme="dark" data-entry="intro">
   <div class="stage"><div class="bg bg-dark"><div class="bg-grid"></div></div>
@@ -546,6 +556,18 @@
       <li><svg class="ico"><use href="#i-target"/></svg><b>Success measures to agree.</b></li>
       <li><svg class="ico"><use href="#i-scale"/></svg><b>Evidence to guide the investment.</b></li>
     </ul>
+  </div></div>
+</section>
+
+<!-- =====================================================================
+     FINALE V · THE VALUE OF VISIBILITY   (1 beat)
+     The designer-handoff slide used as supplied (image 1). EXTERNAL benchmark (GPS fleet tracking, Verizon Connect · 2026 Fleet
+     Technology Trends), not a VMS forecast and not a project result: the framing lines are part of the image.
+     ===================================================================== -->
+<section class="scene" id="finale-v" data-beats="1" data-chapter="finale" data-theme="light">
+  <div class="stage"><div class="bg hero-bg" style="--hl:#f6f2ea"></div>
+  <div class="safe">
+    <img class="hero-img" src="@asset(hero/outro.jpg)" alt="The value of visibility. 15% Lower maintenance costs. 12% Lower fuel costs. GPS fleet tracking — reported average cost reductions. External benchmark. Not a VMS forecast. Verizon Connect · 2026 Fleet Technology Trends.">
   </div></div>
 </section>
 

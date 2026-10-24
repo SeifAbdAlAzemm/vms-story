@@ -17,6 +17,9 @@ VMS.scene("finale-n", ({ tl, q, qa, at }) => {
   tl.from(qa(".nd-steps li"), { opacity: 0, y: 14, stagger: 0.08, duration: 0.25 }, at(0) + 0.25);
   tl.from(qa(".nd-anchors li"), { opacity: 0, y: 18, stagger: 0.08, duration: 0.3 }, at(0) + 0.5);
 });
+VMS.scene("finale-v", ({ tl, q, at }) => {
+  tl.from(q(".hero-img"), { opacity: 0, scale: 1.03, transformOrigin: "50% 50%", duration: 0.6 }, at(0) + 0.1);
+});
 VMS.scene("finale-b", ({ tl, q, at }) => {
   tl.from(q(".fb-from"), { opacity: 0, x: -30, duration: 0.5 }, at(0) + 0.05);
   tl.from(q(".fb-arrow"), { opacity: 0, duration: 0.4 }, at(0) + 0.2);

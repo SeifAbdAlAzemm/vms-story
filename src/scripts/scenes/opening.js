@@ -1,17 +1,13 @@
-/* COVER · time-based on load (VMS.coverIntro): kicker → statement → record fragments settle into order → proposal line.
-   OPENING · what is VMS? One beat, time-based (VMS.intro), played when the presenter arrives from the cover:
+/* COVER · the supplied intro slide, time-based on load (VMS.coverIntro): a slow fade-and-settle.
+   HOOK · the supplied hook slide, fades in with the scroll.
+   OPENING · what is VMS? One beat, time-based (VMS.intro), played when the presenter arrives from the hook:
    vehicle drives in from the right → title → definition → six lifecycle areas. No scroll choreography. */
-VMS.scene("cover", ({ q, qa }) => {
-  const recs = qa(".rec");
+VMS.scene("cover", ({ q }) => {
   VMS.coverIntro = gsap.timeline({ paused: true })
-    .from(q(".cv-kicker"), { opacity: 0, y: 14, duration: 0.5, ease: "power2.out" }, 0)
-    .from(recs, { opacity: 0, duration: 0.5, stagger: 0.03, ease: "power1.out" }, 0.1)
-    .from(recs, { x: (i, el) => +el.dataset.dx, y: (i, el) => +el.dataset.dy, rotation: (i, el) => +el.dataset.rot, svgOrigin: "295 225",
-      duration: 1.3, stagger: 0.04, ease: "power3.inOut" }, 0.9)
-    .from(qa(".cv-title span"), { opacity: 0, y: 26, stagger: 0.22, duration: 0.6, ease: "power2.out" }, 0.3)
-    .from(q(".cv-rule"), { scaleX: 0, transformOrigin: "0 50%", duration: 0.45, ease: "power2.out" }, 1.6)
-    .from(q(".cv-sub"), { opacity: 0, y: 12, duration: 0.5, ease: "power2.out" }, 1.8)
-    .from(qa(".rec-hl rect, .rec-hl path"), { opacity: 0.3, duration: 0.5 }, 2.4);   // one record comes into focus
+    .from(q(".hero-img"), { opacity: 0, scale: 1.035, transformOrigin: "50% 50%", duration: 1.6, ease: "power2.out" }, 0);
+});
+VMS.scene("hook", ({ tl, q, at }) => {
+  tl.from(q(".hero-img"), { opacity: 0, scale: 1.03, transformOrigin: "50% 50%", duration: 0.6 }, at(0) + 0.1);
 });
 VMS.scene("opening", ({ sc, q, qa, reduce }) => {
   const intro = VMS.intro = gsap.timeline({ paused: true })
@@ -23,7 +19,7 @@ VMS.scene("opening", ({ sc, q, qa, reduce }) => {
     .from(q(".o-def"), { opacity: 0, y: 16, duration: 0.5, ease: "power2.out" }, 1.0)
     .from(qa(".o-area"), { opacity: 0, y: 14, stagger: 0.06, duration: 0.4, ease: "power2.out" }, 1.3)
     .from([q(".o-src"), q(".unlocks")], { opacity: 0, duration: 0.4 }, 1.75);
-  // plays when the presenter arrives from the cover; a jump past it completes it; going back to the cover resets it
+  // plays when the presenter arrives from the hook; a jump past it completes it; going back resets it
   const arrive = () => {
     const t = sc.getBoundingClientRect().top;
     if (t > 0.42 * innerHeight) return;
