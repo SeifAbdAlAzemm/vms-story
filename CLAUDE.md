@@ -133,7 +133,7 @@ qa/                        GENERATED output; qa/shots/ and qa/sheets/ are gitign
 - Copy, IDs, counts and notes live in `src/scripts/data/*.js` (IIFE writing `window.VMS_DATA`), and in short literal strings in `src/index.html`.
   The same data runs at build time (node vm) and at runtime.
 - Presenter notes per beat: `src/scripts/data/beats.js` → `{scene, chapter, title, thread?, notes:{key,why,value,next}}`.
-  `thread` (string or array) lights the golden-thread tracker, cumulatively: stakeholders → persona → vv → brd → stories (`D.thread` in project.js).
+  `thread` (string or array) lights the golden-thread tracker, cumulatively: kickoff → stakeholders → persona → features → vv → brd → bpmn → stories → jira → prototype (`D.thread` in project.js).
 - Changing an on-screen business fact: change its data file, verify it against the source, and update `SOURCES.md` only if the source or risk entry changes.
 - Banned in output (the build fails if present): the old inspiration/temporary UI images and their strings. Never add them back.
 

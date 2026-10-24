@@ -21,14 +21,19 @@
   ];
   D.designTrackFrom = "ch5"; // TEAM: wireframes/prototype ran in parallel with analysis
 
-  /* ---------- Golden thread tracker: the BA journey through five key analysis artifacts (Seif, 24 Oct 2026) ----------
+  /* ---------- Golden thread tracker: the BA journey through ten key analysis artifacts (Seif, 24 Oct 2026) ----------
      Each milestone lights on its beat (beats.js `thread`) and stays lit. Story order = presentation order. */
   D.thread = [
+    { id: "kickoff", label: "Kick-off Meeting" },
     { id: "stakeholders", label: "Stakeholder Analysis" },
     { id: "persona", label: "Persona" },
+    { id: "features", label: "Feature List" },
     { id: "vv", label: "Verification & Validation" },
     { id: "brd", label: "BRD" },
+    { id: "bpmn", label: "BPMN" },
     { id: "stories", label: "User Stories" },
+    { id: "jira", label: "Jira" },
+    { id: "prototype", label: "Prototype" },
   ];
 
   /* ---------- Opening · What is VMS? ---------- */
